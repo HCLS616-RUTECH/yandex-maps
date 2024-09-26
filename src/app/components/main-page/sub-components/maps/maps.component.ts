@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -7,6 +7,4 @@ import { Component, Input } from '@angular/core';
   templateUrl: './maps.component.html',
   styleUrl: './maps.component.scss',
 })
-export class MapsComponent {
-  @Input() map: any;
-}
+export class MapsComponent {}

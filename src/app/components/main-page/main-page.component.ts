@@ -20,11 +20,9 @@ import { MapsComponent } from './sub-components/maps/maps.component';
   styleUrl: './main-page.component.scss',
 })
 export class MainPageComponent implements OnInit {
-  map: any;
-
-  constructor(private readonly _mapsService: MapsService) {}
+  constructor(private readonly _service: MapsService) {}
 
   ngOnInit(): void {
-    this._mapsService.initMap();
+    this._service.initMap();
   }
 }

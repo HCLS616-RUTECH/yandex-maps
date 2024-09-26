@@ -14,4 +14,8 @@ export class ActionsComponent {
   handleSetDrawingState(): void {
     this._service.setDrawingState();
   }
+
+  ppp() {
+    this._service.ppp();
+  }
 }
