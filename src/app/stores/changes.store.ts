@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Polygon } from 'yandex-maps';
 import { IChangeZonesRequest } from '../models/interfaces/change-zones-request.interface';
 import { MapsHttpService } from '../services/maps.http.service';
@@ -7,15 +7,13 @@ import { MapsHttpService } from '../services/maps.http.service';
   providedIn: 'root',
 })
 export class ChangesStore {
+  isHaveChanges = signal<boolean>(false);
+
   private _new = new Map<string, any>();
   private _edited = new Map<string, any>();
   private _deleted = new Set<string>();
 
   constructor(private readonly _http: MapsHttpService) {}
-
-  get isHaveChanges(): boolean {
-    return !!this._new.size || !!this._edited.size || !!this._deleted.size;
-  }
 
   get changes(): {
     new: Map<string, any>;
@@ -60,6 +58,7 @@ export class ChangesStore {
   create(polygon: Polygon): void {
     const id = polygon.properties.get('id') as never as string;
     this._new.set(id, polygon);
+    this._setSignal();
   }
 
   edit(polygon: Polygon): void {
@@ -69,6 +68,8 @@ export class ChangesStore {
       const id = polygon.properties.get('id') as never as string;
       this._edited.set(id, polygon);
     }
+
+    this._setSignal();
   }
 
   delete(polygon: Polygon): void {
@@ -81,5 +82,21 @@ export class ChangesStore {
       this._deleted.add(id);
       if (this._edited.has(id)) this._edited.delete(id);
     }
+
+    this._setSignal();
+  }
+
+  clearChanges(): void {
+    this._new.clear();
+    this._edited.clear();
+    this._deleted.clear();
+
+    this._setSignal();
+  }
+
+  private _setSignal(): void {
+    this.isHaveChanges.set(
+      !!this._new.size || !!this._edited.size || !!this._deleted.size
+    );
   }
 }

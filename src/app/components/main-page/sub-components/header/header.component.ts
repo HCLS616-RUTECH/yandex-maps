@@ -1,6 +1,7 @@
 import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MapsService } from '../../../../services/maps.service';
+import { ChangesStore } from '../../../../stores/changes.store';
 
 @Component({
   selector: 'app-header',
@@ -11,14 +12,20 @@ import { MapsService } from '../../../../services/maps.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  constructor(private readonly _mapsService: MapsService) {}
+  constructor(
+    private readonly _mapsService: MapsService,
+    private readonly _changesStore: ChangesStore
+  ) {}
 
   get isHaveChanges(): boolean {
-    // return this._polygonsStore.isHaveChanges;
-    return true;
+    return this._changesStore.isHaveChanges();
   }
 
   handleSaveChanges(): void {
     this._mapsService.saveChanges();
+  }
+
+  handleUpdate(): void {
+    this._mapsService.updateZones();
   }
 }

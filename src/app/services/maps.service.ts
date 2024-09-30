@@ -20,7 +20,8 @@ export class MapsService {
   private _polygon: any | null = null;
   // private _dash: any | null = null;
   // private _placemark: any | null = null;
-  private _selected: Polygon | null = null;
+
+  private _isAddingPolygons = false;
 
   private readonly _polygons = new Map<string, any>();
   private readonly YANDEX_MAPS = (window as any).ymaps;
@@ -71,6 +72,16 @@ export class MapsService {
     }
   }
 
+  updateZones(): void {
+    this._polygons.forEach((polygon) => this._map.geoObjects.remove(polygon));
+    this._polygons.clear();
+    this._changesStore.changes.new.forEach((polygon) =>
+      this._map.geoObjects.remove(polygon)
+    );
+    this._changesStore.clearChanges();
+    this._getZones(this._map.getBounds());
+  }
+
   saveChanges(): void {
     const body = this._changesStore.requestBody;
 
@@ -91,13 +102,20 @@ export class MapsService {
 
     const newPolygons: Polygon[] = [];
 
+    this._isAddingPolygons = true;
+
     for (let zone of zones) {
       if (deleted.has(zone.id)) {
         continue;
       }
 
       if (this._polygons.has(zone.id)) {
-        this._polygons.get(zone.id).geometry.setCoordinates(zone.coordinates);
+        // Чинит багу с яндекс карт, при которой не до конца отрисовывается полигон, при движении экрана по картам
+        this._polygons
+          .get(zone.id)
+          .geometry.setCoordinates(
+            this._polygons.get(zone.id).geometry.getCoordinates()
+          );
         continue;
       }
 
@@ -117,6 +135,8 @@ export class MapsService {
       this._polygons.set(zone.id, polygon);
       this._map.geoObjects.add(polygon);
     }
+
+    this._isAddingPolygons = false;
   }
 
   private _drawingPolygon(): void {
@@ -169,6 +189,8 @@ export class MapsService {
     this._selectedStore.setSelectedState(this._polygon);
 
     this._polygon.editor.stopDrawing();
+
+    this.setActionState('EDITING_POLYGON');
 
     this._polygon = null;
   }
@@ -244,6 +266,7 @@ export class MapsService {
       this._initPolygonActions(polygon);
 
       this._selectedStore.setSelectedState(polygon);
+      this.setActionState('EDITING_POLYGON');
 
       // this._map.events.add('mousemove', this._updateLastPoint);
       // this._placemark = new this.YANDEX_MAPS.Placemark([0, 0], {});
@@ -291,12 +314,22 @@ export class MapsService {
   }
 
   private _initPolygonActions = (polygon: Polygon): void => {
-    polygon.events.add('click', (e: any) =>
-      this._selectedStore.setSelectedState(e.originalEvent.target)
-    );
-    polygon.geometry?.events.add('change', (e: any) =>
-      this._changesStore.edit(polygon)
-    );
+    polygon.events.add('click', (e: any) => {
+      this._selectedStore.setSelectedState(e.originalEvent.target);
+      if (
+        !this._selectedStore.selected() &&
+        this._action === 'EDITING_POLYGON'
+      ) {
+        e.originalEvent.target.editor.stopEditing();
+        this._action = 'EMPTY';
+      }
+    });
+
+    polygon.geometry?.events.add('change', (e: any) => {
+      if (!this._isAddingPolygons) {
+        this._changesStore.edit(polygon);
+      }
+    });
   };
 
   private _getPolygonId(polygon: any): string {
