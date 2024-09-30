@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MapsService } from '../../../../services/maps.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { MapsService } from '../../../../services/maps.service';
   imports: [NgIf],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
   constructor(private readonly _mapsService: MapsService) {}

@@ -1,8 +1,8 @@
 <article class="bg-black-1000 h-full w-full flex flex-col justify-between items-center text-white-1000 py-3">
-  <button (click)="handleSetActionState('DRAWING_POLYLINE')">+</button>
-  <button (click)="handleSetActionState('DRAWING_POLYGON')">-</button>
-  <button>*</button>
-  <button>/</button>
+  <button (click)="handleSetActionState('DRAWING_POLYLINE')">Линия</button>
+  <button (click)="handleSetActionState('DRAWING_POLYGON')">Зона</button>
+  <button (click)="handleSetActionState('EDITING_POLYGON')" [disabled]="!isSelectedSignal">Ред</button>
+  <button (click)="handleSetActionState('DELETE_POLYGON')" [disabled]="!isSelectedSignal">Удал</button>
   <button>=</button>
   <button>%</button>
 </article>

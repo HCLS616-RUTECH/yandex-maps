@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MapsService } from '../../services/maps.service';
 import { ActionsComponent } from './sub-components/actions/actions.component';
 import { ExtendsComponent } from './sub-components/extends/extends.component';
@@ -18,6 +18,7 @@ import { MapsComponent } from './sub-components/maps/maps.component';
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainPageComponent implements OnInit {
   constructor(private readonly _service: MapsService) {}

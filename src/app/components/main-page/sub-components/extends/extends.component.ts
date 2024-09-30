@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-extends',
   standalone: true,
   imports: [],
   templateUrl: './extends.component.html',
-  styleUrl: './extends.component.scss'
+  styleUrl: './extends.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ExtendsComponent {
-
-}
+export class ExtendsComponent {}

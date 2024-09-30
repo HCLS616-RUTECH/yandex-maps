@@ -6,6 +6,7 @@ import { IZone } from '../models/interfaces/zone.interface';
 import { TActionState } from '../models/types/action-state.type';
 import { TBbox } from '../models/types/bbox.type';
 import { ChangesStore } from '../stores/changes.store';
+import { SelectedStore } from '../stores/selected.store';
 import { MapsHttpService } from './maps.http.service';
 
 @Injectable({
@@ -26,7 +27,8 @@ export class MapsService {
 
   constructor(
     private readonly _http: MapsHttpService,
-    private readonly _changesStore: ChangesStore
+    private readonly _changesStore: ChangesStore,
+    private readonly _selectedStore: SelectedStore
   ) {}
 
   initMap(): void {
@@ -61,6 +63,10 @@ export class MapsService {
         this._drawingPolygon();
         break;
       case 'EDITING_POLYGON':
+        this._editPolygon();
+        break;
+      case 'DELETE_POLYGON':
+        this._deletePolygon();
         break;
     }
   }
@@ -107,42 +113,16 @@ export class MapsService {
 
       this._initPolygonActions(polygon);
 
-      // polygons.add(polygon);
       newPolygons.push(polygon);
       this._polygons.set(zone.id, polygon);
       this._map.geoObjects.add(polygon);
     }
-
-    // this._animateNewPolygons(newPolygons);
-    // this._map.geoObjects.add(polygons);
-  }
-
-  private _setSelectedState(polygon: Polygon): void {
-    const isSame =
-      (polygon.properties.get('id') as never as number) ===
-      (this._selected?.properties.get('id') as never as number);
-
-    if (this._selected && !isSame) {
-      this._selected.editor.stopEditing();
-      this._selected.options.set('strokeWidth', 1);
-    }
-
-    if (isSame) {
-      this._selected?.editor.stopEditing();
-      this._selected?.options.set('strokeWidth', 1);
-      this._selected = null;
-      this._action = 'EMPTY';
-    } else {
-      this._selected = polygon;
-      this._selected.editor.startEditing();
-      this._selected.options.set('strokeWidth', 3);
-      this._action = 'EDITING_POLYGON';
-    }
   }
 
   private _drawingPolygon(): void {
-    if (this._selected) {
-      this._setSelectedState(this._selected);
+    const selected = this._selectedStore.selected();
+    if (selected) {
+      this._selectedStore.setSelectedState(selected);
     }
 
     this._action = this._checkActionState('DRAWING_POLYGON');
@@ -186,7 +166,7 @@ export class MapsService {
 
     this._initPolygonActions(this._polygon);
 
-    this._setSelectedState(this._polygon);
+    this._selectedStore.setSelectedState(this._polygon);
 
     this._polygon.editor.stopDrawing();
 
@@ -194,8 +174,9 @@ export class MapsService {
   }
 
   private _drawingPolyline(): void {
-    if (this._selected) {
-      this._setSelectedState(this._selected);
+    const selected = this._selectedStore.selected();
+    if (selected) {
+      this._selectedStore.setSelectedState(selected);
     }
 
     this._action = this._checkActionState('DRAWING_POLYLINE');
@@ -262,7 +243,7 @@ export class MapsService {
 
       this._initPolygonActions(polygon);
 
-      this._setSelectedState(polygon);
+      this._selectedStore.setSelectedState(polygon);
 
       // this._map.events.add('mousemove', this._updateLastPoint);
       // this._placemark = new this.YANDEX_MAPS.Placemark([0, 0], {});
@@ -285,9 +266,33 @@ export class MapsService {
     // this._dash = null;
   }
 
+  private _editPolygon(): void {
+    const selected = this._selectedStore.selected();
+    if (!selected) {
+      return;
+    }
+
+    this._action = this._checkActionState('EDITING_POLYGON');
+
+    this._action === 'EDITING_POLYGON'
+      ? selected.editor.startEditing()
+      : selected.editor.stopEditing();
+  }
+
+  private _deletePolygon(): void {
+    const selected = this._selectedStore.selected();
+    if (!selected) {
+      return;
+    }
+
+    this._polygons.delete(selected.properties.get('id') as never as string);
+    this._changesStore.delete(selected);
+    this._map.geoObjects.remove(selected);
+  }
+
   private _initPolygonActions = (polygon: Polygon): void => {
     polygon.events.add('click', (e: any) =>
-      this._setSelectedState(e.originalEvent.target)
+      this._selectedStore.setSelectedState(e.originalEvent.target)
     );
     polygon.geometry?.events.add('change', (e: any) =>
       this._changesStore.edit(polygon)
@@ -313,18 +318,6 @@ export class MapsService {
 
     return state;
   }
-
-  private _transformZoneToPolygon = (zone: IZone): Polygon => {
-    return new this.YANDEX_MAPS.Polygon(
-      [zone.coordinates],
-      { id: zone.id, name: zone.name, new: false },
-      {
-        fillColor: zone.color,
-        strokeColor: '#0000FF',
-        strokeWidth: 1,
-      }
-    );
-  };
 
   // private _initPlaceMark(): void {
   //   this._placemark = new this.YANDEX_MAPS.Placemark(
