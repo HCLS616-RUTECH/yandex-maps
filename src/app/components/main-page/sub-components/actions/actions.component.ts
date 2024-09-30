@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TActionState } from '../../../../models/types/action-state.type';
 import { MapsService } from '../../../../services/maps.service';
 
 @Component({
@@ -11,11 +12,7 @@ import { MapsService } from '../../../../services/maps.service';
 export class ActionsComponent {
   constructor(private readonly _service: MapsService) {}
 
-  handleSetDrawingState(): void {
-    this._service.setDrawingState();
-  }
-
-  ppp() {
-    this._service.ppp();
+  handleSetActionState(state: TActionState): void {
+    this._service.setActionState(state);
   }
 }
