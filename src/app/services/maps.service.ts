@@ -69,6 +69,9 @@ export class MapsService {
       case 'DELETE_POLYGON':
         this._deletePolygon();
         break;
+      case 'DRAG_POLYGON':
+        this._dragPolygon();
+        break;
     }
   }
 
@@ -140,7 +143,7 @@ export class MapsService {
   }
 
   private _drawingPolygon(): void {
-    const selected = this._selectedStore.selected();
+    const selected = this._selectedStore.selected;
     if (selected) {
       this._selectedStore.setSelectedState(selected);
     }
@@ -196,7 +199,7 @@ export class MapsService {
   }
 
   private _drawingPolyline(): void {
-    const selected = this._selectedStore.selected();
+    const selected = this._selectedStore.selected;
     if (selected) {
       this._selectedStore.setSelectedState(selected);
     }
@@ -290,7 +293,7 @@ export class MapsService {
   }
 
   private _editPolygon(): void {
-    const selected = this._selectedStore.selected();
+    const selected = this._selectedStore.selected;
     if (!selected) {
       return;
     }
@@ -303,7 +306,7 @@ export class MapsService {
   }
 
   private _deletePolygon(): void {
-    const selected = this._selectedStore.selected();
+    const selected = this._selectedStore.selected;
     if (!selected) {
       return;
     }
@@ -313,13 +316,29 @@ export class MapsService {
     this._map.geoObjects.remove(selected);
   }
 
+  private _dragPolygon(): void {
+    const selected = this._selectedStore.selected;
+    if (!selected) {
+      return;
+    }
+
+    this._action = this._checkActionState('DRAG_POLYGON');
+
+    if (this._action === 'DRAG_POLYGON') {
+      // @ts-ignore
+      selected.options.set('draggable', true);
+      selected.options.set('fillColor', '#FF000088');
+    } else {
+      // @ts-ignore
+      selected.options.set('draggable', false);
+      selected.options.set('fillColor', '#00FF0088');
+    }
+  }
+
   private _initPolygonActions = (polygon: Polygon): void => {
     polygon.events.add('click', (e: any) => {
       this._selectedStore.setSelectedState(e.originalEvent.target);
-      if (
-        !this._selectedStore.selected() &&
-        this._action === 'EDITING_POLYGON'
-      ) {
+      if (!this._selectedStore.selected && this._action === 'EDITING_POLYGON') {
         e.originalEvent.target.editor.stopEditing();
         this._action = 'EMPTY';
       }

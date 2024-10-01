@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TActionState } from '../../../../models/types/action-state.type';
 import { MapsService } from '../../../../services/maps.service';
 import { SelectedStore } from '../../../../stores/selected.store';
@@ -17,7 +17,9 @@ export class ActionsComponent {
     private readonly _selected: SelectedStore
   ) {}
 
-  isSelectedSignal = computed(() => !!this._selected.selected());
+  get isSelected(): boolean {
+    return this._selected.isSelected;
+  }
 
   handleSetActionState(state: TActionState): void {
     this._service.setActionState(state);

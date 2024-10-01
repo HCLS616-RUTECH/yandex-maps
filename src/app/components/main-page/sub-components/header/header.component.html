@@ -2,7 +2,7 @@
   <a href="https://projects-angular.firebaseapp.com">Вернуться к проектам</a>
 
   <div class="flex items-center">
-    <button (click)="handleUpdate()">Обновить</button>
-    <button class="ml-2" *ngIf="isHaveChanges" (click)="handleSaveChanges()">СОХРАНИТЬ</button>
+    <button (click)="handleUpdate()">ОБНОВИТЬ</button>
+    <button class="ml-2" (click)="handleSaveChanges()" [disabled]="!isHaveChanges">СОХРАНИТЬ</button>
   </div>
 </header>
