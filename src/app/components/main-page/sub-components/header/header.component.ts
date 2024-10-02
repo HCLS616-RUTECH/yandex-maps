@@ -21,6 +21,10 @@ export class HeaderComponent {
     return this._changesStore.isHaveChanges();
   }
 
+  get actionTitle(): string {
+    return this._mapsService.actionTitle();
+  }
+
   handleSaveChanges(): void {
     this._mapsService.saveChanges();
   }

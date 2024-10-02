@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
-import { take } from 'rxjs';
+import { Injectable, signal } from '@angular/core';
+import { debounceTime, Subject, switchMap, take } from 'rxjs';
 import { Polygon } from 'yandex-maps';
 import { IPointActions } from '../models/interfaces/point-actions.interface';
 import { IZone } from '../models/interfaces/zone.interface';
+import { MActionsTypes } from '../models/maps/actions-types.map';
 import { TActionState } from '../models/types/action-state.type';
 import { TBbox } from '../models/types/bbox.type';
 import { ChangesStore } from '../stores/changes.store';
@@ -13,6 +14,8 @@ import { MapsHttpService } from './maps.http.service';
   providedIn: 'root',
 })
 export class MapsService {
+  actionTitle = signal<string>('');
+
   private _map: any;
 
   private _action: TActionState = 'EMPTY';
@@ -24,6 +27,10 @@ export class MapsService {
   private _isAddingPolygons = false;
 
   private readonly _polygons = new Map<string, any>();
+  private readonly _visiblePolygons = new Map<string, any>();
+
+  private readonly _request$ = new Subject<TBbox>();
+
   private readonly YANDEX_MAPS = (window as any).ymaps;
 
   constructor(
@@ -47,11 +54,20 @@ export class MapsService {
         size: 'small',
       });
 
+      this._request$
+        .pipe(
+          debounceTime(300),
+          switchMap((bbox) => this._http.getZones(bbox))
+        )
+        .subscribe({
+          next: (zones) => this._addNewPolygons(zones),
+        });
+
       this._map.events.add('boundschange', (e: any) =>
-        this._getZones(this._map.getBounds())
+        this._request$.next(this._map.getBounds())
       );
 
-      this._getZones(this._map.getBounds());
+      this._request$.next(this._map.getBounds());
     });
   }
 
@@ -78,11 +94,15 @@ export class MapsService {
   updateZones(): void {
     this._polygons.forEach((polygon) => this._map.geoObjects.remove(polygon));
     this._polygons.clear();
+    this._visiblePolygons.clear();
     this._changesStore.changes.new.forEach((polygon) =>
       this._map.geoObjects.remove(polygon)
     );
     this._changesStore.clearChanges();
-    this._getZones(this._map.getBounds());
+    this._action = 'EMPTY';
+    this.actionTitle.set(MActionsTypes[this._action]);
+    // this._getZones(this._map.getBounds());
+    this._request$.next(this._map.getBounds());
   }
 
   saveChanges(): void {
@@ -91,34 +111,36 @@ export class MapsService {
     this._http.saveChanges(body).pipe(take(1)).subscribe();
   }
 
-  private _getZones(bbox: TBbox): void {
-    this._http
-      .getZones(bbox)
-      .pipe(take(1))
-      .subscribe({
-        next: (zones) => this._addNewPolygons(zones),
-      });
-  }
-
   private _addNewPolygons(zones: IZone[]): void {
     const { deleted } = this._changesStore.changes;
 
-    const newPolygons: Polygon[] = [];
-
     this._isAddingPolygons = true;
+
+    const currentZones = new Set<string>();
+    const newPolygons: Polygon[] = [];
 
     for (let zone of zones) {
       if (deleted.has(zone.id)) {
         continue;
       }
 
+      currentZones.add(zone.id);
+
+      const visiblePolygon = this._visiblePolygons.get(zone.id);
+
+      if (visiblePolygon) {
+        // Чинит багу яндекс карт, при которой не до конца отрисовывается полигон, при движении экрана по картам
+        visiblePolygon.options.set(
+          'fillColor',
+          visiblePolygon.options.get('fillColor')
+        );
+        continue;
+      }
+
       if (this._polygons.has(zone.id)) {
-        // Чинит багу с яндекс карт, при которой не до конца отрисовывается полигон, при движении экрана по картам
-        this._polygons
-          .get(zone.id)
-          .geometry.setCoordinates(
-            this._polygons.get(zone.id).geometry.getCoordinates()
-          );
+        this._visiblePolygons.set(zone.id, this._polygons.get(zone.id));
+        this._map.geoObjects.add(this._polygons.get(zone.id));
+        newPolygons.push(this._polygons.get(zone.id));
         continue;
       }
 
@@ -129,6 +151,7 @@ export class MapsService {
           fillColor: zone.color,
           strokeColor: '#0000FF',
           strokeWidth: 1,
+          // opacity: 0.5,
         }
       );
 
@@ -136,8 +159,18 @@ export class MapsService {
 
       newPolygons.push(polygon);
       this._polygons.set(zone.id, polygon);
+      this._visiblePolygons.set(zone.id, this._polygons.get(zone.id));
       this._map.geoObjects.add(polygon);
     }
+
+    this._visiblePolygons.forEach((polygon, id) => {
+      if (!currentZones.has(id)) {
+        this._map.geoObjects.remove(polygon);
+        this._visiblePolygons.delete(id);
+      }
+    });
+
+    this._animatePolygons(newPolygons);
 
     this._isAddingPolygons = false;
   }
@@ -146,9 +179,14 @@ export class MapsService {
     const selected = this._selectedStore.selected;
     if (selected) {
       this._selectedStore.setSelectedState(selected);
+      // @ts-ignore
+      selected.options.set('draggable', false);
+      selected.options.set('fillColor', '#00FF0088');
+      selected.editor.stopEditing();
     }
 
     this._action = this._checkActionState('DRAWING_POLYGON');
+    this.actionTitle.set(MActionsTypes[this._action]);
 
     this._action === 'DRAWING_POLYGON'
       ? this._startDrawingPolygon()
@@ -168,6 +206,21 @@ export class MapsService {
 
     this._map.geoObjects.add(this._polygon);
     this._polygon.editor.startDrawing();
+
+    this._polygon.editor.events.add('vertexadd', (event: any) => {
+      const start = Date.now();
+      const { vertexIndex } = event.originalEvent;
+      const coordinates = this._polygon.geometry.getCoordinates()[0];
+      const newPoint = coordinates[vertexIndex];
+
+      this._polygons.forEach((polygon) => {
+        if (polygon.geometry.contains(newPoint)) {
+          // console.log(polygon);
+        }
+      });
+      const end = Date.now();
+      // console.log((end - start) / 1000);
+    });
   }
 
   private _endDrawingPolygon(): void {
@@ -195,6 +248,9 @@ export class MapsService {
 
     this.setActionState('EDITING_POLYGON');
 
+    this._polygons.set(id, this._polygon);
+    this._visiblePolygons.set(id, this._polygon);
+
     this._polygon = null;
   }
 
@@ -202,9 +258,14 @@ export class MapsService {
     const selected = this._selectedStore.selected;
     if (selected) {
       this._selectedStore.setSelectedState(selected);
+      // @ts-ignore
+      selected.options.set('draggable', false);
+      selected.options.set('fillColor', '#00FF0088');
+      selected.editor.stopEditing();
     }
 
     this._action = this._checkActionState('DRAWING_POLYLINE');
+    this.actionTitle.set(MActionsTypes[this._action]);
 
     this._action === 'DRAWING_POLYLINE'
       ? this._startDrawingPolyline()
@@ -229,6 +290,7 @@ export class MapsService {
               title: 'Замкнуть полигон',
               onClick: () => {
                 this._action = 'EMPTY';
+                this.actionTitle.set(MActionsTypes[this._action]);
                 this._endDrawingPolyline();
               },
             });
@@ -238,6 +300,21 @@ export class MapsService {
         },
       }
     );
+
+    this._polyline.editor.events.add('vertexadd', (event: any) => {
+      const start = Date.now();
+      const { vertexIndex } = event.originalEvent;
+      const coordinates = this._polyline.geometry.getCoordinates();
+      const newPoint = coordinates[vertexIndex];
+
+      this._polygons.forEach((polygon) => {
+        if (polygon.geometry.contains(newPoint)) {
+          console.log(polygon);
+        }
+      });
+      const end = Date.now();
+      console.log((end - start) / 1000);
+    });
 
     this._map.geoObjects.add(this._polyline);
     this._polyline.editor.startEditing();
@@ -271,6 +348,9 @@ export class MapsService {
       this._selectedStore.setSelectedState(polygon);
       this.setActionState('EDITING_POLYGON');
 
+      this._polygons.set(id, polygon);
+      this._visiblePolygons.set(id, polygon);
+
       // this._map.events.add('mousemove', this._updateLastPoint);
       // this._placemark = new this.YANDEX_MAPS.Placemark([0, 0], {});
       // this._map.geoObjects.add(this._placemark);
@@ -299,6 +379,11 @@ export class MapsService {
     }
 
     this._action = this._checkActionState('EDITING_POLYGON');
+    this.actionTitle.set(MActionsTypes[this._action]);
+
+    // @ts-ignore
+    selected.options.set('draggable', false);
+    selected.options.set('fillColor', '#00FF0088');
 
     this._action === 'EDITING_POLYGON'
       ? selected.editor.startEditing()
@@ -323,6 +408,9 @@ export class MapsService {
     }
 
     this._action = this._checkActionState('DRAG_POLYGON');
+    this.actionTitle.set(MActionsTypes[this._action]);
+
+    selected.editor.stopEditing();
 
     if (this._action === 'DRAG_POLYGON') {
       // @ts-ignore
@@ -341,6 +429,7 @@ export class MapsService {
       if (!this._selectedStore.selected && this._action === 'EDITING_POLYGON') {
         e.originalEvent.target.editor.stopEditing();
         this._action = 'EMPTY';
+        this.actionTitle.set(MActionsTypes[this._action]);
       }
     });
 
@@ -370,6 +459,62 @@ export class MapsService {
 
     return state;
   }
+
+  private _animatePolygons(polygons: Polygon[]): void {
+    const startTime = performance.now();
+    const duration = 400;
+    const maxOpacity = 88;
+
+    function updateOpacity(timeStamp: number): void {
+      const elapsedTime = timeStamp - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+
+      const count = Math.floor(progress * maxOpacity);
+
+      for (const polygon of polygons) {
+        // @ts-ignore
+        const color = polygon.options.get('fillColor').slice(0, 6);
+
+        let opacity: string | number = 0;
+
+        switch (true) {
+          case count <= 0:
+            opacity = `00`;
+            break;
+          case count >= 88:
+            opacity = 88;
+            break;
+          case Math.trunc(count) < 10:
+            opacity = `0${Math.trunc(count)}`;
+            break;
+          default:
+            opacity = Math.trunc(count);
+        }
+
+        polygon.options.set('fillColor', `${color}${opacity}`);
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(updateOpacity);
+      }
+    }
+
+    requestAnimationFrame(updateOpacity);
+  }
+
+  private _isBBoxIntersect = (zoneBbox: TBbox, screenBbox: TBbox) => {
+    const [zoneBboxSouthWest, zoneBboxNorthEast] = zoneBbox;
+    const [screenBboxSouthWest, screenBboxNorthEast] = screenBbox;
+
+    const isLatOverlap =
+      zoneBboxSouthWest[0] <= screenBboxNorthEast[0] &&
+      zoneBboxNorthEast[0] >= screenBboxSouthWest[0];
+    const isLngOverlap =
+      zoneBboxSouthWest[1] <= screenBboxNorthEast[1] &&
+      zoneBboxNorthEast[1] >= screenBboxSouthWest[1];
+
+    return isLatOverlap && isLngOverlap;
+  };
 
   // private _initPlaceMark(): void {
   //   this._placemark = new this.YANDEX_MAPS.Placemark(

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { debounceTime, Observable, of } from 'rxjs';
 import { IChangeZonesRequest } from '../models/interfaces/change-zones-request.interface';
 import { IZone } from '../models/interfaces/zone.interface';
+import { zones } from '../models/mocks/zones';
 import { TBbox } from '../models/types/bbox.type';
 
 @Injectable({
@@ -41,10 +42,15 @@ export class MapsHttpService {
   }
 
   private _emitHttpGetZones(bbox: TBbox): IZone[] {
-    const zones: IZone[] = JSON.parse(localStorage.getItem('zones') ?? '[]');
-
+    // @ts-ignore
     return zones.filter((zone) => this._isBBoxIntersect(zone.bbox, bbox));
   }
+
+  // private _emitHttpGetZones(bbox: TBbox): IZone[] {
+  //   const zones: IZone[] = JSON.parse(localStorage.getItem('zones') ?? '[]');
+  //
+  //   return zones.filter((zone) => this._isBBoxIntersect(zone.bbox, bbox));
+  // }
 
   private _isBBoxIntersect = (zoneBbox: TBbox, screenBbox: TBbox) => {
     const [zoneBboxSouthWest, zoneBboxNorthEast] = zoneBbox;
