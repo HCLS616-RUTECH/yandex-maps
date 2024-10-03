@@ -2,7 +2,8 @@
   <a href="https://projects-angular.firebaseapp.com">Вернуться к проектам</a>
 
   <div class="flex items-center">
-    <div>{{ actionTitle }}</div>
+    <div *ngIf="vertexCount" class="ml-2">Количество вершин: {{ vertexCount }}</div>
+    <div class="ml-2">{{ actionTitle }}</div>
     <button (click)="handleUpdate()" class="ml-2">ОБНОВИТЬ</button>
     <button (click)="handleSaveChanges()" [disabled]="!isHaveChanges" class="ml-2">СОХРАНИТЬ</button>
   </div>

@@ -6,8 +6,10 @@ import { IZone } from '../models/interfaces/zone.interface';
 import { MActionsTypes } from '../models/maps/actions-types.map';
 import { TActionState } from '../models/types/action-state.type';
 import { TBbox } from '../models/types/bbox.type';
+import { TPoint } from '../models/types/point.type';
 import { ChangesStore } from '../stores/changes.store';
 import { SelectedStore } from '../stores/selected.store';
+import { ComputingService } from './computing.service';
 import { MapsHttpService } from './maps.http.service';
 
 @Injectable({
@@ -15,6 +17,7 @@ import { MapsHttpService } from './maps.http.service';
 })
 export class MapsService {
   actionTitle = signal<string>('');
+  vertexCount = signal<number>(0);
 
   private _map: any;
 
@@ -35,6 +38,7 @@ export class MapsService {
 
   constructor(
     private readonly _http: MapsHttpService,
+    private readonly _computing: ComputingService,
     private readonly _changesStore: ChangesStore,
     private readonly _selectedStore: SelectedStore
   ) {}
@@ -44,8 +48,10 @@ export class MapsService {
       this._map = new this.YANDEX_MAPS.Map(
         'map',
         {
-          center: [55.76, 37.64],
-          zoom: 10,
+          // center: [55.76, 37.64],
+          center: [49.8765293803552, 38.09430233469668],
+          zoom: 8,
+          // zoom: 10,
         },
         { minZoom: 4, maxZoom: 14 }
       );
@@ -66,6 +72,10 @@ export class MapsService {
       this._map.events.add('boundschange', (e: any) =>
         this._request$.next(this._map.getBounds())
       );
+
+      // this._map.events.add('click', (event: any) =>
+      //   console.log(event.get('coords'))
+      // );
 
       this._request$.next(this._map.getBounds());
     });
@@ -146,7 +156,7 @@ export class MapsService {
 
       const polygon = new this.YANDEX_MAPS.Polygon(
         zone.coordinates,
-        { id: zone.id, name: zone.name, new: false },
+        { id: zone.id, name: zone.name, bbox: zone.bbox, new: false },
         {
           fillColor: zone.color,
           strokeColor: '#0000FF',
@@ -194,6 +204,10 @@ export class MapsService {
   }
 
   private _startDrawingPolygon(): void {
+    if (this._polyline) {
+      this._clearPolyLine();
+    }
+
     this._polygon = new this.YANDEX_MAPS.Polygon(
       [],
       {},
@@ -207,29 +221,14 @@ export class MapsService {
     this._map.geoObjects.add(this._polygon);
     this._polygon.editor.startDrawing();
 
-    this._polygon.editor.events.add('vertexadd', (event: any) => {
-      const start = Date.now();
-      const { vertexIndex } = event.originalEvent;
-      const coordinates = this._polygon.geometry.getCoordinates()[0];
-      const newPoint = coordinates[vertexIndex];
-
-      this._polygons.forEach((polygon) => {
-        if (polygon.geometry.contains(newPoint)) {
-          // console.log(polygon);
-        }
-      });
-      const end = Date.now();
-      // console.log((end - start) / 1000);
-    });
+    this._polygon.editor.events.add('vertexadd', this._checkNewVertex);
   }
 
   private _endDrawingPolygon(): void {
     const coordinates = this._polygon.geometry.getCoordinates()[0];
 
     if (coordinates.length < 4) {
-      this._polygon.editor.stopDrawing();
-      this._map.geoObjects.remove(this._polygon);
-      this._polygon = null;
+      this._clearPolygon();
       return;
     }
 
@@ -245,12 +244,20 @@ export class MapsService {
     this._selectedStore.setSelectedState(this._polygon);
 
     this._polygon.editor.stopDrawing();
+    this._polygon.events.remove('vertexadd', this._checkNewVertex);
 
     this.setActionState('EDITING_POLYGON');
 
     this._polygons.set(id, this._polygon);
     this._visiblePolygons.set(id, this._polygon);
 
+    this._polygon = null;
+  }
+
+  private _clearPolygon(): void {
+    this._polygon.editor.stopDrawing();
+    this._polygon.events.remove('vertexadd', this._checkNewVertex);
+    this._map.geoObjects.remove(this._polygon);
     this._polygon = null;
   }
 
@@ -262,6 +269,10 @@ export class MapsService {
       selected.options.set('draggable', false);
       selected.options.set('fillColor', '#00FF0088');
       selected.editor.stopEditing();
+    }
+
+    if (this._polygon) {
+      this._clearPolygon();
     }
 
     this._action = this._checkActionState('DRAWING_POLYLINE');
@@ -301,20 +312,7 @@ export class MapsService {
       }
     );
 
-    this._polyline.editor.events.add('vertexadd', (event: any) => {
-      const start = Date.now();
-      const { vertexIndex } = event.originalEvent;
-      const coordinates = this._polyline.geometry.getCoordinates();
-      const newPoint = coordinates[vertexIndex];
-
-      this._polygons.forEach((polygon) => {
-        if (polygon.geometry.contains(newPoint)) {
-          console.log(polygon);
-        }
-      });
-      const end = Date.now();
-      console.log((end - start) / 1000);
-    });
+    this._polyline.editor.events.add('vertexadd', this._checkNewVertex);
 
     this._map.geoObjects.add(this._polyline);
     this._polyline.editor.startEditing();
@@ -331,9 +329,9 @@ export class MapsService {
         [coordinates],
         {},
         {
-          fillColor: '#00FF0088', // Цвет заливки
-          strokeColor: '#0000FF', // Цвет обводки
-          strokeWidth: 3, // Ширина обводки
+          fillColor: '#00FF0088',
+          strokeColor: '#0000FF',
+          strokeWidth: 3,
         }
       );
 
@@ -350,26 +348,17 @@ export class MapsService {
 
       this._polygons.set(id, polygon);
       this._visiblePolygons.set(id, polygon);
-
-      // this._map.events.add('mousemove', this._updateLastPoint);
-      // this._placemark = new this.YANDEX_MAPS.Placemark([0, 0], {});
-      // this._map.geoObjects.add(this._placemark);
-      // this._map.events.add('mousemove', this._ppp);
     }
 
-    // this._map.events.remove('click', this._onPointClick);
-    // this._map.events.remove('mousemove', this._movePlaceMark);
-    // this._placemark.events.remove('click', this._onPointClick);
-    // this._map.events.remove('mousemove', this._moveDash);
+    this._clearPolyLine();
+  }
+
+  private _clearPolyLine(): void {
     this._polyline.editor.stopEditing();
     this._polyline.editor.stopDrawing();
+    this._polyline.events.remove('vertexadd', this._checkNewVertex);
     this._map.geoObjects.remove(this._polyline);
-    // this._map.geoObjects.remove(this._placemark);
-    // this._map.geoObjects.remove(this._dash);
-
     this._polyline = null;
-    // this._placemark = null;
-    // this._dash = null;
   }
 
   private _editPolygon(): void {
@@ -388,6 +377,10 @@ export class MapsService {
     this._action === 'EDITING_POLYGON'
       ? selected.editor.startEditing()
       : selected.editor.stopEditing();
+
+    this._action === 'EDITING_POLYGON'
+      ? this.vertexCount.set(selected.geometry?.getCoordinates()[0].length ?? 0)
+      : this.vertexCount.set(0);
   }
 
   private _deletePolygon(): void {
@@ -502,18 +495,148 @@ export class MapsService {
     requestAnimationFrame(updateOpacity);
   }
 
-  private _isBBoxIntersect = (zoneBbox: TBbox, screenBbox: TBbox) => {
-    const [zoneBboxSouthWest, zoneBboxNorthEast] = zoneBbox;
-    const [screenBboxSouthWest, screenBboxNorthEast] = screenBbox;
+  private _checkNewVertex = (event: any): void => {
+    const { vertexIndex } = event.originalEvent;
+    let coordinates = [];
 
-    const isLatOverlap =
-      zoneBboxSouthWest[0] <= screenBboxNorthEast[0] &&
-      zoneBboxNorthEast[0] >= screenBboxSouthWest[0];
-    const isLngOverlap =
-      zoneBboxSouthWest[1] <= screenBboxNorthEast[1] &&
-      zoneBboxNorthEast[1] >= screenBboxSouthWest[1];
+    switch (this._action) {
+      case 'DRAWING_POLYLINE':
+        coordinates = this._polyline.geometry.getCoordinates();
+        break;
+      case 'DRAWING_POLYGON':
+        coordinates = this._polygon.geometry.getCoordinates()[0];
+        break;
+    }
 
-    return isLatOverlap && isLngOverlap;
+    this.vertexCount.set(coordinates.length);
+
+    const checkResult = this._checkCoordinates(vertexIndex, coordinates);
+
+    if (checkResult.changes) {
+      switch (this._action) {
+        case 'DRAWING_POLYLINE':
+          this._polyline.geometry.setCoordinates(checkResult.coordinates);
+          break;
+        case 'DRAWING_POLYGON':
+          this._polygon.geometry.setCoordinates([checkResult.coordinates]);
+          break;
+      }
+    }
+  };
+
+  private _checkCoordinates = (
+    vertexIndex: number,
+    coordinates: TPoint[]
+  ): { changes: boolean; coordinates: TPoint[] } => {
+    const result = { changes: false, coordinates };
+
+    const newPoint = coordinates[vertexIndex];
+
+    const polygons = Array.from(this._polygons.values());
+
+    for (let i = 0; i < polygons.length; i++) {
+      const bbox = polygons[i].properties.get('bbox') as never as TBbox;
+
+      if (!this._computing.isPointInBBox(newPoint, bbox)) {
+        continue;
+      }
+
+      const isPointInPolygon = this._computing.isPointInPolygon(
+        newPoint,
+        polygons[i].geometry.getCoordinates()[0]
+      );
+
+      if (isPointInPolygon) {
+        const closestPoint = this._computing.getClosestPoint(
+          newPoint,
+          polygons[i].geometry.getCoordinates()[0]
+        );
+
+        result.changes = true;
+
+        switch (this._action) {
+          case 'DRAWING_POLYLINE':
+            result.coordinates = this._changeCoordinatesForPolyline(
+              vertexIndex,
+              coordinates,
+              closestPoint
+            );
+            break;
+          case 'DRAWING_POLYGON':
+            result.coordinates = this._changeCoordinatesForPolygon(
+              vertexIndex,
+              coordinates,
+              closestPoint
+            );
+            break;
+        }
+
+        i = polygons.length;
+      }
+    }
+
+    return result;
+  };
+
+  private _changeCoordinatesForPolyline = (
+    vertexIndex: number,
+    coordinates: TPoint[],
+    closestPoint: TPoint
+  ): TPoint[] => {
+    let newCoordinates = coordinates.slice();
+
+    newCoordinates[vertexIndex] = closestPoint;
+
+    if (newCoordinates.length > 1) {
+      const isSamePoint = !!vertexIndex
+        ? this._computing.isSamePoints(
+            coordinates[vertexIndex - 1],
+            closestPoint
+          )
+        : this._computing.isSamePoints(
+            coordinates[vertexIndex + 1],
+            closestPoint
+          );
+
+      if (isSamePoint) {
+        newCoordinates = !!vertexIndex
+          ? newCoordinates.slice(0, coordinates.length - 1)
+          : newCoordinates.slice(1, coordinates.length);
+
+        this.vertexCount.set(coordinates.length);
+      }
+    }
+
+    return newCoordinates;
+  };
+
+  private _changeCoordinatesForPolygon = (
+    vertexIndex: number,
+    coordinates: TPoint[],
+    closestPoint: TPoint
+  ): TPoint[] => {
+    if (!vertexIndex) {
+      return [closestPoint, closestPoint];
+    }
+
+    let newCoordinates = coordinates.slice();
+
+    newCoordinates[vertexIndex] = closestPoint;
+
+    const isSamePoint = this._computing.isSamePoints(
+      coordinates[vertexIndex],
+      coordinates[vertexIndex - 1]
+    );
+
+    if (isSamePoint) {
+      newCoordinates = newCoordinates
+        .slice(0, vertexIndex)
+        .concat(newCoordinates.slice(vertexIndex, newCoordinates.length));
+
+      this.vertexCount.set(coordinates.length);
+    }
+
+    return newCoordinates;
   };
 
   // private _initPlaceMark(): void {

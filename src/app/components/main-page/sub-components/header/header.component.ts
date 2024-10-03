@@ -25,6 +25,10 @@ export class HeaderComponent {
     return this._mapsService.actionTitle();
   }
 
+  get vertexCount(): number {
+    return this._mapsService.vertexCount();
+  }
+
   handleSaveChanges(): void {
     this._mapsService.saveChanges();
   }
