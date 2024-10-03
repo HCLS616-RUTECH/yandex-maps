@@ -9,7 +9,7 @@ export class SelectedStore {
 
   constructor() {}
 
-  get selected(): Polygon | null {
+  get selected(): any | null {
     return this._selected();
   }
 

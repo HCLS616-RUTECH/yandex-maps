@@ -6,6 +6,7 @@ import { IZone } from '../models/interfaces/zone.interface';
 import { MActionsTypes } from '../models/maps/actions-types.map';
 import { TActionState } from '../models/types/action-state.type';
 import { TBbox } from '../models/types/bbox.type';
+import { TFigureEvent } from '../models/types/figure-event.type';
 import { TPoint } from '../models/types/point.type';
 import { ChangesStore } from '../stores/changes.store';
 import { SelectedStore } from '../stores/selected.store';
@@ -22,6 +23,7 @@ export class MapsService {
   private _map: any;
 
   private _action: TActionState = 'EMPTY';
+  private _lastFigureEvent: TFigureEvent = 'empty';
   private _polyline: any | null = null;
   private _polygon: any | null = null;
   // private _dash: any | null = null;
@@ -31,6 +33,7 @@ export class MapsService {
 
   private readonly _polygons = new Map<string, any>();
   private readonly _visiblePolygons = new Map<string, any>();
+  private _zones = new Map<string, IZone>();
 
   private readonly _request$ = new Subject<TBbox>();
 
@@ -123,10 +126,10 @@ export class MapsService {
 
   private _addNewPolygons(zones: IZone[]): void {
     const { deleted } = this._changesStore.changes;
+    this._zones.clear();
 
     this._isAddingPolygons = true;
 
-    const currentZones = new Set<string>();
     const newPolygons: Polygon[] = [];
 
     for (let zone of zones) {
@@ -134,7 +137,7 @@ export class MapsService {
         continue;
       }
 
-      currentZones.add(zone.id);
+      this._zones.set(zone.id, zone);
 
       const visiblePolygon = this._visiblePolygons.get(zone.id);
 
@@ -174,7 +177,7 @@ export class MapsService {
     }
 
     this._visiblePolygons.forEach((polygon, id) => {
-      if (!currentZones.has(id)) {
+      if (!this._zones.has(id)) {
         this._map.geoObjects.remove(polygon);
         this._visiblePolygons.delete(id);
       }
@@ -221,7 +224,7 @@ export class MapsService {
     this._map.geoObjects.add(this._polygon);
     this._polygon.editor.startDrawing();
 
-    this._polygon.editor.events.add('vertexadd', this._checkNewVertex);
+    this._polygon.editor.events.add('vertexadd', this._newVertexHandler);
   }
 
   private _endDrawingPolygon(): void {
@@ -244,7 +247,6 @@ export class MapsService {
     this._selectedStore.setSelectedState(this._polygon);
 
     this._polygon.editor.stopDrawing();
-    this._polygon.events.remove('vertexadd', this._checkNewVertex);
 
     this.setActionState('EDITING_POLYGON');
 
@@ -256,7 +258,7 @@ export class MapsService {
 
   private _clearPolygon(): void {
     this._polygon.editor.stopDrawing();
-    this._polygon.events.remove('vertexadd', this._checkNewVertex);
+    this._polygon.events.remove('vertexadd', this._newVertexHandler);
     this._map.geoObjects.remove(this._polygon);
     this._polygon = null;
   }
@@ -312,7 +314,7 @@ export class MapsService {
       }
     );
 
-    this._polyline.editor.events.add('vertexadd', this._checkNewVertex);
+    this._polyline.editor.events.add('vertexadd', this._newVertexHandler);
 
     this._map.geoObjects.add(this._polyline);
     this._polyline.editor.startEditing();
@@ -356,7 +358,7 @@ export class MapsService {
   private _clearPolyLine(): void {
     this._polyline.editor.stopEditing();
     this._polyline.editor.stopDrawing();
-    this._polyline.events.remove('vertexadd', this._checkNewVertex);
+    this._polyline.events.remove('vertexadd', this._newVertexHandler);
     this._map.geoObjects.remove(this._polyline);
     this._polyline = null;
   }
@@ -431,6 +433,10 @@ export class MapsService {
         this._changesStore.edit(polygon);
       }
     });
+
+    polygon.editor.events.add('vertexadd', this._newVertexHandler);
+
+    polygon.events.add('geometrychange', this._geometryChangeHandler);
   };
 
   private _getPolygonId(polygon: any): string {
@@ -495,8 +501,45 @@ export class MapsService {
     requestAnimationFrame(updateOpacity);
   }
 
-  private _checkNewVertex = (event: any): void => {
+  private _geometryChangeHandler = (event: any): void => {
+    const isLastEventVertexAdd = this._lastFigureEvent === 'vertexadd';
+    this._lastFigureEvent = 'geometrychange';
+
+    if (isLastEventVertexAdd) {
+      return;
+    }
+
+    const { oldCoordinates, newCoordinates } =
+      event.originalEvent.originalEvent.originalEvent;
+
+    if (oldCoordinates[0].length !== newCoordinates[0].length) {
+      return;
+    }
+
+    for (let i = 0; i < newCoordinates[0].length; i++) {
+      const isSame = this._computing.isSamePoints(
+        oldCoordinates[0][i],
+        newCoordinates[0][i]
+      );
+
+      if (isSame) {
+        continue;
+      }
+
+      this._checkPoint(i);
+
+      i = newCoordinates[0].length;
+    }
+  };
+
+  private _newVertexHandler = (event: any): void => {
+    this._lastFigureEvent = 'vertexadd';
     const { vertexIndex } = event.originalEvent;
+
+    this._checkPoint(vertexIndex);
+  };
+
+  private _checkPoint = (vertexIndex: number): void => {
     let coordinates = [];
 
     switch (this._action) {
@@ -505,6 +548,9 @@ export class MapsService {
         break;
       case 'DRAWING_POLYGON':
         coordinates = this._polygon.geometry.getCoordinates()[0];
+        break;
+      case 'EDITING_POLYGON':
+        coordinates = this._selectedStore.selected.geometry.getCoordinates()[0];
         break;
     }
 
@@ -519,6 +565,11 @@ export class MapsService {
           break;
         case 'DRAWING_POLYGON':
           this._polygon.geometry.setCoordinates([checkResult.coordinates]);
+          break;
+        case 'EDITING_POLYGON':
+          this._selectedStore.selected.geometry.setCoordinates([
+            checkResult.coordinates,
+          ]);
           break;
       }
     }
@@ -563,6 +614,7 @@ export class MapsService {
             );
             break;
           case 'DRAWING_POLYGON':
+          case 'EDITING_POLYGON':
             result.coordinates = this._changeCoordinatesForPolygon(
               vertexIndex,
               coordinates,

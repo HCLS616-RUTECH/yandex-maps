@@ -11,6 +11,10 @@ export class ComputingService {
   };
 
   isPointInBBox = (point: TPoint, bbox: TBbox): boolean => {
+    if (!point || !bbox) {
+      return false;
+    }
+
     const [southWest, northEast] = bbox;
     const [southWestLongitude, southWestLatitude] = southWest;
     const [northEastLongitude, northEastLatitude] = northEast;
