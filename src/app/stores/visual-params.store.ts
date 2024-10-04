@@ -11,6 +11,12 @@ export class VisualParamsStore {
       // zoom: 10,
       center: [49.8765293803552, 38.09430233469668],
       zoom: 8,
+      controls: [
+        'zoomControl',
+        'geolocationControl',
+        'searchControl',
+        'rulerControl',
+      ],
       minZoom: 4,
       maxZoom: 14,
     },

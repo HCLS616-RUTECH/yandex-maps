@@ -50,11 +50,12 @@ export class MapsService {
 
   initMap(): void {
     this.YANDEX_MAPS.ready(() => {
-      const { center, zoom, maxZoom, minZoom } = this._visualParams.map;
+      const { center, zoom, controls, maxZoom, minZoom } =
+        this._visualParams.map;
 
       this._map = new this.YANDEX_MAPS.Map(
         'map',
-        { center, zoom },
+        { center, zoom, controls },
         { minZoom, maxZoom }
       );
 
@@ -80,6 +81,8 @@ export class MapsService {
       // );
 
       this._request$.next(this._map.getBounds());
+
+      document.querySelector('.ymaps-2-1-79-map-copyrights-promo')?.remove();
     });
   }
 
@@ -114,6 +117,7 @@ export class MapsService {
     this._clearPreviousActionsState();
     this._action.state = 'EMPTY';
     this._request$.next(this._map.getBounds());
+    this.vertexCount.set(0);
   }
 
   saveChanges(): void {
