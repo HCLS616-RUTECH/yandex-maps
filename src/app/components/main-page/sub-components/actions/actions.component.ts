@@ -18,7 +18,7 @@ export class ActionsComponent {
   ) {}
 
   get isSelected(): boolean {
-    return this._selected.isSelected;
+    return !!this._selected.state;
   }
 
   handleSetActionState(state: TActionState): void {

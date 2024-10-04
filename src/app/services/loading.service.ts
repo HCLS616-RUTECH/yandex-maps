@@ -4,19 +4,19 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class LoadingService {
-  private readonly _loading = signal<boolean>(false);
+  private readonly _state = signal<boolean>(false);
 
   private readonly _percents = signal<number>(0);
 
-  get loading(): boolean {
-    return this._loading();
+  get state(): boolean {
+    return this._state();
   }
 
-  setState(state: boolean): void {
-    this._loading.set(state);
+  set state(state: boolean) {
+    this._state.set(state);
   }
 
   toggle(): void {
-    this._loading.set(!this._loading());
+    this._state.set(!this._state());
   }
 }

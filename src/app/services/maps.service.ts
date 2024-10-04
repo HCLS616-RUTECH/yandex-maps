@@ -3,13 +3,14 @@ import { debounceTime, Subject, switchMap, take } from 'rxjs';
 import { Polygon } from 'yandex-maps';
 import { IPointActions } from '../models/interfaces/point-actions.interface';
 import { IZone } from '../models/interfaces/zone.interface';
-import { MActionsTypes } from '../models/maps/actions-types.map';
 import { TActionState } from '../models/types/action-state.type';
 import { TBbox } from '../models/types/bbox.type';
 import { TFigureEvent } from '../models/types/figure-event.type';
 import { TPoint } from '../models/types/point.type';
+import { ActionStore } from '../stores/action.store';
 import { ChangesStore } from '../stores/changes.store';
 import { SelectedStore } from '../stores/selected.store';
+import { VisualParamsStore } from '../stores/visual-params.store';
 import { ComputingService } from './computing.service';
 import { MapsHttpService } from './maps.http.service';
 
@@ -17,12 +18,11 @@ import { MapsHttpService } from './maps.http.service';
   providedIn: 'root',
 })
 export class MapsService {
-  actionTitle = signal<string>('');
   vertexCount = signal<number>(0);
 
   private _map: any;
 
-  private _action: TActionState = 'EMPTY';
+  // private _action: TActionState = 'EMPTY';
   private _lastFigureEvent: TFigureEvent = 'empty';
   private _polyline: any | null = null;
   private _polygon: any | null = null;
@@ -33,7 +33,7 @@ export class MapsService {
 
   private readonly _polygons = new Map<string, any>();
   private readonly _visiblePolygons = new Map<string, any>();
-  private _zones = new Map<string, IZone>();
+  private readonly _zones = new Map<string, IZone>();
 
   private readonly _request$ = new Subject<TBbox>();
 
@@ -42,21 +42,20 @@ export class MapsService {
   constructor(
     private readonly _http: MapsHttpService,
     private readonly _computing: ComputingService,
-    private readonly _changesStore: ChangesStore,
-    private readonly _selectedStore: SelectedStore
+    private readonly _changes: ChangesStore,
+    private readonly _action: ActionStore,
+    private readonly _selected: SelectedStore,
+    private readonly _visualParams: VisualParamsStore
   ) {}
 
   initMap(): void {
     this.YANDEX_MAPS.ready(() => {
+      const { center, zoom, maxZoom, minZoom } = this._visualParams.map;
+
       this._map = new this.YANDEX_MAPS.Map(
         'map',
-        {
-          // center: [55.76, 37.64],
-          center: [49.8765293803552, 38.09430233469668],
-          zoom: 8,
-          // zoom: 10,
-        },
-        { minZoom: 4, maxZoom: 14 }
+        { center, zoom },
+        { minZoom, maxZoom }
       );
 
       this._map.controls.add('zoomControl', {
@@ -108,24 +107,23 @@ export class MapsService {
     this._polygons.forEach((polygon) => this._map.geoObjects.remove(polygon));
     this._polygons.clear();
     this._visiblePolygons.clear();
-    this._changesStore.changes.new.forEach((polygon) =>
+    this._changes.state.new.forEach((polygon) =>
       this._map.geoObjects.remove(polygon)
     );
-    this._changesStore.clearChanges();
-    this._action = 'EMPTY';
-    this.actionTitle.set(MActionsTypes[this._action]);
-    // this._getZones(this._map.getBounds());
+    this._changes.clear();
+    this._clearPreviousActionsState();
+    this._action.state = 'EMPTY';
     this._request$.next(this._map.getBounds());
   }
 
   saveChanges(): void {
-    const body = this._changesStore.requestBody;
+    const body = this._changes.requestBody;
 
     this._http.saveChanges(body).pipe(take(1)).subscribe();
   }
 
   private _addNewPolygons(zones: IZone[]): void {
-    const { deleted } = this._changesStore.changes;
+    const { deleted } = this._changes.state;
     this._zones.clear();
 
     this._isAddingPolygons = true;
@@ -161,10 +159,8 @@ export class MapsService {
         zone.coordinates,
         { id: zone.id, name: zone.name, bbox: zone.bbox, new: false },
         {
+          ...this._visualParams.stroke,
           fillColor: zone.color,
-          strokeColor: '#0000FF',
-          strokeWidth: 1,
-          // opacity: 0.5,
         }
       );
 
@@ -183,25 +179,17 @@ export class MapsService {
       }
     });
 
-    this._animatePolygons(newPolygons);
+    this._visualParams.animatePolygons(newPolygons);
 
     this._isAddingPolygons = false;
   }
 
   private _drawingPolygon(): void {
-    const selected = this._selectedStore.selected;
-    if (selected) {
-      this._selectedStore.setSelectedState(selected);
-      // @ts-ignore
-      selected.options.set('draggable', false);
-      selected.options.set('fillColor', '#00FF0088');
-      selected.editor.stopEditing();
-    }
+    this._clearPreviousActionsState();
 
-    this._action = this._checkActionState('DRAWING_POLYGON');
-    this.actionTitle.set(MActionsTypes[this._action]);
+    this._action.state = 'DRAWING_POLYGON';
 
-    this._action === 'DRAWING_POLYGON'
+    this._action.state === 'DRAWING_POLYGON'
       ? this._startDrawingPolygon()
       : this._endDrawingPolygon();
   }
@@ -215,9 +203,8 @@ export class MapsService {
       [],
       {},
       {
-        fillColor: '#FFFF0088', // Цвет заливки
-        strokeColor: '#0000FF', // Цвет обводки
-        strokeWidth: 3, // Ширина обводки
+        ...this._visualParams.strokeSelected,
+        fillColor: this._visualParams.newColor,
       }
     );
 
@@ -235,16 +222,16 @@ export class MapsService {
       return;
     }
 
-    this._polygon.options.set('fillColor', '#00FF0088');
+    this._polygon.options.set('fillColor', this._visualParams.baseColor);
 
     const id = this._getPolygonId(this._polygon);
     this._polygon.properties.set({ id, name: `Новая зона ${id}`, new: true });
 
-    this._changesStore.create(this._polygon);
+    this._changes.create(this._polygon);
 
     this._initPolygonActions(this._polygon);
 
-    this._selectedStore.setSelectedState(this._polygon);
+    this._selected.state = this._polygon;
 
     this._polygon.editor.stopDrawing();
 
@@ -264,23 +251,15 @@ export class MapsService {
   }
 
   private _drawingPolyline(): void {
-    const selected = this._selectedStore.selected;
-    if (selected) {
-      this._selectedStore.setSelectedState(selected);
-      // @ts-ignore
-      selected.options.set('draggable', false);
-      selected.options.set('fillColor', '#00FF0088');
-      selected.editor.stopEditing();
-    }
+    this._clearPreviousActionsState();
 
     if (this._polygon) {
       this._clearPolygon();
     }
 
-    this._action = this._checkActionState('DRAWING_POLYLINE');
-    this.actionTitle.set(MActionsTypes[this._action]);
+    this._action.state = 'DRAWING_POLYLINE';
 
-    this._action === 'DRAWING_POLYLINE'
+    this._action.state === 'DRAWING_POLYLINE'
       ? this._startDrawingPolyline()
       : this._endDrawingPolyline();
   }
@@ -290,8 +269,7 @@ export class MapsService {
       [],
       {},
       {
-        strokeColor: '#0000FF', // Цвет линии
-        strokeWidth: 3, // Толщина линии
+        ...this._visualParams.strokeSelected,
         editorMenuManager: (actions: IPointActions[]) => {
           const isPolyLineStartOrEnd = !!actions.find(
             (action) => action.title === 'Продолжить'
@@ -302,8 +280,7 @@ export class MapsService {
             actions.push({
               title: 'Замкнуть полигон',
               onClick: () => {
-                this._action = 'EMPTY';
-                this.actionTitle.set(MActionsTypes[this._action]);
+                this._action.state = 'EMPTY';
                 this._endDrawingPolyline();
               },
             });
@@ -331,21 +308,20 @@ export class MapsService {
         [coordinates],
         {},
         {
-          fillColor: '#00FF0088',
-          strokeColor: '#0000FF',
-          strokeWidth: 3,
+          ...this._visualParams.strokeSelected,
+          fillColor: this._visualParams.baseColor,
         }
       );
 
       const id = this._getPolygonId(polygon);
       polygon.properties.set({ id, name: `Новая зона ${id}`, new: true });
 
-      this._changesStore.create(polygon);
+      this._changes.create(polygon);
       this._map.geoObjects.add(polygon);
 
       this._initPolygonActions(polygon);
 
-      this._selectedStore.setSelectedState(polygon);
+      this._selected.state = polygon;
       this.setActionState('EDITING_POLYGON');
 
       this._polygons.set(id, polygon);
@@ -364,73 +340,89 @@ export class MapsService {
   }
 
   private _editPolygon(): void {
-    const selected = this._selectedStore.selected;
+    const selected = this._selected.state;
     if (!selected) {
       return;
     }
 
-    this._action = this._checkActionState('EDITING_POLYGON');
-    this.actionTitle.set(MActionsTypes[this._action]);
+    this._action.state = 'EDITING_POLYGON';
 
-    // @ts-ignore
-    selected.options.set('draggable', false);
-    selected.options.set('fillColor', '#00FF0088');
+    const draggable = selected.properties.get('draggable') as never as boolean;
+    if (draggable) {
+      selected.options.set('fillColor', this._visualParams.colorCache);
+    }
 
-    this._action === 'EDITING_POLYGON'
+    this._action.state === 'EDITING_POLYGON'
       ? selected.editor.startEditing()
       : selected.editor.stopEditing();
 
-    this._action === 'EDITING_POLYGON'
+    this._action.state === 'EDITING_POLYGON'
       ? this.vertexCount.set(selected.geometry?.getCoordinates()[0].length ?? 0)
       : this.vertexCount.set(0);
   }
 
   private _deletePolygon(): void {
-    const selected = this._selectedStore.selected;
+    const selected = this._selected.state;
     if (!selected) {
       return;
     }
 
     this._polygons.delete(selected.properties.get('id') as never as string);
-    this._changesStore.delete(selected);
+    this._changes.delete(selected);
     this._map.geoObjects.remove(selected);
   }
 
   private _dragPolygon(): void {
-    const selected = this._selectedStore.selected;
+    const selected = this._selected.state;
     if (!selected) {
       return;
     }
 
-    this._action = this._checkActionState('DRAG_POLYGON');
-    this.actionTitle.set(MActionsTypes[this._action]);
+    this._action.state = 'DRAG_POLYGON';
 
     selected.editor.stopEditing();
 
-    if (this._action === 'DRAG_POLYGON') {
+    if (this._action.state === 'DRAG_POLYGON') {
       // @ts-ignore
       selected.options.set('draggable', true);
-      selected.options.set('fillColor', '#FF000088');
+      this._visualParams.colorCache = selected.options.get('fillColor');
+      selected.options.set('fillColor', this._visualParams.dragColor);
     } else {
+      // const id = selected.properties.get('id') as never as string;
+      //
+      // let color = '#00FF0088';
+      //
+      // const { changes } = this._changes;
+      //
+      // if (changes.new.has(id)) {
+      //   color = changes.new.get(id).options.get('fillColor');
+      // }
+      //
+      // if (changes.edited.has(id)) {
+      //   color = changes.edited.get(id).options.get('fillColor');
+      // }
+
+      // const color = isNew ? this._changes.changes.new.get(id).options.get('fillColor') :
       // @ts-ignore
       selected.options.set('draggable', false);
-      selected.options.set('fillColor', '#00FF0088');
+      selected.options.set('fillColor', this._visualParams.colorCache);
     }
+
+    this._visualParams.animatePolygons([selected]);
   }
 
   private _initPolygonActions = (polygon: Polygon): void => {
     polygon.events.add('click', (e: any) => {
-      this._selectedStore.setSelectedState(e.originalEvent.target);
-      if (!this._selectedStore.selected && this._action === 'EDITING_POLYGON') {
+      this._selected.state = e.originalEvent.target;
+      if (!this._selected.state && this._action.state === 'EDITING_POLYGON') {
         e.originalEvent.target.editor.stopEditing();
-        this._action = 'EMPTY';
-        this.actionTitle.set(MActionsTypes[this._action]);
+        this._action.state = 'EMPTY';
       }
     });
 
     polygon.geometry?.events.add('change', (e: any) => {
       if (!this._isAddingPolygons) {
-        this._changesStore.edit(polygon);
+        this._changes.edit(polygon);
       }
     });
 
@@ -449,56 +441,6 @@ export class MapsService {
       }
     }
     return id;
-  }
-
-  private _checkActionState(state: TActionState): TActionState {
-    if (state === this._action) {
-      return 'EMPTY';
-    }
-
-    return state;
-  }
-
-  private _animatePolygons(polygons: Polygon[]): void {
-    const startTime = performance.now();
-    const duration = 400;
-    const maxOpacity = 88;
-
-    function updateOpacity(timeStamp: number): void {
-      const elapsedTime = timeStamp - startTime;
-      const progress = Math.min(elapsedTime / duration, 1);
-
-      const count = Math.floor(progress * maxOpacity);
-
-      for (const polygon of polygons) {
-        // @ts-ignore
-        const color = polygon.options.get('fillColor').slice(0, 6);
-
-        let opacity: string | number = 0;
-
-        switch (true) {
-          case count <= 0:
-            opacity = `00`;
-            break;
-          case count >= 88:
-            opacity = 88;
-            break;
-          case Math.trunc(count) < 10:
-            opacity = `0${Math.trunc(count)}`;
-            break;
-          default:
-            opacity = Math.trunc(count);
-        }
-
-        polygon.options.set('fillColor', `${color}${opacity}`);
-      }
-
-      if (progress < 1) {
-        requestAnimationFrame(updateOpacity);
-      }
-    }
-
-    requestAnimationFrame(updateOpacity);
   }
 
   private _geometryChangeHandler = (event: any): void => {
@@ -542,7 +484,7 @@ export class MapsService {
   private _checkPoint = (vertexIndex: number): void => {
     let coordinates = [];
 
-    switch (this._action) {
+    switch (this._action.state) {
       case 'DRAWING_POLYLINE':
         coordinates = this._polyline.geometry.getCoordinates();
         break;
@@ -550,7 +492,7 @@ export class MapsService {
         coordinates = this._polygon.geometry.getCoordinates()[0];
         break;
       case 'EDITING_POLYGON':
-        coordinates = this._selectedStore.selected.geometry.getCoordinates()[0];
+        coordinates = this._selected.state.geometry.getCoordinates()[0];
         break;
     }
 
@@ -559,7 +501,7 @@ export class MapsService {
     const checkResult = this._checkCoordinates(vertexIndex, coordinates);
 
     if (checkResult.changes) {
-      switch (this._action) {
+      switch (this._action.state) {
         case 'DRAWING_POLYLINE':
           this._polyline.geometry.setCoordinates(checkResult.coordinates);
           break;
@@ -567,7 +509,7 @@ export class MapsService {
           this._polygon.geometry.setCoordinates([checkResult.coordinates]);
           break;
         case 'EDITING_POLYGON':
-          this._selectedStore.selected.geometry.setCoordinates([
+          this._selected.state.geometry.setCoordinates([
             checkResult.coordinates,
           ]);
           break;
@@ -605,7 +547,7 @@ export class MapsService {
 
         result.changes = true;
 
-        switch (this._action) {
+        switch (this._action.state) {
           case 'DRAWING_POLYLINE':
             result.coordinates = this._changeCoordinatesForPolyline(
               vertexIndex,
@@ -690,6 +632,18 @@ export class MapsService {
 
     return newCoordinates;
   };
+
+  private _clearPreviousActionsState(): void {
+    const selected = this._selected.state;
+
+    if (selected) {
+      this._selected.state = selected;
+      // @ts-ignore
+      selected.options.set('draggable', false);
+      selected.options.set('fillColor', this._visualParams.colorCache);
+      selected.editor.stopEditing();
+    }
+  }
 
   // private _initPlaceMark(): void {
   //   this._placemark = new this.YANDEX_MAPS.Placemark(

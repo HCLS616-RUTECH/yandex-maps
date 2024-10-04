@@ -5,20 +5,14 @@ import { Polygon } from 'yandex-maps';
   providedIn: 'root',
 })
 export class SelectedStore {
-  private readonly _selected = signal<Polygon | null>(null);
+  private readonly _state = signal<any | null>(null);
 
-  constructor() {}
-
-  get selected(): any | null {
-    return this._selected();
+  get state(): any | null {
+    return this._state();
   }
 
-  get isSelected(): boolean {
-    return !!this._selected();
-  }
-
-  setSelectedState(polygon: Polygon): void {
-    const selected = this._selected();
+  set state(polygon: Polygon) {
+    const selected = this._state();
 
     const isSame =
       (polygon.properties.get('id') as never as string) ===
@@ -31,10 +25,10 @@ export class SelectedStore {
 
     if (isSame) {
       selected?.options.set('strokeWidth', 1);
-      this._selected.set(null);
+      this._state.set(null);
     } else {
       polygon.options.set('strokeWidth', 3);
-      this._selected.set(polygon);
+      this._state.set(polygon);
     }
   }
 }

@@ -1,7 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { Polygon } from 'yandex-maps';
 import { IChangeZonesRequest } from '../models/interfaces/change-zones-request.interface';
-import { MapsHttpService } from '../services/maps.http.service';
 
 @Injectable({
   providedIn: 'root',
@@ -9,13 +8,11 @@ import { MapsHttpService } from '../services/maps.http.service';
 export class ChangesStore {
   isHaveChanges = signal<boolean>(false);
 
-  private _new = new Map<string, any>();
-  private _edited = new Map<string, any>();
-  private _deleted = new Set<string>();
+  private readonly _new = new Map<string, any>();
+  private readonly _edited = new Map<string, any>();
+  private readonly _deleted = new Set<string>();
 
-  constructor(private readonly _http: MapsHttpService) {}
-
-  get changes(): {
+  get state(): {
     new: Map<string, any>;
     edited: Map<string, any>;
     deleted: Set<string>;
@@ -86,7 +83,7 @@ export class ChangesStore {
     this._setSignal();
   }
 
-  clearChanges(): void {
+  clear(): void {
     this._new.clear();
     this._edited.clear();
     this._deleted.clear();
