@@ -123,7 +123,7 @@ export class MapsService {
   }
 
   private _addNewPolygons(zones: IZone[]): void {
-    const { deleted } = this._changes.state;
+    const changes = this._changes.state;
     this._zones.clear();
 
     this._isAddingPolygons = true;
@@ -131,7 +131,7 @@ export class MapsService {
     const newPolygons: Polygon[] = [];
 
     for (let zone of zones) {
-      if (deleted.has(zone.id)) {
+      if (changes.deleted.has(zone.id)) {
         continue;
       }
 
@@ -173,9 +173,27 @@ export class MapsService {
     }
 
     this._visiblePolygons.forEach((polygon, id) => {
-      if (!this._zones.has(id)) {
+      if (!this._zones.has(id) && !changes.new.has(id)) {
         this._map.geoObjects.remove(polygon);
         this._visiblePolygons.delete(id);
+      }
+    });
+
+    changes.new.forEach((polygon, id) => {
+      const isBboxesIntersected = this._computing.isBBoxesIntersected(
+        changes.new.get(id).properties.get('bbox') as never as TBbox,
+        this._map.getBounds()
+      );
+
+      if (!isBboxesIntersected && this._visiblePolygons.has(id)) {
+        this._map.geoObjects.remove(polygon);
+        this._visiblePolygons.delete(id);
+      }
+
+      if (isBboxesIntersected && !this._visiblePolygons.has(id)) {
+        this._visiblePolygons.set(id, this._polygons.get(id));
+        this._map.geoObjects.add(polygon);
+        newPolygons.push(polygon);
       }
     });
 
@@ -225,7 +243,12 @@ export class MapsService {
     this._polygon.options.set('fillColor', this._visualParams.baseColor);
 
     const id = this._getPolygonId(this._polygon);
-    this._polygon.properties.set({ id, name: `Новая зона ${id}`, new: true });
+    this._polygon.properties.set({
+      id,
+      name: `Новая зона ${id}`,
+      bbox: this._polygon.geometry.getBounds(),
+      new: true,
+    });
 
     this._changes.create(this._polygon);
 
@@ -313,11 +336,17 @@ export class MapsService {
         }
       );
 
+      this._map.geoObjects.add(polygon);
+
       const id = this._getPolygonId(polygon);
-      polygon.properties.set({ id, name: `Новая зона ${id}`, new: true });
+      polygon.properties.set({
+        id,
+        name: `Новая зона ${id}`,
+        bbox: polygon.geometry.getBounds(),
+        new: true,
+      });
 
       this._changes.create(polygon);
-      this._map.geoObjects.add(polygon);
 
       this._initPolygonActions(polygon);
 
@@ -446,6 +475,10 @@ export class MapsService {
   private _geometryChangeHandler = (event: any): void => {
     const isLastEventVertexAdd = this._lastFigureEvent === 'vertexadd';
     this._lastFigureEvent = 'geometrychange';
+
+    this._selected.state?.properties.set({
+      bbox: this._selected.state?.geometry.getBounds(),
+    });
 
     if (isLastEventVertexAdd) {
       return;

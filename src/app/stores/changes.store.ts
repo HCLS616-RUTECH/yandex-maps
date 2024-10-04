@@ -1,6 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 import { Polygon } from 'yandex-maps';
 import { IChangeZonesRequest } from '../models/interfaces/change-zones-request.interface';
+import { TBbox } from '../models/types/bbox.type';
 
 @Injectable({
   providedIn: 'root',
@@ -31,7 +32,9 @@ export class ChangesStore {
       body.new.push({
         color: polygon.options.get('fillColor'),
         coordinates: polygon.geometry.getCoordinates(),
-        bbox: polygon.geometry.getBounds(),
+        bbox:
+          polygon.geometry?.getBounds() ??
+          (polygon.properties.get('bbox') as never as TBbox),
         id: polygon.properties.get('id') as never as string,
         name: polygon.properties.get('name') as never as string,
       })
@@ -41,7 +44,9 @@ export class ChangesStore {
       body.edited.push({
         color: polygon.options.get('fillColor'),
         coordinates: polygon.geometry.getCoordinates(),
-        bbox: polygon.geometry.getBounds(),
+        bbox:
+          polygon.geometry?.getBounds() ??
+          (polygon.properties.get('bbox') as never as TBbox),
         id: polygon.properties.get('id') as never as string,
         name: polygon.properties.get('name') as never as string,
       })
