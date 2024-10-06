@@ -477,16 +477,9 @@ export class MapsService {
   }
 
   private _geometryChangeHandler = (event: any): void => {
-    const isLastEventVertexAdd = this._lastFigureEvent === 'vertexadd';
-    this._lastFigureEvent = 'geometrychange';
-
     this._selected.state?.properties.set({
       bbox: this._selected.state?.geometry.getBounds(),
     });
-
-    if (isLastEventVertexAdd) {
-      return;
-    }
 
     const { oldCoordinates, newCoordinates } =
       event.originalEvent.originalEvent.originalEvent;
@@ -549,6 +542,10 @@ export class MapsService {
           this._selected.state.geometry.setCoordinates([
             checkResult.coordinates,
           ]);
+
+          // Чинит багу, с точкой, которая отрывается от вершины при логике с одинаковыми вершинами
+          this._selected.state.editor.stopEditing();
+          this._selected.state.editor.startEditing();
           break;
       }
     }
@@ -661,7 +658,7 @@ export class MapsService {
 
     if (isSamePoint) {
       newCoordinates = newCoordinates
-        .slice(0, vertexIndex)
+        .slice(0, vertexIndex - 1)
         .concat(newCoordinates.slice(vertexIndex, newCoordinates.length));
 
       this.vertexCount.set(coordinates.length);
