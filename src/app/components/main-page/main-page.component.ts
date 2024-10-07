@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { MapsService } from '../../services/maps.service';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActionsComponent } from './sub-components/actions/actions.component';
 import { ExtendsComponent } from './sub-components/extends/extends.component';
 import { FooterComponent } from './sub-components/footer/footer.component';
@@ -20,10 +19,4 @@ import { MapsComponent } from './sub-components/maps/maps.component';
   styleUrl: './main-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainPageComponent implements OnInit {
-  constructor(private readonly _service: MapsService) {}
-
-  ngOnInit(): void {
-    this._service.initMap();
-  }
-}
+export class MainPageComponent {}

@@ -1,0 +1,83 @@
+import { Observable, Subject } from 'rxjs';
+import { TPoint } from '../../models/types/point.type';
+import { MapParamsExtension } from './map.params.extension';
+
+export class PolygonExtension {
+  private _polygon: any | null = null;
+
+  private readonly _emitter$ = new Subject<any>();
+
+  constructor(
+    private readonly _map: any,
+    private readonly YANDEX_MAPS: any,
+    private readonly _mapParams: MapParamsExtension
+  ) {}
+
+  get state(): any | null {
+    return this._polygon;
+  }
+
+  get emitter$(): Observable<any> {
+    return this._emitter$.asObservable();
+  }
+
+  get coordinates(): TPoint[] {
+    return this._polygon?.geometry.getCoordinates()[0] ?? [];
+  }
+
+  set coordinates(coordinates: TPoint[]) {
+    this._polygon?.geometry.setCoordinates([coordinates]);
+  }
+
+  startDrawing(
+    newVertexHandler: (event: any) => void,
+    geometryChangeHandler: (event: any) => void
+  ): void {
+    this._polygon = new this.YANDEX_MAPS.Polygon(
+      [],
+      {},
+      {
+        ...this._mapParams.strokeSelected,
+        fillColor: this._mapParams.newColor,
+      }
+    );
+
+    this._map.geoObjects.add(this._polygon);
+    this._polygon.editor.startDrawing();
+
+    this._polygon.editor.events.add('vertexadd', newVertexHandler);
+    this._polygon.editor.events.add('geometrychange', geometryChangeHandler);
+  }
+
+  stopDrawing(newVertexHandler: (event: any) => void): void {
+    const coordinates = this._polygon.geometry.getCoordinates()[0];
+
+    if (coordinates.length < 4) {
+      this.clear(newVertexHandler);
+      return;
+    }
+
+    this._polygon.options.set('fillColor', this._mapParams.baseColor);
+
+    const id = this._mapParams.createPolygonId(this._polygon);
+    this._polygon.properties.set({
+      id,
+      name: `Новая зона ${id}`,
+      bbox: this._polygon.geometry.getBounds(),
+      new: true,
+    });
+
+    this._emitter$.next(this._polygon);
+
+    this._polygon.editor.stopDrawing();
+
+    this._polygon = null;
+  }
+
+  clear(newVertexHandler: (event: any) => void): void {
+    this._polygon.editor.stopDrawing();
+    this._polygon.events.remove('vertexadd', newVertexHandler);
+    this._map.geoObjects.remove(this._polygon);
+    this._polygon = null;
+  }
+}

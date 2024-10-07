@@ -1,5 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { Polygon } from 'yandex-maps';
+import { TPoint } from '../models/types/point.type';
 
 @Injectable({
   providedIn: 'root',
@@ -30,5 +31,17 @@ export class SelectedStore {
       polygon.options.set('strokeWidth', 3);
       this._state.set(polygon);
     }
+  }
+
+  get coordinates(): TPoint[] {
+    return this._state()?.geometry?.getCoordinates()[0] ?? [];
+  }
+
+  set coordinates(coordinates: TPoint[]) {
+    this._state()?.geometry?.setCoordinates([coordinates]);
+
+    // Чинит багу, с точкой, которая отрывается от вершины при логике с одинаковыми вершинами
+    this._state()?.editor.stopEditing();
+    this._state()?.editor.startEditing();
   }
 }

@@ -1,10 +1,6 @@
-import { Injectable } from '@angular/core';
 import { Polygon } from 'yandex-maps';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class VisualParamsStore {
+export class MapParamsExtension {
   private readonly BASE_PARAMS = {
     map: {
       // center: [55.76, 37.64],
@@ -70,6 +66,18 @@ export class VisualParamsStore {
 
   set colorCache(cache: string) {
     this.BASE_PARAMS.colors.cache = cache;
+  }
+
+  createPolygonId(polygon: any): string {
+    let id = '0';
+    const keys = Object.keys(polygon);
+    for (let i = 0; i < keys.length; i++) {
+      if (keys[i].includes('id')) {
+        id = (keys[i].match(/\d/g)?.join('') ?? '0') + polygon[keys[i]];
+        i = keys.length;
+      }
+    }
+    return id;
   }
 
   animatePolygons(polygons: Polygon[]): void {
