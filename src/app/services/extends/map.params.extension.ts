@@ -1,5 +1,9 @@
+import { Injectable } from '@angular/core';
 import { Polygon } from 'yandex-maps';
 
+@Injectable({
+  providedIn: 'root',
+})
 export class MapParamsExtension {
   private readonly BASE_PARAMS = {
     map: {
@@ -17,7 +21,7 @@ export class MapParamsExtension {
       maxZoom: 14,
     },
     colors: {
-      opacity: '88',
+      opacity: 60,
       base: '00FF00',
       new: 'FFFF00',
       drag: 'FF0000',
@@ -80,10 +84,25 @@ export class MapParamsExtension {
     return id;
   }
 
+  startDrag = (polygon: any): void => {
+    polygon.options.set('draggable', true);
+    this.colorCache = polygon.options.get('fillColor');
+    polygon.options.set('fillColor', this.dragColor);
+
+    this.animatePolygons([polygon]);
+  };
+
+  stopDrag = (polygon: any): void => {
+    polygon.options.set('draggable', false);
+    polygon.options.set('fillColor', this.colorCache);
+
+    this.animatePolygons([polygon]);
+  };
+
   animatePolygons(polygons: Polygon[]): void {
     const startTime = performance.now();
     const duration = 400;
-    const maxOpacity = 88;
+    const maxOpacity = this.BASE_PARAMS.colors.opacity;
 
     function updateOpacity(timeStamp: number): void {
       const elapsedTime = timeStamp - startTime;
@@ -95,14 +114,14 @@ export class MapParamsExtension {
         // @ts-ignore
         const color = polygon.options.get('fillColor').slice(0, 6);
 
-        let opacity: string | number = 0;
+        let opacity: string | number = '00';
 
         switch (true) {
           case count <= 0:
-            opacity = `00`;
+            opacity = '00';
             break;
-          case count >= 88:
-            opacity = 88;
+          case count >= maxOpacity:
+            opacity = maxOpacity;
             break;
           case Math.trunc(count) < 10:
             opacity = `0${Math.trunc(count)}`;

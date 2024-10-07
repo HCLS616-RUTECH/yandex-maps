@@ -1,12 +1,19 @@
 import { Injectable, signal } from '@angular/core';
 import { Polygon } from 'yandex-maps';
 import { TPoint } from '../models/types/point.type';
+import { MapParamsExtension } from '../services/extends/map.params.extension';
+import { ActionStore } from './action.store';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SelectedStore {
   private readonly _state = signal<any | null>(null);
+
+  constructor(
+    private readonly _params: MapParamsExtension,
+    private readonly _action: ActionStore
+  ) {}
 
   get state(): any | null {
     return this._state();
@@ -19,17 +26,33 @@ export class SelectedStore {
       (polygon.properties.get('id') as never as string) ===
       (selected?.properties.get('id') as never as string);
 
-    if (selected && !isSame) {
-      selected.editor.stopEditing();
-      selected.options.set('strokeWidth', 1);
+    switch (this._action.state) {
+      case 'EDITING_POLYGON':
+        selected?.editor.stopEditing();
+        break;
+      case 'DRAG_POLYGON':
+        this._params.stopDrag(selected);
+        break;
     }
 
+    selected?.options.set('strokeWidth', 1);
+
     if (isSame) {
-      selected?.options.set('strokeWidth', 1);
+      this._action.state = 'EMPTY';
       this._state.set(null);
-    } else {
-      polygon.options.set('strokeWidth', 3);
-      this._state.set(polygon);
+      return;
+    }
+
+    polygon.options.set('strokeWidth', 3);
+    this._state.set(polygon);
+
+    switch (this._action.state) {
+      case 'EDITING_POLYGON':
+        polygon.editor.startEditing();
+        break;
+      case 'DRAG_POLYGON':
+        this._params.startDrag(polygon);
+        break;
     }
   }
 
@@ -41,7 +64,9 @@ export class SelectedStore {
     this._state()?.geometry?.setCoordinates([coordinates]);
 
     // Чинит багу с точкой, которая отрывается от вершины при логике с одинаковыми вершинами
-    this._state()?.editor.stopEditing();
-    this._state()?.editor.startEditing();
+    if (this._action.state === 'EDITING_POLYGON') {
+      this._state()?.editor.stopEditing();
+      this._state()?.editor.startEditing();
+    }
   }
 }

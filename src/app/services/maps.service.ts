@@ -26,7 +26,6 @@ export class MapsService {
 
   private _isAddingPolygons = false;
 
-  private readonly _mapParams = new MapParamsExtension();
   private readonly _polygons = new Map<string, any>();
   private readonly _visiblePolygons = new Map<string, any>();
   private readonly _zones = new Map<string, IZone>();
@@ -40,10 +39,11 @@ export class MapsService {
     private readonly _computing: ComputingService,
     private readonly _changes: ChangesStore,
     private readonly _action: ActionStore,
-    private readonly _selected: SelectedStore
+    private readonly _selected: SelectedStore,
+    private readonly _params: MapParamsExtension
   ) {
     this.YANDEX_MAPS.ready(() => {
-      const { center, zoom, controls, maxZoom, minZoom } = this._mapParams.map;
+      const { center, zoom, controls, maxZoom, minZoom } = this._params.map;
 
       this._map = new this.YANDEX_MAPS.Map(
         'map',
@@ -54,13 +54,13 @@ export class MapsService {
       this._polyline = new PolylineExtension(
         this._map,
         this.YANDEX_MAPS,
-        this._mapParams
+        this._params
       );
 
       this._polygon = new PolygonExtension(
         this._map,
         this.YANDEX_MAPS,
-        this._mapParams
+        this._params
       );
 
       this._request$
@@ -163,7 +163,7 @@ export class MapsService {
         zone.coordinates,
         { id: zone.id, name: zone.name, bbox: zone.bbox, new: false },
         {
-          ...this._mapParams.stroke,
+          ...this._params.stroke,
           fillColor: zone.color,
         }
       );
@@ -201,7 +201,7 @@ export class MapsService {
       }
     });
 
-    this._mapParams.animatePolygons(newPolygons);
+    this._params.animatePolygons(newPolygons);
 
     this._isAddingPolygons = false;
   }
@@ -276,12 +276,11 @@ export class MapsService {
       return;
     }
 
-    this._action.state = 'EDITING_POLYGON';
-
-    const draggable = selected.properties.get('draggable') as never as boolean;
-    if (draggable) {
-      selected.options.set('fillColor', this._mapParams.colorCache);
+    if (this._action.state === 'DRAG_POLYGON') {
+      this._params.stopDrag(selected);
     }
+
+    this._action.state = 'EDITING_POLYGON';
 
     this._action.state === 'EDITING_POLYGON'
       ? selected.editor.startEditing()
@@ -309,37 +308,15 @@ export class MapsService {
       return;
     }
 
-    this._action.state = 'DRAG_POLYGON';
-
-    selected.editor.stopEditing();
-
-    if (this._action.state === 'DRAG_POLYGON') {
-      // @ts-ignore
-      selected.options.set('draggable', true);
-      this._mapParams.colorCache = selected.options.get('fillColor');
-      selected.options.set('fillColor', this._mapParams.dragColor);
-    } else {
-      // const id = selected.properties.get('id') as never as string;
-      //
-      // let color = '#00FF0088';
-      //
-      // const { changes } = this._changes;
-      //
-      // if (changes.new.has(id)) {
-      //   color = changes.new.get(id).options.get('fillColor');
-      // }
-      //
-      // if (changes.edited.has(id)) {
-      //   color = changes.edited.get(id).options.get('fillColor');
-      // }
-
-      // const color = isNew ? this._changes.changes.new.get(id).options.get('fillColor') :
-      // @ts-ignore
-      selected.options.set('draggable', false);
-      selected.options.set('fillColor', this._mapParams.colorCache);
+    if (this._action.state === 'EDITING_POLYGON') {
+      selected.editor.stopEditing();
     }
 
-    this._mapParams.animatePolygons([selected]);
+    this._action.state = 'DRAG_POLYGON';
+
+    this._action.state === 'DRAG_POLYGON'
+      ? this._params.startDrag(selected)
+      : this._params.stopDrag(selected);
   }
 
   private _initPolygonActions = (polygon: Polygon): void => {
@@ -360,6 +337,8 @@ export class MapsService {
     polygon.editor.events.add('vertexadd', this._newVertexHandler);
 
     polygon.events.add('geometrychange', this._geometryChangeHandler);
+
+    polygon.events.add('dragend', this._dragendHandler);
   };
 
   private _changeHandler = (event: any): void => {
@@ -386,6 +365,43 @@ export class MapsService {
     this._comparePoints(oldCoordinates[0], newCoordinates[0]);
   };
 
+  private _newVertexHandler = (event: any): void => {
+    const { vertexIndex } = event.originalEvent;
+    this._checkPoint(vertexIndex);
+  };
+
+  private _dragendHandler = (event: any): void => {
+    const coordinates = this._selected.coordinates;
+    const result: { [key: string]: TPoint[] } = {};
+
+    for (let i = 0; i < coordinates.length; i++) {
+      const current = this._checkCoordinates(i, coordinates);
+
+      if (current.changes) {
+        result[i] = current.coordinates;
+      }
+    }
+
+    const indexes = Object.keys(result);
+
+    if (indexes.length) {
+      let newCoordinates = coordinates;
+
+      indexes.forEach(
+        // @ts-ignore
+        (index) => (newCoordinates[index] = result[index][index])
+      );
+
+      const hash = new Set<string>(
+        newCoordinates.map((point) => JSON.stringify(point))
+      );
+
+      newCoordinates = Array.from(hash).map((point) => JSON.parse(point));
+
+      this._selected.coordinates = [...newCoordinates, newCoordinates[0]];
+    }
+  };
+
   private _comparePoints = (
     oldCoordinates: TPoint[],
     newCoordinates: TPoint[]
@@ -408,11 +424,6 @@ export class MapsService {
 
       i = newCoordinates.length;
     }
-  };
-
-  private _newVertexHandler = (event: any): void => {
-    const { vertexIndex } = event.originalEvent;
-    this._checkPoint(vertexIndex);
   };
 
   private _checkPoint = (vertexIndex: number): void => {
@@ -460,6 +471,14 @@ export class MapsService {
     const polygons = Array.from(this._polygons.values());
 
     for (let i = 0; i < polygons.length; i++) {
+      if (
+        this._action.state === 'DRAG_POLYGON' &&
+        polygons[i].properties.get('id') ===
+          this._selected.state.properties.get('id')
+      ) {
+        continue;
+      }
+
       const bbox = polygons[i].properties.get('bbox') as never as TBbox;
 
       if (!this._computing.isPointInBBox(newPoint, bbox)) {
@@ -489,6 +508,7 @@ export class MapsService {
             break;
           case 'DRAWING_POLYGON':
           case 'EDITING_POLYGON':
+          case 'DRAG_POLYGON':
             result.coordinates = this._changeCoordinatesForPolygon(
               vertexIndex,
               coordinates,
@@ -590,7 +610,7 @@ export class MapsService {
       this._selected.state = selected;
       // @ts-ignore
       selected.options.set('draggable', false);
-      selected.options.set('fillColor', this._mapParams.colorCache);
+      selected.options.set('fillColor', this._params.colorCache);
       selected.editor.stopEditing();
     }
   }
