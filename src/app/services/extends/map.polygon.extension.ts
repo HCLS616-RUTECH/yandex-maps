@@ -31,7 +31,7 @@ export class PolygonExtension {
 
   startDrawing(
     newVertexHandler: (event: any) => void,
-    geometryChangeHandler: (event: any) => void
+    changeHandler: (event: any) => void
   ): void {
     this._polygon = new this.YANDEX_MAPS.Polygon(
       [],
@@ -46,14 +46,17 @@ export class PolygonExtension {
     this._polygon.editor.startDrawing();
 
     this._polygon.editor.events.add('vertexadd', newVertexHandler);
-    this._polygon.editor.events.add('geometrychange', geometryChangeHandler);
+    this._polygon.geometry.events.add('change', changeHandler);
   }
 
-  stopDrawing(newVertexHandler: (event: any) => void): void {
+  stopDrawing(
+    newVertexHandler: (event: any) => void,
+    changeHandler: (event: any) => void
+  ): void {
     const coordinates = this._polygon.geometry.getCoordinates()[0];
 
     if (coordinates.length < 4) {
-      this.clear(newVertexHandler);
+      this.clear(newVertexHandler, changeHandler);
       return;
     }
 
@@ -74,9 +77,13 @@ export class PolygonExtension {
     this._polygon = null;
   }
 
-  clear(newVertexHandler: (event: any) => void): void {
+  clear(
+    newVertexHandler: (event: any) => void,
+    changeHandler: (event: any) => void
+  ): void {
     this._polygon.editor.stopDrawing();
     this._polygon.events.remove('vertexadd', newVertexHandler);
+    this._polygon.geometry.events.remove('change', changeHandler);
     this._map.geoObjects.remove(this._polygon);
     this._polygon = null;
   }

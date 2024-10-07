@@ -217,17 +217,14 @@ export class MapsService {
 
     switch (this._action.state) {
       case 'DRAWING_POLYGON':
-        this._polygon.startDrawing(
-          this._newVertexHandler,
-          this._geometryChangeHandler
-        );
+        this._polygon.startDrawing(this._newVertexHandler, this._changeHandler);
 
         this._polygon.emitter$.pipe(take(1)).subscribe({
           next: (polygon: any) => this._initNewPolygon(polygon),
         });
         break;
       default:
-        this._polygon.stopDrawing(this._newVertexHandler);
+        this._polygon.stopDrawing(this._newVertexHandler, this._changeHandler);
     }
   }
 
@@ -242,14 +239,18 @@ export class MapsService {
 
     switch (this._action.state) {
       case 'DRAWING_POLYLINE':
-        this._polyline.startDrawing(this._action, this._newVertexHandler);
+        this._polyline.startDrawing(
+          this._action,
+          this._newVertexHandler,
+          this._changeHandler
+        );
 
         this._polyline.emitter$.pipe(take(1)).subscribe({
           next: (polygon: any) => this._initNewPolygon(polygon),
         });
         break;
       default:
-        this._polyline.stopDrawing(this._newVertexHandler);
+        this._polyline.stopDrawing(this._newVertexHandler, this._changeHandler);
     }
   }
 
@@ -361,6 +362,19 @@ export class MapsService {
     polygon.events.add('geometrychange', this._geometryChangeHandler);
   };
 
+  private _changeHandler = (event: any): void => {
+    const { oldCoordinates, newCoordinates } = event.originalEvent;
+
+    switch (this._action.state) {
+      case 'DRAWING_POLYLINE':
+        this._comparePoints(oldCoordinates, newCoordinates);
+        break;
+      case 'DRAWING_POLYGON':
+        this._comparePoints(oldCoordinates[0] ?? [], newCoordinates[0]);
+        break;
+    }
+  };
+
   private _geometryChangeHandler = (event: any): void => {
     this._selected.state?.properties.set({
       bbox: this._selected.state?.geometry.getBounds(),
@@ -369,14 +383,21 @@ export class MapsService {
     const { oldCoordinates, newCoordinates } =
       event.originalEvent.originalEvent.originalEvent;
 
-    if (oldCoordinates[0].length !== newCoordinates[0].length) {
+    this._comparePoints(oldCoordinates[0], newCoordinates[0]);
+  };
+
+  private _comparePoints = (
+    oldCoordinates: TPoint[],
+    newCoordinates: TPoint[]
+  ): void => {
+    if (oldCoordinates.length !== newCoordinates.length) {
       return;
     }
 
-    for (let i = 0; i < newCoordinates[0].length; i++) {
+    for (let i = 0; i < newCoordinates.length; i++) {
       const isSame = this._computing.isSamePoints(
-        oldCoordinates[0][i],
-        newCoordinates[0][i]
+        oldCoordinates[i],
+        newCoordinates[i]
       );
 
       if (isSame) {
@@ -385,7 +406,7 @@ export class MapsService {
 
       this._checkPoint(i);
 
-      i = newCoordinates[0].length;
+      i = newCoordinates.length;
     }
   };
 
@@ -521,7 +542,7 @@ export class MapsService {
     coordinates: TPoint[],
     closestPoint: TPoint
   ): TPoint[] => {
-    if (!vertexIndex) {
+    if (!vertexIndex && coordinates.length < 3) {
       return [closestPoint, closestPoint];
     }
 

@@ -29,11 +29,19 @@ export class PolylineExtension {
 
   set coordinates(coordinates: TPoint[]) {
     this._polyline?.geometry.setCoordinates(coordinates);
+
+    // Чинит багу с точкой, которая отрывается от вершины при логике с одинаковыми вершинами
+    this._polyline?.editor.stopEditing();
+    this._polyline?.editor.startEditing();
+
+    this._polyline?.editor.stopDrawing();
+    this._polyline?.editor.startDrawing();
   }
 
   startDrawing(
     action: ActionStore,
-    newVertexHandler: (event: any) => void
+    newVertexHandler: (event: any) => void,
+    changeHandler: (event: any) => void
   ): void {
     this._polyline = new this.YANDEX_MAPS.Polyline(
       [],
@@ -51,7 +59,7 @@ export class PolylineExtension {
               title: 'Замкнуть полигон',
               onClick: () => {
                 action.state = 'EMPTY';
-                this.stopDrawing(newVertexHandler);
+                this.stopDrawing(newVertexHandler, changeHandler);
               },
             });
           }
@@ -62,13 +70,17 @@ export class PolylineExtension {
     );
 
     this._polyline.editor.events.add('vertexadd', newVertexHandler);
+    this._polyline.geometry.events.add('change', changeHandler);
 
     this._map.geoObjects.add(this._polyline);
     this._polyline.editor.startEditing();
     this._polyline.editor.startDrawing();
   }
 
-  stopDrawing(newVertexHandler: (event: any) => void): void {
+  stopDrawing(
+    newVertexHandler: (event: any) => void,
+    changeHandler: (event: any) => void
+  ): void {
     const coordinates = this._polyline.geometry.getCoordinates();
 
     if (coordinates.length > 2) {
@@ -98,13 +110,17 @@ export class PolylineExtension {
       this._emitter$.next(null);
     }
 
-    this.clear(newVertexHandler);
+    this.clear(newVertexHandler, changeHandler);
   }
 
-  clear(newVertexHandler: (event: any) => void): void {
+  clear(
+    newVertexHandler: (event: any) => void,
+    changeHandler: (event: any) => void
+  ): void {
     this._polyline.editor.stopEditing();
     this._polyline.editor.stopDrawing();
     this._polyline.events.remove('vertexadd', newVertexHandler);
+    this._polyline.events.remove('change', changeHandler);
     this._map.geoObjects.remove(this._polyline);
     this._polyline = null;
   }

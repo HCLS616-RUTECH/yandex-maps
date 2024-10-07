@@ -40,7 +40,7 @@ export class SelectedStore {
   set coordinates(coordinates: TPoint[]) {
     this._state()?.geometry?.setCoordinates([coordinates]);
 
-    // Чинит багу, с точкой, которая отрывается от вершины при логике с одинаковыми вершинами
+    // Чинит багу с точкой, которая отрывается от вершины при логике с одинаковыми вершинами
     this._state()?.editor.stopEditing();
     this._state()?.editor.startEditing();
   }
