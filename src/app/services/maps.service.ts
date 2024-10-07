@@ -412,7 +412,6 @@ export class MapsService {
 
   private _newVertexHandler = (event: any): void => {
     const { vertexIndex } = event.originalEvent;
-
     this._checkPoint(vertexIndex);
   };
 
@@ -542,23 +541,41 @@ export class MapsService {
     coordinates: TPoint[],
     closestPoint: TPoint
   ): TPoint[] => {
-    if (!vertexIndex && coordinates.length < 3) {
+    if (vertexIndex === 0 && coordinates.length < 3) {
       return [closestPoint, closestPoint];
     }
 
     let newCoordinates = coordinates.slice();
 
-    newCoordinates[vertexIndex] = closestPoint;
+    if (vertexIndex === 0) {
+      newCoordinates[0] = closestPoint;
+      newCoordinates[newCoordinates.length - 1] = closestPoint;
+    } else {
+      newCoordinates[vertexIndex] = closestPoint;
+    }
 
-    const isSamePoint = this._computing.isSamePoints(
-      coordinates[vertexIndex],
-      coordinates[vertexIndex - 1]
-    );
+    const isSamePoint =
+      vertexIndex !== 0
+        ? this._computing.isSamePoints(
+            coordinates[vertexIndex],
+            coordinates[vertexIndex - 1]
+          )
+        : this._computing.isSamePoints(
+            coordinates[vertexIndex],
+            coordinates[vertexIndex + 1]
+          );
 
     if (isSamePoint) {
-      newCoordinates = newCoordinates
-        .slice(0, vertexIndex - 1)
-        .concat(newCoordinates.slice(vertexIndex, newCoordinates.length));
+      newCoordinates =
+        vertexIndex !== 0
+          ? newCoordinates
+              .slice(0, vertexIndex - 1)
+              .concat(newCoordinates.slice(vertexIndex, newCoordinates.length))
+          : [
+              closestPoint,
+              ...newCoordinates.slice(1, newCoordinates.length - 1),
+              closestPoint,
+            ];
 
       this.vertexCount.set(coordinates.length);
     }
