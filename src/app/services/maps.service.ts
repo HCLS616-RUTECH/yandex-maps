@@ -112,6 +112,8 @@ export class MapsService {
         this.vertexCount.set(0);
       }
 
+      this._action.state = 'EMPTY';
+
       return this._clearPreviousActionsState();
     }
 
@@ -158,6 +160,10 @@ export class MapsService {
 
       return this.setActionState(this._action.state);
     }
+
+    if (/[qй]/i.test(event.key)) {
+      return this.updateMap();
+    }
   };
 
   setActionState(state: TActionState): void {
@@ -180,7 +186,7 @@ export class MapsService {
     }
   }
 
-  updateZones(): void {
+  updateMap(): void {
     this._intersections.clear();
     this._polygons.forEach((polygon) => this._map.geoObjects.remove(polygon));
     this._polygons.clear();
@@ -193,6 +199,14 @@ export class MapsService {
     this._action.state = 'EMPTY';
     this._request$.next(this._map.getBounds());
     this.vertexCount.set(0);
+
+    if (this._polyline.state) {
+      this._polyline.clear(this._newVertexHandler);
+    }
+
+    if (this._polygon.state) {
+      this._polygon.clear(this._newVertexHandler);
+    }
   }
 
   saveChanges(): void {

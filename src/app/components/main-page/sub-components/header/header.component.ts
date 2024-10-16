@@ -36,6 +36,6 @@ export class HeaderComponent {
   }
 
   handleUpdate(): void {
-    this._mapsService.updateZones();
+    this._mapsService.updateMap();
   }
 }
