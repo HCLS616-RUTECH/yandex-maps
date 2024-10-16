@@ -98,6 +98,68 @@ export class MapsService {
     });
   }
 
+  keyboardHandler = (event: KeyboardEvent): void => {
+    if (event.key === 'Escape') {
+      if (this._polyline.state) {
+        this._polyline.clear(this._newVertexHandler);
+      }
+
+      if (this._polygon.state) {
+        this._polygon.clear(this._newVertexHandler);
+      }
+
+      if (this.vertexCount()) {
+        this.vertexCount.set(0);
+      }
+
+      return this._clearPreviousActionsState();
+    }
+
+    if (/[zя]/i.test(event.key)) {
+      return this.setActionState('DRAWING_POLYLINE');
+    }
+
+    if (/[xч]/i.test(event.key)) {
+      return this.setActionState('DRAWING_POLYGON');
+    }
+
+    if (/[dв]/i.test(event.key)) {
+      if (this._selected.state) {
+        this.setActionState('DRAG_POLYGON');
+      }
+      return;
+    }
+
+    if (/[cс]/i.test(event.key)) {
+      if (this._selected.state) {
+        this.setActionState('EDITING_POLYGON');
+      }
+      return;
+    }
+
+    if (/[sы]/i.test(event.key)) {
+      if (this._selected.state) {
+        this.setActionState('DELETE_POLYGON');
+      }
+      return;
+    }
+
+    if (event.key === 'Delete') {
+      if (this._selected.state) {
+        this.setActionState('DELETE_POLYGON');
+      }
+      return;
+    }
+
+    if (event.key === 'Enter') {
+      if (this._action.state === 'EMPTY' && this._selected.state) {
+        return this.setActionState('EDITING_POLYGON');
+      }
+
+      return this.setActionState(this._action.state);
+    }
+  };
+
   setActionState(state: TActionState): void {
     switch (state) {
       case 'DRAWING_POLYGON':
@@ -653,9 +715,7 @@ export class MapsService {
 
     if (selected) {
       this._selected.state = selected;
-      // @ts-ignore
-      selected.options.set('draggable', false);
-      selected.options.set('fillColor', this._params.colorCache);
+      this._params.stopDrag(selected);
       selected.editor.stopEditing();
     }
   }

@@ -98,9 +98,11 @@ export class MapParamsExtension {
 
   stopDrag = (polygon: any): void => {
     polygon.options.set('draggable', false);
-    polygon.options.set('fillColor', this.colorCache);
 
-    this.animatePolygons([polygon]);
+    if (polygon.options.get('fillColor') === this.dragColor) {
+      polygon.options.set('fillColor', this.colorCache);
+      this.animatePolygons([polygon]);
+    }
   };
 
   animatePolygons(polygons: Polygon[]): void {
