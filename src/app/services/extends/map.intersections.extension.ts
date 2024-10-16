@@ -18,6 +18,10 @@ export class IntersectionsExtension {
     private readonly _polygons: Map<string, any>
   ) {}
 
+  get isExist(): boolean {
+    return !!this._intersections.size;
+  }
+
   checkBounds = (screenBbox: TBbox): void => {
     if (!this._intersections.size) {
       return;

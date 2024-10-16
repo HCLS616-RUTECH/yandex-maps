@@ -311,7 +311,7 @@ export class MapsService {
       this._polygons.set(id, polygon);
       this._visiblePolygons.set(id, polygon);
 
-      // this._checkIntersections(polygon);
+      this._intersections.check(polygon);
     }
   };
 
