@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { debounceTime, Subject, switchMap, take } from 'rxjs';
 import { Polygon } from 'yandex-maps';
 import { IZone } from '../models/interfaces/zone.interface';
@@ -8,6 +8,7 @@ import { TPoint } from '../models/types/point.type';
 import { ActionStore } from '../stores/action.store';
 import { ChangesStore } from '../stores/changes.store';
 import { SelectedStore } from '../stores/selected.store';
+import { VertexCountStore } from '../stores/vertex-count.store';
 import { ComputingService } from './computing.service';
 import { IntersectionsExtension } from './extends/map.intersections.extension';
 import { MapParamsExtension } from './extends/map.params.extension';
@@ -19,8 +20,6 @@ import { MapsHttpService } from './maps.http.service';
   providedIn: 'root',
 })
 export class MapsService {
-  vertexCount = signal<number>(0);
-
   private _map: any;
   private _polyline: any | PolylineExtension;
   private _polygon: any | PolygonExtension;
@@ -42,6 +41,7 @@ export class MapsService {
     private readonly _changes: ChangesStore,
     private readonly _action: ActionStore,
     private readonly _selected: SelectedStore,
+    private readonly _vertexCount: VertexCountStore,
     private readonly _params: MapParamsExtension
   ) {
     this.YANDEX_MAPS.ready(() => {
@@ -108,9 +108,7 @@ export class MapsService {
         this._polygon.clear(this._newVertexHandler);
       }
 
-      if (this.vertexCount()) {
-        this.vertexCount.set(0);
-      }
+      this._vertexCount.clear();
 
       this._action.state = 'EMPTY';
 
@@ -198,7 +196,7 @@ export class MapsService {
     this._clearPreviousActionsState();
     this._action.state = 'EMPTY';
     this._request$.next(this._map.getBounds());
-    this.vertexCount.set(0);
+    this._vertexCount.clear();
 
     if (this._polyline.state) {
       this._polyline.clear(this._newVertexHandler);
@@ -210,6 +208,10 @@ export class MapsService {
   }
 
   saveChanges(): void {
+    if (!this._changes.isHaveChanges()) {
+      return;
+    }
+
     const body = this._changes.requestBody;
 
     this._http.saveChanges(body).pipe(take(1)).subscribe();
@@ -406,10 +408,6 @@ export class MapsService {
     this._action.state === 'EDITING_POLYGON'
       ? selected.editor.startEditing()
       : selected.editor.stopEditing();
-
-    this._action.state === 'EDITING_POLYGON'
-      ? this.vertexCount.set(this._selected.coordinates.length)
-      : this.vertexCount.set(0);
   }
 
   private _deletePolygon(): void {
@@ -562,7 +560,7 @@ export class MapsService {
         break;
     }
 
-    this.vertexCount.set(coordinates.length);
+    this._vertexCount.state = coordinates.length;
 
     const checkResult = this._checkCoordinates(vertexIndex, coordinates);
 
@@ -670,7 +668,7 @@ export class MapsService {
           ? newCoordinates.slice(0, coordinates.length - 1)
           : newCoordinates.slice(1, coordinates.length);
 
-        this.vertexCount.set(coordinates.length);
+        this._vertexCount.state = coordinates.length;
       }
     }
 
@@ -718,7 +716,7 @@ export class MapsService {
               closestPoint,
             ];
 
-      this.vertexCount.set(coordinates.length);
+      this._vertexCount.state = coordinates.length;
     }
 
     return newCoordinates;

@@ -1,0 +1,15 @@
+<aside class="bg-black-1000 text-white-1000 max-h-full h-full w-full flex flex-col overflow-auto p-2">
+  <div>
+    <div>{{ action }}</div>
+  </div>
+
+  <div *ngIf="vertexCount">Количество вершин: {{ vertexCount }}</div>
+
+  <div *ngIf="selected">
+    <div>{{ params.name }}</div>
+    <div>ID: {{ params.id }}</div>
+    <div>ЦВЕТ: {{ params.color }}</div>
+  </div>
+
+  <!--  <input type="color" style="height: 40px; width: 40px">-->
+</aside>

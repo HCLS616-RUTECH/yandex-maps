@@ -1,8 +1,10 @@
 import { Injectable, signal } from '@angular/core';
 import { Polygon } from 'yandex-maps';
+import { ISelectedParams } from '../models/interfaces/selected-params.interface';
 import { TPoint } from '../models/types/point.type';
 import { MapParamsExtension } from '../services/extends/map.params.extension';
 import { ActionStore } from './action.store';
+import { VertexCountStore } from './vertex-count.store';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +14,8 @@ export class SelectedStore {
 
   constructor(
     private readonly _params: MapParamsExtension,
-    private readonly _action: ActionStore
+    private readonly _action: ActionStore,
+    private readonly _vertexCount: VertexCountStore
   ) {}
 
   get state(): any | null {
@@ -40,6 +43,7 @@ export class SelectedStore {
     if (isSame) {
       this._action.state = 'EMPTY';
       this._state.set(null);
+      this._vertexCount.clear();
       return;
     }
 
@@ -54,6 +58,23 @@ export class SelectedStore {
         this._params.startDrag(polygon);
         break;
     }
+
+    this._vertexCount.state = this.coordinates.length;
+  }
+
+  get params(): ISelectedParams {
+    const state = this._state();
+
+    const color: string =
+      state.options.get('fillColor') === this._params.dragColor
+        ? this._params.colorCache
+        : state.options.get('fillColor');
+
+    return {
+      color: color.slice(0, 6),
+      id: state?.properties.get('id') ?? '',
+      name: state?.properties.get('name') ?? '',
+    };
   }
 
   get coordinates(): TPoint[] {

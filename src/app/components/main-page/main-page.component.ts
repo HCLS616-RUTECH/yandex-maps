@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 import { MapsService } from '../../services/maps.service';
 import { ActionsComponent } from './sub-components/actions/actions.component';
-import { ExtendsComponent } from './sub-components/extends/extends.component';
+import { EditorComponent } from './sub-components/editor/editor.component';
 import { FooterComponent } from './sub-components/footer/footer.component';
 import { HeaderComponent } from './sub-components/header/header.component';
 import { MapsComponent } from './sub-components/maps/maps.component';
@@ -17,8 +17,8 @@ import { MapsComponent } from './sub-components/maps/maps.component';
     HeaderComponent,
     ActionsComponent,
     MapsComponent,
-    ExtendsComponent,
     FooterComponent,
+    EditorComponent,
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',

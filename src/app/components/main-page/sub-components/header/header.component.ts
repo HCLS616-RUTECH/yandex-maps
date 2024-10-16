@@ -1,7 +1,6 @@
 import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MapsService } from '../../../../services/maps.service';
-import { ActionStore } from '../../../../stores/action.store';
 import { ChangesStore } from '../../../../stores/changes.store';
 
 @Component({
@@ -14,8 +13,7 @@ import { ChangesStore } from '../../../../stores/changes.store';
 })
 export class HeaderComponent {
   constructor(
-    private readonly _mapsService: MapsService,
-    private readonly _action: ActionStore,
+    private readonly _mapService: MapsService,
     private readonly _changesStore: ChangesStore
   ) {}
 
@@ -23,19 +21,11 @@ export class HeaderComponent {
     return this._changesStore.isHaveChanges();
   }
 
-  get actionTitle(): string {
-    return this._action.title();
-  }
-
-  get vertexCount(): number {
-    return this._mapsService.vertexCount();
-  }
-
   handleSaveChanges(): void {
-    this._mapsService.saveChanges();
+    this._mapService.saveChanges();
   }
 
-  handleUpdate(): void {
-    this._mapsService.updateMap();
+  handleUpdateMap(): void {
+    this._mapService.updateMap();
   }
 }

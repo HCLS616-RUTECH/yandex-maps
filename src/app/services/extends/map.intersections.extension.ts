@@ -5,6 +5,13 @@ import { SelectedStore } from '../../stores/selected.store';
 import { ComputingService } from '../computing.service';
 import { MapParamsExtension } from './map.params.extension';
 
+// TODO: 1. Бага с неотробатывающей логикой по притягиванию к ближайшей точке у нового полигона
+// TODO: 2. Бага с невыбираемыми зонами после создания
+// TODO: 3. Бага с цветом при перетаскивании (быстро нажимать)
+// TODO: 4. Переделать selected state на поток
+// TODO: 5. скачать untildestroyed
+// TODO: 6. Отображать факт наличия пересечений
+
 export class IntersectionsExtension {
   private _intersections = new Map<string, any>();
 
@@ -17,10 +24,6 @@ export class IntersectionsExtension {
     private readonly _action: ActionStore,
     private readonly _polygons: Map<string, any>
   ) {}
-
-  get isExist(): boolean {
-    return !!this._intersections.size;
-  }
 
   checkBounds = (screenBbox: TBbox): void => {
     if (!this._intersections.size) {

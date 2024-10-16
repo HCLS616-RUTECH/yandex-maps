@@ -6,7 +6,7 @@ import { TActionState } from '../models/types/action-state.type';
   providedIn: 'root',
 })
 export class ActionStore {
-  title = signal<string>('');
+  title = signal<string>(MActionsTypes['EMPTY']);
 
   private _state: TActionState = 'EMPTY';
 

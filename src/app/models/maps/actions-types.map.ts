@@ -6,5 +6,5 @@ export const MActionsTypes: Record<TActionState, string> = {
   EDITING_POLYGON: 'Редактируется полигон',
   DELETE_POLYGON: '',
   DRAG_POLYGON: 'Перетаскивается полигон',
-  EMPTY: '',
+  EMPTY: 'Действие отсутствует',
 };
