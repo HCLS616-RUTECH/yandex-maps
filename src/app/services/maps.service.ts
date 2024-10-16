@@ -9,6 +9,7 @@ import { ActionStore } from '../stores/action.store';
 import { ChangesStore } from '../stores/changes.store';
 import { SelectedStore } from '../stores/selected.store';
 import { ComputingService } from './computing.service';
+import { IntersectionsExtension } from './extends/map.intersections.extension';
 import { MapParamsExtension } from './extends/map.params.extension';
 import { PolygonExtension } from './extends/map.polygon.extension';
 import { PolylineExtension } from './extends/map.polyline.extension';
@@ -23,6 +24,7 @@ export class MapsService {
   private _map: any;
   private _polyline: any | PolylineExtension;
   private _polygon: any | PolygonExtension;
+  private _intersections: any | IntersectionsExtension;
 
   private _isAddingPolygons = false;
 
@@ -61,6 +63,16 @@ export class MapsService {
         this._map,
         this.YANDEX_MAPS,
         this._params
+      );
+
+      this._intersections = new IntersectionsExtension(
+        this._map,
+        this.YANDEX_MAPS,
+        this._computing,
+        this._params,
+        this._selected,
+        this._action,
+        this._polygons
       );
 
       this._request$
@@ -107,6 +119,7 @@ export class MapsService {
   }
 
   updateZones(): void {
+    this._intersections.clear();
     this._polygons.forEach((polygon) => this._map.geoObjects.remove(polygon));
     this._polygons.clear();
     this._visiblePolygons.clear();
@@ -177,16 +190,44 @@ export class MapsService {
     }
 
     this._visiblePolygons.forEach((polygon, id) => {
-      if (!this._zones.has(id) && !changes.new.has(id)) {
+      if (
+        !this._zones.has(id) &&
+        !changes.new.has(id) &&
+        !changes.edited.has(id)
+      ) {
         this._map.geoObjects.remove(polygon);
         this._visiblePolygons.delete(id);
       }
     });
 
+    const screenBbox = this._map.getBounds();
+
+    changes.edited.forEach((polygon, id) => {
+      const isBboxesIntersected = this._computing.isBBoxesIntersected(
+        polygon.properties.get('bbox') as never as TBbox,
+        screenBbox
+      );
+
+      if (isBboxesIntersected && this._visiblePolygons.has(id)) {
+        return;
+      }
+
+      if (!isBboxesIntersected && this._visiblePolygons.has(id)) {
+        this._map.geoObjects.remove(polygon);
+        this._visiblePolygons.delete(id);
+      }
+
+      if (isBboxesIntersected && !this._visiblePolygons.has(id)) {
+        this._visiblePolygons.set(id, this._polygons.get(id));
+        this._map.geoObjects.add(polygon);
+        newPolygons.push(polygon);
+      }
+    });
+
     changes.new.forEach((polygon, id) => {
       const isBboxesIntersected = this._computing.isBBoxesIntersected(
-        changes.new.get(id).properties.get('bbox') as never as TBbox,
-        this._map.getBounds()
+        polygon.properties.get('bbox') as never as TBbox,
+        screenBbox
       );
 
       if (!isBboxesIntersected && this._visiblePolygons.has(id)) {
@@ -202,6 +243,8 @@ export class MapsService {
     });
 
     this._params.animatePolygons(newPolygons);
+
+    this._intersections.checkBounds(screenBbox);
 
     this._isAddingPolygons = false;
   }
@@ -267,6 +310,8 @@ export class MapsService {
 
       this._polygons.set(id, polygon);
       this._visiblePolygons.set(id, polygon);
+
+      // this._checkIntersections(polygon);
     }
   };
 
@@ -298,6 +343,9 @@ export class MapsService {
     }
 
     this._polygons.delete(selected.properties.get('id') as never as string);
+    this._visiblePolygons.delete(
+      selected.properties.get('id') as never as string
+    );
     this._changes.delete(selected);
     this._map.geoObjects.remove(selected);
   }
@@ -363,6 +411,8 @@ export class MapsService {
       event.originalEvent.originalEvent.originalEvent;
 
     this._comparePoints(oldCoordinates[0], newCoordinates[0]);
+
+    this._intersections.check(this._selected.state);
   };
 
   private _newVertexHandler = (event: any): void => {
@@ -392,13 +442,8 @@ export class MapsService {
         (index) => (newCoordinates[index] = result[index][index])
       );
 
-      const hash = new Set<string>(
-        newCoordinates.map((point) => JSON.stringify(point))
-      );
-
-      newCoordinates = Array.from(hash).map((point) => JSON.parse(point));
-
-      this._selected.coordinates = [...newCoordinates, newCoordinates[0]];
+      this._selected.coordinates =
+        this._computing.deleteSamePoints(newCoordinates);
     }
   };
 

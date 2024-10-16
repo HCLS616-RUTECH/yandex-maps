@@ -6,6 +6,18 @@ import { TPoint } from '../models/types/point.type';
   providedIn: 'root',
 })
 export class ComputingService {
+  deleteSamePoints = (coordinates: TPoint[]): TPoint[] => {
+    const hash = new Set<string>(
+      coordinates.map((point) => JSON.stringify(point))
+    );
+
+    const newCoordinates: TPoint[] = Array.from(hash).map((point) =>
+      JSON.parse(point)
+    );
+
+    return [...newCoordinates, newCoordinates[0]];
+  };
+
   isSamePoints = (first: TPoint, second: TPoint): boolean => {
     return first[0] === second[0] && first[1] === second[1];
   };

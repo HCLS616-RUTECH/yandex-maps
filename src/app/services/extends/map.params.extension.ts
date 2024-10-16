@@ -50,6 +50,10 @@ export class MapParamsExtension {
     return `${this.BASE_PARAMS.colors.drag}${this.BASE_PARAMS.colors.opacity}`;
   }
 
+  get intersectionColor(): string {
+    return `${this.BASE_PARAMS.colors.drag}90`;
+  }
+
   get stroke(): { strokeColor: string; strokeWidth: number } {
     return {
       strokeColor: this.BASE_PARAMS.stroke.color,
