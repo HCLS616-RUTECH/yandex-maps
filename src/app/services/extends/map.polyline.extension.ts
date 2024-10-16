@@ -12,7 +12,7 @@ export class PolylineExtension {
   constructor(
     private readonly _map: any,
     private readonly YANDEX_MAPS: any,
-    private readonly _mapParams: MapParamsExtension
+    private readonly _params: MapParamsExtension
   ) {}
 
   get state(): any | null {
@@ -47,7 +47,7 @@ export class PolylineExtension {
       [],
       {},
       {
-        ...this._mapParams.strokeSelected,
+        ...this._params.strokeSelected,
         editorMenuManager: (actions: IPointActions[]) => {
           const isPolyLineStartOrEnd = !!actions.find(
             (action) => action.title === 'Продолжить'
@@ -90,14 +90,14 @@ export class PolylineExtension {
         [coordinates],
         {},
         {
-          ...this._mapParams.strokeSelected,
-          fillColor: this._mapParams.baseColor,
+          ...this._params.strokeSelected,
+          fillColor: this._params.baseColor,
         }
       );
 
       this._map.geoObjects.add(polygon);
 
-      const id = this._mapParams.createPolygonId(polygon);
+      const id = this._params.createPolygonId(polygon);
       polygon.properties.set({
         id,
         name: `Новая зона ${id}`,

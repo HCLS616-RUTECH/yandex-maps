@@ -10,7 +10,7 @@ export class PolygonExtension {
   constructor(
     private readonly _map: any,
     private readonly YANDEX_MAPS: any,
-    private readonly _mapParams: MapParamsExtension
+    private readonly _params: MapParamsExtension
   ) {}
 
   get state(): any | null {
@@ -37,8 +37,8 @@ export class PolygonExtension {
       [],
       {},
       {
-        ...this._mapParams.strokeSelected,
-        fillColor: this._mapParams.newColor,
+        ...this._params.strokeSelected,
+        fillColor: this._params.newColor,
       }
     );
 
@@ -60,9 +60,9 @@ export class PolygonExtension {
       return;
     }
 
-    this._polygon.options.set('fillColor', this._mapParams.baseColor);
+    this._polygon.options.set('fillColor', this._params.baseColor);
 
-    const id = this._mapParams.createPolygonId(this._polygon);
+    const id = this._params.createPolygonId(this._polygon);
     this._polygon.properties.set({
       id,
       name: `Новая зона ${id}`,

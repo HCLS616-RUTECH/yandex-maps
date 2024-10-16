@@ -58,16 +58,25 @@ export class IntersectionsExtension {
     });
   };
 
-  check = (currentPolygon: any): void => {
-    this._deleteIntersections(currentPolygon.properties.get('id'));
+  check = (polygon: any): void => {
+    this._deleteIntersections(polygon.properties.get('id'));
 
-    const intersections: any[] = this._getIntersections(currentPolygon);
+    this._checkIntersections(polygon);
 
-    if (intersections.length) {
-      this._initIntersections(
-        intersections,
-        currentPolygon.properties.get('id')
-      );
+    const ids = Array.from(this._intersections.keys());
+
+    for (const id of ids) {
+      if (id === polygon.properties.get('id')) {
+        continue;
+      }
+
+      this._deleteIntersections(id);
+
+      const anotherPolygonWithIntersections = this._polygons.get(id);
+
+      if (anotherPolygonWithIntersections) {
+        this._checkIntersections(anotherPolygonWithIntersections);
+      }
     }
   };
 
@@ -89,23 +98,16 @@ export class IntersectionsExtension {
     }
   };
 
-  private _isBboxesIntersected = (
-    currentPolygon: any,
-    cachePolygon: any
-  ): boolean => {
-    const currentBbox =
-      currentPolygon.geometry?.getBounds() ??
-      (currentPolygon.properties?.get('bbox') as never as TBbox);
+  private _checkIntersections = (polygon: any): void => {
+    const intersections: any[] = this._getIntersections(polygon);
 
-    const cacheBbox =
-      cachePolygon.geometry?.getBounds() ??
-      (cachePolygon.properties?.get('bbox') as never as TBbox);
-
-    return this._computing.isBBoxesIntersected(cacheBbox, currentBbox);
+    if (intersections.length) {
+      this._initIntersections(intersections, polygon.properties.get('id'));
+    }
   };
 
   private _getIntersections = (currentPolygon: any): any[] => {
-    const intersections: any[] = [];
+    let intersections: any[] = [];
 
     this._polygons.forEach((cachePolygon) => {
       if (
@@ -124,10 +126,13 @@ export class IntersectionsExtension {
         return;
       }
 
-      const intersection = this._getIntersection(currentPolygon, cachePolygon);
+      const foundedIntersections = this._getIntersection(
+        currentPolygon,
+        cachePolygon
+      );
 
-      if (intersection) {
-        intersections.push(intersection);
+      if (foundedIntersections.length) {
+        intersections = intersections.concat(foundedIntersections);
       }
     });
 
@@ -137,7 +142,9 @@ export class IntersectionsExtension {
   private _getIntersection = (
     currentPolygon: any,
     cachePolygon: any
-  ): any | null => {
+  ): any[] => {
+    const intersections: any[] = [];
+
     const turfCurrentPolygon = polygon(
       currentPolygon.geometry.getCoordinates()
     );
@@ -149,14 +156,20 @@ export class IntersectionsExtension {
     );
 
     if (intersection) {
-      return new this.YANDEX_MAPS.Polygon(
-        intersection.geometry.coordinates,
-        {},
-        {}
-      );
+      switch (intersection.geometry.type) {
+        case 'MultiPolygon':
+          intersection.geometry.coordinates.forEach((c) =>
+            intersections.push(new this.YANDEX_MAPS.Polygon(c))
+          );
+          break;
+        default:
+          intersections.push(
+            new this.YANDEX_MAPS.Polygon(intersection.geometry.coordinates)
+          );
+      }
     }
 
-    return null;
+    return intersections;
   };
 
   private _initIntersections = (intersections: any[], id: string): void => {
@@ -177,6 +190,21 @@ export class IntersectionsExtension {
     });
 
     this._params.animatePolygons(intersections);
+  };
+
+  private _isBboxesIntersected = (
+    currentPolygon: any,
+    cachePolygon: any
+  ): boolean => {
+    const currentBbox =
+      currentPolygon.geometry?.getBounds() ??
+      (currentPolygon.properties?.get('bbox') as never as TBbox);
+
+    const cacheBbox =
+      cachePolygon.geometry?.getBounds() ??
+      (cachePolygon.properties?.get('bbox') as never as TBbox);
+
+    return this._computing.isBBoxesIntersected(cacheBbox, currentBbox);
   };
 
   private _clickHandler = (e: any) => {
