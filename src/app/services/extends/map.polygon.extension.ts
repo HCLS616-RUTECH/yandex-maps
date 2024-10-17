@@ -1,4 +1,5 @@
 import { Observable, Subject } from 'rxjs';
+import { IPointActions } from '../../models/interfaces/point-actions.interface';
 import { TPoint } from '../../models/types/point.type';
 import { MapParamsExtension } from './map.params.extension';
 
@@ -39,6 +40,8 @@ export class PolygonExtension {
       {
         ...this._params.strokeSelected,
         fillColor: this._params.newColor,
+        editorMenuManager: (actions: IPointActions[]) =>
+          actions.filter((action) => action.title !== 'Завершить'),
       }
     );
 

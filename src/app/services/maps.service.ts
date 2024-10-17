@@ -16,6 +16,17 @@ import { PolygonExtension } from './extends/map.polygon.extension';
 import { PolylineExtension } from './extends/map.polyline.extension';
 import { MapsHttpService } from './maps.http.service';
 
+// TODO: 1. Бага с неотробатывающей логикой по притягиванию к ближайшей точке у нового полигона   -
+// TODO: 2. Бага с невыбираемыми зонами после создания                                            -
+// TODO: 3. Бага с цветом при перетаскивании (быстро нажимать)                                    -
+// TODO: 4. Переделать selected state на поток                                                    -
+// TODO: 5. скачать untildestroyed                                                                +
+// TODO: 6. Отображать факт наличия пересечений                                                   -
+// TODO: 7. Удалить кнопку завершить при рисовании кривой                                         +
+// TODO: 8. Отчищать редактируемымй полигон от одинаковых точек                                   -
+// TODO: 9. Ссылки открываются в новом окне                                                       +
+// TODO: 10. Анимирование полигона при снятии выбора с перетаскиваемой зон                        +
+
 @Injectable({
   providedIn: 'root',
 })

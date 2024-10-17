@@ -49,6 +49,9 @@ export class PolylineExtension {
       {
         ...this._params.strokeSelected,
         editorMenuManager: (actions: IPointActions[]) => {
+          console.log(actions);
+          actions = actions.filter((action) => action.title !== 'Завершить');
+
           const isPolyLineStartOrEnd = !!actions.find(
             (action) => action.title === 'Продолжить'
           );
