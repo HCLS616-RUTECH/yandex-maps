@@ -1,14 +1,17 @@
-import { NgIf } from '@angular/common';
+import { AsyncPipe, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { Observable } from 'rxjs';
 import { ISelectedParams } from '../../../../models/interfaces/selected-params.interface';
 import { ActionStore } from '../../../../stores/action.store';
 import { SelectedStore } from '../../../../stores/selected.store';
 import { VertexCountStore } from '../../../../stores/vertex-count.store';
 
+@UntilDestroy()
 @Component({
   selector: 'app-editor',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, AsyncPipe],
   templateUrl: './editor.component.html',
   styleUrl: './editor.component.scss',
 })
@@ -27,11 +30,7 @@ export class EditorComponent {
     return this._vertexCount.state;
   }
 
-  get selected(): any | null {
-    return this._selected.state;
-  }
-
-  get params(): ISelectedParams {
-    return this._selected.params;
+  get selected$(): Observable<ISelectedParams | null> {
+    return this._selected.params$.pipe(untilDestroyed(this));
   }
 }

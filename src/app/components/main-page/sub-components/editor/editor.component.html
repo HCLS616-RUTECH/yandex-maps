@@ -5,7 +5,7 @@
 
   <div *ngIf="vertexCount">Количество вершин: {{ vertexCount }}</div>
 
-  <div *ngIf="selected">
+  <div *ngIf="selected$ | async as params">
     <div>{{ params.name }}</div>
     <div>ID: {{ params.id }}</div>
     <div>ЦВЕТ: {{ params.color }}</div>
