@@ -55,18 +55,24 @@ export class IntersectionsExtension {
   };
 
   check = (polygon: any): void => {
-    this._deleteIntersections(polygon.properties.get('id'));
+    const id = polygon.properties.get('id');
+
+    this.delete(id);
 
     this._checkIntersections(polygon);
 
+    this.checkAll(id);
+  };
+
+  checkAll = (ignoredId?: string): void => {
     const ids = Array.from(this._intersections.keys());
 
     for (const id of ids) {
-      if (id === polygon.properties.get('id')) {
+      if (id === ignoredId) {
         continue;
       }
 
-      this._deleteIntersections(id);
+      this.delete(id);
 
       const anotherPolygonWithIntersections = this._polygons.get(id);
 
@@ -77,12 +83,10 @@ export class IntersectionsExtension {
   };
 
   clear = (): void => {
-    this._intersections.forEach((polygons, id) =>
-      this._deleteIntersections(id)
-    );
+    this._intersections.forEach((polygons, id) => this.delete(id));
   };
 
-  private _deleteIntersections = (id: string): void => {
+  delete = (id: string): void => {
     const intersections = this._intersections.get(id);
 
     if (intersections) {

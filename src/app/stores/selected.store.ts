@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, map, Observable } from 'rxjs';
 import { Polygon } from 'yandex-maps';
 import { ISelectedParams } from '../models/interfaces/selected-params.interface';
+import { TBbox } from '../models/types/bbox.type';
 import { TPoint } from '../models/types/point.type';
 import { MapParamsExtension } from '../services/extends/map.params.extension';
 import { ActionStore } from './action.store';
@@ -98,6 +99,16 @@ export class SelectedStore {
     if (this._action.state === 'EDITING_POLYGON') {
       this._state$.value?.editor.stopEditing();
       this._state$.value?.editor.startEditing();
+    }
+  }
+
+  get bounds(): TBbox {
+    return this._state$.value?.geometry.getBounds() ?? [];
+  }
+
+  clear(): void {
+    if (this._state$.value) {
+      this.state = this._state$.value;
     }
   }
 }

@@ -2,6 +2,7 @@ import { Observable, Subject } from 'rxjs';
 import { IPointActions } from '../../models/interfaces/point-actions.interface';
 import { TPoint } from '../../models/types/point.type';
 import { ActionStore } from '../../stores/action.store';
+import { ComputingService } from '../computing.service';
 import { MapParamsExtension } from './map.params.extension';
 
 export class PolylineExtension {
@@ -12,6 +13,8 @@ export class PolylineExtension {
   constructor(
     private readonly _map: any,
     private readonly YANDEX_MAPS: any,
+    private readonly _action: ActionStore,
+    private readonly _computing: ComputingService,
     private readonly _params: MapParamsExtension
   ) {}
 
@@ -39,7 +42,6 @@ export class PolylineExtension {
   }
 
   startDrawing(
-    action: ActionStore,
     newVertexHandler: (event: any) => void,
     changeHandler: (event: any) => void
   ): void {
@@ -49,7 +51,6 @@ export class PolylineExtension {
       {
         ...this._params.strokeSelected,
         editorMenuManager: (actions: IPointActions[]) => {
-          console.log(actions);
           actions = actions.filter((action) => action.title !== 'Завершить');
 
           const isPolyLineStartOrEnd = !!actions.find(
@@ -60,10 +61,7 @@ export class PolylineExtension {
           if (isPolyLineStartOrEnd && length > 2) {
             actions.push({
               title: 'Замкнуть полигон',
-              onClick: () => {
-                action.state = 'EMPTY';
-                this.stopDrawing(newVertexHandler, changeHandler);
-              },
+              onClick: () => this.stopDrawing(newVertexHandler, changeHandler),
             });
           }
 
@@ -84,47 +82,59 @@ export class PolylineExtension {
     newVertexHandler: (event: any) => void,
     changeHandler: (event: any) => void
   ): void {
-    const coordinates = this._polyline.geometry.getCoordinates();
+    const coordinates = this._computing.deleteSamePoints(
+      this._polyline.geometry.getCoordinates()
+    );
 
-    if (coordinates.length > 2) {
-      coordinates.push(coordinates[0]);
-
-      const polygon = new this.YANDEX_MAPS.Polygon(
-        [coordinates],
-        {},
-        {
-          ...this._params.strokeSelected,
-          fillColor: this._params.baseColor,
-        }
-      );
-
-      this._map.geoObjects.add(polygon);
-
-      const id = this._params.createPolygonId(polygon);
-      polygon.properties.set({
-        id,
-        name: `Новая зона ${id}`,
-        bbox: polygon.geometry.getBounds(),
-        new: true,
-      });
-
-      this._emitter$.next(polygon);
-    } else {
-      this._emitter$.next(null);
+    if (coordinates.length < 4) {
+      return this.clear(newVertexHandler, changeHandler);
     }
 
-    this.clear(newVertexHandler, changeHandler);
+    const polygon = new this.YANDEX_MAPS.Polygon(
+      [coordinates],
+      {},
+      {
+        ...this._params.strokeSelected,
+        fillColor: this._params.baseColor,
+      }
+    );
+
+    this._map.geoObjects.add(polygon);
+
+    const id = this._params.createPolygonId(polygon);
+    polygon.properties.set({
+      id,
+      name: `Новая зона ${id}`,
+      bbox: polygon.geometry.getBounds(),
+      new: true,
+    });
+
+    this._clearStates(newVertexHandler, changeHandler);
+
+    this._emitter$.next(polygon);
   }
 
-  clear(
+  clear = (
     newVertexHandler: (event: any) => void,
     changeHandler: (event: any) => void
-  ): void {
+  ): void => {
+    if (this._polyline) {
+      this._clearStates(newVertexHandler, changeHandler);
+
+      this._emitter$.next(null);
+    }
+  };
+
+  private _clearStates = (
+    newVertexHandler: (event: any) => void,
+    changeHandler: (event: any) => void
+  ): void => {
     this._polyline.editor.stopEditing();
     this._polyline.editor.stopDrawing();
     this._polyline.events.remove('vertexadd', newVertexHandler);
     this._polyline.events.remove('change', changeHandler);
     this._map.geoObjects.remove(this._polyline);
     this._polyline = null;
-  }
+    this._action.state = 'EMPTY';
+  };
 }

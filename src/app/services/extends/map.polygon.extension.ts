@@ -1,6 +1,8 @@
 import { Observable, Subject } from 'rxjs';
 import { IPointActions } from '../../models/interfaces/point-actions.interface';
 import { TPoint } from '../../models/types/point.type';
+import { ActionStore } from '../../stores/action.store';
+import { ComputingService } from '../computing.service';
 import { MapParamsExtension } from './map.params.extension';
 
 export class PolygonExtension {
@@ -11,6 +13,8 @@ export class PolygonExtension {
   constructor(
     private readonly _map: any,
     private readonly YANDEX_MAPS: any,
+    private readonly _action: ActionStore,
+    private readonly _computing: ComputingService,
     private readonly _params: MapParamsExtension
   ) {}
 
@@ -56,11 +60,19 @@ export class PolygonExtension {
     newVertexHandler: (event: any) => void,
     changeHandler: (event: any) => void
   ): void {
-    const coordinates = this._polygon.geometry.getCoordinates()[0];
+    const coordinates = this._computing.deleteSamePoints(
+      this._polygon.geometry.getCoordinates()[0]
+    );
 
     if (coordinates.length < 4) {
       this.clear(newVertexHandler, changeHandler);
       return;
+    }
+
+    if (
+      coordinates.length !== this._polygon.geometry.getCoordinates()[0].length
+    ) {
+      this.coordinates = coordinates;
     }
 
     this._polygon.options.set('fillColor', this._params.baseColor);
@@ -73,21 +85,34 @@ export class PolygonExtension {
       new: true,
     });
 
-    this._emitter$.next(this._polygon);
+    this._clearStates(newVertexHandler, changeHandler);
 
-    this._polygon.editor.stopDrawing();
+    this._emitter$.next(this._polygon);
 
     this._polygon = null;
   }
 
-  clear(
+  clear = (
     newVertexHandler: (event: any) => void,
     changeHandler: (event: any) => void
-  ): void {
+  ): void => {
+    if (this._polygon) {
+      this._clearStates(newVertexHandler, changeHandler);
+
+      this._map.geoObjects.remove(this._polygon);
+
+      this._polygon = null;
+      this._emitter$.next(null);
+    }
+  };
+
+  private _clearStates = (
+    newVertexHandler: (event: any) => void,
+    changeHandler: (event: any) => void
+  ): void => {
     this._polygon.editor.stopDrawing();
     this._polygon.events.remove('vertexadd', newVertexHandler);
     this._polygon.geometry.events.remove('change', changeHandler);
-    this._map.geoObjects.remove(this._polygon);
-    this._polygon = null;
-  }
+    this._action.state = 'EMPTY';
+  };
 }

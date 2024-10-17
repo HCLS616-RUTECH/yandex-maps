@@ -66,12 +66,16 @@ export class MapsService {
       this._polyline = new PolylineExtension(
         this._map,
         this.YANDEX_MAPS,
+        this._action,
+        this._computing,
         this._params
       );
 
       this._polygon = new PolygonExtension(
         this._map,
         this.YANDEX_MAPS,
+        this._action,
+        this._computing,
         this._params
       );
 
@@ -110,19 +114,13 @@ export class MapsService {
 
   keyboardHandler = (event: KeyboardEvent): void => {
     if (event.key === 'Escape') {
-      if (this._polyline.state) {
-        this._polyline.clear(this._newVertexHandler);
-      }
+      this._polyline.clear(this._newVertexHandler, this._changeHandler);
 
-      if (this._polygon.state) {
-        this._polygon.clear(this._newVertexHandler);
-      }
+      this._polygon.clear(this._newVertexHandler, this._changeHandler);
 
       this._vertexCount.clear();
 
-      this._action.state = 'EMPTY';
-
-      return this._clearPreviousActionsState();
+      this._selected.clear();
     }
 
     if (/[zя]/i.test(event.key)) {
@@ -195,26 +193,25 @@ export class MapsService {
   }
 
   updateMap(): void {
-    this._intersections.clear();
     this._polygons.forEach((polygon) => this._map.geoObjects.remove(polygon));
     this._polygons.clear();
+
     this._visiblePolygons.clear();
+
     this._changes.state.new.forEach((polygon) =>
       this._map.geoObjects.remove(polygon)
     );
     this._changes.clear();
-    this._clearPreviousActionsState();
-    this._action.state = 'EMPTY';
-    this._request$.next(this._map.getBounds());
+
+    this._intersections.clear();
     this._vertexCount.clear();
+    this._selected.clear();
+    this._polyline.clear(this._newVertexHandler, this._changeHandler);
+    this._polygon.clear(this._newVertexHandler, this._changeHandler);
 
-    if (this._polyline.state) {
-      this._polyline.clear(this._newVertexHandler);
-    }
+    this._action.state = 'EMPTY';
 
-    if (this._polygon.state) {
-      this._polygon.clear(this._newVertexHandler);
-    }
+    this._request$.next(this._map.getBounds());
   }
 
   saveChanges(): void {
@@ -338,11 +335,8 @@ export class MapsService {
   }
 
   private _drawingPolygon(): void {
-    this._clearPreviousActionsState();
-
-    if (this._polyline.state) {
-      this._polyline.clear(this._newVertexHandler);
-    }
+    this._selected.clear();
+    this._polyline.clear(this._newVertexHandler, this._changeHandler);
 
     this._action.state = 'DRAWING_POLYGON';
 
@@ -360,18 +354,14 @@ export class MapsService {
   }
 
   private _drawingPolyline(): void {
-    this._clearPreviousActionsState();
-
-    if (this._polygon.state) {
-      this._polygon.clear(this._newVertexHandler);
-    }
+    this._selected.clear();
+    this._polygon.clear(this._newVertexHandler, this._changeHandler);
 
     this._action.state = 'DRAWING_POLYLINE';
 
     switch (this._action.state) {
       case 'DRAWING_POLYLINE':
         this._polyline.startDrawing(
-          this._action,
           this._newVertexHandler,
           this._changeHandler
         );
@@ -426,12 +416,19 @@ export class MapsService {
       return;
     }
 
-    this._polygons.delete(selected.properties.get('id') as never as string);
-    this._visiblePolygons.delete(
-      selected.properties.get('id') as never as string
-    );
+    const id = selected.properties.get('id') as never as string;
+
+    this._polygons.delete(id);
+    this._visiblePolygons.delete(id);
+
     this._changes.delete(selected);
+
     this._map.geoObjects.remove(selected);
+
+    this._intersections.delete(id);
+    this._intersections.checkAll();
+
+    this._selected.clear();
   }
 
   private _dragPolygon(): void {
@@ -488,7 +485,7 @@ export class MapsService {
 
   private _geometryChangeHandler = (event: any): void => {
     this._selected.state?.properties.set({
-      bbox: this._selected.state?.geometry.getBounds(),
+      bbox: this._selected.bounds,
     });
 
     const { oldCoordinates, newCoordinates } =
@@ -731,16 +728,6 @@ export class MapsService {
 
     return newCoordinates;
   };
-
-  private _clearPreviousActionsState(): void {
-    const selected = this._selected.state;
-
-    if (selected) {
-      this._selected.state = selected;
-      this._params.stopDrag(selected);
-      selected.editor.stopEditing();
-    }
-  }
 
   // private _initPlaceMark(): void {
   //   this._placemark = new this.YANDEX_MAPS.Placemark(
