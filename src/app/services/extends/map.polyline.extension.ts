@@ -2,6 +2,7 @@ import { Observable, Subject } from 'rxjs';
 import { IPointActions } from '../../models/interfaces/point-actions.interface';
 import { TPoint } from '../../models/types/point.type';
 import { ActionStore } from '../../stores/action.store';
+import { VertexCountStore } from '../../stores/vertex-count.store';
 import { ComputingService } from '../computing.service';
 import { MapParamsExtension } from './map.params.extension';
 
@@ -14,13 +15,10 @@ export class PolylineExtension {
     private readonly _map: any,
     private readonly YANDEX_MAPS: any,
     private readonly _action: ActionStore,
+    private readonly _vertexCount: VertexCountStore,
     private readonly _computing: ComputingService,
     private readonly _params: MapParamsExtension
   ) {}
-
-  get state(): any | null {
-    return this._polyline;
-  }
 
   get emitter$(): Observable<any> {
     return this._emitter$.asObservable();
@@ -87,6 +85,7 @@ export class PolylineExtension {
     );
 
     if (coordinates.length < 4) {
+      this._vertexCount.clear();
       return this.clear(newVertexHandler, changeHandler);
     }
 

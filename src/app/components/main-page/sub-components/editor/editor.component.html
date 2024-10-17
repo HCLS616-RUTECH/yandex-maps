@@ -1,9 +1,7 @@
 <aside class="bg-black-1000 text-white-1000 max-h-full h-full w-full flex flex-col overflow-auto p-2">
-  <div>
-    <div>{{ action }}</div>
-  </div>
+  <app-action></app-action>
 
-  <div *ngIf="vertexCount">Количество вершин: {{ vertexCount }}</div>
+  <app-vertex-count></app-vertex-count>
 
   <div *ngIf="selected$ | async as params">
     <div>{{ params.name }}</div>

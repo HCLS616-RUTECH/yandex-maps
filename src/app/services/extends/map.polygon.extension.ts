@@ -2,6 +2,7 @@ import { Observable, Subject } from 'rxjs';
 import { IPointActions } from '../../models/interfaces/point-actions.interface';
 import { TPoint } from '../../models/types/point.type';
 import { ActionStore } from '../../stores/action.store';
+import { VertexCountStore } from '../../stores/vertex-count.store';
 import { ComputingService } from '../computing.service';
 import { MapParamsExtension } from './map.params.extension';
 
@@ -14,13 +15,10 @@ export class PolygonExtension {
     private readonly _map: any,
     private readonly YANDEX_MAPS: any,
     private readonly _action: ActionStore,
+    private readonly _vertexCount: VertexCountStore,
     private readonly _computing: ComputingService,
     private readonly _params: MapParamsExtension
   ) {}
-
-  get state(): any | null {
-    return this._polygon;
-  }
 
   get emitter$(): Observable<any> {
     return this._emitter$.asObservable();
@@ -65,8 +63,8 @@ export class PolygonExtension {
     );
 
     if (coordinates.length < 4) {
-      this.clear(newVertexHandler, changeHandler);
-      return;
+      this._vertexCount.clear();
+      return this.clear(newVertexHandler, changeHandler);
     }
 
     if (

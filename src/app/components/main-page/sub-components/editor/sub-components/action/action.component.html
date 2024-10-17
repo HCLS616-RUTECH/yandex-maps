@@ -1,0 +1,7 @@
+<div [ngSwitch]="action" class="overflow-hidden h-10 min-h-10 w-full relative border-white-1000 border">
+  <div *ngSwitchCase="'EMPTY'" [class]="sharedClasses" [@shift]>Действие отсутствует</div>
+  <div *ngSwitchCase="'DRAWING_POLYLINE'" [class]="sharedClasses + ' bg-sky-400'" [@shift]>Рисуется кривая</div>
+  <div *ngSwitchCase="'DRAWING_POLYGON'" [class]="sharedClasses + ' bg-amber-300'" [@shift]>Рисуется полигон</div>
+  <div *ngSwitchCase="'EDITING_POLYGON'" [class]="sharedClasses + ' bg-green-300'" [@shift]>Редактируется полигон</div>
+  <div *ngSwitchCase="'DRAG_POLYGON'" [class]="sharedClasses + ' bg-red-500'" [@shift]>Перетаскивается полигон</div>
+</div>
