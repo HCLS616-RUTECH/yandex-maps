@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { debounceTime, Subject, switchMap, take } from 'rxjs';
 import { Polygon } from 'yandex-maps';
 import { IZone } from '../models/interfaces/zone.interface';
@@ -23,6 +23,8 @@ import { MapsHttpService } from './maps.http.service';
   providedIn: 'root',
 })
 export class MapsService {
+  yandexVersion = signal<string>('0');
+
   private _map: any;
   private _polyline: any | PolylineExtension;
   private _polygon: any | PolygonExtension;
@@ -48,6 +50,8 @@ export class MapsService {
     private readonly _params: MapParamsExtension
   ) {
     this.YANDEX_MAPS.ready(() => {
+      this.yandexVersion.set(this.YANDEX_MAPS.meta.version);
+
       const { center, zoom, controls, maxZoom, minZoom } = this._params.map;
 
       this._map = new this.YANDEX_MAPS.Map(

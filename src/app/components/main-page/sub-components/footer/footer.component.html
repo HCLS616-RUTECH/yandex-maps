@@ -1,5 +1,14 @@
-<footer class="bg-black-1000 w-full h-full text-white-1000 flex justify-between items-center px-3">
-  <a href="https://github.com/HCLS616-RUTECH" target="_blank">Github</a>
-  <a href="https://hh.ru/resume/978f25ecff03ea18570039ed1f4243544d4f4d" target="_blank">HH</a>
-  <div>Angular + Yandex Maps</div>
+<footer class="bg-black-1000 w-full h-full text-white-1000 flex items-center px-3">
+  <div class="flex-1"></div>
+
+  <div class="flex-1 flex justify-center items-center">
+    <a href="https://github.com/HCLS616-RUTECH" target="_blank" class="mr-4">Github</a>
+    <a href="https://hh.ru/resume/978f25ecff03ea18570039ed1f4243544d4f4d" target="_blank">HH</a>
+  </div>
+
+  <div class="flex-1 flex items-center justify-end">
+    <div>Angular v. {{ angularVersion }}</div>
+    <div class="mx-2">+</div>
+    <div>Yandex Maps v. {{ yandexVersion }}</div>
+  </div>
 </footer>
