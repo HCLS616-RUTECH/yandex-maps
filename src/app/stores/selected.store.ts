@@ -36,12 +36,27 @@ export class SelectedStore {
             : fillColor;
 
         return {
-          color,
+          color: `#${color}`,
           id: state?.properties.get('id') ?? '',
           name: state?.properties.get('name') ?? '',
         };
       })
     );
+  }
+
+  set params({ name, color }: Partial<ISelectedParams>) {
+    if (name) {
+      this._state$.value.properties.set({
+        name,
+      });
+    }
+
+    if (color) {
+      this._state$.value.options.set(
+        'fillColor',
+        `${color.replace('#', '')}${this._params.opacity}`
+      );
+    }
   }
 
   get state(): any | null {

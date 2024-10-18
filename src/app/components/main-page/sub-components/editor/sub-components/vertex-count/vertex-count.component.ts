@@ -1,7 +1,6 @@
 import { NgIf } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { VERTICAL_ANIMATION } from '../../../../../../animations/vertical.animation';
-import { VertexCountStore } from '../../../../../../stores/vertex-count.store';
 
 @Component({
   selector: 'app-vertex-count',
@@ -13,9 +12,5 @@ import { VertexCountStore } from '../../../../../../stores/vertex-count.store';
   animations: [VERTICAL_ANIMATION],
 })
 export class VertexCountComponent {
-  constructor(private readonly _vertexCount: VertexCountStore) {}
-
-  get count(): number {
-    return this._vertexCount.state;
-  }
+  @Input() count: number = 0;
 }

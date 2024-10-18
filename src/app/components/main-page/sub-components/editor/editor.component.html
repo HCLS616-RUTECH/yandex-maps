@@ -1,13 +1,16 @@
 <aside class="bg-black-1000 text-white-1000 max-h-full h-full w-full flex flex-col overflow-auto p-2">
   <app-action></app-action>
 
-  <app-vertex-count></app-vertex-count>
+  <app-vertex-count *ngIf="count" [count]="count" [@vertical]></app-vertex-count>
 
-  <div *ngIf="selected$ | async as params">
-    <div>{{ params.name }}</div>
-    <div>ID: {{ params.id }}</div>
-    <div>ЦВЕТ: {{ params.color }}</div>
+  <app-selected-params *ngIf="selected$ | async as params"
+                       (onChangeParams)="handleChangeParams($event)"
+                       [params]="params"
+                       [action]="action"
+                       [@vertical]
+  ></app-selected-params>
+
+  <div class="h-10 min-h-10 w-full border-white-1000 border-x border-b flex justify-center items-center p-2">
+    <button>ПАНЕЛЬ УПРАВЛЕНИЯ</button>
   </div>
-
-  <!--  <input type="color" style="height: 40px; width: 40px">-->
 </aside>

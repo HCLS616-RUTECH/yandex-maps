@@ -1,6 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 import { debounceTime, Subject, switchMap, take } from 'rxjs';
 import { Polygon } from 'yandex-maps';
+import { ISelectedParams } from '../models/interfaces/selected-params.interface';
 import { IZone } from '../models/interfaces/zone.interface';
 import { TActionState } from '../models/types/action-state.type';
 import { TBbox } from '../models/types/bbox.type';
@@ -16,8 +17,10 @@ import { PolygonExtension } from './extends/map.polygon.extension';
 import { PolylineExtension } from './extends/map.polyline.extension';
 import { MapsHttpService } from './maps.http.service';
 
-// TODO: 1. Бага с цветом при перетаскивании (быстро нажимать)                                    -
-// TODO: 2. Отображать факт наличия пересечений                                                   -
+// TODO: 1. Бага с цветом при перетаскивании (быстро нажимать)                                      -
+// TODO: 2. Отображать факт наличия пересечений                                                     -
+// TODO: 3. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур -
+// TODO: 4. Исчезновение vertexCount при перетаскивании полигона                                    -
 
 @Injectable({
   providedIn: 'root',
@@ -223,6 +226,11 @@ export class MapsService {
     this._http.saveChanges(body).pipe(take(1)).subscribe();
   }
 
+  setNewParams = (params: Partial<ISelectedParams>): void => {
+    this._selected.params = params;
+    this._changes.edit(this._selected.state);
+  };
+
   private _addNewPolygons(zones: IZone[]): void {
     const changes = this._changes.state;
     this._zones.clear();
@@ -258,7 +266,18 @@ export class MapsService {
 
       const polygon = new this.YANDEX_MAPS.Polygon(
         zone.coordinates,
-        { id: zone.id, name: zone.name, bbox: zone.bbox, new: false },
+        {
+          id: zone.id,
+          name: zone.name,
+          bbox: zone.bbox,
+          new: false,
+          cache: {
+            coordinates: zone.coordinates,
+            bbox: zone.bbox,
+            name: zone.name,
+            color: zone.color,
+          },
+        },
         {
           ...this._params.stroke,
           fillColor: zone.color,

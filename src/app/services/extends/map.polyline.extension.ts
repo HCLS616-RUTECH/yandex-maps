@@ -121,6 +121,8 @@ export class PolylineExtension {
       this._clearStates(newVertexHandler, changeHandler);
 
       this._emitter$.next(null);
+
+      this._vertexCount.clear();
     }
   };
 

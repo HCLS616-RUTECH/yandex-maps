@@ -1,0 +1,39 @@
+<div>
+  <div [class]="class">
+    <div *ngIf="action !== 'EDITING_POLYGON'"
+         class="h-full w-full p-2 text-center align-middle truncate absolute"
+         [@shift]
+    >{{params.name}}</div>
+
+    <input *ngIf="action === 'EDITING_POLYGON'"
+           [ngModel]="params.name"
+           (keydown)="$event.stopPropagation()"
+           (ngModelChange)="emit({name: $event})"
+           class="text-black-1000 w-full h-full p-2 outline-0 absolute"
+           [@shift]>
+  </div>
+
+  <div [class]="class">
+    ID: {{ params.id }}
+  </div>
+
+  <div [class]="class">
+    <div *ngIf="action !== 'EDITING_POLYGON'"
+         [style]="{'background': params.color}"
+         class="w-full h-full flex justify-center items-center absolute"
+         [@shift]
+    >ЦВЕТ</div>
+
+    <div *ngIf="action === 'EDITING_POLYGON'"
+         class="w-full h-full flex justify-center items-center absolute"
+         [@shift]
+    >
+      <label [for]="id" class="mr-2">Выбрать цвет: </label>
+      <input [id]="id"
+             type="color"
+             [ngModel]="params.color"
+             (input)="$event.stopPropagation()"
+             (ngModelChange)="emit({color: $event})">
+    </div>
+  </div>
+</div>

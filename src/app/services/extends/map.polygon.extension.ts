@@ -101,6 +101,8 @@ export class PolygonExtension {
 
       this._polygon = null;
       this._emitter$.next(null);
+
+      this._vertexCount.clear();
     }
   };
 

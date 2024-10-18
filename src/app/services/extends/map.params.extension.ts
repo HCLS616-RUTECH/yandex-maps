@@ -76,6 +76,10 @@ export class MapParamsExtension {
     this.BASE_PARAMS.colors.cache = cache;
   }
 
+  get opacity(): number {
+    return this.BASE_PARAMS.colors.opacity;
+  }
+
   createPolygonId(polygon: any): string {
     let id = '0';
     const keys = Object.keys(polygon);
