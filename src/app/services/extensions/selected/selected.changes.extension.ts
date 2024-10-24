@@ -67,7 +67,9 @@ export class SelectedChangesExtension {
           break;
       }
 
-      changes.delete(param);
+      if (changes) {
+        changes.delete(param);
+      }
     });
 
     value.properties.set({ changes });

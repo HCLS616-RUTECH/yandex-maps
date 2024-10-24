@@ -558,8 +558,8 @@ export class MapsService {
     for (let i = 0; i < coordinates.length; i++) {
       const current = this._checkCoordinates(i, coordinates);
 
-      if (current.changes) {
-        result[i] = current.coordinates;
+      if (current) {
+        result[i] = current;
       }
     }
 
@@ -603,27 +603,28 @@ export class MapsService {
 
     const checkResult = this._checkCoordinates(vertexIndex, coordinates);
 
-    if (checkResult.changes) {
+    if (checkResult) {
       switch (this._action.state) {
         case 'DRAWING_POLYLINE':
-          this._polyline.coordinates = checkResult.coordinates;
+          this._polyline.coordinates = checkResult;
           break;
         case 'DRAWING_POLYGON':
-          this._polygon.coordinates = checkResult.coordinates;
+          this._polygon.coordinates = checkResult;
           break;
         case 'EDITING_POLYGON':
-          this._selected.coordinates = checkResult.coordinates;
-          this._checkIsDefaultCoordinates();
+          this._selected.coordinates = checkResult;
           break;
       }
     }
+
+    this._checkIsDefaultCoordinates();
   };
 
   private _checkCoordinates = (
     vertexIndex: number,
     coordinates: TPoint[]
-  ): { changes: boolean; coordinates: TPoint[] } => {
-    const result = { changes: false, coordinates };
+  ): TPoint[] | null => {
+    let result: TPoint[] | null = null;
 
     const newPoint = coordinates[vertexIndex];
 
@@ -654,11 +655,9 @@ export class MapsService {
           polygons[i].geometry.getCoordinates()[0]
         );
 
-        result.changes = true;
-
         switch (this._action.state) {
           case 'DRAWING_POLYLINE':
-            result.coordinates = this._changeCoordinatesForPolyline(
+            result = this._changeCoordinatesForPolyline(
               vertexIndex,
               coordinates,
               closestPoint
@@ -667,7 +666,7 @@ export class MapsService {
           case 'DRAWING_POLYGON':
           case 'EDITING_POLYGON':
           case 'DRAG_POLYGON':
-            result.coordinates = this._changeCoordinatesForPolygon(
+            result = this._changeCoordinatesForPolygon(
               vertexIndex,
               coordinates,
               closestPoint
@@ -762,6 +761,10 @@ export class MapsService {
   };
 
   private _checkIsDefaultCoordinates = (): void => {
+    if (!this._selected.state) {
+      return;
+    }
+
     const defaultParams = this._selected.state.properties.get(
       'default'
     ) as Omit<IZone, 'id'>;
