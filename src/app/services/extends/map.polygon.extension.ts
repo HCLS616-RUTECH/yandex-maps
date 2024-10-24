@@ -32,10 +32,7 @@ export class PolygonExtension {
     this._polygon?.geometry.setCoordinates([coordinates]);
   }
 
-  startDrawing(
-    newVertexHandler: (event: any) => void,
-    changeHandler: (event: any) => void
-  ): void {
+  startDrawing(drawingHandler: (event: any) => void): void {
     this._polygon = new this.YANDEX_MAPS.Polygon(
       [],
       {},
@@ -50,21 +47,17 @@ export class PolygonExtension {
     this._map.geoObjects.add(this._polygon);
     this._polygon.editor.startDrawing();
 
-    this._polygon.editor.events.add('vertexadd', newVertexHandler);
-    this._polygon.geometry.events.add('change', changeHandler);
+    this._polygon.geometry.events.add('change', drawingHandler);
   }
 
-  stopDrawing(
-    newVertexHandler: (event: any) => void,
-    changeHandler: (event: any) => void
-  ): void {
+  stopDrawing(drawingHandler: (event: any) => void): void {
     const coordinates = this._computing.deleteSamePoints(
       this._polygon.geometry.getCoordinates()[0]
     );
 
     if (coordinates.length < 4) {
       this._vertexCount.clear();
-      return this.clear(newVertexHandler, changeHandler);
+      return this.clear(drawingHandler);
     }
 
     if (
@@ -83,19 +76,16 @@ export class PolygonExtension {
       new: true,
     });
 
-    this._clearStates(newVertexHandler, changeHandler);
+    this._clearStates(drawingHandler);
 
     this._emitter$.next(this._polygon);
 
     this._polygon = null;
   }
 
-  clear = (
-    newVertexHandler: (event: any) => void,
-    changeHandler: (event: any) => void
-  ): void => {
+  clear = (drawingHandler: (event: any) => void): void => {
     if (this._polygon) {
-      this._clearStates(newVertexHandler, changeHandler);
+      this._clearStates(drawingHandler);
 
       this._map.geoObjects.remove(this._polygon);
 
@@ -106,13 +96,9 @@ export class PolygonExtension {
     }
   };
 
-  private _clearStates = (
-    newVertexHandler: (event: any) => void,
-    changeHandler: (event: any) => void
-  ): void => {
+  private _clearStates = (drawingHandler: (event: any) => void): void => {
     this._polygon.editor.stopDrawing();
-    this._polygon.events.remove('vertexadd', newVertexHandler);
-    this._polygon.geometry.events.remove('change', changeHandler);
+    this._polygon.geometry.events.remove('change', drawingHandler);
     this._action.state = 'EMPTY';
   };
 }

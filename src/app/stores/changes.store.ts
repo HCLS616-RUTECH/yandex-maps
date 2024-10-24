@@ -63,7 +63,7 @@ export class ChangesStore {
     this._setSignal();
   }
 
-  edit(polygon: Polygon): void {
+  edit(polygon: any): void {
     const isNew = polygon.properties.get('new') as never as boolean;
 
     if (!isNew) {
@@ -83,6 +83,22 @@ export class ChangesStore {
     } else {
       this._deleted.add(id);
       if (this._edited.has(id)) this._edited.delete(id);
+    }
+
+    this._setSignal();
+  }
+
+  remove(id: string, from: 'new' | 'edited' | 'delete'): void {
+    switch (from) {
+      case 'new':
+        this._new.delete(id);
+        break;
+      case 'edited':
+        this._edited.delete(id);
+        break;
+      case 'delete':
+        this._deleted.delete(id);
+        break;
     }
 
     this._setSignal();

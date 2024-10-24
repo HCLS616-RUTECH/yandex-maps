@@ -1,0 +1,27 @@
+<div>
+  <div [class]="class + ' cursor-pointer text-yellow-500 height'"
+       [@vertical]
+       (click)="toggle()"
+  >
+    <div>ИЗМЕНЕНИЯ</div>
+
+    <div [@rotate]="isShowChanges()">^</div>
+  </div>
+
+  <div *ngIf="isShowChanges()" [@vertical]>
+    <div *ngIf="changes.length > 1"
+         [class]="class + ' text-red-400 height'"
+         [@vertical]
+    >
+      <div>Удалить все</div>
+
+      <button class="cursor-pointer" (click)="onClearParams.emit(changes)">X</button>
+    </div>
+
+    <div *ngFor="let param of changes" [class]="class + ' text-yellow-500 height'" [@vertical]>
+      <span>{{ MChangedParam[param] }}</span>
+
+      <button class="cursor-pointer" (click)="onClearParams.emit([param])">X</button>
+    </div>
+  </div>
+</div>

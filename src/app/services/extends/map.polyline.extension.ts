@@ -39,10 +39,7 @@ export class PolylineExtension {
     this._polyline?.editor.startDrawing();
   }
 
-  startDrawing(
-    newVertexHandler: (event: any) => void,
-    changeHandler: (event: any) => void
-  ): void {
+  startDrawing(drawingHandler: (event: any) => void): void {
     this._polyline = new this.YANDEX_MAPS.Polyline(
       [],
       {},
@@ -59,7 +56,7 @@ export class PolylineExtension {
           if (isPolyLineStartOrEnd && length > 2) {
             actions.push({
               title: 'Замкнуть полигон',
-              onClick: () => this.stopDrawing(newVertexHandler, changeHandler),
+              onClick: () => this.stopDrawing(drawingHandler),
             });
           }
 
@@ -68,25 +65,21 @@ export class PolylineExtension {
       }
     );
 
-    this._polyline.editor.events.add('vertexadd', newVertexHandler);
-    this._polyline.geometry.events.add('change', changeHandler);
+    this._polyline.geometry.events.add('change', drawingHandler);
 
     this._map.geoObjects.add(this._polyline);
     this._polyline.editor.startEditing();
     this._polyline.editor.startDrawing();
   }
 
-  stopDrawing(
-    newVertexHandler: (event: any) => void,
-    changeHandler: (event: any) => void
-  ): void {
+  stopDrawing(drawingHandler: (event: any) => void): void {
     const coordinates = this._computing.deleteSamePoints(
       this._polyline.geometry.getCoordinates()
     );
 
     if (coordinates.length < 4) {
       this._vertexCount.clear();
-      return this.clear(newVertexHandler, changeHandler);
+      return this.clear(drawingHandler);
     }
 
     const polygon = new this.YANDEX_MAPS.Polygon(
@@ -108,17 +101,14 @@ export class PolylineExtension {
       new: true,
     });
 
-    this._clearStates(newVertexHandler, changeHandler);
+    this._clearStates(drawingHandler);
 
     this._emitter$.next(polygon);
   }
 
-  clear = (
-    newVertexHandler: (event: any) => void,
-    changeHandler: (event: any) => void
-  ): void => {
+  clear = (drawingHandler: (event: any) => void): void => {
     if (this._polyline) {
-      this._clearStates(newVertexHandler, changeHandler);
+      this._clearStates(drawingHandler);
 
       this._emitter$.next(null);
 
@@ -126,14 +116,10 @@ export class PolylineExtension {
     }
   };
 
-  private _clearStates = (
-    newVertexHandler: (event: any) => void,
-    changeHandler: (event: any) => void
-  ): void => {
+  private _clearStates = (drawingHandler: (event: any) => void): void => {
     this._polyline.editor.stopEditing();
     this._polyline.editor.stopDrawing();
-    this._polyline.events.remove('vertexadd', newVertexHandler);
-    this._polyline.events.remove('change', changeHandler);
+    this._polyline.events.remove('change', drawingHandler);
     this._map.geoObjects.remove(this._polyline);
     this._polyline = null;
     this._action.state = 'EMPTY';

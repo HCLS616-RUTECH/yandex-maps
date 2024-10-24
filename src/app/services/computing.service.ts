@@ -6,6 +6,41 @@ import { TPoint } from '../models/types/point.type';
   providedIn: 'root',
 })
 export class ComputingService {
+  findVertexIndex = (
+    oldCoordinates: TPoint[],
+    newCoordinates: TPoint[]
+  ): number => {
+    let index = 0;
+
+    if (!oldCoordinates.length) {
+      return index;
+    }
+
+    for (let i = 0; i < newCoordinates.length; i++) {
+      if (oldCoordinates[i] === undefined) {
+        index = i;
+        break;
+      }
+
+      const isSame = this.isSamePoints(oldCoordinates[i], newCoordinates[i]);
+
+      if (isSame) {
+        continue;
+      }
+
+      index = i;
+      break;
+    }
+
+    return index;
+  };
+
+  checkIsSameCoordinates = (first: TPoint[], second: TPoint[]): boolean => {
+    return first.every((point, index) =>
+      this.isSamePoints(point, second[index])
+    );
+  };
+
   deleteSamePoints = (coordinates: TPoint[]): TPoint[] => {
     const hash = new Set<string>(
       coordinates.map((point) => JSON.stringify(point))

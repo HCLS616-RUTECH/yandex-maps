@@ -1,0 +1,8 @@
+:host {
+  overflow: hidden;
+}
+
+// почему-то tailwind ломает ангуляр анимацию
+.height {
+  height: 40px;
+}
