@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { debounceTime, Subject } from 'rxjs';
 import { SHIFT_ANIMATION } from '../../../../../../animations/shift.animation';
-import { ISelectedParams } from '../../../../../../models/interfaces/selected-params.interface';
+import { IZone } from '../../../../../../models/interfaces/zone.interface';
 import { TActionState } from '../../../../../../models/types/action-state.type';
 
 @UntilDestroy()
@@ -24,12 +24,12 @@ import { TActionState } from '../../../../../../models/types/action-state.type';
   animations: [SHIFT_ANIMATION],
 })
 export class SelectedParamsComponent {
-  @Input() params!: ISelectedParams;
+  @Input() params!: IZone;
   @Input() action!: TActionState;
 
-  @Output() onChangeParams = new EventEmitter<Partial<ISelectedParams>>();
+  @Output() onChangeParams = new EventEmitter<Partial<IZone>>();
 
-  private readonly _emitter$ = new Subject<Partial<ISelectedParams>>();
+  private readonly _emitter$ = new Subject<Partial<IZone>>();
 
   constructor() {
     this._emitter$
@@ -42,7 +42,7 @@ export class SelectedParamsComponent {
 
   id = Math.floor(Math.random() * 900000000) + 100000000;
 
-  emit(params: Partial<ISelectedParams>): void {
+  emit(params: Partial<IZone>): void {
     this._emitter$.next(params);
   }
 }

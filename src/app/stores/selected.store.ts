@@ -1,22 +1,20 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map, Observable } from 'rxjs';
 import { Polygon } from 'yandex-maps';
-import { ISelectedChanges } from '../models/interfaces/selected-changes.interface';
-import { ISelectedParams } from '../models/interfaces/selected-params.interface';
+import { IOptions } from '../models/interfaces/options.interface';
 import { IZone } from '../models/interfaces/zone.interface';
 import { TBbox } from '../models/types/bbox.type';
+import { TCache } from '../models/types/cache.type';
 import { TChangedParam } from '../models/types/changed-param.type';
+import { TDefaultParams } from '../models/types/default-params.type';
 import { TPoint } from '../models/types/point.type';
-import { DebuggerService } from '../services/debugger.service';
-import { MapParamsExtension } from '../services/extends/map.params.extension';
+import { ComputingService } from '../services/computing.service';
+import { MapSettingsExtension } from '../services/extensions/map/map.settings.extension';
+import { SelectedCacheExtension } from '../services/extensions/selected/selected.cache.extension';
 import { SelectedChangesExtension } from '../services/extensions/selected/selected.changes.extension';
+import { SelectedParamsExtension } from '../services/extensions/selected/selected.params.extension';
 import { ActionStore } from './action.store';
-import { VertexCountStore } from './vertex-count.store';
-
-interface IChanges {
-  params: TChangedParam[];
-  action: 'add' | 'clear';
-}
+import { VertexesStore } from './vertexes.store';
 
 @Injectable({
   providedIn: 'root',
@@ -24,19 +22,30 @@ interface IChanges {
 export class SelectedStore {
   private readonly _state$ = new BehaviorSubject<any | null>(null);
 
+  private readonly _cache: SelectedCacheExtension;
   private readonly _changes: SelectedChangesExtension;
+  private readonly _params: SelectedParamsExtension;
 
   constructor(
-    private readonly _debugger: DebuggerService,
-    private readonly _params: MapParamsExtension,
+    private readonly _settings: MapSettingsExtension,
     private readonly _action: ActionStore,
-    private readonly _vertexCount: VertexCountStore
+    private readonly _vertexes: VertexesStore,
+    private readonly _computing: ComputingService
   ) {
-    this._changes = new SelectedChangesExtension(
-      this._state$,
-      this._vertexCount,
-      this._debugger
+    this._params = new SelectedParamsExtension(
+      this,
+      this._settings,
+      this._action,
+      this._computing
     );
+
+    this._changes = new SelectedChangesExtension(this);
+
+    this._cache = new SelectedCacheExtension(this, this._params, this._changes);
+
+    this._vertexes.state = this._state$
+      .asObservable()
+      .pipe(map(() => this._params.coordinates.length));
   }
 
   get state(): any | null {
@@ -55,7 +64,7 @@ export class SelectedStore {
         selected?.editor.stopEditing();
         break;
       case 'DRAG_POLYGON':
-        this._params.stopDrag(selected);
+        this._settings.stopDrag(selected);
         break;
     }
 
@@ -64,8 +73,6 @@ export class SelectedStore {
     if (isSame) {
       this._action.state = 'EMPTY';
       this._state$.next(null);
-      this._vertexCount.clear();
-      this._changes.check();
       return;
     }
 
@@ -77,126 +84,120 @@ export class SelectedStore {
         polygon.editor.startEditing();
         break;
       case 'DRAG_POLYGON':
-        this._params.startDrag(polygon);
+        this._settings.startDrag(polygon);
         break;
     }
-
-    this._vertexCount.state = this.coordinates.length;
-    this._changes.check();
   }
 
-  get params$(): Observable<ISelectedParams | null> {
-    return this._state$.asObservable().pipe(map(() => this.params));
+  get params$(): Observable<IZone | null> {
+    return this._state$.asObservable().pipe(map(() => this._params.state));
   }
 
-  get params(): ISelectedParams | null {
-    const { value } = this._state$;
+  get params(): IZone | null {
+    return this._params.state;
+  }
 
-    if (!value) {
-      return value;
+  set params(params: Partial<IZone>) {
+    if (!this._state$.value) {
+      return;
     }
 
-    const fillColor: string = value.options.get('fillColor').slice(0, 6);
-    const dragColor: string = this._params.dragColor.slice(0, 6);
+    this._params.state = params;
 
-    const color: string =
-      fillColor === dragColor ? this._params.colorCache.slice(0, 6) : fillColor;
+    this.check(params);
+  }
+
+  get coordinates(): TPoint[] {
+    return this._params.coordinates;
+  }
+
+  get bbox(): TBbox {
+    return this._params.bbox;
+  }
+
+  get changes$(): Observable<TChangedParam[]> {
+    return this._state$.asObservable().pipe(map(() => this._changes.state));
+  }
+
+  get changes(): TChangedParam[] {
+    return this._changes.state;
+  }
+
+  get manipulations(): IOptions['manipulations'] {
+    const manipulations = this._state$.value?.properties.get('manipulations');
 
     return {
-      color: `#${color}`,
-      id: value.properties.get('id'),
-      name: value.properties.get('name'),
+      caches: manipulations.caches ?? false,
+      computing: manipulations.computing ?? false,
+      drag: manipulations.drag ?? false,
     };
   }
 
-  set params({ name, color }: Partial<ISelectedParams>) {
+  set manipulations(state: Partial<IOptions['manipulations']>) {
     const { value } = this._state$;
     if (!value) {
       return;
     }
 
-    const toAdd: TChangedParam[] = [];
-    const toClear: TChangedParam[] = [];
+    const manipulations = {
+      ...value.properties.get('manipulations'),
+      ...state,
+    };
 
-    const defaultParams = value.properties.get('default') as Omit<IZone, 'id'>;
+    value.properties.set({ manipulations });
+  }
 
-    if (name) {
-      value.properties.set({ name });
-
-      name === defaultParams.name ? toClear.push('name') : toAdd.push('name');
+  get cache(): { length: number; index: number } {
+    const { value } = this._state$;
+    if (!value) {
+      return { length: 0, index: -1 };
     }
 
-    if (color) {
-      color = `${color.replace('#', '')}${this._params.opacity}`;
-      value.options.set('fillColor', color);
+    const { queue, index } = value.properties.get('cache') as IOptions['cache'];
 
-      color === defaultParams.color
-        ? toClear.push('color')
-        : toAdd.push('color');
-    }
-
-    if (toAdd.length) {
-      this._changes.add(toAdd);
-    }
-
-    if (toClear.length) {
-      this._changes.clear(toClear);
-    }
+    return { length: queue.length, index };
   }
 
-  get coordinates(): TPoint[] {
-    return this._state$.value?.geometry?.getCoordinates()[0] ?? [];
+  set cache(to: 'back' | 'forward') {
+    this._cache.go(to);
+
+    this.update();
   }
 
-  set coordinates(coordinates: TPoint[]) {
-    this._state$.value?.geometry?.setCoordinates([coordinates]);
-
-    // Чинит багу с точкой, которая отрывается от вершины при логике с одинаковыми вершинами
-    if (this._action.state === 'EDITING_POLYGON') {
-      this._state$.value?.editor.stopEditing();
-      this._state$.value?.editor.startEditing();
-    }
-  }
-
-  get bounds(): TBbox {
-    return (
-      this._state$.value?.geometry?.getBounds() ??
-      this._state$.value?.properties.get('bbox') ??
-      []
-    );
-  }
-
-  set bounds(bbox: TBbox) {
-    this._state$.value?.properties.set({ bbox });
-  }
-
-  get changes(): ISelectedChanges | null {
-    return this._changes.state;
-  }
-
-  set changes({ params, action }: IChanges) {
-    this._changes[action](params);
-  }
-
-  get drag(): boolean {
-    return this._state$.value?.properties.get('drag') ?? false;
-  }
-
-  set drag(state: boolean) {
-    this._state$.value?.properties.set({ drag: state });
-  }
-
-  get computing(): boolean {
-    return this._state$.value?.properties.get('computing') ?? false;
-  }
-
-  set computing(state: boolean) {
-    this._state$.value?.properties.set({ computing: state });
+  get defaultParams(): TDefaultParams | null {
+    return this._params.default;
   }
 
   clear(): void {
     if (this._state$.value) {
       this.state = this._state$.value;
     }
+  }
+
+  update(): void {
+    this._state$.next(this._state$.value);
+  }
+
+  check(params: Partial<IZone>): void {
+    if (this.manipulations.caches) {
+      return;
+    }
+
+    const keys = Object.keys(params) as TChangedParam[];
+    const result = this._params.checkIsDefault(keys);
+
+    const { name, color, coordinates } = this.params!;
+
+    const cache: TCache = { name, color, coordinates };
+
+    keys.forEach((key) => {
+      result[key] ? this._changes.remove([key]) : this._changes.add([key]);
+
+      cache[key] = params[key] as string & TPoint[][];
+    });
+
+    this._cache.add(cache);
+
+    this.update();
   }
 }

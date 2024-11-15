@@ -3,7 +3,7 @@ import { TBbox } from '../../models/types/bbox.type';
 import { ActionStore } from '../../stores/action.store';
 import { SelectedStore } from '../../stores/selected.store';
 import { ComputingService } from '../computing.service';
-import { MapParamsExtension } from './map.params.extension';
+import { MapSettingsExtension } from '../extensions/map/map.settings.extension';
 
 export class IntersectionsExtension {
   private _intersections = new Map<string, any>();
@@ -12,7 +12,7 @@ export class IntersectionsExtension {
     private readonly _map: any,
     private readonly YANDEX_MAPS: any,
     private readonly _computing: ComputingService,
-    private readonly _params: MapParamsExtension,
+    private readonly _settings: MapSettingsExtension,
     private readonly _selected: SelectedStore,
     private readonly _action: ActionStore,
     private readonly _polygons: Map<string, any>
@@ -49,7 +49,7 @@ export class IntersectionsExtension {
       });
 
       if (forAnimate.length) {
-        this._params.animatePolygons(forAnimate);
+        this._settings.animatePolygons(forAnimate);
       }
     });
   };
@@ -178,7 +178,7 @@ export class IntersectionsExtension {
     intersections.forEach((intersection) => {
       this._map.geoObjects.add(intersection);
 
-      intersection.options.set('fillColor', this._params.intersectionColor);
+      intersection.options.set('fillColor', this._settings.intersectionColor);
 
       intersection.properties.set({
         id,
@@ -189,7 +189,7 @@ export class IntersectionsExtension {
       intersection.events.add('click', this._clickHandler);
     });
 
-    this._params.animatePolygons(intersections);
+    this._settings.animatePolygons(intersections);
   };
 
   private _isBboxesIntersected = (

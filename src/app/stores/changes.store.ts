@@ -30,7 +30,7 @@ export class ChangesStore {
 
     this._new.forEach((polygon) =>
       body.new.push({
-        color: polygon.options.get('fillColor'),
+        color: polygon.options.get('fillColor').slice(0, 6),
         coordinates: polygon.geometry.getCoordinates(),
         bbox:
           polygon.geometry?.getBounds() ??
@@ -42,7 +42,7 @@ export class ChangesStore {
 
     this._edited.forEach((polygon) =>
       body.edited.push({
-        color: polygon.options.get('fillColor'),
+        color: polygon.options.get('fillColor').slice(0, 6),
         coordinates: polygon.geometry.getCoordinates(),
         bbox:
           polygon.geometry?.getBounds() ??

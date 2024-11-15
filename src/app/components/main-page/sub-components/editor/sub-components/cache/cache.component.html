@@ -1,0 +1,15 @@
+<div class="w-full border-white-1000 border-x border-b flex justify-between items-center p-2 overflow-hidden">
+  <button class="cursor-pointer"
+          (click)="setCache('back')"
+          [disabled]="cache.index <= 0"
+          [ngClass]="{'text-yellow-500': cache.index > 0}"
+  ><</button>
+
+  <div class="text-yellow-500">КЭШ: {{cache.length}}</div>
+
+  <button class="cursor-pointer"
+          (click)="setCache('forward')"
+          [disabled]="cache.index >= cache.length - 1"
+          [ngClass]="{'text-yellow-500': cache.index < cache.length - 1}"
+  >></button>
+</div>

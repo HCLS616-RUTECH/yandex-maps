@@ -1,59 +1,69 @@
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, map, Observable, Subject } from 'rxjs';
+import { Queue } from '../../models/classes/queue';
+import { IOptions } from '../../models/interfaces/options.interface';
 import { IPointActions } from '../../models/interfaces/point-actions.interface';
+import { TCache } from '../../models/types/cache.type';
 import { TPoint } from '../../models/types/point.type';
 import { ActionStore } from '../../stores/action.store';
-import { VertexCountStore } from '../../stores/vertex-count.store';
+import { VertexesStore } from '../../stores/vertexes.store';
 import { ComputingService } from '../computing.service';
-import { MapParamsExtension } from './map.params.extension';
+import { MapSettingsExtension } from '../extensions/map/map.settings.extension';
 
 export class PolylineExtension {
-  private _polyline: any | null = null;
-
+  private readonly _state$ = new BehaviorSubject<any | null>(null);
   private readonly _emitter$ = new Subject<any>();
 
   constructor(
     private readonly _map: any,
     private readonly YANDEX_MAPS: any,
     private readonly _action: ActionStore,
-    private readonly _vertexCount: VertexCountStore,
+    private readonly _vertexes: VertexesStore,
     private readonly _computing: ComputingService,
-    private readonly _params: MapParamsExtension
-  ) {}
+    private readonly _settings: MapSettingsExtension
+  ) {
+    this._vertexes.state = this._state$
+      .asObservable()
+      .pipe(map(() => this.coordinates.length));
+  }
 
   get emitter$(): Observable<any> {
     return this._emitter$.asObservable();
   }
 
   get coordinates(): TPoint[] {
-    return this._polyline?.geometry.getCoordinates() ?? [];
+    return this._state$.value?.geometry.getCoordinates() ?? [];
   }
 
   set coordinates(coordinates: TPoint[]) {
-    this._polyline?.geometry.setCoordinates(coordinates);
+    const { value } = this._state$;
+    if (!value) {
+      return;
+    }
+
+    value.geometry.setCoordinates(coordinates);
 
     // Чинит багу с точкой, которая отрывается от вершины при логике с одинаковыми вершинами
-    this._polyline?.editor.stopEditing();
-    this._polyline?.editor.startEditing();
+    value.editor.stopEditing();
+    value.editor.startEditing();
 
-    this._polyline?.editor.stopDrawing();
-    this._polyline?.editor.startDrawing();
+    value.editor.stopDrawing();
+    value.editor.startDrawing();
   }
 
   startDrawing(drawingHandler: (event: any) => void): void {
-    this._polyline = new this.YANDEX_MAPS.Polyline(
+    const polyline = new this.YANDEX_MAPS.Polyline(
       [],
       {},
       {
-        ...this._params.strokeSelected,
+        ...this._settings.strokeSelected,
         editorMenuManager: (actions: IPointActions[]) => {
           actions = actions.filter((action) => action.title !== 'Завершить');
 
           const isPolyLineStartOrEnd = !!actions.find(
             (action) => action.title === 'Продолжить'
           );
-          const { length } = this._polyline.geometry.getCoordinates();
 
-          if (isPolyLineStartOrEnd && length > 2) {
+          if (isPolyLineStartOrEnd && this.coordinates.length > 2) {
             actions.push({
               title: 'Замкнуть полигон',
               onClick: () => this.stopDrawing(drawingHandler),
@@ -65,20 +75,22 @@ export class PolylineExtension {
       }
     );
 
-    this._polyline.geometry.events.add('change', drawingHandler);
+    polyline.geometry.events.add('change', drawingHandler);
 
-    this._map.geoObjects.add(this._polyline);
-    this._polyline.editor.startEditing();
-    this._polyline.editor.startDrawing();
+    this._map.geoObjects.add(polyline);
+    polyline.editor.startEditing();
+    polyline.editor.startDrawing();
+    this._state$.next(polyline);
   }
 
   stopDrawing(drawingHandler: (event: any) => void): void {
-    const coordinates = this._computing.deleteSamePoints(
-      this._polyline.geometry.getCoordinates()
-    );
+    if (!this._state$.value) {
+      return;
+    }
+
+    const coordinates = this._computing.deleteSamePoints(this.coordinates);
 
     if (coordinates.length < 4) {
-      this._vertexCount.clear();
       return this.clear(drawingHandler);
     }
 
@@ -86,20 +98,38 @@ export class PolylineExtension {
       [coordinates],
       {},
       {
-        ...this._params.strokeSelected,
-        fillColor: this._params.baseColor,
+        ...this._settings.strokeSelected,
+        fillColor: this._settings.baseColor,
       }
     );
 
     this._map.geoObjects.add(polygon);
 
-    const id = this._params.createPolygonId(polygon);
-    polygon.properties.set({
+    const id = this._settings.createPolygonId(polygon);
+    const options: IOptions = {
       id,
       name: `Новая зона ${id}`,
       bbox: polygon.geometry.getBounds(),
-      new: true,
-    });
+      new: false,
+      default: {
+        coordinates: [coordinates],
+        bbox: polygon.geometry.getBounds(),
+        name: `Новая зона ${id}`,
+        color: this._settings.baseColor,
+      },
+      cache: {
+        index: 0,
+        queue: new Queue<TCache>({
+          name: `Новая зона ${id}`,
+          color: this._settings.baseColor,
+          coordinates: [coordinates],
+        }),
+      },
+      manipulations: { caches: false, computing: false, drag: false },
+      changes: new Set(),
+    };
+
+    polygon.properties.set(options);
 
     this._clearStates(drawingHandler);
 
@@ -107,21 +137,28 @@ export class PolylineExtension {
   }
 
   clear = (drawingHandler: (event: any) => void): void => {
-    if (this._polyline) {
+    if (this._state$.value) {
       this._clearStates(drawingHandler);
 
       this._emitter$.next(null);
-
-      this._vertexCount.clear();
     }
   };
 
+  update = (): void => {
+    this._state$.next(this._state$.value);
+  };
+
   private _clearStates = (drawingHandler: (event: any) => void): void => {
-    this._polyline.editor.stopEditing();
-    this._polyline.editor.stopDrawing();
-    this._polyline.events.remove('change', drawingHandler);
-    this._map.geoObjects.remove(this._polyline);
-    this._polyline = null;
+    const { value } = this._state$;
+    if (!value) {
+      return;
+    }
+
+    value.editor.stopEditing();
+    value.editor.stopDrawing();
+    value.events.remove('change', drawingHandler);
+    this._map.geoObjects.remove(value);
+    this._state$.next(null);
     this._action.state = 'EMPTY';
   };
 }

@@ -1,22 +1,23 @@
 import { Injectable, signal } from '@angular/core';
 import { debounceTime, Subject, switchMap, take } from 'rxjs';
 import { Polygon } from 'yandex-maps';
-import { ISelectedParams } from '../models/interfaces/selected-params.interface';
+import { Queue } from '../models/classes/queue';
+import { IOptions } from '../models/interfaces/options.interface';
 import { IZone } from '../models/interfaces/zone.interface';
 import { TActionState } from '../models/types/action-state.type';
 import { TBbox } from '../models/types/bbox.type';
+import { TCache } from '../models/types/cache.type';
 import { TChangedParam } from '../models/types/changed-param.type';
 import { TPoint } from '../models/types/point.type';
 import { ActionStore } from '../stores/action.store';
 import { ChangesStore } from '../stores/changes.store';
 import { SelectedStore } from '../stores/selected.store';
-import { VertexCountStore } from '../stores/vertex-count.store';
+import { VertexesStore } from '../stores/vertexes.store';
 import { ComputingService } from './computing.service';
-import { DebuggerService } from './debugger.service';
 import { IntersectionsExtension } from './extends/map.intersections.extension';
-import { MapParamsExtension } from './extends/map.params.extension';
 import { PolygonExtension } from './extends/map.polygon.extension';
 import { PolylineExtension } from './extends/map.polyline.extension';
+import { MapSettingsExtension } from './extensions/map/map.settings.extension';
 import { MapsHttpService } from './maps.http.service';
 
 // TODO: 1. Бага с цветом при перетаскивании (быстро нажимать)                                      -
@@ -49,19 +50,18 @@ export class MapsService {
   private readonly YANDEX_MAPS = (window as any).ymaps;
 
   constructor(
-    private readonly _debugger: DebuggerService,
     private readonly _http: MapsHttpService,
+    private readonly _settings: MapSettingsExtension,
     private readonly _computing: ComputingService,
     private readonly _changes: ChangesStore,
     private readonly _action: ActionStore,
     private readonly _selected: SelectedStore,
-    private readonly _vertexCount: VertexCountStore,
-    private readonly _params: MapParamsExtension
+    private readonly _vertexes: VertexesStore
   ) {
     this.YANDEX_MAPS.ready(() => {
       this.yandexVersion.set(this.YANDEX_MAPS.meta.version);
 
-      const { center, zoom, controls, maxZoom, minZoom } = this._params.map;
+      const { center, zoom, controls, maxZoom, minZoom } = this._settings.map;
 
       this._map = new this.YANDEX_MAPS.Map(
         'map',
@@ -73,25 +73,25 @@ export class MapsService {
         this._map,
         this.YANDEX_MAPS,
         this._action,
-        this._vertexCount,
+        this._vertexes,
         this._computing,
-        this._params
+        this._settings
       );
 
       this._polygon = new PolygonExtension(
         this._map,
         this.YANDEX_MAPS,
         this._action,
-        this._vertexCount,
+        this._vertexes,
         this._computing,
-        this._params
+        this._settings
       );
 
       this._intersections = new IntersectionsExtension(
         this._map,
         this.YANDEX_MAPS,
         this._computing,
-        this._params,
+        this._settings,
         this._selected,
         this._action,
         this._polygons
@@ -125,8 +125,6 @@ export class MapsService {
       this._polyline.clear(this._drawingHandler);
 
       this._polygon.clear(this._drawingHandler);
-
-      this._vertexCount.clear();
 
       this._selected.clear();
     }
@@ -212,7 +210,6 @@ export class MapsService {
     this._changes.clear();
 
     this._intersections.clear();
-    this._vertexCount.clear();
     this._selected.clear();
     this._polyline.clear(this._drawingHandler);
     this._polygon.clear(this._drawingHandler);
@@ -232,14 +229,14 @@ export class MapsService {
     this._http.saveChanges(body).pipe(take(1)).subscribe();
   }
 
-  setNewParams = (params: Partial<ISelectedParams>): void => {
+  setNewParams = (params: Partial<IZone>): void => {
     if (!this._selected.state) {
       return;
     }
 
     this._selected.params = params;
 
-    this._selected.changes
+    this._selected.changes.length
       ? this._changes.edit(this._selected.state)
       : this._changes.remove(this._selected.params!.id, 'edited');
   };
@@ -249,9 +246,14 @@ export class MapsService {
       return;
     }
 
-    this._selected.changes = { params, action: 'clear' };
+    const defaultParams = this._selected.defaultParams!;
 
-    this._selected.changes
+    this._selected.params = params.reduce(
+      (acc, key) => ({ ...acc, [key]: defaultParams[key] }),
+      {}
+    );
+
+    this._selected.changes.length
       ? this._changes.edit(this._selected.state)
       : this._changes.remove(this._selected.params!.id, 'edited');
   };
@@ -287,25 +289,33 @@ export class MapsService {
         continue;
       }
 
-      const polygon = new this.YANDEX_MAPS.Polygon(
-        zone.coordinates,
-        {
-          id: zone.id,
-          name: zone.name,
+      const options: IOptions = {
+        id: zone.id,
+        name: zone.name,
+        bbox: zone.bbox,
+        new: false,
+        default: {
+          coordinates: zone.coordinates,
           bbox: zone.bbox,
-          new: false,
-          default: {
-            coordinates: zone.coordinates,
-            bbox: zone.bbox,
+          name: zone.name,
+          color: zone.color,
+        },
+        cache: {
+          index: 0,
+          queue: new Queue<TCache>({
             name: zone.name,
             color: zone.color,
-          },
+            coordinates: zone.coordinates,
+          }),
         },
-        {
-          ...this._params.stroke,
-          fillColor: zone.color,
-        }
-      );
+        manipulations: { caches: false, computing: false, drag: false },
+        changes: new Set(),
+      };
+
+      const polygon = new this.YANDEX_MAPS.Polygon(zone.coordinates, options, {
+        ...this._settings.stroke,
+        fillColor: zone.color,
+      });
 
       this._initPolygonActions(polygon);
 
@@ -368,7 +378,7 @@ export class MapsService {
       }
     });
 
-    this._params.animatePolygons(newPolygons);
+    this._settings.animatePolygons(newPolygons);
 
     this._intersections.checkBounds(screenBbox);
   }
@@ -436,7 +446,7 @@ export class MapsService {
     }
 
     if (this._action.state === 'DRAG_POLYGON') {
-      this._params.stopDrag(selected);
+      this._settings.stopDrag(selected);
     }
 
     this._action.state = 'EDITING_POLYGON';
@@ -480,8 +490,8 @@ export class MapsService {
     this._action.state = 'DRAG_POLYGON';
 
     this._action.state === 'DRAG_POLYGON'
-      ? this._params.startDrag(selected)
-      : this._params.stopDrag(selected);
+      ? this._settings.startDrag(selected)
+      : this._settings.stopDrag(selected);
   }
 
   private _initPolygonActions = (polygon: Polygon): void => {
@@ -495,7 +505,10 @@ export class MapsService {
 
     polygon.events.add('geometrychange', this._geometryChangeHandler);
 
-    polygon.events.add('dragstart', () => (this._selected.drag = true));
+    polygon.events.add(
+      'dragstart',
+      () => (this._selected.manipulations = { drag: true })
+    );
 
     polygon.events.add('dragend', this._dragendHandler);
   };
@@ -521,18 +534,27 @@ export class MapsService {
     }
 
     this._checkPoint(vertexIndex);
+
+    switch (this._action.state) {
+      case 'DRAWING_POLYLINE':
+        this._polyline.update();
+        break;
+      case 'DRAWING_POLYGON':
+        this._polygon.update();
+        break;
+    }
   };
 
   private _geometryChangeHandler = (event: any): void => {
-    if (this._selected.drag) {
+    if (this._selected.manipulations.drag) {
       return;
     }
 
-    if (this._selected.computing) {
+    if (this._selected.manipulations.computing) {
       return;
     }
 
-    this._selected.computing = true;
+    this._selected.manipulations = { computing: true };
 
     const { oldCoordinates, newCoordinates } =
       event.originalEvent.originalEvent.originalEvent;
@@ -544,11 +566,13 @@ export class MapsService {
 
     this._checkPoint(vertexIndex);
 
-    this._selected.bounds = this._selected.bounds;
-
     this._intersections.check(this._selected.state);
 
-    this._selected.computing = false;
+    this._selected.changes.length
+      ? this._changes.edit(this._selected.state)
+      : this._changes.remove(this._selected.params!.id, 'edited');
+
+    this._selected.manipulations = { computing: false };
   };
 
   private _dragendHandler = (event: any): void => {
@@ -573,15 +597,18 @@ export class MapsService {
         (index) => (newCoordinates[index] = result[index][index])
       );
 
-      this._selected.coordinates =
-        this._computing.deleteSamePoints(newCoordinates);
+      this.setNewParams({
+        coordinates: [this._computing.deleteSamePoints(newCoordinates)],
+      });
     }
+
+    this._selected.changes.length
+      ? this._changes.edit(this._selected.state)
+      : this._changes.remove(this._selected.params!.id, 'edited');
 
     this._intersections.check(this._selected.state);
 
-    this._checkIsDefaultCoordinates();
-
-    this._selected.drag = false;
+    this._selected.manipulations = { drag: false };
   };
 
   private _checkPoint = (vertexIndex: number): void => {
@@ -599,8 +626,6 @@ export class MapsService {
         break;
     }
 
-    this._vertexCount.state = coordinates.length;
-
     const checkResult = this._checkCoordinates(vertexIndex, coordinates);
 
     if (checkResult) {
@@ -612,12 +637,14 @@ export class MapsService {
           this._polygon.coordinates = checkResult;
           break;
         case 'EDITING_POLYGON':
-          this._selected.coordinates = checkResult;
+          this.setNewParams({ coordinates: [checkResult] });
           break;
       }
     }
 
-    this._checkIsDefaultCoordinates();
+    if (!checkResult && this._action.state === 'EDITING_POLYGON') {
+      this._selected.check({ coordinates: [this._selected.coordinates] });
+    }
   };
 
   private _checkCoordinates = (
@@ -705,8 +732,6 @@ export class MapsService {
         newCoordinates = !!vertexIndex
           ? newCoordinates.slice(0, coordinates.length - 1)
           : newCoordinates.slice(1, coordinates.length);
-
-        this._vertexCount.state = coordinates.length;
       }
     }
 
@@ -753,33 +778,9 @@ export class MapsService {
               ...newCoordinates.slice(1, newCoordinates.length - 1),
               closestPoint,
             ];
-
-      this._vertexCount.state = coordinates.length;
     }
 
     return newCoordinates;
-  };
-
-  private _checkIsDefaultCoordinates = (): void => {
-    if (!this._selected.state) {
-      return;
-    }
-
-    const defaultParams = this._selected.state.properties.get(
-      'default'
-    ) as Omit<IZone, 'id'>;
-    const isDefaultCoordinates = this._computing.checkIsSameCoordinates(
-      this._selected.coordinates,
-      defaultParams.coordinates[0]
-    );
-
-    if (isDefaultCoordinates) {
-      this._selected.changes = { params: ['coordinates'], action: 'clear' };
-      this._changes.remove(this._selected.params!.id, 'edited');
-    } else {
-      this._selected.changes = { params: ['coordinates'], action: 'add' };
-      this._changes.edit(this._selected.state);
-    }
   };
 
   // private _initPlaceMark(): void {

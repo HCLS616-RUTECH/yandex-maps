@@ -1,7 +1,7 @@
 <aside class="bg-black-1000 text-white-1000 max-h-full h-full w-full flex flex-col overflow-auto p-2">
   <app-action [action]="action"></app-action>
 
-  <app-vertex-count *ngIf="count" [count]="count" [@vertical]></app-vertex-count>
+  <app-vertex-count *ngIf="vertexes$ | async as count" [count]="count" [@vertical]></app-vertex-count>
 
   <app-selected-params *ngIf="selected$ | async as params"
                        [params]="params"
@@ -10,11 +10,17 @@
                        [@vertical]
   ></app-selected-params>
 
-  <app-changes *ngIf="changes"
+  <app-changes *ngIf="changes$ | async as changes"
                [changes]="changes"
                (onClearParams)="handleClearParams($event)"
                [@vertical]
   ></app-changes>
+
+  <app-cache *ngIf="action === 'EDITING_POLYGON' && cache.length > 1"
+             [cache]="cache"
+             (onSetCache)="handleSetCache($event)"
+             [@vertical]
+  ></app-cache>
 
   <div class="h-10 min-h-10 w-full border-white-1000 border-x border-b flex justify-center items-center p-2 cursor-not-allowed">
     <button class="cursor-not-allowed">ПАНЕЛЬ УПРАВЛЕНИЯ</button>

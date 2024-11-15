@@ -1,3 +1,3 @@
-import { ISelectedParams } from '../interfaces/selected-params.interface';
+import { IZone } from '../interfaces/zone.interface';
 
-export type TChangedParam = 'coordinates' | keyof Omit<ISelectedParams, 'id'>;
+export type TChangedParam = keyof Omit<IZone, 'id' | 'bbox'>;

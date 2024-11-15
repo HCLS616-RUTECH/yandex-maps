@@ -2,7 +2,7 @@ export const zones = [
   {
     id: '36',
     name: 'Ростов-на-Дону Миронова 2Е',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [47.265051, 39.753289],
@@ -77,7 +77,7 @@ export const zones = [
   {
     id: '37',
     name: 'Хабаровск Руднева 56',
-    color: '536ac288',
+    color: '536ac2',
     coordinates: [
       [
         [49.071112, 135.289382],
@@ -99,7 +99,7 @@ export const zones = [
   {
     id: '39',
     name: 'Сах. Обл Южно-Сахалинск Фабричная 40',
-    color: 'ffd70088',
+    color: 'ffd700',
     coordinates: [
       [
         [47.124532, 143.064448],
@@ -137,7 +137,7 @@ export const zones = [
   {
     id: '41',
     name: 'Брест Комсомольская 23/1',
-    color: 'ff450088',
+    color: 'ff4500',
     coordinates: [
       [
         [52.076034, 23.71483],
@@ -179,7 +179,7 @@ export const zones = [
   {
     id: '42',
     name: 'Казань Батыева 15',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [55.732163, 49.233146],
@@ -218,7 +218,7 @@ export const zones = [
   {
     id: '43',
     name: 'Тверь Склизкова 44',
-    color: '228b2288',
+    color: '228b22',
     coordinates: [
       [
         [56.849907, 35.974599],
@@ -271,7 +271,7 @@ export const zones = [
   {
     id: '44',
     name: 'Краснодар Будённого 80',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [44.99104, 38.966918],
@@ -316,7 +316,7 @@ export const zones = [
   {
     id: '45',
     name: 'Ниж. обл. Бор Ленина 112',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [56.429168, 43.888417],
@@ -373,7 +373,7 @@ export const zones = [
   {
     id: '46',
     name: 'Самара Демократическая 30А',
-    color: 'e3078d88',
+    color: 'e3078d',
     coordinates: [
       [
         [53.262621, 50.187997],
@@ -438,7 +438,7 @@ export const zones = [
   {
     id: '51',
     name: 'Омск Масленникова 82',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [54.108673, 72.378337],
@@ -659,7 +659,7 @@ export const zones = [
   {
     id: '54',
     name: 'ЕАО Биробиджан Пионерская 68',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [49.070267, 131.829346],
@@ -680,7 +680,7 @@ export const zones = [
   {
     id: '57',
     name: 'Тюмень Салтыкова-Щедрина 44',
-    color: '46ade488',
+    color: '46ade4',
     coordinates: [
       [
         [57.154582, 65.537491],
@@ -713,7 +713,7 @@ export const zones = [
   {
     id: '58',
     name: 'Воронеж Генерала Лизюкова 61',
-    color: 'ff90fd88',
+    color: 'ff90fd',
     coordinates: [
       [
         [51.757153, 39.094123],
@@ -759,7 +759,7 @@ export const zones = [
   {
     id: '60',
     name: 'Кемерово Красноармейская 140',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.155029, 86.54397],
@@ -824,7 +824,7 @@ export const zones = [
   {
     id: '62',
     name: 'Уфа Николая Дмитриева 17/1',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [54.75456, 56.032635],
@@ -915,7 +915,7 @@ export const zones = [
   {
     id: '63',
     name: 'Пермь Рабоче-Крестьянская 6',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [57.9853871653537, 56.2550439946578],
@@ -959,7 +959,7 @@ export const zones = [
   {
     id: '68',
     name: 'Новороссийск Фисанова 18',
-    color: 'ff00ff88',
+    color: 'ff00ff',
     coordinates: [
       [
         [44.71774, 37.701257],
@@ -1011,7 +1011,7 @@ export const zones = [
   {
     id: '70',
     name: 'Орёл 2-я Посадская 1',
-    color: '7fff0088',
+    color: '7fff00',
     coordinates: [
       [
         [52.85958, 34.842778],
@@ -1081,7 +1081,7 @@ export const zones = [
   {
     id: '73',
     name: 'Липецк Первомайская 78',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [52.238824, 39.34388],
@@ -1291,7 +1291,7 @@ export const zones = [
   {
     id: '74',
     name: 'Тул. обл. Новомосковск Свердлова 38',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.058506, 38.18036],
@@ -1320,7 +1320,7 @@ export const zones = [
   {
     id: '75',
     name: 'Рязань Александра Полина 1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.55108, 39.448962],
@@ -1409,7 +1409,7 @@ export const zones = [
   {
     id: '78',
     name: 'Сарат. Обл Энгельс Петровская 90',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [51.641782, 46.347341],
@@ -1475,7 +1475,7 @@ export const zones = [
   {
     id: '79',
     name: 'Пенза Калинина 22А',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [53.067058, 45.469155],
@@ -1597,7 +1597,7 @@ export const zones = [
   {
     id: '80',
     name: 'Калуга Гурьянова 69к1',
-    color: '3cb37188',
+    color: '3cb371',
     coordinates: [
       [
         [54.535292, 36.234009],
@@ -1662,7 +1662,7 @@ export const zones = [
   {
     id: '82',
     name: 'Смоленск Николаева 49',
-    color: '6495ed88',
+    color: '6495ed',
     coordinates: [
       [
         [54.511566, 31.083852],
@@ -1706,7 +1706,7 @@ export const zones = [
   {
     id: '84',
     name: 'Св. Обл Нижняя Салда Уральская 2',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [57.793288, 60.204067],
@@ -1729,7 +1729,7 @@ export const zones = [
   {
     id: '85',
     name: 'Йошкар-Ола Машиностроителей 89',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.321644, 47.425941],
@@ -1769,7 +1769,7 @@ export const zones = [
   {
     id: '86',
     name: 'Мурманск Коминтерна 15',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [68.981321, 33.070815],
@@ -1849,7 +1849,7 @@ export const zones = [
   {
     id: '87',
     name: 'Владимир Полины Осипенко 21',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [56.2032, 40.356211],
@@ -1989,7 +1989,7 @@ export const zones = [
   {
     id: '89',
     name: 'Ярославль Сосновая 4',
-    color: 'ffff0088',
+    color: 'ffff00',
     coordinates: [
       [
         [57.90383, 39.455019],
@@ -2043,7 +2043,7 @@ export const zones = [
   {
     id: '90',
     name: 'Нижневартовск Омская 38',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [60.932307, 76.599162],
@@ -2072,7 +2072,7 @@ export const zones = [
   {
     id: '91',
     name: 'Махачкала пр-кт Али-Гаджи Акушинского 3',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [42.945705, 47.416561],
@@ -2103,7 +2103,7 @@ export const zones = [
   {
     id: '92',
     name: 'Став. Кра. пос Свободы Маршала Жукова 37А',
-    color: '32cd3288',
+    color: '32cd32',
     coordinates: [
       [
         [44.036665, 43.046076],
@@ -2165,7 +2165,7 @@ export const zones = [
   {
     id: '93',
     name: 'Вор. обл. Борисоглебск Юго-Восточный мкр. 2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.216185, 41.239969],
@@ -2192,7 +2192,7 @@ export const zones = [
   {
     id: '94',
     name: 'При. Кра. Находка Комсомольская 32',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [43.558548, 134.003449],
@@ -2224,7 +2224,7 @@ export const zones = [
   {
     id: '95',
     name: 'Уссурийск Ушакова 8В',
-    color: '8b008b88',
+    color: '8b008b',
     coordinates: [
       [
         [43.854475, 131.917638],
@@ -2248,7 +2248,7 @@ export const zones = [
   {
     id: '97',
     name: 'МО Ногинск Рогожская 67',
-    color: 'ffff0088',
+    color: 'ffff00',
     coordinates: [
       [
         [55.865636, 38.348285],
@@ -2301,7 +2301,7 @@ export const zones = [
   {
     id: '98',
     name: 'ЯНАО Ноябрьск Холмогорская 49',
-    color: '7b68ee88',
+    color: '7b68ee',
     coordinates: [
       [
         [63.34566, 75.279806],
@@ -2328,7 +2328,7 @@ export const zones = [
   {
     id: '99',
     name: 'Владикавказ Весенняя 7к10',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [43.030036, 44.665783],
@@ -2420,7 +2420,7 @@ export const zones = [
   {
     id: '100',
     name: 'Томск Говорова 38',
-    color: '536ac288',
+    color: '536ac2',
     coordinates: [
       [
         [56.55395, 84.981237],
@@ -2494,7 +2494,7 @@ export const zones = [
   {
     id: '101',
     name: 'Гомель Шилова 3А/4',
-    color: 'ffff0088',
+    color: 'ffff00',
     coordinates: [
       [
         [52.449785, 30.987903],
@@ -2559,7 +2559,7 @@ export const zones = [
   {
     id: '102',
     name: 'КБР Нальчик Ногмова 53',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [43.606227, 43.787463],
@@ -2602,7 +2602,7 @@ export const zones = [
   {
     id: '103',
     name: 'Петропавловск-Камчатский Советская 20',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [52.97655, 158.68295],
@@ -2629,7 +2629,7 @@ export const zones = [
   {
     id: '104',
     name: 'Оренбург Гая 12',
-    color: 'ff8fb688',
+    color: 'ff8fb6',
     coordinates: [
       [
         [51.718068, 55.273607],
@@ -2662,7 +2662,7 @@ export const zones = [
   {
     id: '107',
     name: 'Чел. обл. Магнитогорск Комсомольская 4',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [54.231925, 56.96127],
@@ -2722,7 +2722,7 @@ export const zones = [
   {
     id: '108',
     name: 'Вит. Обл Витебск Ленина 73',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.720298, 29.546527],
@@ -2911,7 +2911,7 @@ export const zones = [
   {
     id: '109',
     name: 'Сочи Дивноморская 20',
-    color: '536ac288',
+    color: '536ac2',
     coordinates: [
       [
         [43.5381, 39.7749],
@@ -2942,7 +2942,7 @@ export const zones = [
   {
     id: '111',
     name: 'Св. обл. Серов Зелёная 7',
-    color: 'fff48488',
+    color: 'fff484',
     coordinates: [
       [
         [59.37103, 61.416602],
@@ -2963,7 +2963,7 @@ export const zones = [
   {
     id: '112',
     name: 'Туапсе Ленина 2',
-    color: 'ff7f5088',
+    color: 'ff7f50',
     coordinates: [
       [
         [44.204324, 38.721332],
@@ -2991,7 +2991,7 @@ export const zones = [
   {
     id: '116',
     name: 'См. обл. Вязьма Полевая 52',
-    color: '536ac288',
+    color: '536ac2',
     coordinates: [
       [
         [55.289544, 35.302505],
@@ -3027,7 +3027,7 @@ export const zones = [
   {
     id: '117',
     name: 'Рост. обл. Каменск-Шахтинский пер. Зелёный Курган 80',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [48.598645, 40.498772],
@@ -3069,7 +3069,7 @@ export const zones = [
   {
     id: '118',
     name: 'Рост. Обл Таганрог Инициативная 54А',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [47.421109, 39.559233],
@@ -3108,7 +3108,7 @@ export const zones = [
   {
     id: '119',
     name: 'Орен. обл. Бузулук Гая 50Б',
-    color: 'ff4f8188',
+    color: 'ff4f81',
     coordinates: [
       [
         [53.050363, 53.487934],
@@ -3135,7 +3135,7 @@ export const zones = [
   {
     id: '120',
     name: 'ЯН. Окр. Новый Уренгой мкр Восточный 5/9',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [66.116512, 76.683455],
@@ -3167,7 +3167,7 @@ export const zones = [
   {
     id: '121',
     name: 'Пер. Кра. Березники Мира 107',
-    color: 'ff1f4988',
+    color: 'ff1f49',
     coordinates: [
       [
         [58.958759445185, 57.2312707059064],
@@ -3193,7 +3193,7 @@ export const zones = [
   {
     id: '125',
     name: 'ХМ. Окр. Ханты-Мансийск Гагарина 65',
-    color: 'ff7f5088',
+    color: 'ff7f50',
     coordinates: [
       [
         [61.253561, 69.387163],
@@ -3243,7 +3243,7 @@ export const zones = [
   {
     id: '126',
     name: 'Вологда Герцена 61',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [59.842148, 37.618509],
@@ -3294,7 +3294,7 @@ export const zones = [
   {
     id: '128',
     name: 'Респ. Саха Мирный Ленинградский пр-кт 2В',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [62.523996, 113.967002],
@@ -3334,7 +3334,7 @@ export const zones = [
   {
     id: '131',
     name: 'Саранск Васенко 1',
-    color: 'ffaa3a88',
+    color: 'ffaa3a',
     coordinates: [
       [
         [54.208625, 45.190494],
@@ -3401,7 +3401,7 @@ export const zones = [
   {
     id: '132',
     name: 'Сам. обл. Сызрань пр-кт 50 лет Октября 24',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [53.502562, 49.005033],
@@ -3441,7 +3441,7 @@ export const zones = [
   {
     id: '134',
     name: 'Респ. Ад. Майкоп Пионерская 494',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [44.456241, 40.507125],
@@ -3473,7 +3473,7 @@ export const zones = [
   {
     id: '135',
     name: 'КЧР Черкесск Космонавтов 86',
-    color: 'ffff0088',
+    color: 'ffff00',
     coordinates: [
       [
         [44.22231, 42.058502],
@@ -3521,7 +3521,7 @@ export const zones = [
   {
     id: '136',
     name: 'Ижевск Красноармейская 74',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [56.813922, 53.203241],
@@ -3597,7 +3597,7 @@ export const zones = [
   {
     id: '137',
     name: 'Набережные Челны пр-кт Вахитова 27',
-    color: 'ffd70088',
+    color: 'ffd700',
     coordinates: [
       [
         [55.78772, 52.523106],
@@ -3656,7 +3656,7 @@ export const zones = [
   {
     id: '138',
     name: 'Респ. Баш. Нефтекамск Дорожная 29А',
-    color: '536ac288',
+    color: '536ac2',
     coordinates: [
       [
         [55.760904, 53.857424],
@@ -3694,7 +3694,7 @@ export const zones = [
   {
     id: '140',
     name: 'Респ. Кал. Элиста 8-й мкр. 33А',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [46.303231, 44.188664],
@@ -3763,7 +3763,7 @@ export const zones = [
   {
     id: '143',
     name: 'МСК Мироновская 25',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.800579, 37.733384],
@@ -3825,7 +3825,7 @@ export const zones = [
   {
     id: '145',
     name: 'Саров Октябрьский 5',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [54.925584, 43.251166],
@@ -3850,7 +3850,7 @@ export const zones = [
   {
     id: '148',
     name: 'Киров Ленина 83',
-    color: 'ff6a4e88',
+    color: 'ff6a4e',
     coordinates: [
       [
         [58.586081, 49.724123],
@@ -3892,7 +3892,7 @@ export const zones = [
   {
     id: '149',
     name: 'Респ. Ком. Сыктывкар Морозова 119',
-    color: 'ffa50088',
+    color: 'ffa500',
     coordinates: [
       [
         [60.788518, 48.326827],
@@ -3956,7 +3956,7 @@ export const zones = [
   {
     id: '150',
     name: 'Братск Комсомольская 10',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [56.110679, 101.437174],
@@ -3985,7 +3985,7 @@ export const zones = [
   {
     id: '153',
     name: 'Арзамас Молокозаводская 65А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.252021, 44.007943],
@@ -4022,7 +4022,7 @@ export const zones = [
   {
     id: '154',
     name: 'Уд. респ. Глазов Советская 20',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [58.188482, 51.757182],
@@ -4052,7 +4052,7 @@ export const zones = [
   {
     id: '155',
     name: 'Брест. обл. Барановичи Пролетарская 32',
-    color: 'fff48488',
+    color: 'fff484',
     coordinates: [
       [
         [53.239154, 25.77552],
@@ -4121,7 +4121,7 @@ export const zones = [
   {
     id: '160',
     name: 'Гом. обл. Мозырь Советская 128',
-    color: '536ac288',
+    color: '536ac2',
     coordinates: [
       [
         [52.043473, 29.10079],
@@ -4156,7 +4156,7 @@ export const zones = [
   {
     id: '161',
     name: 'МСК Суздальская 42',
-    color: '2e8b5788',
+    color: '2e8b57',
     coordinates: [
       [
         [55.737461, 37.875747],
@@ -4181,7 +4181,7 @@ export const zones = [
   {
     id: '162',
     name: 'Гродно Ольги Соломовой 137',
-    color: 'ffff0088',
+    color: 'ffff00',
     coordinates: [
       [
         [53.688671, 23.774995],
@@ -4243,7 +4243,7 @@ export const zones = [
   {
     id: '163',
     name: 'ЛО Кириши Пионерская 2',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [59.564873, 31.698053],
@@ -4265,7 +4265,7 @@ export const zones = [
   {
     id: '165',
     name: 'Стерлитамак пр-кт Октября 59',
-    color: 'ff4f8188',
+    color: 'ff4f81',
     coordinates: [
       [
         [53.262347, 55.585838],
@@ -4303,7 +4303,7 @@ export const zones = [
   {
     id: '166',
     name: 'Мог. обл. Бобруйск Советская 72/3',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [53.149109, 29.138814],
@@ -4337,7 +4337,7 @@ export const zones = [
   {
     id: '168',
     name: 'Св. обл. Североуральск Мира 20',
-    color: '4b008288',
+    color: '4b0082',
     coordinates: [
       [
         [60.448708, 59.734235],
@@ -4357,7 +4357,7 @@ export const zones = [
   {
     id: '169',
     name: 'Тв. обл. Вышний Волочёк Большая Садовая 58-66',
-    color: '6a5acd88',
+    color: '6a5acd',
     coordinates: [
       [
         [57.531275, 32.913952],
@@ -4387,7 +4387,7 @@ export const zones = [
   {
     id: '176',
     name: 'Троицк Советская 64',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [54.048601, 62.388904],
@@ -4423,7 +4423,7 @@ export const zones = [
   {
     id: '177',
     name: 'Пск. обл. Великие Луки Пионерская 5',
-    color: '7cfc0088',
+    color: '7cfc00',
     coordinates: [
       [
         [55.734886, 31.21926],
@@ -4449,7 +4449,7 @@ export const zones = [
   {
     id: '178',
     name: 'МО Красногорск Ильинское шоссе 6',
-    color: 'ff634788',
+    color: 'ff6347',
     coordinates: [
       [
         [55.81129, 37.312704],
@@ -4481,7 +4481,7 @@ export const zones = [
   {
     id: '179',
     name: 'Брест. обл. Пинск Завальная 29',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.581214, 26.020573],
@@ -4507,7 +4507,7 @@ export const zones = [
   {
     id: '180',
     name: 'Красн. кр. Шарыпово 2-й мкр. 15А',
-    color: '228b2288',
+    color: '228b22',
     coordinates: [
       [
         [55.513977, 89.771446],
@@ -4536,7 +4536,7 @@ export const zones = [
   {
     id: '181',
     name: 'Кург. обл. Шадринск Свердлова 83',
-    color: '3cb37188',
+    color: '3cb371',
     coordinates: [
       [
         [56.010701, 64.83266],
@@ -4564,7 +4564,7 @@ export const zones = [
   {
     id: '182',
     name: 'Вит. Обл Полоцк пр-кт Франциска Скорины 23',
-    color: '80008088',
+    color: '800080',
     coordinates: [
       [
         [55.56916, 28.628291],
@@ -4620,7 +4620,7 @@ export const zones = [
   {
     id: '186',
     name: 'Нягань 3-й мкр 23к1',
-    color: '8a2be288',
+    color: '8a2be2',
     coordinates: [
       [
         [62.095613, 65.35518],
@@ -4651,7 +4651,7 @@ export const zones = [
   {
     id: '188',
     name: 'МО Одинцово Вокзальная 51А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.653433, 37.338099],
@@ -4687,7 +4687,7 @@ export const zones = [
   {
     id: '192',
     name: 'Грод. обл. Лида Космонавтов 10к1',
-    color: 'b2222288',
+    color: 'b22222',
     coordinates: [
       [
         [53.727033, 25.068112],
@@ -4726,7 +4726,7 @@ export const zones = [
   {
     id: '259',
     name: 'Слуцк Комсомольская 1 ',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [52.873231, 28.136089],
@@ -4748,7 +4748,7 @@ export const zones = [
   {
     id: '260',
     name: 'Св. обл. Новоуральск Первомайская 42',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [57.283635, 60.485883],
@@ -4766,7 +4766,7 @@ export const zones = [
   {
     id: '262',
     name: 'Ман. Обл Актау 2-й мкр 34/1 (курьерский склад)',
-    color: 'ffa07a88',
+    color: 'ffa07a',
     coordinates: [
       [
         [43.813027, 51.351453],
@@ -4787,7 +4787,7 @@ export const zones = [
   {
     id: '264',
     name: 'В-К Обл Усть-Каменогорск пр-кт Ауэзова 14/1 (курьерский склад)',
-    color: 'ff7f5088',
+    color: 'ff7f50',
     coordinates: [
       [
         [50.070627, 82.754789],
@@ -4811,7 +4811,7 @@ export const zones = [
   {
     id: '265',
     name: 'Атыр. Обл Атырау Сырыма Датова 40А',
-    color: '7cfc0088',
+    color: '7cfc00',
     coordinates: [
       [
         [47.23647, 51.630661],
@@ -4856,7 +4856,7 @@ export const zones = [
   {
     id: '266',
     name: 'Симферополь Батурина 189',
-    color: '7cfc0088',
+    color: '7cfc00',
     coordinates: [
       [
         [44.917184, 34.088625],
@@ -4898,7 +4898,7 @@ export const zones = [
   {
     id: '267',
     name: 'СПБ Уездный пр-кт 11',
-    color: '6495ed88',
+    color: '6495ed',
     coordinates: [
       [
         [59.881702, 30.407071],
@@ -4926,7 +4926,7 @@ export const zones = [
   {
     id: '270',
     name: 'Мур. обл. Полярные Зори Ломоносова 6',
-    color: 'e9967a88',
+    color: 'e9967a',
     coordinates: [
       [
         [67.199499, 29.936076],
@@ -4948,7 +4948,7 @@ export const zones = [
   {
     id: '273',
     name: 'Воркута Димитрова 15',
-    color: '98fb9888',
+    color: '98fb98',
     coordinates: [
       [
         [67.634754, 64.169357],
@@ -4990,7 +4990,7 @@ export const zones = [
   {
     id: '275',
     name: 'Салехард Подшибякина 50Б',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [66.547841, 66.631095],
@@ -5027,7 +5027,7 @@ export const zones = [
   {
     id: '276',
     name: 'ЯН. Окр. Губкинский 44',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [64.434984, 76.497711],
@@ -5057,7 +5057,7 @@ export const zones = [
   {
     id: '278',
     name: 'Респ. Алт. Горно-Алтайск Коммунистический пр-кт 125',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [52.573355, 86.557079],
@@ -5094,7 +5094,7 @@ export const zones = [
   {
     id: '279',
     name: 'Чита Красноармейская 54',
-    color: 'fa807288',
+    color: 'fa8072',
     coordinates: [
       [
         [51.900203, 113.474287],
@@ -5155,7 +5155,7 @@ export const zones = [
   {
     id: '281',
     name: 'Красн. кр. Ачинск 6-й мкр. 19',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [56.506921, 91.54509],
@@ -5181,7 +5181,7 @@ export const zones = [
   {
     id: '282',
     name: 'Крснр. Кра. Канск 4-й Центральный мкр 19',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [57.108757, 97.356661],
@@ -5208,7 +5208,7 @@ export const zones = [
   {
     id: '283',
     name: 'Крснр. Кра. пгт Шушенское Тельмана 26',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [53.355205, 91.913941],
@@ -5238,7 +5238,7 @@ export const zones = [
   {
     id: '284',
     name: 'Ирк. обл. Тулун мкр. Угольщиков 6',
-    color: 'ffff0088',
+    color: 'ffff00',
     coordinates: [
       [
         [55.322616, 100.691254],
@@ -5258,7 +5258,7 @@ export const zones = [
   {
     id: '285',
     name: 'Улан-Удэ 140А мкр. 19/1',
-    color: '7cfc0088',
+    color: '7cfc00',
     coordinates: [
       [
         [51.546328, 108.290497],
@@ -5310,7 +5310,7 @@ export const zones = [
   {
     id: '286',
     name: 'Арх. обл. Вельск Дзержинского 17Б',
-    color: 'ff1f4988',
+    color: 'ff1f49',
     coordinates: [
       [
         [61.574002, 42.792248],
@@ -5352,7 +5352,7 @@ export const zones = [
   {
     id: '287',
     name: 'Петрозаводск Шотмана 48А',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [61.772064, 34.373086],
@@ -5387,7 +5387,7 @@ export const zones = [
   {
     id: '288',
     name: 'Актобе Абубакира Кердери 17',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [50.526873, 57.377327],
@@ -5408,7 +5408,7 @@ export const zones = [
   {
     id: '289',
     name: 'Кост. Обл Костанай Воинов-Интернационалистов 1/1',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [53.110868, 63.751637],
@@ -5428,7 +5428,7 @@ export const zones = [
   {
     id: '290',
     name: 'ЛО Лодейное Поле Гагарина 8',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [60.745659, 32.699673],
@@ -5452,7 +5452,7 @@ export const zones = [
   {
     id: '291',
     name: 'Кокшетау Мира 22 (франшизный курьерский склад)',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.610759, 69.134782],
@@ -5472,7 +5472,7 @@ export const zones = [
   {
     id: '292',
     name: 'Кыз .Обл Кызылорда Женис 99',
-    color: 'e7b1b188',
+    color: 'e7b1b1',
     coordinates: [
       [
         [45.082803, 65.995972],
@@ -5494,7 +5494,7 @@ export const zones = [
   {
     id: '293',
     name: 'Шымкент 16-й мкр. 31',
-    color: 'a7ff9888',
+    color: 'a7ff98',
     coordinates: [
       [
         [42.548325, 69.733792],
@@ -5531,7 +5531,7 @@ export const zones = [
   {
     id: '294',
     name: 'Жам. Обл Тараз Генерала Рахимова 53',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [42.95687, 71.224365],
@@ -5552,7 +5552,7 @@ export const zones = [
   {
     id: '295',
     name: 'Талдыкорган Тауелсыздик 103',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [44.913872, 78.711273],
@@ -5574,7 +5574,7 @@ export const zones = [
   {
     id: '296',
     name: 'С-В Обл Петропавловск Алтынсарина 165/В (+курьерская доставка)',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [55.3532, 69.406],
@@ -5646,7 +5646,7 @@ export const zones = [
   {
     id: '297',
     name: 'область Улытау Жезказган Абая Кунанбаева 83',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [47.705892, 67.651217],
@@ -5667,7 +5667,7 @@ export const zones = [
   {
     id: '298',
     name: 'Семей Айгиз Кошкинбаевой 37 (франшизный курьерский склад)',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [50.313813, 80.074272],
@@ -5688,7 +5688,7 @@ export const zones = [
   {
     id: '300',
     name: 'Арх. Обл Котлас Октябрьская 37А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.9712861130321, 46.9564012266091],
@@ -5710,7 +5710,7 @@ export const zones = [
   {
     id: '301',
     name: 'Ре. Ком. Ухта Интернациональная 50',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [63.466511, 53.942926],
@@ -5730,7 +5730,7 @@ export const zones = [
   {
     id: '303',
     name: 'Инта Мира 17',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [66.0302078757821, 60.4008002445103],
@@ -5753,7 +5753,7 @@ export const zones = [
   {
     id: '304',
     name: 'Усинск Ленина 9',
-    color: 'ff1e7f88',
+    color: 'ff1e7f',
     coordinates: [
       [
         [66.400771, 57.276256],
@@ -5774,7 +5774,7 @@ export const zones = [
   {
     id: '305',
     name: 'Арх. обл. Мирный Дзержинского 40с1',
-    color: 'ff6a9488',
+    color: 'ff6a94',
     coordinates: [
       [
         [62.730592, 40.268737],
@@ -5795,7 +5795,7 @@ export const zones = [
   {
     id: '306',
     name: 'Мур. Обл Мончегорск Ленинградская наб 12',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [67.784752, 32.314195],
@@ -5817,7 +5817,7 @@ export const zones = [
   {
     id: '307',
     name: 'Калининград Ленинский пр-кт 84',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [54.71399, 20.52235],
@@ -5880,7 +5880,7 @@ export const zones = [
   {
     id: '308',
     name: 'Урай 3-й мкр 2А',
-    color: 'ffe57588',
+    color: 'ffe575',
     coordinates: [
       [
         [60.323765, 64.265935],
@@ -5900,7 +5900,7 @@ export const zones = [
   {
     id: '309',
     name: 'Тобольск 8 марта 11',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [58.343618, 66.936492],
@@ -5926,7 +5926,7 @@ export const zones = [
   {
     id: '310',
     name: 'Тюм. обл. Ишим Республики 99Г',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [55.8932, 67.234],
@@ -5996,7 +5996,7 @@ export const zones = [
   {
     id: '312',
     name: 'При. Кра. Дальнегорск пр-кт 50 лет Октября 40',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [44.226857, 135.99244],
@@ -6020,7 +6020,7 @@ export const zones = [
   {
     id: '313',
     name: 'Мин. обл. Солигорск Набережная 8',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [52.330513, 27.599851],
@@ -6050,7 +6050,7 @@ export const zones = [
   {
     id: '314',
     name: 'Мин. Обл Молодечно Великий Гостинец 84',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [54.122076, 25.942245],
@@ -6076,7 +6076,7 @@ export const zones = [
   {
     id: '315',
     name: 'Брест. обл. Берёза Красноармейская 26',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [52.345051, 25.134499],
@@ -6104,7 +6104,7 @@ export const zones = [
   {
     id: '316',
     name: 'Гом. Обл Светлогорск Социалистическая 65',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [52.592655, 28.590737],
@@ -6126,7 +6126,7 @@ export const zones = [
   {
     id: '319',
     name: 'МО Домодедово 25 лет Октября 9',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.457465, 37.618935],
@@ -6160,7 +6160,7 @@ export const zones = [
   {
     id: '320',
     name: 'Подольск Комсомольская 46',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [55.411513, 37.522114],
@@ -6258,7 +6258,7 @@ export const zones = [
   {
     id: '321',
     name: 'Алт. кр.  Бийск Декабристов 27/1',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [53.046823, 85.497174],
@@ -6363,7 +6363,7 @@ export const zones = [
   {
     id: '323',
     name: 'Усолье-Сибирское Комсомольский 33',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.679214, 103.848845],
@@ -6388,7 +6388,7 @@ export const zones = [
   {
     id: '325',
     name: 'СПБ пр-кт Энгельса 109к2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.98998, 30.350931],
@@ -6427,7 +6427,7 @@ export const zones = [
   {
     id: '326',
     name: 'Ив. обл. Кинешма Гоголя 14',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [57.996638, 42.428881],
@@ -6464,7 +6464,7 @@ export const zones = [
   {
     id: '327',
     name: 'Красн. Кра. Геленджик Адмирала Серебрякова 6',
-    color: 'ffe18088',
+    color: 'ffe180',
     coordinates: [
       [
         [44.59534, 38.047707],
@@ -6514,7 +6514,7 @@ export const zones = [
   {
     id: '328',
     name: 'МО Пушкино Вокзальная 14',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.04823, 37.85881],
@@ -6551,7 +6551,7 @@ export const zones = [
   {
     id: '333',
     name: 'Красн. Кра. Анапа Таманская 121к1',
-    color: 'ff74a688',
+    color: 'ff74a6',
     coordinates: [
       [
         [44.894507, 37.322668],
@@ -6584,7 +6584,7 @@ export const zones = [
   {
     id: '342',
     name: 'МО Орехово-Зуево Козлова 4А',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.988683, 38.856736],
@@ -6602,7 +6602,7 @@ export const zones = [
   {
     id: '344',
     name: 'МО Ступино Победы 33/27',
-    color: 'ff086988',
+    color: 'ff0869',
     coordinates: [
       [
         [55.144214, 37.753464],
@@ -6631,7 +6631,7 @@ export const zones = [
   {
     id: '345',
     name: 'Рост. Обл Шахты Садовая 10Р',
-    color: 'ff2b4b88',
+    color: 'ff2b4b',
     coordinates: [
       [
         [47.497578, 40.552533],
@@ -6673,7 +6673,7 @@ export const zones = [
   {
     id: '347',
     name: 'Сарат. обл. Балашов Автомобилистов 3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.868614, 43.861304],
@@ -6708,7 +6708,7 @@ export const zones = [
   {
     id: '350',
     name: 'МО Наро-Фоминск Ленина 15',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.377762, 36.856308],
@@ -6736,7 +6736,7 @@ export const zones = [
   {
     id: '351',
     name: 'МО Домодедово Каширское 95',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [55.363151, 37.945071],
@@ -6778,7 +6778,7 @@ export const zones = [
   {
     id: '352',
     name: 'См. обл. Рославль им. Э.Г. Репина 4',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.458053, 32.755549],
@@ -6839,7 +6839,7 @@ export const zones = [
   {
     id: '354',
     name: 'Старый Оскол Восточный 47',
-    color: 'ff83b588',
+    color: 'ff83b5',
     coordinates: [
       [
         [51.469135, 37.935267],
@@ -6945,7 +6945,7 @@ export const zones = [
   {
     id: '355',
     name: 'МСК Фрунзенская наб 50',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.734542, 37.590202],
@@ -6977,7 +6977,7 @@ export const zones = [
   {
     id: '356',
     name: 'МСК Коптевская 83к2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.833329, 37.545543],
@@ -7008,7 +7008,7 @@ export const zones = [
   {
     id: '357',
     name: 'Россошь Фурманова 18',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [50.658935, 39.47701],
@@ -7038,7 +7038,7 @@ export const zones = [
   {
     id: '358',
     name: 'Став. кр. с. Прасковея Дзержинского 74',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.936708, 46.37759],
@@ -7061,7 +7061,7 @@ export const zones = [
   {
     id: '359',
     name: 'Лип. обл. Елец Коммунаров 41',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [52.702021, 38.447754],
@@ -7085,7 +7085,7 @@ export const zones = [
   {
     id: '360',
     name: 'МО Истра 9-й Гвардейской Дивизии 54',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.89845, 36.880929],
@@ -7154,7 +7154,7 @@ export const zones = [
   {
     id: '362',
     name: 'Димитровград Мориса Тореза 3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.8074, 50.0516],
@@ -7179,7 +7179,7 @@ export const zones = [
   {
     id: '365',
     name: 'МСК Лётчика Ульянина 3А',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [55.645913, 37.306228],
@@ -7210,7 +7210,7 @@ export const zones = [
   {
     id: '366',
     name: 'Красн. Кра. Армавир Тургенева 93',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [44.537642, 41.197311],
@@ -7233,7 +7233,7 @@ export const zones = [
   {
     id: '369',
     name: 'МО Люберцы С.П. Попова 26',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.707942, 37.855612],
@@ -7274,7 +7274,7 @@ export const zones = [
   {
     id: '373',
     name: 'МСК Красного Маяка 15Ас2',
-    color: 'fff48488',
+    color: 'fff484',
     coordinates: [
       [
         [55.613325, 37.583356],
@@ -7309,7 +7309,7 @@ export const zones = [
   {
     id: '379',
     name: 'МО Кашира Советская 7',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [54.74291, 38.585074],
@@ -7355,7 +7355,7 @@ export const zones = [
   {
     id: '380',
     name: 'МСК Боровское шоссе 43к2',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [55.631, 37.4041],
@@ -7395,7 +7395,7 @@ export const zones = [
   {
     id: '382',
     name: 'МО Дзержинский Дзержинская 26',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.62908, 37.893043],
@@ -7425,7 +7425,7 @@ export const zones = [
   {
     id: '384',
     name: 'МСК Б. Козловский пер. 10с1',
-    color: 'fff48488',
+    color: 'fff484',
     coordinates: [
       [
         [55.77224, 37.63714],
@@ -7463,7 +7463,7 @@ export const zones = [
   {
     id: '386',
     name: 'МО Чехов Ильича 38А',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.245017, 37.258883],
@@ -7516,7 +7516,7 @@ export const zones = [
   {
     id: '387',
     name: 'МО Фрязино Садовая 1',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [55.987767, 38.217597],
@@ -7564,7 +7564,7 @@ export const zones = [
   {
     id: '388',
     name: 'Респ. Даг. Дагестанские Огни Ленина 5',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [42.135147, 48.302845],
@@ -7582,7 +7582,7 @@ export const zones = [
   {
     id: '389',
     name: 'Св. обл. Лесной Ленина 86',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [58.490675, 59.65291],
@@ -7603,7 +7603,7 @@ export const zones = [
   {
     id: '390',
     name: 'Крым Феодосия Челнокова 94В',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [44.976523, 34.923752],
@@ -7647,7 +7647,7 @@ export const zones = [
   {
     id: '392',
     name: 'Гом. обл. Жлобин Макара Барташова 1Д',
-    color: 'ff83b588',
+    color: 'ff83b5',
     coordinates: [
       [
         [53.132134, 30.440988],
@@ -7674,7 +7674,7 @@ export const zones = [
   {
     id: '396',
     name: 'МСК Народная 20с1',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [55.759303, 37.645155],
@@ -7721,7 +7721,7 @@ export const zones = [
   {
     id: '397',
     name: 'Югорск Спортивная 29',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [60.722759, 63.897962],
@@ -7742,7 +7742,7 @@ export const zones = [
   {
     id: '400',
     name: 'Респ. Тат. Нижнекамск пр-кт Химиков 50Б',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [55.664422, 51.714783],
@@ -7789,7 +7789,7 @@ export const zones = [
   {
     id: '401',
     name: 'г МСК Улица Кржижановского 5к2',
-    color: 'ff1f4988',
+    color: 'ff1f49',
     coordinates: [
       [
         [55.677953, 37.562753],
@@ -7809,7 +7809,7 @@ export const zones = [
   {
     id: '402',
     name: 'МО Островцы Баулинская 5к2',
-    color: 'ffe57588',
+    color: 'ffe575',
     coordinates: [
       [
         [55.575574, 38.064181],
@@ -7828,7 +7828,7 @@ export const zones = [
   {
     id: '408',
     name: 'Грод. Обл Новогрудок Карского 14А',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [53.49499, 25.519867],
@@ -7849,7 +7849,7 @@ export const zones = [
   {
     id: '409',
     name: 'Крым Керчь Вокзальное ш. 33',
-    color: '8fffad88',
+    color: '8fffad',
     coordinates: [
       [
         [45.496137, 36.512709],
@@ -7873,7 +7873,7 @@ export const zones = [
   {
     id: '410',
     name: 'Мог. Обл Климовичи Ленина 23А',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [53.657505, 32.411328],
@@ -7918,7 +7918,7 @@ export const zones = [
   {
     id: '411',
     name: 'ЛО Выборг Выборгская 40',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.824722, 29.044304],
@@ -7943,7 +7943,7 @@ export const zones = [
   {
     id: '414',
     name: 'МСК Академика Бочвара 4А',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [55.805609, 37.410962],
@@ -7990,7 +7990,7 @@ export const zones = [
   {
     id: '415',
     name: 'МСК Каширское шоссе 26к1',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [55.62911, 37.662587],
@@ -8022,7 +8022,7 @@ export const zones = [
   {
     id: '416',
     name: 'МСК 6-я Радиальная 3к2',
-    color: 'ffbfbf88',
+    color: 'ffbfbf',
     coordinates: [
       [
         [55.588947, 37.675375],
@@ -8063,7 +8063,7 @@ export const zones = [
   {
     id: '417',
     name: 'МСК Волжский бульвар 38',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [55.708005, 37.74521],
@@ -8098,7 +8098,7 @@ export const zones = [
   {
     id: '418',
     name: 'МСК Дубнинская 1',
-    color: 'ff396b88',
+    color: 'ff396b',
     coordinates: [
       [
         [55.859766, 37.558427],
@@ -8128,7 +8128,7 @@ export const zones = [
   {
     id: '419',
     name: 'МСК Химкинский бульвар 14к1',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.853325, 37.463208],
@@ -8154,7 +8154,7 @@ export const zones = [
   {
     id: '421',
     name: 'Ирк. обл. Усть-Кут Пушкина 55',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [56.936067, 105.034481],
@@ -8175,7 +8175,7 @@ export const zones = [
   {
     id: '422',
     name: 'Красн. кр. Норильск Строителей 25',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [69.490143, 88.398115],
@@ -8203,7 +8203,7 @@ export const zones = [
   {
     id: '423',
     name: 'Пер. кр. Соликамск Матросова 20к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.969338, 55.677908],
@@ -8224,7 +8224,7 @@ export const zones = [
   {
     id: '424',
     name: 'МО Воскресенск Дзержинского 18',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.243962, 38.946387],
@@ -8257,7 +8257,7 @@ export const zones = [
   {
     id: '425',
     name: 'Тарко-Сале Геологов 11',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [64.974758, 77.133406],
@@ -8277,7 +8277,7 @@ export const zones = [
   {
     id: '427',
     name: 'Кам. кр. Елизово Вилюйская 34',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [53.1900433591566, 158.368974532702],
@@ -8310,7 +8310,7 @@ export const zones = [
   {
     id: '428',
     name: 'Сочи пгт Сириус Ружейная 7',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [43.507264, 39.913463],
@@ -8359,7 +8359,7 @@ export const zones = [
   {
     id: '429',
     name: 'Св. обл. Первоуральск Герцена 9',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [56.418763, 59.493164],
@@ -8389,7 +8389,7 @@ export const zones = [
   {
     id: '431',
     name: 'МСК Лётчика Бабушкина 6',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.821311, 37.663219],
@@ -8427,7 +8427,7 @@ export const zones = [
   {
     id: '433',
     name: 'Орен. обл. Бугуруслан Калинина 135',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [54.002561, 51.599484],
@@ -8455,7 +8455,7 @@ export const zones = [
   {
     id: '434',
     name: 'Холмск Первомайская вл. 8',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [47.014382, 142.282288],
@@ -8473,7 +8473,7 @@ export const zones = [
   {
     id: '435',
     name: 'Минск Янковского 34',
-    color: 'a6c05688',
+    color: 'a6c056',
     coordinates: [
       [
         [53.834167, 27.22924],
@@ -8591,7 +8591,7 @@ export const zones = [
   {
     id: '437',
     name: 'Сах. Обл Корсаков Нагорная 3',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [46.926207, 143.189401],
@@ -8612,7 +8612,7 @@ export const zones = [
   {
     id: '438',
     name: 'Минск Слободская 27',
-    color: 'fff4f488',
+    color: 'fff4f4',
     coordinates: [
       [
         [53.8716, 27.475656],
@@ -8653,7 +8653,7 @@ export const zones = [
   {
     id: '439',
     name: 'Минск Гурского 45',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [53.849049, 27.459231],
@@ -8705,7 +8705,7 @@ export const zones = [
   {
     id: '440',
     name: 'Свободный 50 лет Октября 10',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [51.12942, 127.125414],
@@ -8726,7 +8726,7 @@ export const zones = [
   {
     id: '442',
     name: 'Минск Скрыганова 4Д',
-    color: '5a682d88',
+    color: '5a682d',
     coordinates: [
       [
         [53.917822, 27.551866],
@@ -8774,7 +8774,7 @@ export const zones = [
   {
     id: '443',
     name: 'Минск Выготского 45',
-    color: 'ab1f1f88',
+    color: 'ab1f1f',
     coordinates: [
       [
         [53.965044, 27.570227],
@@ -8826,7 +8826,7 @@ export const zones = [
   {
     id: '444',
     name: 'Минск Казинца 11А',
-    color: '17dba088',
+    color: '17dba0',
     coordinates: [
       [
         [53.73961, 27.418596],
@@ -8871,7 +8871,7 @@ export const zones = [
   {
     id: '445',
     name: 'Минск Левкова 45',
-    color: 'ff537d88',
+    color: 'ff537d',
     coordinates: [
       [
         [53.860869, 27.50411],
@@ -8929,7 +8929,7 @@ export const zones = [
   {
     id: '446',
     name: 'Гом. обл. Речица Достоевского 27',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [52.598386, 30.501773],
@@ -8963,7 +8963,7 @@ export const zones = [
   {
     id: '448',
     name: 'МСК Алабяна 13к1',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.8127155086274, 37.4766076073915],
@@ -9000,7 +9000,7 @@ export const zones = [
   {
     id: '453',
     name: 'Минск Болеслава Берута 3Б',
-    color: 'ffe57588',
+    color: 'ffe575',
     coordinates: [
       [
         [53.901996, 27.473708],
@@ -9017,7 +9017,7 @@ export const zones = [
   {
     id: '454',
     name: 'Вит. Обл Глубокое Фридриха Энгельса 41',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.160489, 27.186881],
@@ -9047,7 +9047,7 @@ export const zones = [
   {
     id: '455',
     name: 'МСК Рублёвское шоссе 28к2',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [55.764183, 37.408328],
@@ -9088,7 +9088,7 @@ export const zones = [
   {
     id: '457',
     name: 'МСК Ухтомская 13',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.754838, 37.693671],
@@ -9135,7 +9135,7 @@ export const zones = [
   {
     id: '458',
     name: 'МСК Казакова 29с1',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [55.761309, 37.685753],
@@ -9168,7 +9168,7 @@ export const zones = [
   {
     id: '459',
     name: 'С-П Шаврова 13к1',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [60.008487, 30.248491],
@@ -9196,7 +9196,7 @@ export const zones = [
   {
     id: '460',
     name: 'С-П Комендантский 69',
-    color: 'fff48488',
+    color: 'fff484',
     coordinates: [
       [
         [60.074838, 30.178555],
@@ -9220,7 +9220,7 @@ export const zones = [
   {
     id: '461',
     name: 'Новое Девяткино Школьная 2',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [60.09693, 30.408161],
@@ -9249,7 +9249,7 @@ export const zones = [
   {
     id: '462',
     name: 'СПБ пр-кт Просвещения 46к1',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [60.056312, 30.337711],
@@ -9274,7 +9274,7 @@ export const zones = [
   {
     id: '463',
     name: 'МСК Люблинская 179/1',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.661699, 37.774617],
@@ -9309,7 +9309,7 @@ export const zones = [
   {
     id: '465',
     name: 'СПБ Большой Сампсониевский пр-кт 18',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.954079, 30.373934],
@@ -9342,7 +9342,7 @@ export const zones = [
   {
     id: '466',
     name: 'СПБ Кораблестроителей 30',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.945797, 30.244342],
@@ -9385,7 +9385,7 @@ export const zones = [
   {
     id: '467',
     name: 'СПБ Десантников 22',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [59.86705, 30.183982],
@@ -9414,7 +9414,7 @@ export const zones = [
   {
     id: '468',
     name: 'СПБ пр-кт Стачек 27',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.923121, 30.225679],
@@ -9452,7 +9452,7 @@ export const zones = [
   {
     id: '469',
     name: 'Тверь Горького 102/8',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [56.88703, 35.882751],
@@ -9551,7 +9551,7 @@ export const zones = [
   {
     id: '470',
     name: 'Тверь Симеоновская 11',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [56.856641, 35.9012],
@@ -9643,7 +9643,7 @@ export const zones = [
   {
     id: '471',
     name: 'Калуга Суворова 154к1',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [54.516428, 36.277104],
@@ -9694,7 +9694,7 @@ export const zones = [
   {
     id: '472',
     name: 'Белгород Садовая 118Г',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [50.607069, 36.591308],
@@ -9742,7 +9742,7 @@ export const zones = [
   {
     id: '474',
     name: 'Витебск Ленина 6',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [55.243078, 29.032796],
@@ -9759,7 +9759,7 @@ export const zones = [
   {
     id: '475',
     name: 'ЛО Кингисепп Большая Советская 3В',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [59.696775, 28.190952],
@@ -9781,7 +9781,7 @@ export const zones = [
   {
     id: '476',
     name: 'Брянск 3-я Интернационала 29',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [53.237542, 34.394011],
@@ -9854,7 +9854,7 @@ export const zones = [
   {
     id: '478',
     name: 'Став. Кра. Ессентуки Маркова 76',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [44.01076, 42.806035],
@@ -9883,7 +9883,7 @@ export const zones = [
   {
     id: '479',
     name: 'Став. Кра. Кисловодск Кирова 35',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [44.006334, 42.812876],
@@ -9913,7 +9913,7 @@ export const zones = [
   {
     id: '480',
     name: 'Став. кр. Георгиевск Тургенева 14',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [43.864825, 43.475279],
@@ -9949,7 +9949,7 @@ export const zones = [
   {
     id: '481',
     name: 'Став. кр. Минеральные Воды пр-кт 22-го Партсъезда 141',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [44.277237, 43.208036],
@@ -9979,7 +9979,7 @@ export const zones = [
   {
     id: '482',
     name: 'Мин. Обл Борисов 50 лет БССР 17А',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [54.126535, 28.56315],
@@ -10016,7 +10016,7 @@ export const zones = [
   {
     id: '484',
     name: 'Могилёв, Мовчанского 24Б',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [53.223714, 30.800655],
@@ -10059,7 +10059,7 @@ export const zones = [
   {
     id: '487',
     name: 'СПБ Морская наб. 31к1',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [59.948789, 30.268493],
@@ -10133,7 +10133,7 @@ export const zones = [
   {
     id: '488',
     name: 'СПБ Коллонтай 15к1',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [59.919904, 30.470582],
@@ -10167,7 +10167,7 @@ export const zones = [
   {
     id: '489',
     name: 'Мог. обл. Бобруйск Ульяновская 66',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [53.146357, 29.172681],
@@ -10203,7 +10203,7 @@ export const zones = [
   {
     id: '490',
     name: 'Гомель Хмельницкого 108к1',
-    color: 'eb0c0c88',
+    color: 'eb0c0c',
     coordinates: [
       [
         [52.441268, 30.986623],
@@ -10259,7 +10259,7 @@ export const zones = [
   {
     id: '491',
     name: 'Тв. обл. Осташков Рабочая 11А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.573102, 32.209167],
@@ -10285,7 +10285,7 @@ export const zones = [
   {
     id: '492',
     name: 'Гом. Обл Гомель Ильича 87А',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [52.310181, 30.932291],
@@ -10340,7 +10340,7 @@ export const zones = [
   {
     id: '493',
     name: 'Гом. Обл Гомель Тельмана 3',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [52.439369, 30.988745],
@@ -10373,7 +10373,7 @@ export const zones = [
   {
     id: '494',
     name: 'Гомель Мазурова 9',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [52.460298, 31.008727],
@@ -10431,7 +10431,7 @@ export const zones = [
   {
     id: '495',
     name: 'Тула Пролетарская 24',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [54.206, 37.624717],
@@ -10467,7 +10467,7 @@ export const zones = [
   {
     id: '496',
     name: 'Саранск пр-кт 70 лет Октября 53',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [54.616259, 45.254822],
@@ -10513,7 +10513,7 @@ export const zones = [
   {
     id: '498',
     name: 'Курск Радищева 87/7',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [51.821161, 36.230302],
@@ -10606,7 +10606,7 @@ export const zones = [
   {
     id: '499',
     name: 'Всеволожск Христиновский 83к2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.004417, 31.006101],
@@ -10628,7 +10628,7 @@ export const zones = [
   {
     id: '500',
     name: 'Смоленск Коммунистическая 17',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [54.8355, 30.801272],
@@ -10689,7 +10689,7 @@ export const zones = [
   {
     id: '501',
     name: 'Минск Менделеева 3',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [53.885579, 27.564983],
@@ -10748,7 +10748,7 @@ export const zones = [
   {
     id: '503',
     name: 'Минск Грицевца 3',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [53.897801, 27.619457],
@@ -10796,7 +10796,7 @@ export const zones = [
   {
     id: '504',
     name: 'Минск Иосифа Гошкевича 22',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [53.885419, 27.563253],
@@ -10859,7 +10859,7 @@ export const zones = [
   {
     id: '506',
     name: 'Минск Каховская 17',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [53.939376, 27.57415],
@@ -10903,7 +10903,7 @@ export const zones = [
   {
     id: '507',
     name: 'Ульяновск Пензенский бульвар 22',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.007399, 48.940816],
@@ -10929,7 +10929,7 @@ export const zones = [
   {
     id: '508',
     name: 'Минск Кнорина 11',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [53.939381, 27.565776],
@@ -10969,7 +10969,7 @@ export const zones = [
   {
     id: '510',
     name: 'Екатеринбург пер. Осоавиахима 105',
-    color: 'ffe57588',
+    color: 'ffe575',
     coordinates: [
       [
         [56.935021, 60.616809],
@@ -11022,7 +11022,7 @@ export const zones = [
   {
     id: '511',
     name: 'Екатеринбург Студенческая 13',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [56.866981, 60.673147],
@@ -11065,7 +11065,7 @@ export const zones = [
   {
     id: '512',
     name: 'Пенза Карпинского 52',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [53.21005, 44.980281],
@@ -11122,7 +11122,7 @@ export const zones = [
   {
     id: '514',
     name: 'Воронеж Остужева 36',
-    color: 'ffd8d888',
+    color: 'ffd8d8',
     coordinates: [
       [
         [51.483067, 39.241593],
@@ -11162,7 +11162,7 @@ export const zones = [
   {
     id: '515',
     name: 'Пермь Академика Веденеева 79',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [58.140311, 56.330904],
@@ -11216,7 +11216,7 @@ export const zones = [
   {
     id: '517',
     name: 'Ниж. обл. Дзержинск Пирогова 5',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [56.220807, 43.68521],
@@ -11240,7 +11240,7 @@ export const zones = [
   {
     id: '518',
     name: 'Братск 25-летия Братскгэсстроя 49В',
-    color: '10d4a188',
+    color: '10d4a1',
     coordinates: [
       [
         [56.269047, 101.83982],
@@ -11263,7 +11263,7 @@ export const zones = [
   {
     id: '519',
     name: 'Сарат. Обл Балаково Пролетарская 65',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [52.035318, 47.520582],
@@ -11288,7 +11288,7 @@ export const zones = [
   {
     id: '520',
     name: 'Ставрополь Доваторцев 90/3',
-    color: 'ff4f8188',
+    color: 'ff4f81',
     coordinates: [
       [
         [45.124875, 42.150009],
@@ -11370,7 +11370,7 @@ export const zones = [
   {
     id: '521',
     name: 'СПБ Дунайский пр-кт 28к2',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [59.795556, 30.324875],
@@ -11405,7 +11405,7 @@ export const zones = [
   {
     id: '522',
     name: 'МСК Генерала Кузнецова 14к1',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.685071, 37.838233],
@@ -11434,7 +11434,7 @@ export const zones = [
   {
     id: '527',
     name: 'МО Люберцы Кирова 51',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [55.673666, 37.964481],
@@ -11477,7 +11477,7 @@ export const zones = [
   {
     id: '529',
     name: 'Кемерово Серебряный Бор 21',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [55.378019, 86.041339],
@@ -11513,7 +11513,7 @@ export const zones = [
   {
     id: '536',
     name: 'Иркутск  мкр. Радужный 118А',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [52.214583, 104.242827],
@@ -11568,7 +11568,7 @@ export const zones = [
   {
     id: '537',
     name: 'Магадан Речная 59',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [59.530579, 150.608892],
@@ -11610,7 +11610,7 @@ export const zones = [
   {
     id: '539',
     name: 'Краснодар Черниговская 8',
-    color: 'ff6a4e88',
+    color: 'ff6a4e',
     coordinates: [
       [
         [45.054692, 38.994013],
@@ -11657,7 +11657,7 @@ export const zones = [
   {
     id: '542',
     name: 'Зеленогорск (С-П) Привокзальная 3',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [60.37689, 29.406415],
@@ -11683,7 +11683,7 @@ export const zones = [
   {
     id: '543',
     name: 'Сургут Маяковского 11',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [61.243656, 73.374549],
@@ -11713,7 +11713,7 @@ export const zones = [
   {
     id: '544',
     name: 'Приозерск Гагарина 18',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [61.231802, 29.692879],
@@ -11736,7 +11736,7 @@ export const zones = [
   {
     id: '545',
     name: 'Абакан Некрасова 37',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [53.809494, 91.470816],
@@ -11759,7 +11759,7 @@ export const zones = [
   {
     id: '549',
     name: 'Нижний Новгород Лопатина 8',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [56.298775445214, 44.0795056221235],
@@ -11813,7 +11813,7 @@ export const zones = [
   {
     id: '550',
     name: 'Челябинск Университетская 46',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.171591, 61.332825],
@@ -11858,7 +11858,7 @@ export const zones = [
   {
     id: '551',
     name: 'Казань Ямашева 49',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [55.811789, 49.10245],
@@ -11897,7 +11897,7 @@ export const zones = [
   {
     id: '552',
     name: 'Самара Советской Армии 17',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [53.168372, 50.173348],
@@ -11947,7 +11947,7 @@ export const zones = [
   {
     id: '553',
     name: 'Самара Лукачева 42',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [53.206671, 50.169428],
@@ -11997,7 +11997,7 @@ export const zones = [
   {
     id: '554',
     name: 'Самара пр-кт Кирова 180',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [53.221564, 50.202996],
@@ -12058,7 +12058,7 @@ export const zones = [
   {
     id: '555',
     name: 'Новосибирск Линейная 53/1',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [55.060242, 82.955894],
@@ -12100,7 +12100,7 @@ export const zones = [
   {
     id: '556',
     name: 'Новосибирск Фабричная 65',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.053629, 82.939503],
@@ -12148,7 +12148,7 @@ export const zones = [
   {
     id: '558',
     name: 'Новосибирск Виктора Уса 13',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [54.958755, 82.848696],
@@ -12224,7 +12224,7 @@ export const zones = [
   {
     id: '560',
     name: 'Красноярск Авиаторов 41',
-    color: 'ffaa3a88',
+    color: 'ffaa3a',
     coordinates: [
       [
         [56.156176, 93.157846],
@@ -12266,7 +12266,7 @@ export const zones = [
   {
     id: '561',
     name: 'Красноярск Ады Лебедевой 141',
-    color: '2209e788',
+    color: '2209e7',
     coordinates: [
       [
         [56.030908, 92.836155],
@@ -12335,7 +12335,7 @@ export const zones = [
   {
     id: '562',
     name: 'Мин. Обл Дзержинск Шарко 4А',
-    color: 'ffe18088',
+    color: 'ffe180',
     coordinates: [
       [
         [53.877087, 27.124753],
@@ -12413,7 +12413,7 @@ export const zones = [
   {
     id: '563',
     name: 'Ярославль Ленинградский пр-кт 49',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [57.883915, 39.522077],
@@ -12460,7 +12460,7 @@ export const zones = [
   {
     id: '564',
     name: 'Ярославль Павлова 7',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [57.360421, 40.331713],
@@ -12506,7 +12506,7 @@ export const zones = [
   {
     id: '567',
     name: 'Якутск Дзержинского 7',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [62.037801, 129.754044],
@@ -12534,7 +12534,7 @@ export const zones = [
   {
     id: '568',
     name: 'Якутск Жорницкого 30/1',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [62.050375, 129.690675],
@@ -12594,7 +12594,7 @@ export const zones = [
   {
     id: '569',
     name: 'МО Реутов Парковая 8',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.74897, 37.841802],
@@ -12618,7 +12618,7 @@ export const zones = [
   {
     id: '570',
     name: 'ЛО гп Новоселье Невская 9',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [59.788725, 30.299073],
@@ -12657,7 +12657,7 @@ export const zones = [
   {
     id: '571',
     name: 'Кем. Куз. Междуреченск Кузнецкая 40',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [54.222672, 87.846477],
@@ -12683,7 +12683,7 @@ export const zones = [
   {
     id: '572',
     name: 'МСК Миклухо-Маклая 42Б',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [55.6573978899154, 37.4984242387475],
@@ -12711,7 +12711,7 @@ export const zones = [
   {
     id: '573',
     name: 'МСК Криворожская 29к2',
-    color: 'ffaded88',
+    color: 'ffaded',
     coordinates: [
       [
         [55.664908, 37.601058],
@@ -12735,7 +12735,7 @@ export const zones = [
   {
     id: '576',
     name: 'Алексеевка Ольминского 87А',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [50.289321, 38.728979],
@@ -12764,7 +12764,7 @@ export const zones = [
   {
     id: '578',
     name: 'Яр. Обл Переславль-Залесский Полевая 6А',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [56.753927, 39.966404],
@@ -12792,7 +12792,7 @@ export const zones = [
   {
     id: '579',
     name: 'СПБ Ломоносов Еленинская 24к2',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [59.650387, 29.833622],
@@ -12821,7 +12821,7 @@ export const zones = [
   {
     id: '580',
     name: 'Орёл Максима Горького 82',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [53.016135, 36.076495],
@@ -12883,7 +12883,7 @@ export const zones = [
   {
     id: '583',
     name: 'Тюмень Домостроителей 10',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [57.114773, 65.648185],
@@ -12936,7 +12936,7 @@ export const zones = [
   {
     id: '584',
     name: 'Тюмень Дмитрия Менделеева 16',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.113698, 65.537748],
@@ -12978,7 +12978,7 @@ export const zones = [
   {
     id: '587',
     name: 'Ре. Хак. Саяногорск 25Б',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [53.281564, 91.83512],
@@ -13009,7 +13009,7 @@ export const zones = [
   {
     id: '588',
     name: 'Крснр. Кра. Лесосибирск 7-й мкр 1',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [58.324196, 91.912681],
@@ -13042,7 +13042,7 @@ export const zones = [
   {
     id: '589',
     name: 'МСК Херсонская 20к2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.651331, 37.55097],
@@ -13064,7 +13064,7 @@ export const zones = [
   {
     id: '591',
     name: 'Осинники Победы 34',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [53.718044, 87.235963],
@@ -13081,7 +13081,7 @@ export const zones = [
   {
     id: '592',
     name: 'МО Подольск Литейная 30/9',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [55.412004653079, 37.5229688703629],
@@ -13163,7 +13163,7 @@ export const zones = [
   {
     id: '594',
     name: 'Ковров Либерецкая 1',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [56.47086, 41.704077],
@@ -13191,7 +13191,7 @@ export const zones = [
   {
     id: '595',
     name: 'Усть-Илимск 50лет ВЛКСМ 18',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [58.322308, 102.601367],
@@ -13212,7 +13212,7 @@ export const zones = [
   {
     id: '596',
     name: 'Балашиха Свердлова 54',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [55.835209, 37.945433],
@@ -13242,7 +13242,7 @@ export const zones = [
   {
     id: '597',
     name: 'Кем. Куз. Прокопьевск пр-кт Шахтёров 39',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.956127, 86.691796],
@@ -13269,7 +13269,7 @@ export const zones = [
   {
     id: '598',
     name: 'Рост. обл. Батайск авиагородок 14',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [47.083338, 40.272394],
@@ -13314,7 +13314,7 @@ export const zones = [
   {
     id: '599',
     name: 'Екатеринбург Рябинина 31',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [56.8189995384183, 60.5064455048875],
@@ -13361,7 +13361,7 @@ export const zones = [
   {
     id: '600',
     name: 'Бугульма Мусы Джалиля 41',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.306378, 52.239156],
@@ -13386,7 +13386,7 @@ export const zones = [
   {
     id: '601',
     name: 'ХМ. Окр. Когалым Мира 22Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [62.26867, 74.492695],
@@ -13411,7 +13411,7 @@ export const zones = [
   {
     id: '602',
     name: 'Там. Обл Моршанск Интернациональная 48',
-    color: 'ffe57588',
+    color: 'ffe575',
     coordinates: [
       [
         [53.4215893069568, 40.9137859926144],
@@ -13433,7 +13433,7 @@ export const zones = [
   {
     id: '603',
     name: 'Воронеж Патриотов 4А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.632551, 39.133054],
@@ -13511,7 +13511,7 @@ export const zones = [
   {
     id: '604',
     name: 'Воронеж Чайковского 5',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [51.681729, 39.184516],
@@ -13562,7 +13562,7 @@ export const zones = [
   {
     id: '605',
     name: 'Там. Обл Мичуринск Новая 11',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [53.079418, 41.196321],
@@ -13590,7 +13590,7 @@ export const zones = [
   {
     id: '607',
     name: 'СПБ Народная 2',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [59.845345, 30.495839],
@@ -13672,7 +13672,7 @@ export const zones = [
   {
     id: '608',
     name: 'Новосибирск Кирова 236',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [55.021249, 82.971078],
@@ -13744,7 +13744,7 @@ export const zones = [
   {
     id: '610',
     name: 'Барнаул Сухэ-Батора 33',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [53.35955, 83.700941],
@@ -13806,7 +13806,7 @@ export const zones = [
   {
     id: '611',
     name: 'Красн. Кра. Славянск-на-Кубани Стаханова 288',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [45.575893, 37.519448],
@@ -13843,7 +13843,7 @@ export const zones = [
   {
     id: '612',
     name: 'Екатеринбург Тбилисский б-р 13к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.793434, 60.663508],
@@ -13899,7 +13899,7 @@ export const zones = [
   {
     id: '613',
     name: 'Крснр. Кра. Минусинск Бограда 2',
-    color: 'ffa91488',
+    color: 'ffa914',
     coordinates: [
       [
         [53.781714, 92.297388],
@@ -13935,7 +13935,7 @@ export const zones = [
   {
     id: '616',
     name: 'Ульяновск Шолмова 37А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.2154, 48.31],
@@ -13973,7 +13973,7 @@ export const zones = [
   {
     id: '618',
     name: 'Иркутск Люксембург 39',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [52.398403, 104.144053],
@@ -14023,7 +14023,7 @@ export const zones = [
   {
     id: '619',
     name: 'Иркутск Маяковского 12',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.254941, 104.255956],
@@ -14059,7 +14059,7 @@ export const zones = [
   {
     id: '621',
     name: 'Якутск Пушкина 22',
-    color: 'fff90888',
+    color: 'fff908',
     coordinates: [
       [
         [62.03735, 129.712737],
@@ -14077,7 +14077,7 @@ export const zones = [
   {
     id: '626',
     name: 'Став. кр. Невинномысск б-р Мира 16',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [44.859898, 42.514264],
@@ -14109,7 +14109,7 @@ export const zones = [
   {
     id: '627',
     name: 'Орел Привокзальная 4',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [52.971738, 36.070928],
@@ -14163,7 +14163,7 @@ export const zones = [
   {
     id: '628',
     name: 'Ре. Хак. с Аскиз Горького 3',
-    color: 'ffe57588',
+    color: 'ffe575',
     coordinates: [
       [
         [53.62939, 89.92646],
@@ -14190,7 +14190,7 @@ export const zones = [
   {
     id: '629',
     name: 'Нижний Новгород Дьяконова',
-    color: 'ff446e88',
+    color: 'ff446e',
     coordinates: [
       [
         [56.2659371514621, 43.7839786451433],
@@ -14234,7 +14234,7 @@ export const zones = [
   {
     id: '632',
     name: 'Ростов-на-Дону Портовая 241/45',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [47.265854, 39.379401],
@@ -14341,7 +14341,7 @@ export const zones = [
   {
     id: '633',
     name: 'Ростов-на-Дону пр-кт 40-летия Победы 55Е',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [47.229507, 39.785817],
@@ -14394,7 +14394,7 @@ export const zones = [
   {
     id: '637',
     name: 'Уфа Интернациональная 191',
-    color: 'ff587888',
+    color: 'ff5878',
     coordinates: [
       [
         [54.765472, 56.176649],
@@ -14450,7 +14450,7 @@ export const zones = [
   {
     id: '638',
     name: 'Уфа Зайнаб Биишевой 1',
-    color: 'ff6a4e88',
+    color: 'ff6a4e',
     coordinates: [
       [
         [54.707984, 56.216587],
@@ -14501,7 +14501,7 @@ export const zones = [
   {
     id: '639',
     name: 'МО Дедовск Гвардейская 12',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [55.838786, 37.05657],
@@ -14606,7 +14606,7 @@ export const zones = [
   {
     id: '640',
     name: 'Ростов-на-Дону Оганова 20с3',
-    color: 'ffb45388',
+    color: 'ffb453',
     coordinates: [
       [
         [47.369055, 39.730926],
@@ -14781,7 +14781,7 @@ export const zones = [
   {
     id: '644',
     name: 'Красноярск Новосибирская 41',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [56.01132, 92.740358],
@@ -14834,7 +14834,7 @@ export const zones = [
   {
     id: '646',
     name: 'Владивосток Карбышева 16',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [43.137258, 131.92982],
@@ -14893,7 +14893,7 @@ export const zones = [
   {
     id: '647',
     name: 'Владикавказ пр-кт Героев Отечества 4',
-    color: 'ff1e7f88',
+    color: 'ff1e7f',
     coordinates: [
       [
         [42.974714, 44.641355],
@@ -14936,7 +14936,7 @@ export const zones = [
   {
     id: '648',
     name: 'Владивосток Черёмуховая 3Б',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [43.115748, 131.922595],
@@ -15017,7 +15017,7 @@ export const zones = [
   {
     id: '649',
     name: 'Анжеро-Судженск Ленина 22',
-    color: 'ff086988',
+    color: 'ff0869',
     coordinates: [
       [
         [56.34952, 85.726407],
@@ -15045,7 +15045,7 @@ export const zones = [
   {
     id: '650',
     name: 'Владивосток Тигровая 22',
-    color: 'ffaa3a88',
+    color: 'ffaa3a',
     coordinates: [
       [
         [43.136831, 131.924875],
@@ -15113,7 +15113,7 @@ export const zones = [
   {
     id: '651',
     name: 'Волгоград Шурухина 13',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [48.776645, 44.620856],
@@ -15147,7 +15147,7 @@ export const zones = [
   {
     id: '652',
     name: 'Волгоград 7-й Гвардейской 7',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [48.481059, 44.91171],
@@ -15206,7 +15206,7 @@ export const zones = [
   {
     id: '653',
     name: 'Кем. Куз. Юрга Московская 18',
-    color: 'ff6a4e88',
+    color: 'ff6a4e',
     coordinates: [
       [
         [55.997251, 84.43343],
@@ -15235,7 +15235,7 @@ export const zones = [
   {
     id: '654',
     name: 'Боровляны 40 Лет Победы 23А',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [53.966438, 27.607598],
@@ -15270,7 +15270,7 @@ export const zones = [
   {
     id: '655',
     name: 'Калуга Крайний пр 1',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [54.5338010053653, 36.2799169724537],
@@ -15325,7 +15325,7 @@ export const zones = [
   {
     id: '656',
     name: 'Ижевск Красногеройская 30',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [56.861639, 53.221187],
@@ -15369,7 +15369,7 @@ export const zones = [
   {
     id: '658',
     name: 'Липецк П.И. Смородина 11',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.740753, 39.273416],
@@ -15574,7 +15574,7 @@ export const zones = [
   {
     id: '659',
     name: 'Пенза Терешковой 1Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.197016, 44.963979],
@@ -15683,7 +15683,7 @@ export const zones = [
   {
     id: '661',
     name: 'Сам. обл. Новокуйбышевск Свердлова 29',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.957551, 51.11449],
@@ -15728,7 +15728,7 @@ export const zones = [
   {
     id: '662',
     name: 'Саратов им. Ю.А. Мысникова 7',
-    color: 'fff48488',
+    color: 'fff484',
     coordinates: [
       [
         [51.583198, 46.057307],
@@ -15793,7 +15793,7 @@ export const zones = [
   {
     id: '663',
     name: 'Респ. Баш. Салават Губкина 2',
-    color: 'dc1e1e88',
+    color: 'dc1e1e',
     coordinates: [
       [
         [53.133257, 55.908285],
@@ -15813,7 +15813,7 @@ export const zones = [
   {
     id: '664',
     name: 'Владимир Добросельская 207А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.166023, 40.620947],
@@ -15903,7 +15903,7 @@ export const zones = [
   {
     id: '665',
     name: 'Респ. Даг. Каспийск Ленина 20',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [42.879611, 47.617865],
@@ -15929,7 +15929,7 @@ export const zones = [
   {
     id: '666',
     name: 'Рязань Касимовское ш. 48к5',
-    color: 'fffa0988',
+    color: 'fffa09',
     coordinates: [
       [
         [54.541826, 40.421282],
@@ -16031,7 +16031,7 @@ export const zones = [
   {
     id: '668',
     name: 'Воронеж Колесниченко 44А',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [51.425385, 39.009952],
@@ -16105,7 +16105,7 @@ export const zones = [
   {
     id: '670',
     name: 'Тул. обл. Узловая Заводская 8',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [53.556626, 39.004211],
@@ -16136,7 +16136,7 @@ export const zones = [
   {
     id: '673',
     name: 'ХМ. Окр. Нефтеюганск 14-й мкр 3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [61.259492, 71.690055],
@@ -16174,7 +16174,7 @@ export const zones = [
   {
     id: '675',
     name: 'Вит. Обл Лепель Чуйкова 75',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [54.535474, 28.965683],
@@ -16195,7 +16195,7 @@ export const zones = [
   {
     id: '679',
     name: 'Чита мкр Царский 3',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [52.058139, 113.493674],
@@ -16271,7 +16271,7 @@ export const zones = [
   {
     id: '680',
     name: 'МСК Москворечье 31к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.632515, 37.668119],
@@ -16297,7 +16297,7 @@ export const zones = [
   {
     id: '682',
     name: 'Новосибирск Дунаевского 14/1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.179683, 82.99209],
@@ -16332,7 +16332,7 @@ export const zones = [
   {
     id: '683',
     name: 'Тольятти Приморский 45',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.634439, 48.878553],
@@ -16349,7 +16349,7 @@ export const zones = [
   {
     id: '684',
     name: 'Севастополь Шевченко 49',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.582611, 33.434255],
@@ -16404,7 +16404,7 @@ export const zones = [
   {
     id: '685',
     name: 'Екатеринбург Техническая 51',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [56.877887907462, 60.5560708660622],
@@ -16443,7 +16443,7 @@ export const zones = [
   {
     id: '686',
     name: 'Красн. кр. Норильск Первомайская 52с1',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [69.344591, 87.757255],
@@ -16474,7 +16474,7 @@ export const zones = [
   {
     id: '687',
     name: 'Муравленко Муравленко',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [64.301861, 73.905911],
@@ -16491,7 +16491,7 @@ export const zones = [
   {
     id: '689',
     name: 'Гродно Бульвар Комсомола 6А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.678479, 23.810191],
@@ -16558,7 +16558,7 @@ export const zones = [
   {
     id: '690',
     name: 'Красн. кр. Железногорск Ленина 22',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.41161, 93.689586],
@@ -16586,7 +16586,7 @@ export const zones = [
   {
     id: '691',
     name: 'Ангарск 19-й кв-л 6',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [52.196815, 103.834865],
@@ -16610,7 +16610,7 @@ export const zones = [
   {
     id: '693',
     name: 'Лиски Коммунистическая 13',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [51.389609, 39.656391],
@@ -16655,7 +16655,7 @@ export const zones = [
   {
     id: '695',
     name: 'Брест Васнецова 50',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [51.889996, 24.366068],
@@ -16708,7 +16708,7 @@ export const zones = [
   {
     id: '696',
     name: 'Улан-Удэ Волконского 1А',
-    color: 'ffef3888',
+    color: 'ffef38',
     coordinates: [
       [
         [51.856586, 107.785645],
@@ -16760,7 +16760,7 @@ export const zones = [
   {
     id: '697',
     name: 'Краснодар Круговая 4Вк1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.06625, 38.973526],
@@ -16806,7 +16806,7 @@ export const zones = [
   {
     id: '698',
     name: 'Уд. Респ. Воткинск Пролетарская 41',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [56.946081, 53.942485],
@@ -16830,7 +16830,7 @@ export const zones = [
   {
     id: '700',
     name: 'Рост. обл. Новочеркасск Высоковольтная 5',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [47.226885, 40.206821],
@@ -16869,7 +16869,7 @@ export const zones = [
   {
     id: '702',
     name: 'Тула Пузакова 46',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [54.211865, 37.63196],
@@ -16924,7 +16924,7 @@ export const zones = [
   {
     id: '703',
     name: 'Десногорск 3-й мкр 9',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [54.022681, 33.224279],
@@ -16960,7 +16960,7 @@ export const zones = [
   {
     id: '704',
     name: 'Ижевск Деревообделочная 36',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.831458, 53.172553],
@@ -17024,7 +17024,7 @@ export const zones = [
   {
     id: '705',
     name: 'Мурманск пр-кт Героев-североморцев 27',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [69.070918, 33.19827],
@@ -17083,7 +17083,7 @@ export const zones = [
   {
     id: '707',
     name: 'Оренбург Дорофеева 5',
-    color: 'fffa1c88',
+    color: 'fffa1c',
     coordinates: [
       [
         [51.796698, 55.177745],
@@ -17137,7 +17137,7 @@ export const zones = [
   {
     id: '708',
     name: 'Нижний Новгород Лескова 44',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [56.255687, 43.63174],
@@ -17178,7 +17178,7 @@ export const zones = [
   {
     id: '710',
     name: 'Вит. обл. Новополоцк Блохина 25А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.080048, 28.28266],
@@ -17251,7 +17251,7 @@ export const zones = [
   {
     id: '712',
     name: 'Волжский Мира 121А',
-    color: 'ff359688',
+    color: 'ff3596',
     coordinates: [
       [
         [49.884333, 46.42615],
@@ -17306,7 +17306,7 @@ export const zones = [
   {
     id: '713',
     name: 'Екатеринбург Репина 68',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.81271, 60.484785],
@@ -17388,7 +17388,7 @@ export const zones = [
   {
     id: '714',
     name: 'МСК Грина 26',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.5696, 37.5613],
@@ -17421,7 +17421,7 @@ export const zones = [
   {
     id: '718',
     name: 'Тул. обл. Ефремов Майорова 7',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [52.955831, 37.335436],
@@ -17453,7 +17453,7 @@ export const zones = [
   {
     id: '719',
     name: 'ХМ. Окр. Радужный 2-й мкр 3',
-    color: 'ff1e7f88',
+    color: 'ff1e7f',
     coordinates: [
       [
         [62.639834, 77.677265],
@@ -17472,7 +17472,7 @@ export const zones = [
   {
     id: '720',
     name: 'Кос. обл. Шарья Октябрьская 15',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [59.169724, 47.446586],
@@ -17504,7 +17504,7 @@ export const zones = [
   {
     id: '721',
     name: 'Нижний Новгород Нахимова 14',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [56.304429, 43.909942],
@@ -17548,7 +17548,7 @@ export const zones = [
   {
     id: '722',
     name: 'Нижний Новгород Максима Горького 24',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.3108569472742, 43.9628935817179],
@@ -17596,7 +17596,7 @@ export const zones = [
   {
     id: '723',
     name: 'МСК Б. Спасская 8с1А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.768566, 37.649944],
@@ -17633,7 +17633,7 @@ export const zones = [
   {
     id: '725',
     name: 'Тверь Бориса Полевого 9',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.846251, 35.891094],
@@ -17721,7 +17721,7 @@ export const zones = [
   {
     id: '727',
     name: 'Владимир Студёная Гора 34А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.1187, 40.372],
@@ -17793,7 +17793,7 @@ export const zones = [
   {
     id: '728',
     name: 'Красноярск Ястынская 11',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [56.060445, 92.927976],
@@ -17851,7 +17851,7 @@ export const zones = [
   {
     id: '730',
     name: 'МО Старая Купавна Кирова 21',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.753854, 38.114095],
@@ -17882,7 +17882,7 @@ export const zones = [
   {
     id: '731',
     name: 'Астрахань Калинина 44',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [46.3622, 48.0588],
@@ -17960,7 +17960,7 @@ export const zones = [
   {
     id: '733',
     name: 'Св. обл. Ирбит Советская 96',
-    color: 'fff48488',
+    color: 'fff484',
     coordinates: [
       [
         [57.998957, 62.841907],
@@ -17985,7 +17985,7 @@ export const zones = [
   {
     id: '734',
     name: 'Мурманск Зои Космодемьянской 5',
-    color: 'fff48488',
+    color: 'fff484',
     coordinates: [
       [
         [68.790454, 32.661747],
@@ -18047,7 +18047,7 @@ export const zones = [
   {
     id: '735',
     name: 'Смолевичи Толстого 2Б',
-    color: 'ff6a4e88',
+    color: 'ff6a4e',
     coordinates: [
       [
         [53.91371, 28.059045],
@@ -18094,7 +18094,7 @@ export const zones = [
   {
     id: '736',
     name: 'МСК Свободный пр-кт 1Б',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.758259, 37.748597],
@@ -18124,7 +18124,7 @@ export const zones = [
   {
     id: '738',
     name: 'МСК Анадырский пр-д 69',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.885587, 37.719146],
@@ -18153,7 +18153,7 @@ export const zones = [
   {
     id: '739',
     name: 'МСК Мусоргского 1Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.866434, 37.60827],
@@ -18190,7 +18190,7 @@ export const zones = [
   {
     id: '741',
     name: 'МСК Пятницкая 54',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.732559, 37.627208],
@@ -18223,7 +18223,7 @@ export const zones = [
   {
     id: '743',
     name: 'МСК Мнёвники 10к1',
-    color: 'ff359688',
+    color: 'ff3596',
     coordinates: [
       [
         [55.768767, 37.49268],
@@ -18263,7 +18263,7 @@ export const zones = [
   {
     id: '744',
     name: 'Воркута Ленина 25',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [67.509114, 63.943033],
@@ -18306,7 +18306,7 @@ export const zones = [
   {
     id: '745',
     name: 'МСК Волгоградский пр-кт 9с1',
-    color: 'fff48488',
+    color: 'fff484',
     coordinates: [
       [
         [55.725085, 37.712486],
@@ -18353,7 +18353,7 @@ export const zones = [
   {
     id: '746',
     name: 'Уфа Новосёлов 6',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.788419, 56.139182],
@@ -18409,7 +18409,7 @@ export const zones = [
   {
     id: '747',
     name: 'Уфа Мингажева 109',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.73092, 55.946502],
@@ -18480,7 +18480,7 @@ export const zones = [
   {
     id: '749',
     name: 'Кем. Куз. Таштагол Поспелова 18',
-    color: 'ff6a9488',
+    color: 'ff6a94',
     coordinates: [
       [
         [53.115418, 86.517747],
@@ -18507,7 +18507,7 @@ export const zones = [
   {
     id: '751',
     name: 'Волг. обл. Камышин Мира 18',
-    color: 'ff83b588',
+    color: 'ff83b5',
     coordinates: [
       [
         [49.868411, 44.253577],
@@ -18539,7 +18539,7 @@ export const zones = [
   {
     id: '753',
     name: 'МСК Зеленоград Георгиевский пр-кт 1935',
-    color: 'eb12c388',
+    color: 'eb12c3',
     coordinates: [
       [
         [55.966469, 37.162885],
@@ -18586,7 +18586,7 @@ export const zones = [
   {
     id: '754',
     name: 'Челябинск Дзержинского 125',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [55.155281, 61.513104],
@@ -18659,7 +18659,7 @@ export const zones = [
   {
     id: '755',
     name: 'Брест. Обл Барановичи Комсомольская 52',
-    color: 'ff6e8e88',
+    color: 'ff6e8e',
     coordinates: [
       [
         [53.120372, 25.983899],
@@ -18729,7 +18729,7 @@ export const zones = [
   {
     id: '757',
     name: 'Ре. Баш. Белебей Советская 49/1',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [53.405749, 54.442543],
@@ -18755,7 +18755,7 @@ export const zones = [
   {
     id: '758',
     name: 'З-К Обл город Аксай Самуила Цвиллинга 156А',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [51.503482, 53.367194],
@@ -18774,7 +18774,7 @@ export const zones = [
   {
     id: '761',
     name: 'Сочи Павлова 11А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [43.879596, 39.276937],
@@ -18799,7 +18799,7 @@ export const zones = [
   {
     id: '762',
     name: 'КРД. кр. Темрюк Калинина 115/1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.172505, 37.091409],
@@ -18822,7 +18822,7 @@ export const zones = [
   {
     id: '763',
     name: 'Губкин Севастопольская улица 18',
-    color: 'ff6a4e88',
+    color: 'ff6a4e',
     coordinates: [
       [
         [51.201161, 36.76659],
@@ -18852,7 +18852,7 @@ export const zones = [
   {
     id: '764',
     name: 'Волгоград Расула Гамзатова 7',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [48.736307, 44.457356],
@@ -18891,7 +18891,7 @@ export const zones = [
   {
     id: '765',
     name: 'Тюмень Станционная 24к1',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [57.074137, 65.643844],
@@ -18943,7 +18943,7 @@ export const zones = [
   {
     id: '766',
     name: 'Чел. обл. Миасс пр-кт Автозаводцев 47',
-    color: 'ff1e7f88',
+    color: 'ff1e7f',
     coordinates: [
       [
         [55.396546, 60.113028],
@@ -18979,7 +18979,7 @@ export const zones = [
   {
     id: '767',
     name: 'Красн. кр. Норильск Талнахская 55',
-    color: 'e48fff88',
+    color: 'e48fff',
     coordinates: [
       [
         [69.348276, 87.771031],
@@ -19042,7 +19042,7 @@ export const zones = [
   {
     id: '768',
     name: 'Тул. обл. Алексин Дубравная 36А',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [54.546415, 36.866079],
@@ -19073,7 +19073,7 @@ export const zones = [
   {
     id: '769',
     name: 'Сургут Маяковского 45Б',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [61.257436, 73.417622],
@@ -19109,7 +19109,7 @@ export const zones = [
   {
     id: '770',
     name: 'Челябинск Блюхера 2Б',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [55.150098, 61.428695],
@@ -19157,7 +19157,7 @@ export const zones = [
   {
     id: '771',
     name: 'Ряз. Обл Ряжск Максима Горького 13А',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [54.067772, 40.055101],
@@ -19185,7 +19185,7 @@ export const zones = [
   {
     id: '772',
     name: 'Екатеринбург Мира 36',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [56.846968, 60.606721],
@@ -19231,7 +19231,7 @@ export const zones = [
   {
     id: '775',
     name: 'Вологда Костромская 12А',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [58.975114, 39.942345],
@@ -19270,7 +19270,7 @@ export const zones = [
   {
     id: '776',
     name: 'Томск Пушкина 65А',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [56.442382, 86.094573],
@@ -19333,7 +19333,7 @@ export const zones = [
   {
     id: '778',
     name: 'Ирк. обл. Нижнеудинск Кржижановского 3',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.559386, 97.67587],
@@ -19360,7 +19360,7 @@ export const zones = [
   {
     id: '779',
     name: 'Грод. Обл Сморгонь Победы 2А',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [54.46674, 25.62596],
@@ -19471,7 +19471,7 @@ export const zones = [
   {
     id: '780',
     name: 'Череповец Ленина 106',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.003237, 37.790286],
@@ -19500,7 +19500,7 @@ export const zones = [
   {
     id: '783',
     name: 'Красн. Кра. Крымск Луначарского 108',
-    color: '144be188',
+    color: '144be1',
     coordinates: [
       [
         [44.945707, 37.736156],
@@ -19525,7 +19525,7 @@ export const zones = [
   {
     id: '784',
     name: 'Чеч. Респ. Аргун Шоссейная 111Д',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [43.549285, 45.637091],
@@ -19584,7 +19584,7 @@ export const zones = [
   {
     id: '785',
     name: 'Кострома Индустриальная 19Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.646136, 40.892502],
@@ -19620,7 +19620,7 @@ export const zones = [
   {
     id: '787',
     name: 'Крым Евпатория Конституции 34',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.222105, 33.367297],
@@ -19662,7 +19662,7 @@ export const zones = [
   {
     id: '788',
     name: 'Крснр. Кра. Дудинка Горького 64',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [69.451511, 87.237614],
@@ -19680,7 +19680,7 @@ export const zones = [
   {
     id: '791',
     name: 'Мценск Ленина 36',
-    color: 'ff6a4e88',
+    color: 'ff6a4e',
     coordinates: [
       [
         [53.049653, 36.091245],
@@ -19710,7 +19710,7 @@ export const zones = [
   {
     id: '792',
     name: 'Витебск, пр-кт Черняховского 44',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.030386, 30.9127],
@@ -19762,7 +19762,7 @@ export const zones = [
   {
     id: '793',
     name: 'Пермь Мира 59',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [58.038222, 55.643142],
@@ -19871,7 +19871,7 @@ export const zones = [
   {
     id: '797',
     name: 'Рост. обл. Сальск Железнодорожная 43',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.766968, 41.91935],
@@ -19897,7 +19897,7 @@ export const zones = [
   {
     id: '798',
     name: 'Рост. Обл Волгодонск Гагарина 7Е',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [47.41130635554, 42.1605988567399],
@@ -19932,7 +19932,7 @@ export const zones = [
   {
     id: '799',
     name: 'Архангельск Валявкина 13',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [64.617697, 40.483314],
@@ -19963,7 +19963,7 @@ export const zones = [
   {
     id: '802',
     name: 'МО Зарайск 1 мкр. 8',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.8831523786173, 38.8507670430784],
@@ -19989,7 +19989,7 @@ export const zones = [
   {
     id: '803',
     name: 'Сафоново Октябрьская 64',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.502972, 32.244881],
@@ -20014,7 +20014,7 @@ export const zones = [
   {
     id: '805',
     name: 'МО Лосино-Петровский Октябрьская 7к1',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [55.842512, 38.201298],
@@ -20063,7 +20063,7 @@ export const zones = [
   {
     id: '806',
     name: 'Чув. респ. Чебоксары Тимофея Кривова 14',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [56.097884, 47.082651],
@@ -20117,7 +20117,7 @@ export const zones = [
   {
     id: '807',
     name: 'Саратов Киевский пр 4',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.547577, 45.996563],
@@ -20186,7 +20186,7 @@ export const zones = [
   {
     id: '808',
     name: 'Севастополь Рабочая 24',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.600851, 33.602423],
@@ -20219,7 +20219,7 @@ export const zones = [
   {
     id: '809',
     name: 'Железногорск (Курск. обл.) Мира 55',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [52.3262801671794, 35.9861056643293],
@@ -20258,7 +20258,7 @@ export const zones = [
   {
     id: '810',
     name: 'МО Жуковский Гудкова 20',
-    color: 'ff74a688',
+    color: 'ff74a6',
     coordinates: [
       [
         [55.566353, 38.082239],
@@ -20314,7 +20314,7 @@ export const zones = [
   {
     id: '812',
     name: 'Кем. Куз. Белово Железнодорожная 28',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [54.289951, 86.78653],
@@ -20337,7 +20337,7 @@ export const zones = [
   {
     id: '813',
     name: 'Киров Ульяновская 10',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [58.49625, 49.620314],
@@ -20368,7 +20368,7 @@ export const zones = [
   {
     id: '814',
     name: 'Волг. обл. Урюпинск Доценко 19',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [50.149356, 41.362872],
@@ -20396,7 +20396,7 @@ export const zones = [
   {
     id: '816',
     name: 'МСК Братеевская 18к1',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [55.618012, 37.782887],
@@ -20430,7 +20430,7 @@ export const zones = [
   {
     id: '817',
     name: 'Томск пр-кт Фрунзе 18',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [56.484577, 84.955807],
@@ -20505,7 +20505,7 @@ export const zones = [
   {
     id: '821',
     name: 'Сарат. обл. Вольск Октябрьская 118А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.050999, 47.758105],
@@ -20530,7 +20530,7 @@ export const zones = [
   {
     id: '825',
     name: 'СПБ Пулковская 2к1',
-    color: 'ff74a688',
+    color: 'ff74a6',
     coordinates: [
       [
         [59.847396, 30.3039],
@@ -20556,7 +20556,7 @@ export const zones = [
   {
     id: '826',
     name: 'Респ. Мор. Рузаевка б-р Горшкова 4',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.125543, 44.450257],
@@ -20593,7 +20593,7 @@ export const zones = [
   {
     id: '827',
     name: 'Новосибирск Николаева 12/3',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [54.88938, 83.071881],
@@ -20642,7 +20642,7 @@ export const zones = [
   {
     id: '828',
     name: 'МСК Ярославское шоссе 59',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [55.84276, 37.803757],
@@ -20670,7 +20670,7 @@ export const zones = [
   {
     id: '830',
     name: 'МСК Улица Главмосстроя 10',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.6384, 37.4593],
@@ -20694,7 +20694,7 @@ export const zones = [
   {
     id: '834',
     name: 'Амур. обл. Благовещенск Горького 147',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [50.530918, 128.40455],
@@ -20728,7 +20728,7 @@ export const zones = [
   {
     id: '835',
     name: 'Ливны Карла Маркса 151',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.899578, 37.906025],
@@ -20750,7 +20750,7 @@ export const zones = [
   {
     id: '836',
     name: 'Кулебаки Адмирала Макарова 4',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [55.483935, 43.019233],
@@ -20783,7 +20783,7 @@ export const zones = [
   {
     id: '838',
     name: 'ХМ. Окр. Лангепас Мира 42Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [61.163164, 74.777977],
@@ -20804,7 +20804,7 @@ export const zones = [
   {
     id: '842',
     name: 'Мур. обл. Североморск Гвардейская 8',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [69.186983, 33.516298],
@@ -20839,7 +20839,7 @@ export const zones = [
   {
     id: '845',
     name: 'Могилёв, 3-й пер Мечникова 6',
-    color: 'ff83b588',
+    color: 'ff83b5',
     coordinates: [
       [
         [53.966049, 30.325785],
@@ -20897,7 +20897,7 @@ export const zones = [
   {
     id: '848',
     name: 'Славгород Ленина 65',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [53.573837, 77.824402],
@@ -20924,7 +20924,7 @@ export const zones = [
   {
     id: '849',
     name: 'Респ. Ком. Сыктывкар Малышева 1/2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [62.0794682343116, 50.2586495732958],
@@ -20978,7 +20978,7 @@ export const zones = [
   {
     id: '855',
     name: 'Бишкек Табышалиева 57',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [42.9621, 74.6451],
@@ -21109,7 +21109,7 @@ export const zones = [
   {
     id: '856',
     name: 'Валуйки 1 Мая 18',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [49.867217, 38.840382],
@@ -21142,7 +21142,7 @@ export const zones = [
   {
     id: '858',
     name: 'Поставы Ленинская 9',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [54.912586, 25.856355],
@@ -21575,7 +21575,7 @@ export const zones = [
   {
     id: '860',
     name: 'Пермь Маршала Рыбалко 38',
-    color: 'ffe57588',
+    color: 'ffe575',
     coordinates: [
       [
         [57.98237, 55.803883],
@@ -21612,7 +21612,7 @@ export const zones = [
   {
     id: '862',
     name: 'Гом. обл. Рогачёв Ленина 59',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [53.3351, 30.792929],
@@ -21640,7 +21640,7 @@ export const zones = [
   {
     id: '863',
     name: 'СПБ Латышских Стрелков 15к3',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [59.91319, 30.476399],
@@ -21725,7 +21725,7 @@ export const zones = [
   {
     id: '866',
     name: 'Чел. обл. Озерск мкр. Заозерный 4',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [56.233295, 61.146507],
@@ -21748,7 +21748,7 @@ export const zones = [
   {
     id: '867',
     name: 'Там. Обл Котовск Октябрьская 49',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [52.083103, 41.717034],
@@ -21786,7 +21786,7 @@ export const zones = [
   {
     id: '868',
     name: 'Пер. кр. Кунгур Голованова 50Г',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.563055, 57.542262],
@@ -21834,7 +21834,7 @@ export const zones = [
   {
     id: '869',
     name: 'Красн. кр. Кропоткин Красная 191',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [45.322316, 41.020561],
@@ -21863,7 +21863,7 @@ export const zones = [
   {
     id: '871',
     name: 'ЯНАО Салехард Свердлова 11',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [66.528894, 66.575283],
@@ -21899,7 +21899,7 @@ export const zones = [
   {
     id: '873',
     name: 'Калуга Фомушина 8',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [54.493957, 36.27429],
@@ -21938,7 +21938,7 @@ export const zones = [
   {
     id: '876',
     name: 'Тверь Паши Савельевой 33А',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [56.868307, 35.879294],
@@ -21998,7 +21998,7 @@ export const zones = [
   {
     id: '879',
     name: 'Св. обл. Верхняя Пышма Александра Козицына 12',
-    color: 'ff910f88',
+    color: 'ff910f',
     coordinates: [
       [
         [56.938559, 60.733637],
@@ -22029,7 +22029,7 @@ export const zones = [
   {
     id: '880',
     name: 'Мур. обл. Снежногорск Флотская 13',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [69.067734, 33.16894],
@@ -22057,7 +22057,7 @@ export const zones = [
   {
     id: '882',
     name: 'Бр. обл. Клинцы пр-кт Ленина 40',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [52.725481, 32.570343],
@@ -22106,7 +22106,7 @@ export const zones = [
   {
     id: '883',
     name: 'Красноярск Линейная 122',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.019574, 92.88106],
@@ -22166,7 +22166,7 @@ export const zones = [
   {
     id: '885',
     name: 'Киров Правды 2А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [58.6454590764539, 49.5095550370146],
@@ -22202,7 +22202,7 @@ export const zones = [
   {
     id: '887',
     name: 'Хабаровск Владивостокская 37',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [48.473715, 135.10082],
@@ -22272,7 +22272,7 @@ export const zones = [
   {
     id: '890',
     name: 'Петропавловск-Камчатский Беринга 115А',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [53.035327, 158.653938],
@@ -22306,7 +22306,7 @@ export const zones = [
   {
     id: '891',
     name: 'МСК Ленинский пр-кт 52',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [55.684648, 37.539609],
@@ -22326,7 +22326,7 @@ export const zones = [
   {
     id: '892',
     name: 'Тамбов пр Николая Островского 6',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.735562, 41.422518],
@@ -22376,7 +22376,7 @@ export const zones = [
   {
     id: '893',
     name: 'Тамбов Советская 191',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [52.739226, 41.435401],
@@ -22424,7 +22424,7 @@ export const zones = [
   {
     id: '894',
     name: 'Саранск пр-кт 60 лет Октября 17А',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [54.363758, 43.676421],
@@ -22479,7 +22479,7 @@ export const zones = [
   {
     id: '895',
     name: 'Пер. кр. Чусовой Лысьвенская 83',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [58.497931, 57.816486],
@@ -22505,7 +22505,7 @@ export const zones = [
   {
     id: '896',
     name: 'Уд. Респ. Сарапул Горького 20А',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.956613, 53.552437],
@@ -22544,7 +22544,7 @@ export const zones = [
   {
     id: '900',
     name: 'МО Голицыно бульвар Генерала Ремезова 4',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [55.603938, 36.830629],
@@ -22575,7 +22575,7 @@ export const zones = [
   {
     id: '902',
     name: 'МСК Туристская 20к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.876522, 37.428667],
@@ -22606,7 +22606,7 @@ export const zones = [
   {
     id: '904',
     name: 'МО Щёлково Институтская 2А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.911869, 38.01345],
@@ -22649,7 +22649,7 @@ export const zones = [
   {
     id: '907',
     name: 'МСК Шокальского 31',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.876726, 37.654059],
@@ -22678,7 +22678,7 @@ export const zones = [
   {
     id: '909',
     name: 'Крым Ялта Мисхорская 2к2',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [44.496544, 34.170895],
@@ -22752,7 +22752,7 @@ export const zones = [
   {
     id: '910',
     name: 'Новокузнецк Тореза 67',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [53.782177, 87.138128],
@@ -22783,7 +22783,7 @@ export const zones = [
   {
     id: '911',
     name: 'Петрозаводск Зайцева 21Б',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [62.238255, 30.768716],
@@ -22807,7 +22807,7 @@ export const zones = [
   {
     id: '912',
     name: 'Яр. обл. Углич Солнечный мкр. 12',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.466363, 37.631375],
@@ -22844,7 +22844,7 @@ export const zones = [
   {
     id: '914',
     name: 'Екатеринбург Палисадная 8А',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [56.7879, 60.58291],
@@ -22921,7 +22921,7 @@ export const zones = [
   {
     id: '915',
     name: 'Кстово Жуковского 12А',
-    color: 'ff83b588',
+    color: 'ff83b5',
     coordinates: [
       [
         [56.038988, 44.030834],
@@ -22967,7 +22967,7 @@ export const zones = [
   {
     id: '916',
     name: 'МСК Профсоюзная 68к4',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.677953, 37.562753],
@@ -22994,7 +22994,7 @@ export const zones = [
   {
     id: '917',
     name: 'Ирк. обл. Саянск Ленинградский мкр. 8',
-    color: 'ff74a688',
+    color: 'ff74a6',
     coordinates: [
       [
         [54.725068, 101.803979],
@@ -23017,7 +23017,7 @@ export const zones = [
   {
     id: '918',
     name: 'Екатеринбург Уктусская 31',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [56.813463, 60.655616],
@@ -23057,7 +23057,7 @@ export const zones = [
   {
     id: '920',
     name: 'Белгород Шаландина 9',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [50.370402, 36.738958],
@@ -23092,7 +23092,7 @@ export const zones = [
   {
     id: '921',
     name: 'МО с. Узуново Почтовая 4А',
-    color: 'ff6e8e88',
+    color: 'ff6e8e',
     coordinates: [
       [
         [54.31896, 38.658485],
@@ -23121,7 +23121,7 @@ export const zones = [
   {
     id: '923',
     name: 'Ростов-на-Дону Будённовский пр-кт 120/1с2',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [47.24149, 39.669039],
@@ -23164,7 +23164,7 @@ export const zones = [
   {
     id: '924',
     name: 'МСК Верхние Поля 4',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [55.644676, 37.745875],
@@ -23191,7 +23191,7 @@ export const zones = [
   {
     id: '928',
     name: 'Новос. Обл Куйбышев Коммунистическая 38',
-    color: '89ff9188',
+    color: '89ff91',
     coordinates: [
       [
         [54.90794, 78.288574],
@@ -23216,7 +23216,7 @@ export const zones = [
   {
     id: '929',
     name: 'МСК Смольная 15',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.845755, 37.500012],
@@ -23266,7 +23266,7 @@ export const zones = [
   {
     id: '930',
     name: 'МСК Базовская 15к6',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.882949, 37.518141],
@@ -23298,7 +23298,7 @@ export const zones = [
   {
     id: '931',
     name: 'Кострома Советская 39Г',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [57.366912, 40.494105],
@@ -23332,7 +23332,7 @@ export const zones = [
   {
     id: '933',
     name: 'Красн. кр. Назарово Арбузова 116Б',
-    color: 'ff74a688',
+    color: 'ff74a6',
     coordinates: [
       [
         [56.092865, 89.878231],
@@ -23354,7 +23354,7 @@ export const zones = [
   {
     id: '935',
     name: 'МСК с Красная Пахра 10',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [55.471152, 37.249278],
@@ -23411,7 +23411,7 @@ export const zones = [
   {
     id: '937',
     name: 'Мур. обл. Заозёрск Ленинского Комсомола 1',
-    color: '2a08e488',
+    color: '2a08e4',
     coordinates: [
       [
         [68.962898, 30.793844],
@@ -23434,7 +23434,7 @@ export const zones = [
   {
     id: '939',
     name: 'МСК Шухова д.10к2(16к7с1)',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.713663, 37.577437],
@@ -23466,7 +23466,7 @@ export const zones = [
   {
     id: '941',
     name: 'Гомель Чапаева 10А',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [52.414898, 30.645921],
@@ -23483,7 +23483,7 @@ export const zones = [
   {
     id: '949',
     name: 'МСК Маршала Захарова 5',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.62017, 37.671416],
@@ -23516,7 +23516,7 @@ export const zones = [
   {
     id: '951',
     name: 'МО рп Калининец 1Е',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [55.592898, 36.995033],
@@ -23552,7 +23552,7 @@ export const zones = [
   {
     id: '952',
     name: 'МО Одинцово Садовая 24',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [55.673184, 37.274117],
@@ -23584,7 +23584,7 @@ export const zones = [
   {
     id: '955',
     name: 'Яр. обл. Рыбинск пр-кт Ленина 160',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [57.987294, 39.240747],
@@ -23611,7 +23611,7 @@ export const zones = [
   {
     id: '960',
     name: 'Иркутск Баррикад 62/13',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [52.288041, 104.35341],
@@ -23708,7 +23708,7 @@ export const zones = [
   {
     id: '963',
     name: 'Алтай Алейск Победы 154',
-    color: '2b40ff88',
+    color: '2b40ff',
     coordinates: [
       [
         [52.976792, 83.104491],
@@ -23761,7 +23761,7 @@ export const zones = [
   {
     id: '964',
     name: 'МСК Новоясеневский пр-кт 25А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.6268, 37.492],
@@ -23784,7 +23784,7 @@ export const zones = [
   {
     id: '967',
     name: 'Амурск Мира 36',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [50.393849, 136.618473],
@@ -23803,7 +23803,7 @@ export const zones = [
   {
     id: '968',
     name: 'Новороссийск Куникова 47Б',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [44.717789, 37.800901],
@@ -23850,7 +23850,7 @@ export const zones = [
   {
     id: '969',
     name: 'Св. обл. Полевской Зеленый бор-1 12',
-    color: '9201b088',
+    color: '9201b0',
     coordinates: [
       [
         [56.657772, 60.314095],
@@ -23877,7 +23877,7 @@ export const zones = [
   {
     id: '970',
     name: 'Новосибирск Адриена Лежена 13',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.010385, 83.053446],
@@ -23918,7 +23918,7 @@ export const zones = [
   {
     id: '971',
     name: 'Новосибирск Троллейная 1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.998659, 82.89194],
@@ -23988,7 +23988,7 @@ export const zones = [
   {
     id: '972',
     name: 'МСК Нагорная 16к3',
-    color: '55a35c88',
+    color: '55a35c',
     coordinates: [
       [
         [55.701427, 37.615917],
@@ -24019,7 +24019,7 @@ export const zones = [
   {
     id: '973',
     name: 'Св. обл. Берёзовский Красных Героев 18',
-    color: 'ff537d88',
+    color: 'ff537d',
     coordinates: [
       [
         [56.878755, 60.677415],
@@ -24050,7 +24050,7 @@ export const zones = [
   {
     id: '976',
     name: 'Симферополь Училищная 22',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.9054264276989, 34.1152564706232],
@@ -24109,7 +24109,7 @@ export const zones = [
   {
     id: '978',
     name: 'Туапсе Маршала Жукова 13',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [44.154378, 39.131861],
@@ -24139,7 +24139,7 @@ export const zones = [
   {
     id: '979',
     name: 'Став. кр. Изобильный Кирова 126А',
-    color: 'ff6e8e88',
+    color: 'ff6e8e',
     coordinates: [
       [
         [45.207926, 41.704231],
@@ -24168,7 +24168,7 @@ export const zones = [
   {
     id: '980',
     name: 'Ярославль Чехова 16',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [57.626391, 39.799412],
@@ -24201,7 +24201,7 @@ export const zones = [
   {
     id: '981',
     name: 'Калуж. обл. Людиново Ф. Энгельса 11',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [54.278348, 33.939004],
@@ -24231,7 +24231,7 @@ export const zones = [
   {
     id: '984',
     name: 'Новочебоксарск Ельниковский 1',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [56.122241, 47.423664],
@@ -24272,7 +24272,7 @@ export const zones = [
   {
     id: '986',
     name: 'МО Апрелевка Парковая 7к2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.545256, 37.072219],
@@ -24318,7 +24318,7 @@ export const zones = [
   {
     id: '987',
     name: 'Рост. обл. Аксай Вартанова 14В',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [47.203766, 39.809677],
@@ -24372,7 +24372,7 @@ export const zones = [
   {
     id: '988',
     name: 'ЯНАО Муравленко пер. Нефтяников 8',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [64.340059, 75.142635],
@@ -24397,7 +24397,7 @@ export const zones = [
   {
     id: '989',
     name: 'ЯНАО Тарко-Сале Труда 28',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [64.867816, 77.893522],
@@ -24422,7 +24422,7 @@ export const zones = [
   {
     id: '993',
     name: 'Нижний Новгород Горная 11',
-    color: 'ff8b0088',
+    color: 'ff8b00',
     coordinates: [
       [
         [56.146433, 43.752438],
@@ -24480,7 +24480,7 @@ export const zones = [
   {
     id: '995',
     name: 'Курган Карла Маркса 105',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.585885, 63.710575],
@@ -24549,7 +24549,7 @@ export const zones = [
   {
     id: '997',
     name: 'Краснодар Автолюбителей 52/3',
-    color: '0a67da88',
+    color: '0a67da',
     coordinates: [
       [
         [44.866591, 39.118433],
@@ -24600,7 +24600,7 @@ export const zones = [
   {
     id: '999',
     name: 'ЯН. Окр. Губкинский 25',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [64.581867, 76.269225],
@@ -24623,7 +24623,7 @@ export const zones = [
   {
     id: '1000',
     name: 'Сев. Колобова 35/2',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [44.586981, 33.468398],
@@ -24652,7 +24652,7 @@ export const zones = [
   {
     id: '1001',
     name: 'Иркутск Советская 168',
-    color: 'ae0fe188',
+    color: 'ae0fe1',
     coordinates: [
       [
         [52.287428, 104.342901],
@@ -24722,7 +24722,7 @@ export const zones = [
   {
     id: '1002',
     name: 'Вихоревка Ленина 15',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [56.3028428128792, 100.62018784869],
@@ -24749,7 +24749,7 @@ export const zones = [
   {
     id: '1003',
     name: 'МСК Адмирала Лазарева 11',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.5621, 37.5148],
@@ -24803,7 +24803,7 @@ export const zones = [
   {
     id: '1004',
     name: 'Рост. обл. Миллерово Калинина 41',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [49.82818, 41.045253],
@@ -24844,7 +24844,7 @@ export const zones = [
   {
     id: '1005',
     name: 'Яр. обл. Ростов Октябрьская 49',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [57.358807, 40.291348],
@@ -24868,7 +24868,7 @@ export const zones = [
   {
     id: '1006',
     name: 'Красн. Кра. Лабинск Красная 404',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [44.194341, 41.434353],
@@ -24899,7 +24899,7 @@ export const zones = [
   {
     id: '1008',
     name: 'Краснодар Средняя 36',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [45.0916, 38.9062],
@@ -24927,7 +24927,7 @@ export const zones = [
   {
     id: '1009',
     name: 'Саров Садовая 70',
-    color: 'ff6e8e88',
+    color: 'ff6e8e',
     coordinates: [
       [
         [54.901201, 43.204797],
@@ -24960,7 +24960,7 @@ export const zones = [
   {
     id: '1010',
     name: 'Рост. Обл Волгодонск Железнодорожная 61',
-    color: 'f7191988',
+    color: 'f71919',
     coordinates: [
       [
         [47.546739, 42.158805],
@@ -24993,7 +24993,7 @@ export const zones = [
   {
     id: '1011',
     name: 'Арх. обл. Северодвинск Карла Маркса 47',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [64.535921, 39.68834],
@@ -25042,7 +25042,7 @@ export const zones = [
   {
     id: '1012',
     name: 'Красн. кр. п. Российский им. В.М. Комарова 21/1',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [45.292441029812, 39.1296019130466],
@@ -25069,7 +25069,7 @@ export const zones = [
   {
     id: '1013',
     name: 'Маркова Березовый 146',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [52.241887, 104.144765],
@@ -25123,7 +25123,7 @@ export const zones = [
   {
     id: '1015',
     name: 'Волгоград Пугачёвская 20',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [48.722403, 44.47088],
@@ -25174,7 +25174,7 @@ export const zones = [
   {
     id: '1025',
     name: 'Арх. обл. Коряжма Советская 10Б',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [60.788518, 48.326827],
@@ -25198,7 +25198,7 @@ export const zones = [
   {
     id: '1027',
     name: 'Севастополь Руднева 30А',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [44.60657, 33.509375],
@@ -25259,7 +25259,7 @@ export const zones = [
   {
     id: '1029',
     name: 'КЧР Черкесск Гагарина 18',
-    color: 'ff587888',
+    color: 'ff5878',
     coordinates: [
       [
         [43.973926, 42.276495],
@@ -25317,7 +25317,7 @@ export const zones = [
   {
     id: '1030',
     name: 'Волг. обл. Михайловка Обороны 41',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [49.644433, 43.631235],
@@ -25341,7 +25341,7 @@ export const zones = [
   {
     id: '1032',
     name: 'Ростов-на-Дону Немировича-Данченко 58',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [47.244497, 39.653186],
@@ -25400,7 +25400,7 @@ export const zones = [
   {
     id: '1036',
     name: 'Астр. обл. Ахтубинск пер. Ульяновых 2',
-    color: '09cdde88',
+    color: '09cdde',
     coordinates: [
       [
         [48.268426, 47.113448],
@@ -25467,7 +25467,7 @@ export const zones = [
   {
     id: '1039',
     name: 'Краснодар Красных Партизан 166',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [45.043202, 38.956754],
@@ -25533,7 +25533,7 @@ export const zones = [
   {
     id: '1044',
     name: 'Вл. обл. Петушки Советская пл. 16',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.027984, 39.190142],
@@ -25571,7 +25571,7 @@ export const zones = [
   {
     id: '1047',
     name: 'КРД. кр. ст-ца Павловская Спартаковская 141',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [46.344463, 39.300971],
@@ -25604,7 +25604,7 @@ export const zones = [
   {
     id: '1050',
     name: 'Волгоград Краснополянская 48',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [48.856584, 44.561891],
@@ -25648,7 +25648,7 @@ export const zones = [
   {
     id: '1053',
     name: 'Казань Шаляпина 14/83',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.783813, 49.149522],
@@ -25731,7 +25731,7 @@ export const zones = [
   {
     id: '1055',
     name: 'Казань Столярова 19',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [56.136186, 48.944114],
@@ -25780,7 +25780,7 @@ export const zones = [
   {
     id: '1057',
     name: 'Ряз. Обл Скопин Советская 65',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.556626, 39.004211],
@@ -25814,7 +25814,7 @@ export const zones = [
   {
     id: '1060',
     name: 'Новороссийск Камская',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [44.779156, 37.496702],
@@ -25861,7 +25861,7 @@ export const zones = [
   {
     id: '1062',
     name: 'Махачкала Мирзабекова 224',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [42.9712, 47.4966],
@@ -25905,7 +25905,7 @@ export const zones = [
   {
     id: '1065',
     name: 'Тв. Обл Бежецк Нечаева 35/34',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [58.412647, 36.558158],
@@ -25936,7 +25936,7 @@ export const zones = [
   {
     id: '1066',
     name: 'ХМО Ханты-Мансийск Дунина-Горкавича 11',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [60.969172, 69.030591],
@@ -25983,7 +25983,7 @@ export const zones = [
   {
     id: '1068',
     name: 'Мур. обл. Оленегорск Строительная 50',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [68.290564, 33.391556],
@@ -26009,7 +26009,7 @@ export const zones = [
   {
     id: '1069',
     name: 'Якутск пр-кт Ленина 58',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [61.981195, 129.623353],
@@ -26062,7 +26062,7 @@ export const zones = [
   {
     id: '1070',
     name: 'Иркутск Авиастроителей 61',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [52.314088, 104.231306],
@@ -26098,7 +26098,7 @@ export const zones = [
   {
     id: '1073',
     name: 'Красн. Кра. Белореченск Интернациональная 160А',
-    color: 'ff83b588',
+    color: 'ff83b5',
     coordinates: [
       [
         [44.652183, 40.00746],
@@ -26124,7 +26124,7 @@ export const zones = [
   {
     id: '1074',
     name: 'ЯНАО Новый Уренгой мкр. Оптимистов 2к1',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [66.082238, 76.659528],
@@ -26168,7 +26168,7 @@ export const zones = [
   {
     id: '1075',
     name: 'МСК Дмитровское шоссе 7к2',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [55.834827, 37.547524],
@@ -26208,7 +26208,7 @@ export const zones = [
   {
     id: '1077',
     name: 'Св. обл. Заречный Ленинградская 16',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [56.834749, 61.0966],
@@ -26240,7 +26240,7 @@ export const zones = [
   {
     id: '1078',
     name: 'ХМО Мегион пр-кт Победы 3',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [60.866924, 75.885816],
@@ -26261,7 +26261,7 @@ export const zones = [
   {
     id: '1084',
     name: 'Кем. Куз. Ленинск-Кузнецкий Пушкина 12',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [55.139734, 86.508023],
@@ -26312,7 +26312,7 @@ export const zones = [
   {
     id: '1086',
     name: 'Владикавказ Астана Кесаева 39',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [43.012488, 44.658446],
@@ -26348,7 +26348,7 @@ export const zones = [
   {
     id: '1088',
     name: 'Омск пр-кт Мира 100',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.0292, 73.1949],
@@ -26396,7 +26396,7 @@ export const zones = [
   {
     id: '1095',
     name: 'Апшеронск Пролетарская 22',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [43.9326, 39.8578],
@@ -26423,7 +26423,7 @@ export const zones = [
   {
     id: '1097',
     name: 'Симферополь Ларионова 38А',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [44.984222, 34.071637],
@@ -26492,7 +26492,7 @@ export const zones = [
   {
     id: '1100',
     name: 'Орен. обл. Орск пр-кт Мира 11',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [51.520707, 59.438782],
@@ -26526,7 +26526,7 @@ export const zones = [
   {
     id: '1101',
     name: 'Воронеж 25 Января 28',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.483067, 39.241593],
@@ -26560,7 +26560,7 @@ export const zones = [
   {
     id: '1102',
     name: 'Рост. обл. Азов Московская 91',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [47.0114572381913, 38.2931908328143],
@@ -26599,7 +26599,7 @@ export const zones = [
   {
     id: '1103',
     name: 'Пер. кр. Чайковский Ленина 70',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [57.022054, 54.679277],
@@ -26629,7 +26629,7 @@ export const zones = [
   {
     id: '1106',
     name: 'Рост. Обл Таганрог Ватутина 40',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [47.197519, 38.896426],
@@ -26668,7 +26668,7 @@ export const zones = [
   {
     id: '1108',
     name: 'Волг. обл. Жирновск Ломоносова 75',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [50.736476, 45.234561],
@@ -26696,7 +26696,7 @@ export const zones = [
   {
     id: '1109',
     name: 'Хабаровск Союзная 14',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [47.485657, 134.818726],
@@ -26726,7 +26726,7 @@ export const zones = [
   {
     id: '1110',
     name: 'КРД. кр. ст-ца Гостагаевская Новороссийская 25А',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [44.99392, 37.321097],
@@ -26768,7 +26768,7 @@ export const zones = [
   {
     id: '1111',
     name: 'Св. Обл Алапаевск Пушкина 34',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [57.620632, 60.427752],
@@ -26797,7 +26797,7 @@ export const zones = [
   {
     id: '1112',
     name: 'Екатеринбург Чкалова 124',
-    color: 'ff8b0088',
+    color: 'ff8b00',
     coordinates: [
       [
         [56.798327, 60.595096],
@@ -26844,7 +26844,7 @@ export const zones = [
   {
     id: '1113',
     name: 'Респ. Мор. рп Зубова Поляна Ленинская 1А',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [54.518167, 43.411331],
@@ -26870,7 +26870,7 @@ export const zones = [
   {
     id: '1116',
     name: 'Пен. Обл Кузнецк Кирова 119',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [53.019698, 45.931844],
@@ -26898,7 +26898,7 @@ export const zones = [
   {
     id: '1119',
     name: 'Амур Обл Шимановск Комсомольская 34',
-    color: 'ff8b0088',
+    color: 'ff8b00',
     coordinates: [
       [
         [51.530334, 127.251756],
@@ -26918,7 +26918,7 @@ export const zones = [
   {
     id: '1120',
     name: 'Омск. Обл Тара Ленина 68',
-    color: 'ffee8d88',
+    color: 'ffee8d',
     coordinates: [
       [
         [56.2739, 73.8788],
@@ -26942,7 +26942,7 @@ export const zones = [
   {
     id: '1121',
     name: 'Ре. Ком. Микунь Советская 2А',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [63.082667, 51.026348],
@@ -26963,7 +26963,7 @@ export const zones = [
   {
     id: '1122',
     name: 'Св. Обл Тавда Ленина 44',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [58.506638, 66.066908],
@@ -26986,7 +26986,7 @@ export const zones = [
   {
     id: '1124',
     name: 'Вол. обл. Великий Устюг Луначарского 25',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [59.99073, 47.318111],
@@ -27016,7 +27016,7 @@ export const zones = [
   {
     id: '1125',
     name: 'МСК Мишина 38',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [55.802597, 37.538273],
@@ -27056,7 +27056,7 @@ export const zones = [
   {
     id: '1126',
     name: 'МСК Новопесчаная 13к4',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.782857, 37.525857],
@@ -27109,7 +27109,7 @@ export const zones = [
   {
     id: '1127',
     name: 'Уфа Центральная 10',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [54.348504, 55.333883],
@@ -27162,7 +27162,7 @@ export const zones = [
   {
     id: '1128',
     name: 'Острогожск Северный 24',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [50.717234, 39.026041],
@@ -27205,7 +27205,7 @@ export const zones = [
   {
     id: '1129',
     name: 'Тайшет Новый 11-2Н',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.65437, 98.22911],
@@ -27242,7 +27242,7 @@ export const zones = [
   {
     id: '1132',
     name: 'Севастополь Античный пр-кт 3',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [44.595227, 33.44871],
@@ -27267,7 +27267,7 @@ export const zones = [
   {
     id: '1134',
     name: 'Арх. обл. рп Коноша Октябрьский пр-кт 25А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.077005, 40.842373],
@@ -27291,7 +27291,7 @@ export const zones = [
   {
     id: '1135',
     name: 'Став. кр. Михайловск Вокзальная 22',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [45.105315, 41.972052],
@@ -27332,7 +27332,7 @@ export const zones = [
   {
     id: '1136',
     name: 'Риддер Независимости 18',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [50.201184, 83.591125],
@@ -27352,7 +27352,7 @@ export const zones = [
   {
     id: '1137',
     name: 'ЛО Сланцы Кирова 20',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [58.004038, 27.625801],
@@ -27399,7 +27399,7 @@ export const zones = [
   {
     id: '1138',
     name: 'КРД. кр. Ейск Энгельса 158/3',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [46.67637, 38.24836],
@@ -27445,7 +27445,7 @@ export const zones = [
   {
     id: '1140',
     name: 'Алтай Новоалтайск Барнаульская 3',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [53.810361, 84.028878],
@@ -27478,7 +27478,7 @@ export const zones = [
   {
     id: '1143',
     name: 'МО Мытищи Троицкая 9',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.915901, 37.726899],
@@ -27514,7 +27514,7 @@ export const zones = [
   {
     id: '1144',
     name: 'Кем. Куз. Киселёвск Ставропольская 7',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [54.195246, 86.331884],
@@ -27547,7 +27547,7 @@ export const zones = [
   {
     id: '1145',
     name: 'Пер. кр. Губаха Космонавтов 11',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [58.497931, 57.816486],
@@ -27573,7 +27573,7 @@ export const zones = [
   {
     id: '1147',
     name: 'Св. Обл Краснотурьинск Попова 39',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [59.841869, 60.068595],
@@ -27594,7 +27594,7 @@ export const zones = [
   {
     id: '1148',
     name: 'Респ. Алт. Горно-Алтайск Коммунистический пр-кт 45',
-    color: 'ffa5a588',
+    color: 'ffa5a5',
     coordinates: [
       [
         [51.995012, 86.064767],
@@ -27628,7 +27628,7 @@ export const zones = [
   {
     id: '1149',
     name: 'ЛО Тосно пр-кт Ленина 3',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [59.714141, 31.192155],
@@ -27651,7 +27651,7 @@ export const zones = [
   {
     id: '1150',
     name: 'При. кр. Большой Камень Маслакова 10',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [43.010903, 132.247909],
@@ -27672,7 +27672,7 @@ export const zones = [
   {
     id: '1151',
     name: 'МСК Островитянова 43',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.621322, 37.536961],
@@ -27693,7 +27693,7 @@ export const zones = [
   {
     id: '1152',
     name: 'Грод. Обл Мосты Советская 14',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [53.83763, 24.947549],
@@ -27721,7 +27721,7 @@ export const zones = [
   {
     id: '1153',
     name: 'Кем. Куз. Калтан Горького 20',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.202623, 86.381815],
@@ -27750,7 +27750,7 @@ export const zones = [
   {
     id: '1155',
     name: 'Владикавказ Мичурина 59',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [43.066988, 44.693562],
@@ -27791,7 +27791,7 @@ export const zones = [
   {
     id: '1158',
     name: 'МСК Дегтярный пер 10с2',
-    color: 'ff6a9488',
+    color: 'ff6a94',
     coordinates: [
       [
         [55.770969, 37.599813],
@@ -27837,7 +27837,7 @@ export const zones = [
   {
     id: '1159',
     name: 'Ре. Саха (Якутия) Покровск Комсомольская 16',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [61.512537, 129.277153],
@@ -27855,7 +27855,7 @@ export const zones = [
   {
     id: '1160',
     name: 'Кам. кр. Елизово Рабочая 2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.104856, 158.376724],
@@ -27890,7 +27890,7 @@ export const zones = [
   {
     id: '1161',
     name: 'МСК Болотниковская 51к1',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [55.646131, 37.585623],
@@ -27916,7 +27916,7 @@ export const zones = [
   {
     id: '1162',
     name: 'МСК Красная Пресня 9к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.748517, 37.610978],
@@ -27947,7 +27947,7 @@ export const zones = [
   {
     id: '1163',
     name: 'Ирк. обл. Шелехов 1-й мкр. 63',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [52.127004, 104.479542],
@@ -27990,7 +27990,7 @@ export const zones = [
   {
     id: '1164',
     name: 'Алт. кр. Змеиногорск Ленина 50',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [51.851358, 83.268016],
@@ -28026,7 +28026,7 @@ export const zones = [
   {
     id: '1167',
     name: 'СПБ Добровольцев 52',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [59.828094, 30.115097],
@@ -28057,7 +28057,7 @@ export const zones = [
   {
     id: '1168',
     name: 'Приморско-Ахтарск Ленина 12',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [46.221698, 37.941637],
@@ -28080,7 +28080,7 @@ export const zones = [
   {
     id: '1171',
     name: 'Белг. обл. Шебекино Московская 11',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [50.6684486631701, 37.0857819557417],
@@ -28111,7 +28111,7 @@ export const zones = [
   {
     id: '1173',
     name: 'Павлово Фаворского 42',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [56.16416, 43.749883],
@@ -28157,7 +28157,7 @@ export const zones = [
   {
     id: '1176',
     name: 'Кем. Куз. Мариинск Ленина 41',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [56.061874, 89.379261],
@@ -28179,7 +28179,7 @@ export const zones = [
   {
     id: '1179',
     name: 'Краснодар Вавилова 1',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [44.996897, 38.80095],
@@ -28239,7 +28239,7 @@ export const zones = [
   {
     id: '1182',
     name: 'Калуж. обл. Козельск Чкалова 84',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [54.276213, 35.774666],
@@ -28278,7 +28278,7 @@ export const zones = [
   {
     id: '1183',
     name: 'МСК Симферопольский бульвар 17к1',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.650076, 37.622108],
@@ -28299,7 +28299,7 @@ export const zones = [
   {
     id: '1184',
     name: 'Пер. Кра. Кудымкар Революционная 21',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [58.411653, 55.52291],
@@ -28323,7 +28323,7 @@ export const zones = [
   {
     id: '1185',
     name: 'Кам. кр. Петропавловск-Камчатский Савченко 22/2',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [53.0546492242612, 158.637832844365],
@@ -28372,7 +28372,7 @@ export const zones = [
   {
     id: '1191',
     name: 'Вол. обл. Сокол Советская 111',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [59.434385, 39.768241],
@@ -28405,7 +28405,7 @@ export const zones = [
   {
     id: '1195',
     name: 'Респ. Даг. Избербаш У.Д. Буйнакского 141',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [42.490797, 47.11913],
@@ -28428,7 +28428,7 @@ export const zones = [
   {
     id: '1196',
     name: 'Ясный Ленина 6',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [50.659851, 59.452896],
@@ -28454,7 +28454,7 @@ export const zones = [
   {
     id: '1199',
     name: 'Хабаровск Карла Маркса 99А',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [48.481293, 135.10738],
@@ -28521,7 +28521,7 @@ export const zones = [
   {
     id: '1200',
     name: 'Оренбург Терешковой 10/2',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [51.786571, 55.106519],
@@ -28578,7 +28578,7 @@ export const zones = [
   {
     id: '1201',
     name: 'Белгород Чапаева 14А',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [50.35329, 35.747314],
@@ -28615,7 +28615,7 @@ export const zones = [
   {
     id: '1203',
     name: 'Геленджик Островского 149Ак1 пом 7/2',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [44.55762, 38.047334],
@@ -28672,7 +28672,7 @@ export const zones = [
   {
     id: '1204',
     name: 'Св. обл. Карпинск Мира 68',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.018013, 60.133149],
@@ -28692,7 +28692,7 @@ export const zones = [
   {
     id: '1207',
     name: 'Став. Кра. Пятигорск Аллея Строителей 7',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [44.110222, 43.02128],
@@ -28750,7 +28750,7 @@ export const zones = [
   {
     id: '1208',
     name: 'Новокузнецк Куйбышева 7',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [53.798292, 86.927299],
@@ -28795,7 +28795,7 @@ export const zones = [
   {
     id: '1210',
     name: 'Краснодар КИМ 38/1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.023773, 39.002999],
@@ -28837,7 +28837,7 @@ export const zones = [
   {
     id: '1212',
     name: 'Симферополь Ковыльная 92А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.989728, 34.111511],
@@ -28891,7 +28891,7 @@ export const zones = [
   {
     id: '1213',
     name: 'Братск Красноярская 5',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.9702, 101.965085],
@@ -28914,7 +28914,7 @@ export const zones = [
   {
     id: '1215',
     name: 'Симферополь 60 лет Октября 9',
-    color: 'ff4f8188',
+    color: 'ff4f81',
     coordinates: [
       [
         [44.914869, 33.980679],
@@ -28952,7 +28952,7 @@ export const zones = [
   {
     id: '1216',
     name: 'Св. обл. Сухой Лог Юбилейная 27',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [56.73991, 61.712514],
@@ -28977,7 +28977,7 @@ export const zones = [
   {
     id: '1218',
     name: 'Тюм. обл. Ялуторовск Свободы 106',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [56.760636, 65.971472],
@@ -29012,7 +29012,7 @@ export const zones = [
   {
     id: '1219',
     name: 'Ив. обл. Шуя Стрелецкая 11',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.884998, 41.101774],
@@ -29044,7 +29044,7 @@ export const zones = [
   {
     id: '1220',
     name: 'Балхаш Уалиханова 2  (пвз + курьерский склад)',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [46.832764, 74.796706],
@@ -29065,7 +29065,7 @@ export const zones = [
   {
     id: '1221',
     name: 'НСК. обл. Татарск Некрасова 36А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.706276, 75.705794],
@@ -29089,7 +29089,7 @@ export const zones = [
   {
     id: '1224',
     name: 'Ре. Баш. Октябрьский Лермонтова 4',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.418913, 54.000102],
@@ -29117,7 +29117,7 @@ export const zones = [
   {
     id: '1225',
     name: 'Вятские Поляны Кирова 14',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [56.522605, 50.869031],
@@ -29161,7 +29161,7 @@ export const zones = [
   {
     id: '1228',
     name: 'Карасук Маяковского 2',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [54.863691, 78.663208],
@@ -29184,7 +29184,7 @@ export const zones = [
   {
     id: '1231',
     name: 'Шацк Красная Площадь 14',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.205443, 42.440931],
@@ -29209,7 +29209,7 @@ export const zones = [
   {
     id: '1233',
     name: 'Воронеж 60-й Армии 27',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.693109, 39.216284],
@@ -29248,7 +29248,7 @@ export const zones = [
   {
     id: '1239',
     name: 'МО рп Нахабино Красноармейская 66',
-    color: 'ff4f8188',
+    color: 'ff4f81',
     coordinates: [
       [
         [55.892373, 37.131557],
@@ -29282,7 +29282,7 @@ export const zones = [
   {
     id: '1240',
     name: 'Том. обл. Стрежевой Ермакова 127Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.914069, 77.479539],
@@ -29306,7 +29306,7 @@ export const zones = [
   {
     id: '1241',
     name: 'Пыть-Ях Романа Кузоваткина 8',
-    color: 'ff4f8188',
+    color: 'ff4f81',
     coordinates: [
       [
         [60.952444, 72.478695],
@@ -29336,7 +29336,7 @@ export const zones = [
   {
     id: '1242',
     name: 'ХМ. Окр. Советский Октябрьская 5А',
-    color: 'ff8b0088',
+    color: 'ff8b00',
     coordinates: [
       [
         [62.290752, 64.452376],
@@ -29366,7 +29366,7 @@ export const zones = [
   {
     id: '1243',
     name: 'Алтай Ленина 88',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [49.891214, 84.576545],
@@ -29388,7 +29388,7 @@ export const zones = [
   {
     id: '1245',
     name: 'Чебоксары Космонавта Николаева 47',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [56.128619, 47.299747],
@@ -29426,7 +29426,7 @@ export const zones = [
   {
     id: '1247',
     name: 'Ивдель Карла Маркса 25',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [60.448708, 59.734235],
@@ -29446,7 +29446,7 @@ export const zones = [
   {
     id: '1248',
     name: 'Респ. Даг. Хасавюрт С-М. Абубакарова 48',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [43.079975, 46.442369],
@@ -29486,7 +29486,7 @@ export const zones = [
   {
     id: '1249',
     name: 'Респ. Даг. Кизляр Махачкалинская 12',
-    color: '918fff88',
+    color: '918fff',
     coordinates: [
       [
         [43.737861, 45.56044],
@@ -29518,7 +29518,7 @@ export const zones = [
   {
     id: '1253',
     name: 'СПБ пр-кт Народного Ополчения 22',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.851825, 30.221514],
@@ -29546,7 +29546,7 @@ export const zones = [
   {
     id: '1254',
     name: 'Ре. Хак. Абаза Вокзальная 15',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.569218, 90.180928],
@@ -29569,7 +29569,7 @@ export const zones = [
   {
     id: '1255',
     name: 'Новокузнецк Разведчиков 52',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.782177, 87.138128],
@@ -29608,7 +29608,7 @@ export const zones = [
   {
     id: '1256',
     name: 'Пав. обл. Экибастуз Машхур Жусупа 64',
-    color: 'ff6e8e88',
+    color: 'ff6e8e',
     coordinates: [
       [
         [51.955092, 75.118745],
@@ -29640,7 +29640,7 @@ export const zones = [
   {
     id: '1257',
     name: 'ЛО Сосновый Бор Солнечная 33А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.825469, 28.871663],
@@ -29666,7 +29666,7 @@ export const zones = [
   {
     id: '1258',
     name: 'Крым пгт Гурзуф Ялтинская 20',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [44.601386, 34.239796],
@@ -29693,7 +29693,7 @@ export const zones = [
   {
     id: '1260',
     name: 'СПБ п. Металлострой Школьная 7',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [59.78952, 30.660761],
@@ -29727,7 +29727,7 @@ export const zones = [
   {
     id: '1261',
     name: 'Бабаево Свердлова 54А',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [59.362456, 36.626328],
@@ -29747,7 +29747,7 @@ export const zones = [
   {
     id: '1262',
     name: 'Кем. Куз. Гурьевск Партизанская 53',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [54.318534, 85.030425],
@@ -29769,7 +29769,7 @@ export const zones = [
   {
     id: '1264',
     name: 'СПБ Ленинский пр-кт 56',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [59.853224, 30.103267],
@@ -29794,7 +29794,7 @@ export const zones = [
   {
     id: '1265',
     name: 'ЛО Кировск Пионерская 14',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [60.069905, 31.22601],
@@ -29838,7 +29838,7 @@ export const zones = [
   {
     id: '1266',
     name: 'Кос. обл. Галич Луначарского 32',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [58.277243, 43.294076],
@@ -29864,7 +29864,7 @@ export const zones = [
   {
     id: '1272',
     name: 'Новокузнецк Косыгина 61',
-    color: 'ff587888',
+    color: 'ff5878',
     coordinates: [
       [
         [54.250464, 87.079354],
@@ -29903,7 +29903,7 @@ export const zones = [
   {
     id: '1273',
     name: 'Рост. обл. Зерноград Специалистов 65А',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [46.944796, 39.912579],
@@ -29929,7 +29929,7 @@ export const zones = [
   {
     id: '1274',
     name: 'МСК Фестивальная 12',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.850279, 37.486295],
@@ -29962,7 +29962,7 @@ export const zones = [
   {
     id: '1275',
     name: 'Брянск Фокина 72',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [53.249019, 34.436487],
@@ -30023,7 +30023,7 @@ export const zones = [
   {
     id: '1278',
     name: 'ХМ. Окр. Лянтор 4-й мкр 10',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [61.259492, 71.690055],
@@ -30059,7 +30059,7 @@ export const zones = [
   {
     id: '1279',
     name: 'Байконур 8 Марта 1Б',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [45.642906, 63.347197],
@@ -30083,7 +30083,7 @@ export const zones = [
   {
     id: '1280',
     name: 'При. Кра. Находка Нахимовская 29А',
-    color: 'fafaa488',
+    color: 'fafaa4',
     coordinates: [
       [
         [42.694908, 132.555826],
@@ -30112,7 +30112,7 @@ export const zones = [
   {
     id: '1282',
     name: 'Кир. Обл Котельнич Чапаева 33Б',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [58.088817, 48.532474],
@@ -30140,7 +30140,7 @@ export const zones = [
   {
     id: '1284',
     name: 'Мур. обл. Ковдор Горняков 13А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [67.492927, 32.299822],
@@ -30163,7 +30163,7 @@ export const zones = [
   {
     id: '1285',
     name: 'Александровск Ленина',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [58.958759445185, 57.2312707059064],
@@ -30185,7 +30185,7 @@ export const zones = [
   {
     id: '1287',
     name: 'Ре. Алт. с Онгудай Советская 88',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [50.802826, 87.775004],
@@ -30212,7 +30212,7 @@ export const zones = [
   {
     id: '1288',
     name: 'Св. обл. Красноуральск Ленина 55',
-    color: 'ff587888',
+    color: 'ff5878',
     coordinates: [
       [
         [58.217955, 60.221413],
@@ -30234,7 +30234,7 @@ export const zones = [
   {
     id: '1289',
     name: 'Сочи Ленина',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [43.46254775115, 39.8797102321277],
@@ -30260,7 +30260,7 @@ export const zones = [
   {
     id: '1292',
     name: 'ХМО Когалым Бакинская 6',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [62.424133, 74.5726],
@@ -30287,7 +30287,7 @@ export const zones = [
   {
     id: '1296',
     name: 'ЯН. Окр. пгт Пангоды Строителей 1А',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [65.574543, 73.573801],
@@ -30307,7 +30307,7 @@ export const zones = [
   {
     id: '1297',
     name: 'Св. обл. Новая Ляля Розы Люксембург 67А',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [58.968874, 60.443459],
@@ -30329,7 +30329,7 @@ export const zones = [
   {
     id: '1299',
     name: 'Якутск Шавкунова 103/1',
-    color: 'ff587888',
+    color: 'ff5878',
     coordinates: [
       [
         [62.023927, 129.714086],
@@ -30375,7 +30375,7 @@ export const zones = [
   {
     id: '1300',
     name: 'Могилёв, Первомайская 84А',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [53.895573, 30.389084],
@@ -30392,7 +30392,7 @@ export const zones = [
   {
     id: '1301',
     name: 'КБР Прохладный Головко 167',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [44.099815, 44.361121],
@@ -30445,7 +30445,7 @@ export const zones = [
   {
     id: '1302',
     name: 'МСК Космонавта Волкова',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.8278567565137, 37.5148000745295],
@@ -30475,7 +30475,7 @@ export const zones = [
   {
     id: '1303',
     name: 'МСК Большая Академическая',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.8119629942571, 37.5406606825304],
@@ -30507,7 +30507,7 @@ export const zones = [
   {
     id: '1304',
     name: 'Уд. Респ. Можга Парковый пер. 1',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.983871, 51.429224],
@@ -30534,7 +30534,7 @@ export const zones = [
   {
     id: '1305',
     name: 'Вязники Ленина 34',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [56.118955, 41.708261],
@@ -30562,7 +30562,7 @@ export const zones = [
   {
     id: '1306',
     name: 'МО с Новопетровское Полевая 2А',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.970245, 36.288289],
@@ -30593,7 +30593,7 @@ export const zones = [
   {
     id: '1308',
     name: 'Крснр. Кра. Боготол Садовая 65А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.092, 89.864302],
@@ -30617,7 +30617,7 @@ export const zones = [
   {
     id: '1309',
     name: 'Салехард Глазкова 12',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [66.617636, 66.8945],
@@ -30642,7 +30642,7 @@ export const zones = [
   {
     id: '1311',
     name: 'Рост. обл. п. Матвеев Курган Комсомольская 106',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [47.84494, 39.282969],
@@ -30665,7 +30665,7 @@ export const zones = [
   {
     id: '1313',
     name: 'Белг. обл. Строитель Ленина 15В',
-    color: '2fc1e988',
+    color: '2fc1e9',
     coordinates: [
       [
         [50.975937, 35.879117],
@@ -30697,7 +30697,7 @@ export const zones = [
   {
     id: '1316',
     name: 'Поронайск Октябрьская 47',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [49.071505, 142.814503],
@@ -30721,7 +30721,7 @@ export const zones = [
   {
     id: '1321',
     name: 'Чув Шумерля Октябрьская 19',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.926814, 46.536559],
@@ -30760,7 +30760,7 @@ export const zones = [
   {
     id: '1323',
     name: 'Крснр. Кра. пгт Курагино Партизанская 134',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.37922, 94.00279],
@@ -30788,7 +30788,7 @@ export const zones = [
   {
     id: '1324',
     name: 'Рост. Обл Новошахтинск пр-кт Ленина 34',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [47.527537, 39.972057],
@@ -30819,7 +30819,7 @@ export const zones = [
   {
     id: '1325',
     name: 'Сев. Фиолентовское шоссе 77/104',
-    color: 'ff74a688',
+    color: 'ff74a6',
     coordinates: [
       [
         [44.3566744544786, 33.7052472134421],
@@ -30845,7 +30845,7 @@ export const zones = [
   {
     id: '1328',
     name: 'МСК Зеленоград к317Ас1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.00595, 37.17437],
@@ -30893,7 +30893,7 @@ export const zones = [
   {
     id: '1329',
     name: 'Уварово Октябрьская 2А',
-    color: 'ff6e8e88',
+    color: 'ff6e8e',
     coordinates: [
       [
         [51.684868, 42.122092],
@@ -30914,7 +30914,7 @@ export const zones = [
   {
     id: '1330',
     name: 'Шир. обл. Артик Чаренца 3',
-    color: 'ff4f8188',
+    color: 'ff4f81',
     coordinates: [
       [
         [41.242627, 44.163811],
@@ -30949,7 +30949,7 @@ export const zones = [
   {
     id: '1331',
     name: 'МСК Башиловская 23к1',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [55.791711, 37.574565],
@@ -30992,7 +30992,7 @@ export const zones = [
   {
     id: '1332',
     name: 'СПБ Кронштадт пр-кт Ленина 13',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.067898, 29.58081],
@@ -31015,7 +31015,7 @@ export const zones = [
   {
     id: '1333',
     name: 'МСК Черняховского 15к1',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.8126910838672, 37.4874152083205],
@@ -31066,7 +31066,7 @@ export const zones = [
   {
     id: '1336',
     name: 'Крым Армянск мкр имени Генерала Корявко 11',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [46.0304095357853, 34.3175091772636],
@@ -31092,7 +31092,7 @@ export const zones = [
   {
     id: '1337',
     name: 'Сарат. обл. Аткарск Советская 115',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.227968, 44.513521],
@@ -31114,7 +31114,7 @@ export const zones = [
   {
     id: '1343',
     name: 'Став. кр. Новоалександровск Гагарина 271',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.779659, 41.365044],
@@ -31138,7 +31138,7 @@ export const zones = [
   {
     id: '1350',
     name: 'Томск Сибирская 109',
-    color: '18c5ae88',
+    color: '18c5ae',
     coordinates: [
       [
         [56.595986, 84.793569],
@@ -31179,7 +31179,7 @@ export const zones = [
   {
     id: '1354',
     name: 'Став. кр. Благодарный Свободы 36',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.951331, 43.573526],
@@ -31206,7 +31206,7 @@ export const zones = [
   {
     id: '1355',
     name: 'Став. кр. Зеленокумск Гражданская 3',
-    color: 'ff2b4b88',
+    color: 'ff2b4b',
     coordinates: [
       [
         [44.162247, 43.845959],
@@ -31232,7 +31232,7 @@ export const zones = [
   {
     id: '1358',
     name: 'Оренбург пр-кт Дзержинского 7/1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.078334, 54.9498],
@@ -31254,7 +31254,7 @@ export const zones = [
   {
     id: '1360',
     name: 'МСК Михайлова 28/7',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.725085, 37.712486],
@@ -31293,7 +31293,7 @@ export const zones = [
   {
     id: '1361',
     name: 'МСК Ташкентская 35',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.701674, 37.79255],
@@ -31325,7 +31325,7 @@ export const zones = [
   {
     id: '1362',
     name: 'Респ. Кал. Лагань Советская 52А',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [45.724035, 46.868229],
@@ -31347,7 +31347,7 @@ export const zones = [
   {
     id: '1364',
     name: 'Астрахань Грановский пер. 58Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [46.2726, 47.9161],
@@ -31388,7 +31388,7 @@ export const zones = [
   {
     id: '1370',
     name: 'Респ. СО-Алания Беслан Ленина 97',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [43.173213, 44.470394],
@@ -31426,7 +31426,7 @@ export const zones = [
   {
     id: '1371',
     name: 'МСК 1-й Щипковский пер 17',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.728756, 37.614129],
@@ -31468,7 +31468,7 @@ export const zones = [
   {
     id: '1372',
     name: 'Капан Шаумяна 26/1',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [38.998025, 46.49329],
@@ -31545,7 +31545,7 @@ export const zones = [
   {
     id: '1373',
     name: 'МСК 1-я Курьяновская 22с1',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [55.657048, 37.711567],
@@ -31592,7 +31592,7 @@ export const zones = [
   {
     id: '1374',
     name: 'МСК Батайский пр 55',
-    color: 'ff4f8188',
+    color: 'ff4f81',
     coordinates: [
       [
         [55.651736, 37.724621],
@@ -31630,7 +31630,7 @@ export const zones = [
   {
     id: '1375',
     name: 'Кир. обл. Луза Виталия Козлова 15',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.096308, 48.146911],
@@ -31654,7 +31654,7 @@ export const zones = [
   {
     id: '1376',
     name: 'Лор. обл. Ванадзор Григора Нарекаци 4',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [40.829676, 44.716287],
@@ -31680,7 +31680,7 @@ export const zones = [
   {
     id: '1383',
     name: 'Петропавловск-Камчатский Академика Королёва 29/1',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [53.0444409084248, 158.629446767401],
@@ -31729,7 +31729,7 @@ export const zones = [
   {
     id: '1384',
     name: 'Вор. обл. Богучар Павших Стрелков 1',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [50.147591, 40.017492],
@@ -31763,7 +31763,7 @@ export const zones = [
   {
     id: '1387',
     name: 'Рост. обл. Гуково Комсомольская 42',
-    color: 'ff74a688',
+    color: 'ff74a6',
     coordinates: [
       [
         [48.13807, 40.491183],
@@ -31794,7 +31794,7 @@ export const zones = [
   {
     id: '1388',
     name: 'Пен. обл. Никольск Центральная 1А',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [53.506062, 46.948286],
@@ -31815,7 +31815,7 @@ export const zones = [
   {
     id: '1389',
     name: 'Котово Мира 112В',
-    color: 'ff587888',
+    color: 'ff5878',
     coordinates: [
       [
         [50.656468, 44.75803],
@@ -31840,7 +31840,7 @@ export const zones = [
   {
     id: '1390',
     name: 'Белоозерск Энергетиков 10',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.436287, 25.418691],
@@ -31857,7 +31857,7 @@ export const zones = [
   {
     id: '1392',
     name: 'Пер. кр. рп Яйва 6-й Пятилетки 15',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [59.333341, 57.079835],
@@ -31877,7 +31877,7 @@ export const zones = [
   {
     id: '1393',
     name: 'Пер. кр. Чернушка Нефтяников 8',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.617161, 56.94163],
@@ -31904,7 +31904,7 @@ export const zones = [
   {
     id: '1395',
     name: 'Казань Юлиуса Фучика 123',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.783511, 49.25031],
@@ -31948,7 +31948,7 @@ export const zones = [
   {
     id: '1396',
     name: 'Казань Сахарова 27А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.789511, 49.175874],
@@ -32016,7 +32016,7 @@ export const zones = [
   {
     id: '1397',
     name: 'Казань Аделя Кутуя 54',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [55.82192, 49.16884],
@@ -32058,7 +32058,7 @@ export const zones = [
   {
     id: '1398',
     name: 'Волг. обл. Новоаннинский Ленина 90Б',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [50.896553, 43.065937],
@@ -32083,7 +32083,7 @@ export const zones = [
   {
     id: '1399',
     name: 'Респ. Кар. Сортавала Маяковского 24',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [61.231802, 29.692879],
@@ -32105,7 +32105,7 @@ export const zones = [
   {
     id: '1400',
     name: 'Св. Обл Реж Фрунзе 21',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.338289, 62.491218],
@@ -32127,7 +32127,7 @@ export const zones = [
   {
     id: '1401',
     name: 'Мартуни Прошяна 2А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [39.815099, 45.917075],
@@ -32158,7 +32158,7 @@ export const zones = [
   {
     id: '1402',
     name: 'Петропавловск-Камчатский Индустриальная 13',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [52.971452, 158.649009],
@@ -32182,7 +32182,7 @@ export const zones = [
   {
     id: '1403',
     name: 'Тюмень Ю.-Р.Г. Эрвье 16',
-    color: 'ff1e7f88',
+    color: 'ff1e7f',
     coordinates: [
       [
         [57.387905, 64.866149],
@@ -32233,7 +32233,7 @@ export const zones = [
   {
     id: '1404',
     name: 'КРД. кр. Усть-Лабинск Ленина 92',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.003473, 39.509198],
@@ -32271,7 +32271,7 @@ export const zones = [
   {
     id: '1405',
     name: 'КРД. кр. Горячий Ключ Ярославского 50',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [44.646225, 38.875812],
@@ -32291,7 +32291,7 @@ export const zones = [
   {
     id: '1406',
     name: 'Данилов Свердлова 58/33',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.976434, 39.994771],
@@ -32312,7 +32312,7 @@ export const zones = [
   {
     id: '1411',
     name: 'Амур. обл. Зея Шохина 12',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.491174, 125.026898],
@@ -32332,7 +32332,7 @@ export const zones = [
   {
     id: '2000',
     name: 'Пен. Обл Нижний Ломов Сергеева 71',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [53.911848, 43.418686],
@@ -32361,7 +32361,7 @@ export const zones = [
   {
     id: '2003',
     name: 'Чел. Обл Сатка 50 лет Октября 3',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [54.773331, 58.826912],
@@ -32390,7 +32390,7 @@ export const zones = [
   {
     id: '2004',
     name: 'Арзамас Парковая 1Г',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [54.85856, 44.232079],
@@ -32413,7 +32413,7 @@ export const zones = [
   {
     id: '2005',
     name: 'Пен. Обл Каменка Театральный пр 1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.28165, 43.154354],
@@ -32443,7 +32443,7 @@ export const zones = [
   {
     id: '2007',
     name: 'Крым пгт Кореиз Севастопольское ш. 10',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.4047, 34.045382],
@@ -32470,7 +32470,7 @@ export const zones = [
   {
     id: '2009',
     name: 'Новг. обл. Пестово Устюженское ш. 2',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [58.15986, 35.1446],
@@ -32498,7 +32498,7 @@ export const zones = [
   {
     id: '2015',
     name: 'Орен. обл. п. Саракташ Ленина 6А',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [51.895235, 56.064459],
@@ -32525,7 +32525,7 @@ export const zones = [
   {
     id: '2016',
     name: 'Петропавловск-Камчатский пр-кт Победы 22',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.066496, 158.62707],
@@ -32560,7 +32560,7 @@ export const zones = [
   {
     id: '2022',
     name: 'Ставрополь Шпаковская 94/3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.997575, 41.909759],
@@ -32590,7 +32590,7 @@ export const zones = [
   {
     id: '2023',
     name: 'НСК. обл. рп Ордынское Степная 27',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [53.487269, 80.247634],
@@ -32619,7 +32619,7 @@ export const zones = [
   {
     id: '2025',
     name: 'Чел. обл. Пласт Октябрьская 33',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [54.276488, 61.051758],
@@ -32637,7 +32637,7 @@ export const zones = [
   {
     id: '2028',
     name: 'Крым Джанкой Толстого 11',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.79587, 34.804289],
@@ -32667,7 +32667,7 @@ export const zones = [
   {
     id: '2029',
     name: 'СПБ Курская 24',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.91404, 30.334408],
@@ -32697,7 +32697,7 @@ export const zones = [
   {
     id: '2034',
     name: 'Кумертау Энергетиков 5Б',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [52.639634, 55.19207],
@@ -32734,7 +32734,7 @@ export const zones = [
   {
     id: '2036',
     name: 'Никель Мира 24',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [69.164661, 29.284303],
@@ -32764,7 +32764,7 @@ export const zones = [
   {
     id: '2037',
     name: 'КРД. кр. ст-ца Новопокровская Ленина 78',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.596583, 40.880761],
@@ -32787,7 +32787,7 @@ export const zones = [
   {
     id: '2038',
     name: 'Невель Комсомольская 17',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.201409, 29.230399],
@@ -32975,7 +32975,7 @@ export const zones = [
   {
     id: '10007',
     name: 'Богучаны Октябрьская 77',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [58.732025, 95.342499],
@@ -32997,7 +32997,7 @@ export const zones = [
   {
     id: '10009',
     name: 'Крым Бахчисарай Фрунзе 46',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [44.601386, 34.239796],
@@ -33023,7 +33023,7 @@ export const zones = [
   {
     id: '10010',
     name: 'ЛО Сясьстрой Космонавтов 4А',
-    color: 'ff74a688',
+    color: 'ff74a6',
     coordinates: [
       [
         [60.319879, 32.973816],
@@ -33043,7 +33043,7 @@ export const zones = [
   {
     id: '10012',
     name: 'Кир. обл. Омутнинск Юных Пионеров 40',
-    color: 'ff6e8e88',
+    color: 'ff6e8e',
     coordinates: [
       [
         [59.426603, 53.979858],
@@ -33068,7 +33068,7 @@ export const zones = [
   {
     id: '10013',
     name: 'Орен. обл. Сорочинск Геологов 10',
-    color: 'ff7f7f88',
+    color: 'ff7f7f',
     coordinates: [
       [
         [51.503482, 53.367194],
@@ -33098,7 +33098,7 @@ export const zones = [
   {
     id: '10015',
     name: 'Тюм. обл. Заводоуковск Малая Базарная 4А',
-    color: '2155de88',
+    color: '2155de',
     coordinates: [
       [
         [56.002603, 66.551356],
@@ -33123,7 +33123,7 @@ export const zones = [
   {
     id: '10019',
     name: 'Волг. обл. Котельниково Войкова 75',
-    color: 'ff74a688',
+    color: 'ff74a6',
     coordinates: [
       [
         [47.930745, 43.007167],
@@ -33147,7 +33147,7 @@ export const zones = [
   {
     id: '10020',
     name: 'Рост. обл. ст-ца Егорлыкская Советская 122',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [46.544663, 40.808686],
@@ -33179,7 +33179,7 @@ export const zones = [
   {
     id: '10022',
     name: 'Ирк. обл. Байкальск Школьный пер. 4А',
-    color: '1ea1d988',
+    color: '1ea1d9',
     coordinates: [
       [
         [51.999037, 105.843157],
@@ -33205,7 +33205,7 @@ export const zones = [
   {
     id: '10023',
     name: 'Том. обл. Асино Челюскина 17',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [57.273127, 88.38731],
@@ -33228,7 +33228,7 @@ export const zones = [
   {
     id: '10024',
     name: 'Пикалево Школьная 58',
-    color: 'ff85a588',
+    color: 'ff85a5',
     coordinates: [
       [
         [59.45874, 34.04158],
@@ -33258,7 +33258,7 @@ export const zones = [
   {
     id: '10025',
     name: 'Ре. Баш. Мелеуз Ленина 218А',
-    color: 'ff2b4b88',
+    color: 'ff2b4b',
     coordinates: [
       [
         [53.206564, 55.400594],
@@ -33287,7 +33287,7 @@ export const zones = [
   {
     id: '10026',
     name: 'Чув Канаш Кооперативная 2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.445395, 46.874216],
@@ -33315,7 +33315,7 @@ export const zones = [
   {
     id: '10027',
     name: 'Чел. обл. Верхний Уфалей Ленина 161Б',
-    color: 'ff2b4b88',
+    color: 'ff2b4b',
     coordinates: [
       [
         [56.0399650610295, 60.8831358560747],
@@ -33345,7 +33345,7 @@ export const zones = [
   {
     id: '10028',
     name: 'Кос. обл. Буй 10-й Годовщины Октября 35',
-    color: 'ff6a4e88',
+    color: 'ff6a4e',
     coordinates: [
       [
         [58.80241, 42.125346],
@@ -33364,7 +33364,7 @@ export const zones = [
   {
     id: '10029',
     name: 'Тв. обл. Нелидово Урицкого 8',
-    color: 'ff74a688',
+    color: 'ff74a6',
     coordinates: [
       [
         [56.355068, 32.492375],
@@ -33387,7 +33387,7 @@ export const zones = [
   {
     id: '10032',
     name: 'Пск. Обл Себеж Замковая 11',
-    color: 'ffb49888',
+    color: 'ffb498',
     coordinates: [
       [
         [56.5482, 28.13607],
@@ -33505,7 +33505,7 @@ export const zones = [
   {
     id: '10034',
     name: 'Сестрорецк Приморское шоссе 352',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [60.044534, 29.921664],
@@ -33530,7 +33530,7 @@ export const zones = [
   {
     id: '10038',
     name: 'Ре. Кар. Олонец Школьная 18А',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [61.360799, 33.504669],
@@ -33553,7 +33553,7 @@ export const zones = [
   {
     id: '10042',
     name: 'Уд. Респ. п. Ува Карла Маркса 33',
-    color: 'ff96d488',
+    color: 'ff96d4',
     coordinates: [
       [
         [56.870778, 50.432409],
@@ -33591,7 +33591,7 @@ export const zones = [
   {
     id: '10043',
     name: 'Ив. обл. Тейково Октябрьская 52В',
-    color: 'ff969b88',
+    color: 'ff969b',
     coordinates: [
       [
         [57.118185, 40.002529],
@@ -33615,7 +33615,7 @@ export const zones = [
   {
     id: '10049',
     name: 'Жанаозен Самал 33',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [43.478629, 53.417208],
@@ -33637,7 +33637,7 @@ export const zones = [
   {
     id: '10051',
     name: 'Кяхта Рабочая 59',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [50.344418, 106.515104],
@@ -33671,7 +33671,7 @@ export const zones = [
   {
     id: '10053',
     name: 'Абаза Вокзальная',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [50.802826, 87.775004],
@@ -33689,7 +33689,7 @@ export const zones = [
   {
     id: '10055',
     name: 'Арх. обл. Няндома Советская 9',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [61.270184, 40.906303],
@@ -33712,7 +33712,7 @@ export const zones = [
   {
     id: '10056',
     name: 'Краснокаменск Строителей 5',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [49.940965, 118.198054],
@@ -33730,7 +33730,7 @@ export const zones = [
   {
     id: '10060',
     name: 'Архипо-Осиповка Ленина 75В',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.274044, 38.589986],
@@ -33750,7 +33750,7 @@ export const zones = [
   {
     id: '10061',
     name: 'ЯН. Окр. Новый Уренгой мкр Приозерный 4А',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [65.773296, 78.20853],
@@ -33772,7 +33772,7 @@ export const zones = [
   {
     id: '10062',
     name: 'Ниж. обл. Сергач Казакова 9',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.213944, 45.97702],
@@ -33807,7 +33807,7 @@ export const zones = [
   {
     id: '10063',
     name: 'Алт. кр. Заринск Металлургов 9',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.033549, 83.756041],
@@ -33841,7 +33841,7 @@ export const zones = [
   {
     id: '10065',
     name: 'Ре. Мор. Ковылкино Комсомольская 7А',
-    color: 'ff6e8e88',
+    color: 'ff6e8e',
     coordinates: [
       [
         [54.257461, 44.378587],
@@ -33864,7 +33864,7 @@ export const zones = [
   {
     id: '10066',
     name: 'Шилово Советская 25',
-    color: 'ff0ee988',
+    color: 'ff0ee9',
     coordinates: [
       [
         [54.15522, 40.992827],
@@ -33891,7 +33891,7 @@ export const zones = [
   {
     id: '10067',
     name: 'Вор. обл. Бутурлиновка Ленина 93',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [51.389609, 39.656391],
@@ -33928,7 +33928,7 @@ export const zones = [
   {
     id: '10070',
     name: 'МСК Троицк Академическая площадь 4',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [55.461329, 37.096821],
@@ -33952,7 +33952,7 @@ export const zones = [
   {
     id: '10072',
     name: 'Том. Обл Колпашево Ленина 39',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [57.55248, 82.385682],
@@ -33975,7 +33975,7 @@ export const zones = [
   {
     id: '10074',
     name: 'Оха 60 лет СССР 19/2',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [53.296423, 142.501312],
@@ -33993,7 +33993,7 @@ export const zones = [
   {
     id: '10076',
     name: 'МСК Мантулинская 2',
-    color: 'fff48488',
+    color: 'fff484',
     coordinates: [
       [
         [55.753806, 37.567694],
@@ -34025,7 +34025,7 @@ export const zones = [
   {
     id: '10077',
     name: 'Ряз. Обл Михайлов Маршала Голикова 17А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.972838, 39.000696],
@@ -34050,7 +34050,7 @@ export const zones = [
   {
     id: '10078',
     name: 'Респ. Баш. Бирск Пролетарская 142',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [56.090182, 55.567788],
@@ -34077,7 +34077,7 @@ export const zones = [
   {
     id: '10079',
     name: 'Ре. Саха (Якутия) Мирный Ленинградский пр-кт 19',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [62.710716, 113.843605],
@@ -34097,7 +34097,7 @@ export const zones = [
   {
     id: '10080',
     name: 'Приобье Строителей 21Б',
-    color: 'ff587888',
+    color: 'ff5878',
     coordinates: [
       [
         [62.73318, 65.464656],
@@ -34119,7 +34119,7 @@ export const zones = [
   {
     id: '10082',
     name: 'Подольск Чистова 9/7',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.460318, 37.561665],
@@ -34151,7 +34151,7 @@ export const zones = [
   {
     id: '10083',
     name: 'МО Подольск Советская 41/5',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.44805, 37.56151],
@@ -34194,7 +34194,7 @@ export const zones = [
   {
     id: '10085',
     name: 'Ряз. обл. Касимов 50 лет СССР 11',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [54.711443, 40.920187],
@@ -34219,7 +34219,7 @@ export const zones = [
   {
     id: '10086',
     name: 'Ганцевичи Красноармейская 14',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [52.696397, 26.05217],
@@ -34243,7 +34243,7 @@ export const zones = [
   {
     id: '10088',
     name: 'Ниж. обл. Семёнов Чайковского 15',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [57.726776, 44.167434],
@@ -34273,7 +34273,7 @@ export const zones = [
   {
     id: '10089',
     name: 'Курск. обл. Рыльск Дзержинского 13',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [51.354527, 34.808677],
@@ -34310,7 +34310,7 @@ export const zones = [
   {
     id: '10090',
     name: 'Арх. обл. Каргополь Красный Посад 24',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [61.284626, 37.671426],
@@ -34330,7 +34330,7 @@ export const zones = [
   {
     id: '10091',
     name: 'Кург. обл. Шумиха Гагарина 1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.585885, 63.710575],
@@ -34370,7 +34370,7 @@ export const zones = [
   {
     id: '10094',
     name: 'Шемонаиха Бауыржана Момышулы 21',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [50.711189, 81.772478],
@@ -34393,7 +34393,7 @@ export const zones = [
   {
     id: '10095',
     name: 'Усть-Илимск Маркса 67',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [58.016681, 102.702053],
@@ -34416,7 +34416,7 @@ export const zones = [
   {
     id: '10096',
     name: 'Джубга Новороссийское 9А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.646225, 38.875812],
@@ -34436,7 +34436,7 @@ export const zones = [
   {
     id: '10099',
     name: 'Ре. Тат. Чистополь Курченко 61',
-    color: 'fd0bbb88',
+    color: 'fd0bbb',
     coordinates: [
       [
         [54.953764, 50.876751],
@@ -34464,7 +34464,7 @@ export const zones = [
   {
     id: '10100',
     name: 'Красн. Кра. ст-ца Тамань Карла Маркса 130А',
-    color: '3e06f088',
+    color: '3e06f0',
     coordinates: [
       [
         [45.089157, 36.589495],
@@ -34485,7 +34485,7 @@ export const zones = [
   {
     id: '10102',
     name: 'Кос. обл. Мантурово Советская 21',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [58.209806, 43.346796],
@@ -34511,7 +34511,7 @@ export const zones = [
   {
     id: '10103',
     name: 'Ре. Баш. Ишимбай Гагарина 5',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.525058, 56.222445],
@@ -34538,7 +34538,7 @@ export const zones = [
   {
     id: '10104',
     name: 'Тюмень Московский тракт 150',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [57.156727, 64.961128],
@@ -34583,7 +34583,7 @@ export const zones = [
   {
     id: '10105',
     name: 'Пен. обл. Сердобск Максима Горького 241',
-    color: 'ff74a688',
+    color: 'ff74a6',
     coordinates: [
       [
         [52.884204, 44.189035],
@@ -34609,7 +34609,7 @@ export const zones = [
   {
     id: '10106',
     name: 'Сарат. обл. Петровск пл. Ленина 2',
-    color: 'fff50a88',
+    color: 'fff50a',
     coordinates: [
       [
         [51.885752, 45.292306],
@@ -34632,7 +34632,7 @@ export const zones = [
   {
     id: '10107',
     name: 'Тв. Обл Западная Двина Октябрьская 14',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.7559, 32.275799],
@@ -34652,7 +34652,7 @@ export const zones = [
   {
     id: '10109',
     name: 'МО рп Селятино Госпитальная 10',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.424216, 37.154343],
@@ -34690,7 +34690,7 @@ export const zones = [
   {
     id: '10110',
     name: 'Мур. обл. пгт Ревда Кузина 2',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [67.72205, 33.891034],
@@ -34711,7 +34711,7 @@ export const zones = [
   {
     id: '10112',
     name: 'Тюмень Котовского 62',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [57.14508, 65.591836],
@@ -34775,7 +34775,7 @@ export const zones = [
   {
     id: '10114',
     name: 'Белоярский Строителей 22',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [64.156326, 66.039992],
@@ -34799,7 +34799,7 @@ export const zones = [
   {
     id: '10118',
     name: 'Св. обл. Талица Кузнецова 69',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.661467, 63.852679],
@@ -34826,7 +34826,7 @@ export const zones = [
   {
     id: '10121',
     name: 'Став. Кра. Светлоград Выставочная площадь 8А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.861042, 42.514794],
@@ -34844,7 +34844,7 @@ export const zones = [
   {
     id: '10126',
     name: 'Гай Елшанская 110А',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [52.157777, 57.787364],
@@ -34876,7 +34876,7 @@ export const zones = [
   {
     id: '10129',
     name: 'Респ. Тат. Зеленодольск Татарстан 8',
-    color: '04c3ea88',
+    color: '04c3ea',
     coordinates: [
       [
         [55.899851, 48.89122],
@@ -34909,7 +34909,7 @@ export const zones = [
   {
     id: '10130',
     name: 'Респ. Даг. Кизилюрт Гамзата Цадасы 86Г',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [42.966162, 46.841364],
@@ -34937,7 +34937,7 @@ export const zones = [
   {
     id: '10131',
     name: 'МО Кубинка Колхозный пр 6А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.632171, 36.563666],
@@ -34972,7 +34972,7 @@ export const zones = [
   {
     id: '10133',
     name: 'Абаза Вокзальная',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [56.6771314844867, 100.614304040294],
@@ -34991,7 +34991,7 @@ export const zones = [
   {
     id: '10135',
     name: 'Лысково Ленина 1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.077514, 45.087183],
@@ -35029,7 +35029,7 @@ export const zones = [
   {
     id: '10137',
     name: 'Вор. обл. Калач пл. Ленина 11',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [50.465688, 40.364847],
@@ -35051,7 +35051,7 @@ export const zones = [
   {
     id: '10138',
     name: 'Красн. Кра. Темрюк Калинина 34/1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.518951, 37.591124],
@@ -35079,7 +35079,7 @@ export const zones = [
   {
     id: '10140',
     name: 'ЯНАО Губкинский 13-й мкр. 108',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [64.357965, 76.691862],
@@ -35097,7 +35097,7 @@ export const zones = [
   {
     id: '10143',
     name: 'Сах. Обл Южно-Сахалинск Комсомольская 294',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [46.845573, 142.333514],
@@ -35121,7 +35121,7 @@ export const zones = [
   {
     id: '10144',
     name: 'Чув Алатырь Стрелка 4',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [54.418005, 46.914101],
@@ -35147,7 +35147,7 @@ export const zones = [
   {
     id: '10147',
     name: 'Сочи Первомайская 5',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [43.596142, 39.724102],
@@ -35180,7 +35180,7 @@ export const zones = [
   {
     id: '10150',
     name: 'Сочи пгт Сириус Анапская 25',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [43.643957, 39.717241],
@@ -35218,7 +35218,7 @@ export const zones = [
   {
     id: '10151',
     name: 'Орен. обл. с. Шарлык Мусы Джалиля 6',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.641607, 55.18916],
@@ -35254,7 +35254,7 @@ export const zones = [
   {
     id: '10152',
     name: 'Кондопога Бумажников 38',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [61.945935, 34.429047],
@@ -35277,7 +35277,7 @@ export const zones = [
   {
     id: '10154',
     name: 'Тул. обл. Суворов Калинина 3',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [53.68103, 36.812416],
@@ -35301,7 +35301,7 @@ export const zones = [
   {
     id: '10155',
     name: 'Чеч. Рес. Урус-Мартан Нурди Усамова 89А',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [42.88696, 45.081098],
@@ -35338,7 +35338,7 @@ export const zones = [
   {
     id: '10156',
     name: 'МСК Троицк Троицкий б-р 6',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.5042, 37.4376],
@@ -35426,7 +35426,7 @@ export const zones = [
   {
     id: '10158',
     name: 'МО д Мисайлово Литературный бульвар 1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.488329, 37.849027],
@@ -35472,7 +35472,7 @@ export const zones = [
   {
     id: '10160',
     name: 'МО Видное Олимпийская 1к2',
-    color: 'ffa58988',
+    color: 'ffa589',
     coordinates: [
       [
         [55.550015, 37.684386],
@@ -35515,7 +35515,7 @@ export const zones = [
   {
     id: '10162',
     name: 'Абаза Вокзальная',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.8127155086274, 37.4766076073915],
@@ -35553,7 +35553,7 @@ export const zones = [
   {
     id: '10163',
     name: 'МО Одинцово Можайское шоссе 121',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.685275, 37.280811],
@@ -35592,7 +35592,7 @@ export const zones = [
   {
     id: '10167',
     name: 'МСК Ленинградский пр-кт 67к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.789287, 37.517842],
@@ -35640,7 +35640,7 @@ export const zones = [
   {
     id: '10168',
     name: 'МСК Твардовского 12к2',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [55.801763, 37.384406],
@@ -35670,7 +35670,7 @@ export const zones = [
   {
     id: '10169',
     name: 'МСК Большая Филёвская 43',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [55.756071, 37.505811],
@@ -35702,7 +35702,7 @@ export const zones = [
   {
     id: '10173',
     name: 'МСК Кубинка 15к2',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [55.723245, 37.449066],
@@ -35723,7 +35723,7 @@ export const zones = [
   {
     id: '10176',
     name: 'МСК Веерная 6',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.708862, 37.45531],
@@ -35753,7 +35753,7 @@ export const zones = [
   {
     id: '10179',
     name: 'МСК Красноярская 1к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.844795, 37.861281],
@@ -35804,7 +35804,7 @@ export const zones = [
   {
     id: '10181',
     name: 'Респ. Бур. пгт Селенгинск пр-кт Строителей 47А',
-    color: 'fe380288',
+    color: 'fe3802',
     coordinates: [
       [
         [52.592717, 106.516848],
@@ -35830,7 +35830,7 @@ export const zones = [
   {
     id: '10182',
     name: 'МСК Федосьино 12',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.636022, 37.326155],
@@ -35855,7 +35855,7 @@ export const zones = [
   {
     id: '10184',
     name: 'Абаза Вокзальная',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.818294, 37.426558],
@@ -35954,7 +35954,7 @@ export const zones = [
   {
     id: '10185',
     name: 'Якутск Кеши Алексеева 5/1',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [62.0285, 129.703564],
@@ -36011,7 +36011,7 @@ export const zones = [
   {
     id: '10187',
     name: 'Якутск Богдана Чижика 2/2',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [62.114307, 129.797559],
@@ -36043,7 +36043,7 @@ export const zones = [
   {
     id: '10188',
     name: 'Тырныауз Эльбрусский 44',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [43.659087, 43.411372],
@@ -36068,7 +36068,7 @@ export const zones = [
   {
     id: '10191',
     name: 'МСК Харьковская 2',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [55.58656, 37.658291],
@@ -36108,7 +36108,7 @@ export const zones = [
   {
     id: '10194',
     name: 'Челябинск Солнечная 40',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.216439, 61.380724],
@@ -36159,7 +36159,7 @@ export const zones = [
   {
     id: '10195',
     name: 'Ре. Кар. Питкяранта Ленина 18',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [61.6324029299068, 30.8365301616382],
@@ -36181,7 +36181,7 @@ export const zones = [
   {
     id: '10198',
     name: 'МО с. Растуново Заря 31',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [55.277988, 37.869424],
@@ -36218,7 +36218,7 @@ export const zones = [
   {
     id: '10201',
     name: 'Калуж. обл. Малоярославец Калужская 6А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.978728, 36.035263],
@@ -36244,7 +36244,7 @@ export const zones = [
   {
     id: '10203',
     name: 'МСК Амундсена 11к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.855732, 37.632979],
@@ -36280,7 +36280,7 @@ export const zones = [
   {
     id: '10204',
     name: 'МСК Маршала Бирюзова 35к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.779626, 37.402717],
@@ -36314,7 +36314,7 @@ export const zones = [
   {
     id: '10205',
     name: 'Брянск Горняков 3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.282517, 33.516292],
@@ -36353,7 +36353,7 @@ export const zones = [
   {
     id: '10206',
     name: 'МО рп Малаховка Рельсовая 1В',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.643523, 37.962371],
@@ -36387,7 +36387,7 @@ export const zones = [
   {
     id: '10207',
     name: 'МО Жуковский Королёва 6с1',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.6178790048606, 38.0961968250196],
@@ -36442,7 +36442,7 @@ export const zones = [
   {
     id: '10209',
     name: 'Тюмень Широтная 29к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.114191, 65.573378],
@@ -36470,7 +36470,7 @@ export const zones = [
   {
     id: '10210',
     name: 'Махачкала Генерала Омарова 102',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [42.959108, 47.488487],
@@ -36516,7 +36516,7 @@ export const zones = [
   {
     id: '10211',
     name: 'Якутск Ларионова 2',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [62.037091, 129.736271],
@@ -36544,7 +36544,7 @@ export const zones = [
   {
     id: '10216',
     name: 'Пав. Обл Павлодар Целинная 46',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [52.361345, 76.880959],
@@ -36565,7 +36565,7 @@ export const zones = [
   {
     id: '10217',
     name: 'Красн. кр. п. Таёжный Карабульская 11',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [57.108757, 97.356661],
@@ -36585,7 +36585,7 @@ export const zones = [
   {
     id: '10218',
     name: 'Красн. Кра. пгт Красная Поляна Турчинского 81',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [43.844274, 40.110874],
@@ -36609,7 +36609,7 @@ export const zones = [
   {
     id: '10219',
     name: 'Тюмень Флотская 32',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.152122, 65.471961],
@@ -36663,7 +36663,7 @@ export const zones = [
   {
     id: '10223',
     name: 'Крым пгт Черноморское Димитрова 10',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.834711, 33.09819],
@@ -36682,7 +36682,7 @@ export const zones = [
   {
     id: '10224',
     name: 'Тюмень Алматинская 4',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [57.608441, 67.038379],
@@ -36708,7 +36708,7 @@ export const zones = [
   {
     id: '10225',
     name: 'Саров Музрукова 22',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [54.957683, 43.15612],
@@ -36740,7 +36740,7 @@ export const zones = [
   {
     id: '10226',
     name: 'Пер. Кра. Добрянка Энгельса 11',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.979646, 56.796434],
@@ -36778,7 +36778,7 @@ export const zones = [
   {
     id: '10228',
     name: 'Сочи Центральная 74',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [43.721874, 39.507289],
@@ -36800,7 +36800,7 @@ export const zones = [
   {
     id: '10230',
     name: 'МСК Ясный проезд 19',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [55.870745, 37.624505],
@@ -36836,7 +36836,7 @@ export const zones = [
   {
     id: '10232',
     name: 'Св. обл. Сысерть Орджоникидзе 9',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.524905, 61.33818],
@@ -36861,7 +36861,7 @@ export const zones = [
   {
     id: '10233',
     name: 'Св. обл. Арамиль Октябрьская 131',
-    color: 'ff6a4e88',
+    color: 'ff6a4e',
     coordinates: [
       [
         [56.76515, 60.854394],
@@ -36910,7 +36910,7 @@ export const zones = [
   {
     id: '10234',
     name: 'МСК Новочерёмушкинская 11к2',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.699639, 37.593157],
@@ -36935,7 +36935,7 @@ export const zones = [
   {
     id: '10244',
     name: 'МСК Ленинский пр-кт 111к1',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.671305, 37.52942],
@@ -36963,7 +36963,7 @@ export const zones = [
   {
     id: '10246',
     name: 'МСК Сокольнический Вал 38',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.811145, 37.683234],
@@ -37012,7 +37012,7 @@ export const zones = [
   {
     id: '10247',
     name: 'МСК Дмитровское шоссе 94к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.889122, 37.543043],
@@ -37044,7 +37044,7 @@ export const zones = [
   {
     id: '10248',
     name: 'СПБ Коммуны 30к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.984379, 30.454921],
@@ -37124,7 +37124,7 @@ export const zones = [
   {
     id: '10252',
     name: 'Калуж. обл. Обнинск пр-кт Ленина 91Б',
-    color: 'fff90488',
+    color: 'fff904',
     coordinates: [
       [
         [55.196232, 36.282459],
@@ -37162,7 +37162,7 @@ export const zones = [
   {
     id: '10253',
     name: 'Тюмень Максима Горького 3',
-    color: '76ed6d88',
+    color: '76ed6d',
     coordinates: [
       [
         [57.148673, 65.597767],
@@ -37198,7 +37198,7 @@ export const zones = [
   {
     id: '10254',
     name: 'Красноярск 9 мая 83',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.052636, 92.88691],
@@ -37257,7 +37257,7 @@ export const zones = [
   {
     id: '10255',
     name: 'Лабытнанги Первомайская 48',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [66.753839, 65.548646],
@@ -37279,7 +37279,7 @@ export const zones = [
   {
     id: '10256',
     name: 'Хойники Жукова 2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.758311, 30.680797],
@@ -37353,7 +37353,7 @@ export const zones = [
   {
     id: '10258',
     name: 'МСК Новгородская 5к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.891238, 37.576123],
@@ -37420,7 +37420,7 @@ export const zones = [
   {
     id: '10260',
     name: 'Чита Кирова 6А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.901523, 113.634342],
@@ -37475,7 +37475,7 @@ export const zones = [
   {
     id: '10261',
     name: 'Респ. Мор. рп Комсомольский Садовая 27',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.993468, 45.821994],
@@ -37503,7 +37503,7 @@ export const zones = [
   {
     id: '10263',
     name: 'Мазовецкое воеводство Буковиньская 2',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [51.655334, 18.583709],
@@ -37542,7 +37542,7 @@ export const zones = [
   {
     id: '10264',
     name: 'Красн. кр. Ужур Кирова 29',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.441267, 91.522594],
@@ -37567,7 +37567,7 @@ export const zones = [
   {
     id: '10265',
     name: 'Чел. обл. Копейск Бажова 10',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.107249, 61.563473],
@@ -37656,7 +37656,7 @@ export const zones = [
   {
     id: '10266',
     name: 'Ре. Хак. Абакан Маршала Жукова 46',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.672432, 91.590143],
@@ -37683,7 +37683,7 @@ export const zones = [
   {
     id: '10268',
     name: 'МО Ступино Тургенева 15/24',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [55.049801, 38.223348],
@@ -37713,7 +37713,7 @@ export const zones = [
   {
     id: '10269',
     name: 'Нижнекамск Строителей 51',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.692689, 52.214316],
@@ -37760,7 +37760,7 @@ export const zones = [
   {
     id: '10271',
     name: 'InPost',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.9233679687673, 140.466831249961],
@@ -37780,7 +37780,7 @@ export const zones = [
   {
     id: '10273',
     name: 'Красн. кр. Норильск Рудная 31',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [69.515144, 88.15763],
@@ -37806,7 +37806,7 @@ export const zones = [
   {
     id: '10274',
     name: 'Салехард Чкалова 8',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [66.66165, 66.604648],
@@ -37829,7 +37829,7 @@ export const zones = [
   {
     id: '10276',
     name: 'Заб. кр. Чита Недорезова 10',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [52.093752, 113.444796],
@@ -37883,7 +37883,7 @@ export const zones = [
   {
     id: '10277',
     name: 'Орен. обл. Абдулино Кооперативная 30',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [52.913226, 53.981483],
@@ -37910,7 +37910,7 @@ export const zones = [
   {
     id: '10278',
     name: 'Севастополь Истомина 12',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.527272, 33.954857],
@@ -37941,7 +37941,7 @@ export const zones = [
   {
     id: '10281',
     name: 'МСК Нагатинская наб 10к3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.671915, 37.627401],
@@ -37983,7 +37983,7 @@ export const zones = [
   {
     id: '10283',
     name: 'СПБ Парашютная 36к1',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [60.052494, 30.22781],
@@ -38011,7 +38011,7 @@ export const zones = [
   {
     id: '10284',
     name: 'Тамбов Карла Маркса 32',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [52.679905, 41.450482],
@@ -38081,7 +38081,7 @@ export const zones = [
   {
     id: '10285',
     name: 'Св. обл. Туринск Кирова 30',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [58.480319, 63.189431],
@@ -38106,7 +38106,7 @@ export const zones = [
   {
     id: '10286',
     name: 'МСК Молдавская 4',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [55.736592, 37.439594],
@@ -38133,7 +38133,7 @@ export const zones = [
   {
     id: '10287',
     name: 'Ниж. обл. Лукоянов Октябрьская 45Б',
-    color: 'fffb0b88',
+    color: 'fffb0b',
     coordinates: [
       [
         [54.842881, 44.845734],
@@ -38159,7 +38159,7 @@ export const zones = [
   {
     id: '10288',
     name: 'Севастополь пр-кт Генерала Острякова 192В',
-    color: 'fffd1588',
+    color: 'fffd15',
     coordinates: [
       [
         [44.434497, 33.518337],
@@ -38248,7 +38248,7 @@ export const zones = [
   {
     id: '10290',
     name: 'Бр. обл. Новозыбков Первомайская 46',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [52.447944, 31.618667],
@@ -38293,7 +38293,7 @@ export const zones = [
   {
     id: '10291',
     name: 'Заполярный Ленина 15',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [69.608245, 30.949388],
@@ -38317,7 +38317,7 @@ export const zones = [
   {
     id: '10292',
     name: 'Якутск Строда 5/3',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [62.094495, 129.71696],
@@ -38356,7 +38356,7 @@ export const zones = [
   {
     id: '10299',
     name: 'Ереван пр-кт Азатамартикнери 25/1',
-    color: '8fceff88',
+    color: '8fceff',
     coordinates: [
       [
         [40.181858, 44.527707],
@@ -38423,7 +38423,7 @@ export const zones = [
   {
     id: '10306',
     name: 'Ре. Саха (Якутия) пос Светлый Молодёжная 23',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [62.710716, 113.843605],
@@ -38443,7 +38443,7 @@ export const zones = [
   {
     id: '10307',
     name: 'Чел. обл. Усть-Катав 1-й мкр. 4',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.167388, 58.352569],
@@ -38464,7 +38464,7 @@ export const zones = [
   {
     id: '10312',
     name: 'Починок Советская 65Г',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.442757, 32.812106],
@@ -38490,7 +38490,7 @@ export const zones = [
   {
     id: '10327',
     name: 'МО Яхрома Ленина 6А',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [56.241861, 37.424965],
@@ -38538,7 +38538,7 @@ export const zones = [
   {
     id: '10330',
     name: 'Могойтуй Гагарина 11А',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [51.431413, 114.905458],
@@ -38558,7 +38558,7 @@ export const zones = [
   {
     id: '10331',
     name: 'Gdynia ul. WLADYSLAWA IV 51',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [54.447255, 19.770968],
@@ -38580,7 +38580,7 @@ export const zones = [
   {
     id: '10333',
     name: 'Szczecin Krzywoustego 19',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.147235, 15.237979],
@@ -38618,7 +38618,7 @@ export const zones = [
   {
     id: '10335',
     name: 'Малопольское воеводство Болеслава Лимановского 11',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [49.387937, 20.365254],
@@ -38663,7 +38663,7 @@ export const zones = [
   {
     id: '10336',
     name: 'Czestochowa ulica Jana III Sobieskiego 2',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [50.77064, 18.120177],
@@ -38682,7 +38682,7 @@ export const zones = [
   {
     id: '10342',
     name: 'МО Люберцы Озёрная 9',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.681166, 37.962421],
@@ -38721,7 +38721,7 @@ export const zones = [
   {
     id: '10355',
     name: 'МСК Родниковая 16',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.6275, 37.3962],
@@ -38754,7 +38754,7 @@ export const zones = [
   {
     id: '10358',
     name: 'СПБ 6-я Советская 18',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [59.954574, 30.375271],
@@ -38784,7 +38784,7 @@ export const zones = [
   {
     id: '10362',
     name: 'МСК пос Внуково 2-я Рейсовая 8/29',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.596481, 37.164909],
@@ -38816,7 +38816,7 @@ export const zones = [
   {
     id: '10363',
     name: 'СПБ Волковский пр-кт 116',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.871263, 30.380022],
@@ -38846,7 +38846,7 @@ export const zones = [
   {
     id: '10366',
     name: 'СПБ пр-кт Обуховской Обороны 243',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.858719, 30.49239],
@@ -38889,7 +38889,7 @@ export const zones = [
   {
     id: '10367',
     name: 'СПБ Московский пр-кт 183-185Ак3Б',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [59.851368, 30.321098],
@@ -38913,7 +38913,7 @@ export const zones = [
   {
     id: '10368',
     name: 'СПБ пр-кт Юрия Гагарина 24к1',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [59.886685, 30.333549],
@@ -38945,7 +38945,7 @@ export const zones = [
   {
     id: '10369',
     name: 'СПБ Московское ш. 30к2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.834963, 30.268763],
@@ -38977,7 +38977,7 @@ export const zones = [
   {
     id: '10370',
     name: 'СПБ Купчинская 32к1Д',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [59.823002, 30.413169],
@@ -39005,7 +39005,7 @@ export const zones = [
   {
     id: '10372',
     name: 'ЛО гор пос Янино-1 Ясная 4',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [59.965625, 30.721733],
@@ -39037,7 +39037,7 @@ export const zones = [
   {
     id: '10373',
     name: 'Всеволожск Центральная 10/2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.965248, 30.553604],
@@ -39079,7 +39079,7 @@ export const zones = [
   {
     id: '10380',
     name: 'МО Ступино Приокский переулок 7к2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.896712, 38.091853],
@@ -39128,7 +39128,7 @@ export const zones = [
   {
     id: '10381',
     name: 'МО Ступино Чайковского 58',
-    color: 'ff8b0088',
+    color: 'ff8b00',
     coordinates: [
       [
         [54.948397, 37.799274],
@@ -39151,7 +39151,7 @@ export const zones = [
   {
     id: '10386',
     name: 'СПБ Большеохтинский пр-кт 15к3',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [59.950589, 30.402984],
@@ -39177,7 +39177,7 @@ export const zones = [
   {
     id: '10387',
     name: 'СПБ Архивная 9к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.91319, 30.476399],
@@ -39205,7 +39205,7 @@ export const zones = [
   {
     id: '10389',
     name: 'МСК Молодёжная 3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.678888, 37.510306],
@@ -39234,7 +39234,7 @@ export const zones = [
   {
     id: '10390',
     name: 'МСК Ленинский пр-кт 66',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [55.708114, 37.542966],
@@ -39256,7 +39256,7 @@ export const zones = [
   {
     id: '10393',
     name: 'ЛО Кудрово Европейский пр-кт 18к2',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [59.91237, 30.507281],
@@ -39292,7 +39292,7 @@ export const zones = [
   {
     id: '10397',
     name: 'Крым Саки Вокзальная 1А',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [45.201652, 33.39147],
@@ -39331,7 +39331,7 @@ export const zones = [
   {
     id: '10400',
     name: 'МСК Широкая 3к3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.895207, 37.673296],
@@ -39362,7 +39362,7 @@ export const zones = [
   {
     id: '10401',
     name: 'Bialystok Lipowa 31/33',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.7885075201929, 37.4782734968355],
@@ -39398,7 +39398,7 @@ export const zones = [
   {
     id: '10403',
     name: 'Иваново Ермака 43',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [57.099192, 40.610501],
@@ -39430,7 +39430,7 @@ export const zones = [
   {
     id: '10404',
     name: 'СПБ Байконурская 24',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [60.0029, 30.321559],
@@ -39457,7 +39457,7 @@ export const zones = [
   {
     id: '10405',
     name: 'МО Домодедово Кирова 15к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.467362, 37.738455],
@@ -39506,7 +39506,7 @@ export const zones = [
   {
     id: '10406',
     name: 'МО Домодедово Энергетиков 4',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.41523, 37.733369],
@@ -39548,7 +39548,7 @@ export const zones = [
   {
     id: '10407',
     name: 'МО Домодедово Курыжова 3',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.366588, 37.783882],
@@ -39579,7 +39579,7 @@ export const zones = [
   {
     id: '10409',
     name: 'Ростов-на-Дону Пацаева 16/1',
-    color: 'cd799188',
+    color: 'cd7991',
     coordinates: [
       [
         [47.284665, 39.680626],
@@ -39695,7 +39695,7 @@ export const zones = [
   {
     id: '10410',
     name: 'Мурино шоссе в лаврики 89',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.041005, 30.438485],
@@ -39719,7 +39719,7 @@ export const zones = [
   {
     id: '10411',
     name: 'Мурино Шувалова 27/7',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.066664, 30.384158],
@@ -39744,7 +39744,7 @@ export const zones = [
   {
     id: '10413',
     name: 'Арарат Шаумяна 18',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [40.048758, 44.928418],
@@ -39769,7 +39769,7 @@ export const zones = [
   {
     id: '10417',
     name: 'МСК Щербинка 40 лет Октября 3',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.501258, 37.540737],
@@ -39817,7 +39817,7 @@ export const zones = [
   {
     id: '10420',
     name: 'МО Ступино Первомайская 18А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.915854, 38.375811],
@@ -39866,7 +39866,7 @@ export const zones = [
   {
     id: '10422',
     name: 'МО Барыбино 1-я Вокзальная 48',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.277451, 37.906114],
@@ -39906,7 +39906,7 @@ export const zones = [
   {
     id: '10425',
     name: 'МСК Клязьминская 15',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.848408, 37.554751],
@@ -39961,7 +39961,7 @@ export const zones = [
   {
     id: '10426',
     name: 'СПБ Богатырский пр-кт 10',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.984397, 30.335332],
@@ -39996,7 +39996,7 @@ export const zones = [
   {
     id: '10427',
     name: 'СПБ Савушкина 138',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [60.04265, 30.156508],
@@ -40050,7 +40050,7 @@ export const zones = [
   {
     id: '10428',
     name: 'СПБ п. Парголово Михаила Дудина 10',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [60.088629, 30.363885],
@@ -40077,7 +40077,7 @@ export const zones = [
   {
     id: '10429',
     name: 'СПБ Руставели 12',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [60.017023, 30.45917],
@@ -40112,7 +40112,7 @@ export const zones = [
   {
     id: '10430',
     name: 'СПБ Гражданский пр-кт 128к2',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [60.013073, 30.3976],
@@ -40141,7 +40141,7 @@ export const zones = [
   {
     id: '10432',
     name: 'СПБ Политехническая 6',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [59.991412, 30.37431],
@@ -40165,7 +40165,7 @@ export const zones = [
   {
     id: '10434',
     name: 'СПБ Выборгское ш. 5к1В',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [60.158139, 30.084084],
@@ -40201,7 +40201,7 @@ export const zones = [
   {
     id: '10436',
     name: 'СПБ Пискарёвский пр-кт 20',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.981627, 30.376128],
@@ -40232,7 +40232,7 @@ export const zones = [
   {
     id: '10438',
     name: 'Челябинск Скульптора Головницкого 16Б',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [55.194511, 61.332691],
@@ -40289,7 +40289,7 @@ export const zones = [
   {
     id: '10443',
     name: 'Краснодар ш. Нефтяников 37',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.064878, 38.975291],
@@ -40336,7 +40336,7 @@ export const zones = [
   {
     id: '10444',
     name: 'Ереван Нелсона Степаняна 6',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [40.223586, 44.863144],
@@ -40353,7 +40353,7 @@ export const zones = [
   {
     id: '10445',
     name: 'Ереван 2-й квартал Давташен 22/2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [40.532699, 44.620239],
@@ -40395,7 +40395,7 @@ export const zones = [
   {
     id: '10446',
     name: 'Краснодар им. 40-летия Победы 129',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.129312, 39.087085],
@@ -40443,7 +40443,7 @@ export const zones = [
   {
     id: '10448',
     name: 'КРД. кр. Тихорецк Ленинградская 134',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [45.751355, 39.814316],
@@ -40484,7 +40484,7 @@ export const zones = [
   {
     id: '10450',
     name: 'МСК Батайский пр 41',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.639413, 37.74796],
@@ -40510,7 +40510,7 @@ export const zones = [
   {
     id: '10451',
     name: 'Омск 10 лет Октября 70',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.9816, 73.4387],
@@ -40621,7 +40621,7 @@ export const zones = [
   {
     id: '10453',
     name: 'Краснодар Минская 57/1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.046297, 38.910832],
@@ -40663,7 +40663,7 @@ export const zones = [
   {
     id: '10454',
     name: 'Омск Герцена 40',
-    color: 'ff6a4e88',
+    color: 'ff6a4e',
     coordinates: [
       [
         [55.0138, 73.3049],
@@ -40713,7 +40713,7 @@ export const zones = [
   {
     id: '10459',
     name: 'Арх. Обл Северодвинск Южная 35',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [64.544016, 39.838796],
@@ -40752,7 +40752,7 @@ export const zones = [
   {
     id: '10460',
     name: 'МСК Алтуфьевское шоссе 22Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.863876, 37.605188],
@@ -40787,7 +40787,7 @@ export const zones = [
   {
     id: '10461',
     name: 'Омск Степанца 2',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.1947, 73.2052],
@@ -40870,7 +40870,7 @@ export const zones = [
   {
     id: '10462',
     name: 'МСК Римского-Корсакова 10',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.87459, 37.616088],
@@ -40910,7 +40910,7 @@ export const zones = [
   {
     id: '10463',
     name: 'Ставрополь Лермонтова 151',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.05041, 41.96307],
@@ -40975,7 +40975,7 @@ export const zones = [
   {
     id: '10464',
     name: 'МСК Высоковольтный 1к5',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.87531, 37.611102],
@@ -40998,7 +40998,7 @@ export const zones = [
   {
     id: '10465',
     name: 'КРД. кр. Тимашевск Новаторов 1Б',
-    color: '14d4dc88',
+    color: '14d4dc',
     coordinates: [
       [
         [45.66796, 38.390472],
@@ -41027,7 +41027,7 @@ export const zones = [
   {
     id: '10467',
     name: 'ЯН. Окр. Новый Уренгой мкр Тундровый 1',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [66.089264, 76.379594],
@@ -41065,7 +41065,7 @@ export const zones = [
   {
     id: '10468',
     name: 'КРД. кр. Ейск Коммунистическая 21',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [46.685777, 38.269454],
@@ -41111,7 +41111,7 @@ export const zones = [
   {
     id: '10480',
     name: 'Крым Ялта Пироговская 10А',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [44.446158, 34.06904],
@@ -41191,7 +41191,7 @@ export const zones = [
   {
     id: '10481',
     name: 'КРД. кр. пгт Сириус Тюльпанов 41Е',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [43.385479, 39.979847],
@@ -41230,7 +41230,7 @@ export const zones = [
   {
     id: '10484',
     name: 'Кир. обл. Кирово-Чепецк пр-кт Россия 28',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [58.406663, 52.048042],
@@ -41271,7 +41271,7 @@ export const zones = [
   {
     id: '10485',
     name: 'Енотаевка Татищева 79А',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [46.9252, 47.6047],
@@ -41322,7 +41322,7 @@ export const zones = [
   {
     id: '10487',
     name: 'Араг. обл. Аштарак Григора Нарекаци 100/2',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [40.252489, 44.366679],
@@ -41345,7 +41345,7 @@ export const zones = [
   {
     id: '10489',
     name: 'Белгород 5 Августа 1А',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [50.572666, 36.624308],
@@ -41383,7 +41383,7 @@ export const zones = [
   {
     id: '10490',
     name: 'Новороссийск Терская 19',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.717789, 37.800901],
@@ -41412,7 +41412,7 @@ export const zones = [
   {
     id: '10492',
     name: 'Геленджик Вишневая 20',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [44.548716, 38.092577],
@@ -41453,7 +41453,7 @@ export const zones = [
   {
     id: '10494',
     name: 'Мысхако Шоссейная 14Ек2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.575239, 37.742933],
@@ -41483,7 +41483,7 @@ export const zones = [
   {
     id: '10495',
     name: 'Ульяновск Пушкарева 60',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [54.2875, 48.3558],
@@ -41518,7 +41518,7 @@ export const zones = [
   {
     id: '10496',
     name: 'Белгород 60 лет Октября 9А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [50.616376, 36.41539],
@@ -41557,7 +41557,7 @@ export const zones = [
   {
     id: '10498',
     name: 'МСК Кутузовский пр-кт 30',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.733256, 37.498259],
@@ -41606,7 +41606,7 @@ export const zones = [
   {
     id: '10500',
     name: 'КРД. кр. Геленджик Геленджикский проспект 108',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.586654, 38.045662],
@@ -41661,7 +41661,7 @@ export const zones = [
   {
     id: '10501',
     name: 'МСК Кутузовский пр-кт 45',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.7363082112012, 37.5922180838181],
@@ -41716,7 +41716,7 @@ export const zones = [
   {
     id: '10502',
     name: 'Киров Октябрьский пр-кт 55',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [58.616729, 49.644943],
@@ -41757,7 +41757,7 @@ export const zones = [
   {
     id: '10505',
     name: 'Вор. обл. Кантемировка Победы 37',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [49.818257, 39.26284],
@@ -41782,7 +41782,7 @@ export const zones = [
   {
     id: '10508',
     name: 'ХМ. Окр. Нефтеюганск 16-й мкр 2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [61.234454, 73.316367],
@@ -41822,7 +41822,7 @@ export const zones = [
   {
     id: '10509',
     name: 'МСК Харьковский пр 1/1к3',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.592967, 37.618148],
@@ -41866,7 +41866,7 @@ export const zones = [
   {
     id: '10511',
     name: 'МСК Чертановская 43к5',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.606547, 37.587254],
@@ -41905,7 +41905,7 @@ export const zones = [
   {
     id: '10513',
     name: 'МСК Рокотова 1А',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [55.639149, 37.545609],
@@ -41929,7 +41929,7 @@ export const zones = [
   {
     id: '10514',
     name: 'МСК Литовский бульвар 4',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.625021, 37.511976],
@@ -41954,7 +41954,7 @@ export const zones = [
   {
     id: '10515',
     name: 'МСК Академика Виноградова 9',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [55.6358, 37.4888],
@@ -41979,7 +41979,7 @@ export const zones = [
   {
     id: '10518',
     name: 'Москва, Москва, улица Винокурова, 6',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.687896, 37.573405],
@@ -41998,7 +41998,7 @@ export const zones = [
   {
     id: '10520',
     name: 'МСК Ивана Бабушкина 20',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.692152, 37.561053],
@@ -42024,7 +42024,7 @@ export const zones = [
   {
     id: '10521',
     name: 'МО Домодедово 1-й Советский пр 2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.549702, 37.79084],
@@ -42062,7 +42062,7 @@ export const zones = [
   {
     id: '10522',
     name: 'Сургут Пролетарский пр-кт 10/1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [61.648539, 73.488398],
@@ -42089,7 +42089,7 @@ export const zones = [
   {
     id: '10523',
     name: 'Очёр Октябрьская 19В',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [57.616583, 54.131468],
@@ -42125,7 +42125,7 @@ export const zones = [
   {
     id: '10524',
     name: 'Киров Лебяжская 17',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [58.6454590764539, 49.5095550370146],
@@ -42186,7 +42186,7 @@ export const zones = [
   {
     id: '10525',
     name: 'Йошкар-Ола Машиностроителей 63',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [56.727323, 46.166362],
@@ -42207,7 +42207,7 @@ export const zones = [
   {
     id: '10526',
     name: 'СПБ Автовская 15',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [59.890132, 30.241948],
@@ -42254,7 +42254,7 @@ export const zones = [
   {
     id: '10528',
     name: 'Оренбург Северный пр 9',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [52.4184728041446, 54.2052927661113],
@@ -42277,7 +42277,7 @@ export const zones = [
   {
     id: '10529',
     name: 'Владикавказ Куйбышева 134',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [42.97728, 44.682047],
@@ -42322,7 +42322,7 @@ export const zones = [
   {
     id: '10530',
     name: 'Владикавказ пр-кт Доватора 85',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [43.042242, 44.640742],
@@ -42351,7 +42351,7 @@ export const zones = [
   {
     id: '10532',
     name: 'Калининград Маршала Борзова 97',
-    color: 'ffcbaf88',
+    color: 'ffcbaf',
     coordinates: [
       [
         [54.724013, 20.651663],
@@ -42415,7 +42415,7 @@ export const zones = [
   {
     id: '10534',
     name: 'Сургут Восход 21',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [61.258132, 73.341405],
@@ -42447,7 +42447,7 @@ export const zones = [
   {
     id: '10535',
     name: 'Красн. Кра. ст-ца Каневская Площадь Революции 10',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [46.174093, 39.583966],
@@ -42472,7 +42472,7 @@ export const zones = [
   {
     id: '10538',
     name: 'Bialystok Lipowa 31/33',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.3606068075143, 43.5849183365503],
@@ -42538,7 +42538,7 @@ export const zones = [
   {
     id: '10539',
     name: 'Старый Оскол Ленина 27',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.477805, 37.951642],
@@ -42626,7 +42626,7 @@ export const zones = [
   {
     id: '10540',
     name: 'Симферополь Грибоедова 1',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [44.948517, 34.110783],
@@ -42698,7 +42698,7 @@ export const zones = [
   {
     id: '10544',
     name: 'Белгород Макаренко 32',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [50.959619, 36.945983],
@@ -42765,7 +42765,7 @@ export const zones = [
   {
     id: '10545',
     name: 'Северный (Белгородская обл) Садовая 84',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [50.653373, 36.645235],
@@ -42793,7 +42793,7 @@ export const zones = [
   {
     id: '10546',
     name: 'Томск Елизаровых 46/1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.451592, 84.979296],
@@ -42856,7 +42856,7 @@ export const zones = [
   {
     id: '10549',
     name: 'Арзамас Пландина 7А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.571384, 45.040694],
@@ -42889,7 +42889,7 @@ export const zones = [
   {
     id: '10556',
     name: 'Барнаул пр-кт Ленина 136',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [52.405899, 83.71083],
@@ -42958,7 +42958,7 @@ export const zones = [
   {
     id: '10564',
     name: 'Нижний Новгород Сутырина 15',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [56.430476, 43.734903],
@@ -43019,7 +43019,7 @@ export const zones = [
   {
     id: '10567',
     name: 'МО Балашиха Гагарина 29',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.844795, 37.861281],
@@ -43050,7 +43050,7 @@ export const zones = [
   {
     id: '10568',
     name: 'МО Балашиха Советская 21',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.816933, 37.912654],
@@ -43081,7 +43081,7 @@ export const zones = [
   {
     id: '10569',
     name: 'Новосибирск Виктора Шевелёва 26',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [54.950621, 82.940087],
@@ -43117,7 +43117,7 @@ export const zones = [
   {
     id: '10570',
     name: 'МО Чехов Губернский ряд 8',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.192132, 37.529906],
@@ -43159,7 +43159,7 @@ export const zones = [
   {
     id: '10571',
     name: 'МО Чехов Вишневый 3/1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.064143296285, 37.5658811463606],
@@ -43211,7 +43211,7 @@ export const zones = [
   {
     id: '10572',
     name: 'Киров Производственная 1литБ',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [58.564302, 49.668997],
@@ -43266,7 +43266,7 @@ export const zones = [
   {
     id: '10573',
     name: 'Bialystok Lipowa 31/33',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [43.4313780934001, 39.8950131925296],
@@ -43296,7 +43296,7 @@ export const zones = [
   {
     id: '10574',
     name: 'Тольятти Южное 19',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [53.5732, 49.4607],
@@ -43338,7 +43338,7 @@ export const zones = [
   {
     id: '10576',
     name: 'Симферополь Кечкеметская 69',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [44.988593, 34.116786],
@@ -43388,7 +43388,7 @@ export const zones = [
   {
     id: '10577',
     name: 'Махачкала Даниялова 64',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [42.965959, 47.523304],
@@ -43420,7 +43420,7 @@ export const zones = [
   {
     id: '10578',
     name: 'Нижний Новгород Тимирязева 7к3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.308831, 44.009113],
@@ -43480,7 +43480,7 @@ export const zones = [
   {
     id: '10579',
     name: 'Нижний Новгород Окская 3',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [56.292459, 43.933436],
@@ -43518,7 +43518,7 @@ export const zones = [
   {
     id: '10580',
     name: 'Bialystok Lipowa 31/33',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [56.3182431486305, 43.9521102788541],
@@ -43555,7 +43555,7 @@ export const zones = [
   {
     id: '10581',
     name: 'МО Руза площадь Партизан 9',
-    color: '15d6db88',
+    color: '15d6db',
     coordinates: [
       [
         [55.665074, 36.044721],
@@ -43580,7 +43580,7 @@ export const zones = [
   {
     id: '10582',
     name: 'Респ. Ком. Сыктывкар Мира 4',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [62.586556, 53.598769],
@@ -43612,7 +43612,7 @@ export const zones = [
   {
     id: '10585',
     name: 'Краснодар Садовая 6/2',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [45.060568, 39.09525],
@@ -43663,7 +43663,7 @@ export const zones = [
   {
     id: '10587',
     name: 'Кург. обл. Петухово Октябрьская 2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.290399, 68.697144],
@@ -43730,7 +43730,7 @@ export const zones = [
   {
     id: '10591',
     name: 'Респ. Инг. Магас Дошлако Мальсагова 32',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [43.23548, 44.807439],
@@ -43768,7 +43768,7 @@ export const zones = [
   {
     id: '10592',
     name: 'НСК. обл. Бердск Максима Горького 5',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [54.752308, 83.243225],
@@ -43813,7 +43813,7 @@ export const zones = [
   {
     id: '10593',
     name: 'Сочи Депутатская 15/10',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [43.555, 39.7427],
@@ -43840,7 +43840,7 @@ export const zones = [
   {
     id: '10594',
     name: 'Чегем Свободы 104 ',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [43.663441, 43.449039],
@@ -43885,7 +43885,7 @@ export const zones = [
   {
     id: '10595',
     name: 'Новосибирск Мясниковой 30',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.141995, 83.123018],
@@ -43917,7 +43917,7 @@ export const zones = [
   {
     id: '10596',
     name: 'Балашиха пр-кт Ленина 32Д',
-    color: '7502e788',
+    color: '7502e7',
     coordinates: [
       [
         [55.806303, 37.941917],
@@ -43943,7 +43943,7 @@ export const zones = [
   {
     id: '10597',
     name: 'КБР Баксан пр-кт Ленина 134',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [43.672849, 43.491538],
@@ -43982,7 +43982,7 @@ export const zones = [
   {
     id: '10598',
     name: 'МО Реутов Носовихинское шоссе 27',
-    color: 'ff086988',
+    color: 'ff0869',
     coordinates: [
       [
         [55.745587, 37.863652],
@@ -44006,7 +44006,7 @@ export const zones = [
   {
     id: '10600',
     name: 'КБР Нальчик 2-я Таманская Дивизия 472А',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [43.424971, 43.769842],
@@ -44053,7 +44053,7 @@ export const zones = [
   {
     id: '10601',
     name: 'Новосибирск Первомайская 234',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.995694, 82.993611],
@@ -44125,7 +44125,7 @@ export const zones = [
   {
     id: '10602',
     name: 'МСК Поречная 21',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [55.668852, 37.763924],
@@ -44162,7 +44162,7 @@ export const zones = [
   {
     id: '10606',
     name: 'Мурманск пр-д Связи 12',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [68.991056, 33.099167],
@@ -44216,7 +44216,7 @@ export const zones = [
   {
     id: '10608',
     name: 'Петрозаводск Лыжная 8А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [61.771335, 34.322579],
@@ -44247,7 +44247,7 @@ export const zones = [
   {
     id: '10609',
     name: 'МО Одинцово Чистяковой 80',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.67091, 37.333654],
@@ -44302,7 +44302,7 @@ export const zones = [
   {
     id: '10612',
     name: 'Чув. респ. Чебоксары Мате Залка 12к3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.14628, 47.22087],
@@ -44367,7 +44367,7 @@ export const zones = [
   {
     id: '10615',
     name: 'МО рп Нахабино Красноармейская 44',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.854993, 37.155969],
@@ -44424,7 +44424,7 @@ export const zones = [
   {
     id: '10616',
     name: 'Астрахань Наб. Приволжского Затона 4',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [46.3471, 48.0537],
@@ -44469,7 +44469,7 @@ export const zones = [
   {
     id: '10617',
     name: 'Св. обл. Нижний Тагил Октябрьский пр-кт 1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [58.283315, 59.000264],
@@ -44508,7 +44508,7 @@ export const zones = [
   {
     id: '10619',
     name: 'Ставрополь пр-кт Юности 26А',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [45.051393, 41.965728],
@@ -44583,7 +44583,7 @@ export const zones = [
   {
     id: '10620',
     name: 'Рост. Обл Таганрог Чехова 98А',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [47.220306, 38.884152],
@@ -44620,7 +44620,7 @@ export const zones = [
   {
     id: '10621',
     name: 'Респ. Кал. Элиста 1-й мкр. 41А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [46.310287, 44.280526],
@@ -44670,7 +44670,7 @@ export const zones = [
   {
     id: '10624',
     name: 'Астрахань Софьи Перовской 103к25',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [46.3659, 48.0579],
@@ -44734,7 +44734,7 @@ export const zones = [
   {
     id: '10625',
     name: 'Рост. обл. ст-ца Романовская Бобровский пер. 16А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [47.598188, 42.134369],
@@ -44770,7 +44770,7 @@ export const zones = [
   {
     id: '10626',
     name: 'Ниж. обл. Заволжье Юринова 10/2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.429103, 43.895872],
@@ -44804,7 +44804,7 @@ export const zones = [
   {
     id: '10628',
     name: 'Казань Декабристов 185',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.818767, 49.096736],
@@ -44842,7 +44842,7 @@ export const zones = [
   {
     id: '10633',
     name: 'Екатеринбург 8 Марта 55',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [56.8327730459816, 60.5895779812718],
@@ -44871,7 +44871,7 @@ export const zones = [
   {
     id: '10634',
     name: 'Екатеринбург Краснофлотцев 1Г',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.866981, 60.673147],
@@ -44927,7 +44927,7 @@ export const zones = [
   {
     id: '10635',
     name: 'Екатеринбург Новгородцевой 13Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.763626, 60.859898],
@@ -44973,7 +44973,7 @@ export const zones = [
   {
     id: '10637',
     name: 'Екатеринбург Амундсена 53',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.81329, 60.555104],
@@ -45013,7 +45013,7 @@ export const zones = [
   {
     id: '10638',
     name: 'Екатеринбург Лучистая 4',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.76237, 60.572403],
@@ -45087,7 +45087,7 @@ export const zones = [
   {
     id: '10640',
     name: 'Екатеринбург Самолётная 27',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [56.774309, 60.632397],
@@ -45139,7 +45139,7 @@ export const zones = [
   {
     id: '10642',
     name: 'Екатеринбург Готвальда 3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.842192, 60.562711],
@@ -45183,7 +45183,7 @@ export const zones = [
   {
     id: '10643',
     name: 'СПБ Таллинская 16',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.933055, 30.442929],
@@ -45219,7 +45219,7 @@ export const zones = [
   {
     id: '10645',
     name: 'СПБ Большой пр-кт Васильевского острова 60/10',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.948316, 30.259545],
@@ -45273,7 +45273,7 @@ export const zones = [
   {
     id: '10647',
     name: 'Саранск Комарова 13',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.179713, 45.153961],
@@ -45324,7 +45324,7 @@ export const zones = [
   {
     id: '10649',
     name: 'МО рп Боброво Крымская 19к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.524402, 37.653018],
@@ -45360,7 +45360,7 @@ export const zones = [
   {
     id: '10650',
     name: 'МО пос Кировский Рогова 6',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.094713, 35.673123],
@@ -45392,7 +45392,7 @@ export const zones = [
   {
     id: '10652',
     name: 'Ульяновск Заречная 9А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.8688, 48.9767],
@@ -45419,7 +45419,7 @@ export const zones = [
   {
     id: '10653',
     name: 'Ульяновск Хрустальная 56',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [53.646076, 48.337392],
@@ -45451,7 +45451,7 @@ export const zones = [
   {
     id: '10654',
     name: 'Дзержинск Ленина 4',
-    color: 'ff42a388',
+    color: 'ff42a3',
     coordinates: [
       [
         [56.447815, 42.617472],
@@ -45477,7 +45477,7 @@ export const zones = [
   {
     id: '10656',
     name: 'Краснодар Красных Партизан 81',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.062771, 38.936042],
@@ -45517,7 +45517,7 @@ export const zones = [
   {
     id: '10657',
     name: 'Краснодар Средняя 15',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [45.1465, 38.9194],
@@ -45541,7 +45541,7 @@ export const zones = [
   {
     id: '10666',
     name: 'Челябинск Доватора 7',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.111977, 61.465693],
@@ -45606,7 +45606,7 @@ export const zones = [
   {
     id: '10669',
     name: 'МСК Народного Ополчения 29к1',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.75546, 37.475728],
@@ -45642,7 +45642,7 @@ export const zones = [
   {
     id: '10670',
     name: 'Bialystok Lipowa 31/33',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.7681660182573, 37.4749499794656],
@@ -45659,7 +45659,7 @@ export const zones = [
   {
     id: '10671',
     name: 'МСК Отрадный 3',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.863876, 37.605188],
@@ -45685,7 +45685,7 @@ export const zones = [
   {
     id: '10672',
     name: 'Bialystok Lipowa 31/33',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [55.858218, 37.426829],
@@ -45710,7 +45710,7 @@ export const zones = [
   {
     id: '10673',
     name: 'МСК бульвар Яна Райниса 29',
-    color: 'ff92b288',
+    color: 'ff92b2',
     coordinates: [
       [
         [55.841153, 37.42287],
@@ -45788,7 +45788,7 @@ export const zones = [
   {
     id: '10674',
     name: 'МСК Лодочная 29с1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.836656, 37.426624],
@@ -45824,7 +45824,7 @@ export const zones = [
   {
     id: '10676',
     name: 'Красн. кр. Сосновоборск Энтузиастов 20/1',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [56.191147, 94.098789],
@@ -45875,7 +45875,7 @@ export const zones = [
   {
     id: '10681',
     name: 'МСК пр-кт Андропова 19',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [55.655015, 37.669655],
@@ -45906,7 +45906,7 @@ export const zones = [
   {
     id: '10682',
     name: 'Bialystok Lipowa 31/33',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.6673678647667, 37.7124081631891],
@@ -45923,7 +45923,7 @@ export const zones = [
   {
     id: '10683',
     name: 'МСК Расплетина 19',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.792889, 37.445626],
@@ -45952,7 +45952,7 @@ export const zones = [
   {
     id: '10689',
     name: 'МСК Шипиловская 25А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.627815, 37.7091],
@@ -45981,7 +45981,7 @@ export const zones = [
   {
     id: '10693',
     name: 'МСК Бехтерева 31к4',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.62017, 37.671416],
@@ -46012,7 +46012,7 @@ export const zones = [
   {
     id: '10694',
     name: 'МСК Каширское шоссе 48к1',
-    color: 'ff533788',
+    color: 'ff5337',
     coordinates: [
       [
         [55.637118, 37.673923],
@@ -46036,7 +46036,7 @@ export const zones = [
   {
     id: '10695',
     name: 'МСК Каширское шоссе 53к6',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [55.651303, 37.67619],
@@ -46063,7 +46063,7 @@ export const zones = [
   {
     id: '10696',
     name: 'МСК Борисовские Пруды 20к1',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.643452, 37.692173],
@@ -46085,7 +46085,7 @@ export const zones = [
   {
     id: '10697',
     name: 'Калуга Никитина 41',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.534589, 36.300595],
@@ -46138,7 +46138,7 @@ export const zones = [
   {
     id: '10700',
     name: 'Иркутск Вампилова 34',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.247716, 104.248633],
@@ -46162,7 +46162,7 @@ export const zones = [
   {
     id: '10701',
     name: 'Брянск Романа Брянского 2/1',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [53.37699, 34.17932],
@@ -46194,7 +46194,7 @@ export const zones = [
   {
     id: '10703',
     name: 'МСК Наташи Качуевской 5',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [55.720238, 37.920327],
@@ -46259,7 +46259,7 @@ export const zones = [
   {
     id: '10704',
     name: 'С-П Абрамова 8',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.088629, 30.363885],
@@ -46281,7 +46281,7 @@ export const zones = [
   {
     id: '10705',
     name: 'СПБ Садовая 112-114',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [59.916007, 30.340383],
@@ -46312,7 +46312,7 @@ export const zones = [
   {
     id: '10706',
     name: 'МО Пушкино Тургеневская 7А',
-    color: '7f242488',
+    color: '7f2424',
     coordinates: [
       [
         [55.996782, 37.830209],
@@ -46349,7 +46349,7 @@ export const zones = [
   {
     id: '10707',
     name: 'МСК Введенского 13Б',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.637395, 37.545252],
@@ -46372,7 +46372,7 @@ export const zones = [
   {
     id: '10708',
     name: 'МО Ногинск площадь Ленина 11',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.870315, 38.458633],
@@ -46412,7 +46412,7 @@ export const zones = [
   {
     id: '10709',
     name: 'МСК Типографская Улица 2',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [55.483023, 37.610691],
@@ -46435,7 +46435,7 @@ export const zones = [
   {
     id: '10711',
     name: 'МСК Академика Волгина 8А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.664695, 37.529497],
@@ -46463,7 +46463,7 @@ export const zones = [
   {
     id: '10714',
     name: 'МО рп Деденево Московское шоссе 13с3',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [56.18626, 37.60069],
@@ -46522,7 +46522,7 @@ export const zones = [
   {
     id: '10715',
     name: 'МО пос Глебовский Микрорайон 14А',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.774809, 36.660415],
@@ -46547,7 +46547,7 @@ export const zones = [
   {
     id: '10716',
     name: 'МСК Поляны 5Ак1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.5602, 37.5913],
@@ -46576,7 +46576,7 @@ export const zones = [
   {
     id: '10720',
     name: 'МО рп Андреевка 2Б',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.963431, 37.139281],
@@ -46614,7 +46614,7 @@ export const zones = [
   {
     id: '10722',
     name: 'МО Истра Морозова 1',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.838801, 36.837552],
@@ -46631,7 +46631,7 @@ export const zones = [
   {
     id: '10724',
     name: 'Чехов Улица Дружбы 13',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.190835, 37.512817],
@@ -46680,7 +46680,7 @@ export const zones = [
   {
     id: '10728',
     name: 'СПБ Демьяна Бедного 28к1',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [60.017865, 30.367422],
@@ -46707,7 +46707,7 @@ export const zones = [
   {
     id: '10729',
     name: 'МСК Щёлковское шоссе 91к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.809708, 37.78198],
@@ -46734,7 +46734,7 @@ export const zones = [
   {
     id: '10730',
     name: 'МО Наро-Фоминск пл. Свободы 4',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [55.488538, 36.463915],
@@ -46757,7 +46757,7 @@ export const zones = [
   {
     id: '10731',
     name: 'МО Люберцы 8 Марта 61',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [55.707275, 37.888651],
@@ -46793,7 +46793,7 @@ export const zones = [
   {
     id: '10732',
     name: 'МСК Саянская 9Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.7698942634302, 37.8427033050919],
@@ -46820,7 +46820,7 @@ export const zones = [
   {
     id: '10734',
     name: 'МСК Люблинская 9к2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.724072, 37.712908],
@@ -46849,7 +46849,7 @@ export const zones = [
   {
     id: '10735',
     name: 'МСК Краснобогатырская 24',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.81208, 37.72674],
@@ -46927,7 +46927,7 @@ export const zones = [
   {
     id: '10736',
     name: 'г Зеленоград Зеленоград к200г (Wildberries)',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.989011, 37.224985],
@@ -46967,7 +46967,7 @@ export const zones = [
   {
     id: '10739',
     name: 'МСК Академика Павлова 50',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.744712, 37.421992],
@@ -46989,7 +46989,7 @@ export const zones = [
   {
     id: '10745',
     name: 'МСК Михневская вл21А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.574872, 37.669789],
@@ -47023,7 +47023,7 @@ export const zones = [
   {
     id: '10750',
     name: 'МСК Болотниковская 36к2',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.653304, 37.599185],
@@ -47052,7 +47052,7 @@ export const zones = [
   {
     id: '10758',
     name: 'Рязань Шереметьевская 6',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [54.530695, 39.73639],
@@ -47107,7 +47107,7 @@ export const zones = [
   {
     id: '10761',
     name: 'МСК Бескудниковский бульвар 13',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.860822, 37.562071],
@@ -47138,7 +47138,7 @@ export const zones = [
   {
     id: '10766',
     name: 'Курск. обл. Железногорск Воинов-Интернационалистов 2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.243421, 35.358836],
@@ -47179,7 +47179,7 @@ export const zones = [
   {
     id: '10768',
     name: 'Подольск Курская 4А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.456659, 37.607268],
@@ -47235,7 +47235,7 @@ export const zones = [
   {
     id: '10771',
     name: 'Рязань Сенная 10',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [54.68156, 39.760078],
@@ -47253,7 +47253,7 @@ export const zones = [
   {
     id: '10777',
     name: 'МСК Лавочкина 18',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.831781, 37.508579],
@@ -47289,7 +47289,7 @@ export const zones = [
   {
     id: '10779',
     name: 'Арх. обл. Новодвинск 50-лет. Октября 46',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [64.359914, 41.092426],
@@ -47327,7 +47327,7 @@ export const zones = [
   {
     id: '10781',
     name: 'Казань Аббасова 12',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.812799, 49.240633],
@@ -47376,7 +47376,7 @@ export const zones = [
   {
     id: '10782',
     name: 'Казань Рауиса Гареева 102к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.278299, 49.817],
@@ -47446,7 +47446,7 @@ export const zones = [
   {
     id: '10786',
     name: 'МО д. Чёрная Новая 35',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.787725, 37.128458],
@@ -47500,7 +47500,7 @@ export const zones = [
   {
     id: '10788',
     name: 'Кир. обл. Яранск Ленина 38',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.236196, 46.969792],
@@ -47527,7 +47527,7 @@ export const zones = [
   {
     id: '10789',
     name: 'Кир. обл. Советск Ленина 104В',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.494647, 48.308172],
@@ -47555,7 +47555,7 @@ export const zones = [
   {
     id: '10793',
     name: 'Орел Московское шоссе 137',
-    color: 'ff872688',
+    color: 'ff8726',
     coordinates: [
       [
         [52.829736, 36.804306],
@@ -47605,7 +47605,7 @@ export const zones = [
   {
     id: '10795',
     name: 'МО Котельники 3-й Покровский пр 2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.672988, 37.864549],
@@ -47635,7 +47635,7 @@ export const zones = [
   {
     id: '10797',
     name: 'МСК Лермонтовский пр-кт 2к1',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [55.685071, 37.838233],
@@ -47678,7 +47678,7 @@ export const zones = [
   {
     id: '10798',
     name: 'МО Лыткарино Степана Степанова 4',
-    color: 'd610ef88',
+    color: 'd610ef',
     coordinates: [
       [
         [55.576296, 38.038393],
@@ -47713,7 +47713,7 @@ export const zones = [
   {
     id: '10800',
     name: 'Gliwice Bytomska 11',
-    color: '1421fd88',
+    color: '1421fd',
     coordinates: [
       [
         [50.35769, 17.190728],
@@ -47760,7 +47760,7 @@ export const zones = [
   {
     id: '10801',
     name: 'Bialystok Lipowa 31/33',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [49.9374421246119, 18.3931617625643],
@@ -47805,7 +47805,7 @@ export const zones = [
   {
     id: '10802',
     name: 'Wroclaw marszałka Józefa Piłsudskiego 28',
-    color: '8a00ff88',
+    color: '8a00ff',
     coordinates: [
       [
         [51.826251, 16.491617],
@@ -47833,7 +47833,7 @@ export const zones = [
   {
     id: '10803',
     name: 'Walbrzych ul.1 Maja 1 ',
-    color: 'dabb0088',
+    color: 'dabb00',
     coordinates: [
       [
         [50.879742, 14.819928],
@@ -47888,7 +47888,7 @@ export const zones = [
   {
     id: '10805',
     name: 'Bialystok Lipowa 31/33',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [55.778495, 37.506527],
@@ -47926,7 +47926,7 @@ export const zones = [
   {
     id: '10806',
     name: 'МО Апрелевка Островского 38',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.550089, 37.067259],
@@ -47960,7 +47960,7 @@ export const zones = [
   {
     id: '10807',
     name: 'МО Звенигород Нахабинское шоссе 1к1',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.713832, 37.07262],
@@ -48037,7 +48037,7 @@ export const zones = [
   {
     id: '10809',
     name: 'МСК Крылатские Холмы 37',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.744712, 37.421992],
@@ -48067,7 +48067,7 @@ export const zones = [
   {
     id: '10810',
     name: 'МСК Исаковского 33к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.808722, 37.38834],
@@ -48090,7 +48090,7 @@ export const zones = [
   {
     id: '10811',
     name: 'МСК Полбина 30с2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.715885, 37.710518],
@@ -48121,7 +48121,7 @@ export const zones = [
   {
     id: '10813',
     name: 'МСК Солнцевский пр-кт 10',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.646334, 37.416174],
@@ -48152,7 +48152,7 @@ export const zones = [
   {
     id: '10817',
     name: 'ЛО Гатчина Радищева 4',
-    color: '1d08bf88',
+    color: '1d08bf',
     coordinates: [
       [
         [59.632555, 30.178944],
@@ -48196,7 +48196,7 @@ export const zones = [
   {
     id: '10822',
     name: 'МО п. Ильинское-Усово Заповедная 2',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.782081, 37.154752],
@@ -48244,7 +48244,7 @@ export const zones = [
   {
     id: '10823',
     name: 'МСК Зеленоград к848А',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [55.977079, 37.180039],
@@ -48277,7 +48277,7 @@ export const zones = [
   {
     id: '10828',
     name: 'МО Лосино-Петровский Кирова 2А',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [55.899111, 38.137259],
@@ -48323,7 +48323,7 @@ export const zones = [
   {
     id: '10830',
     name: 'МСК поселение Десёновское 3-я Нововатутинская 6',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.5065, 37.2856],
@@ -48347,7 +48347,7 @@ export const zones = [
   {
     id: '10831',
     name: 'МСК пос Шишкин Лес 9к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.447221, 37.190885],
@@ -48375,7 +48375,7 @@ export const zones = [
   {
     id: '10832',
     name: 'МО Балашиха Энтузиастов 11/1',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [55.831818, 37.948474],
@@ -48404,7 +48404,7 @@ export const zones = [
   {
     id: '10833',
     name: 'Балашиха Заречная 41',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.819679, 37.962051],
@@ -48427,7 +48427,7 @@ export const zones = [
   {
     id: '10836',
     name: 'Bialystok Lipowa 31/33',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [56.3288235836825, 44.0331720337674],
@@ -48474,7 +48474,7 @@ export const zones = [
   {
     id: '10838',
     name: 'МО дач пос Красково 2-я Заводская 16',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.649717, 38.005848],
@@ -48505,7 +48505,7 @@ export const zones = [
   {
     id: '10839',
     name: 'Красноярск Вильского 22',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.038174, 92.837755],
@@ -48576,7 +48576,7 @@ export const zones = [
   {
     id: '10840',
     name: 'Московская область, Подольск, проспект Ленина, 71',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [55.491661, 37.527818],
@@ -48634,7 +48634,7 @@ export const zones = [
   {
     id: '10844',
     name: 'Курск Аэродромная 3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.169706, 35.914419],
@@ -48735,7 +48735,7 @@ export const zones = [
   {
     id: '10846',
     name: 'Лип. обл. Лебедянь Ленина 44А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.487228, 39.556274],
@@ -48774,7 +48774,7 @@ export const zones = [
   {
     id: '10848',
     name: 'МО д Дергаево 1-я Ленинская 43А',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [55.636641, 38.523492],
@@ -48818,7 +48818,7 @@ export const zones = [
   {
     id: '10853',
     name: 'МО Мытищи Летная 21/1',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [55.903689, 37.714137],
@@ -48835,7 +48835,7 @@ export const zones = [
   {
     id: '10854',
     name: 'МО пос ВНИИССОК Рябиновая 5',
-    color: 'ffadd888',
+    color: 'ffadd8',
     coordinates: [
       [
         [55.6187, 37.229799],
@@ -48875,7 +48875,7 @@ export const zones = [
   {
     id: '10855',
     name: 'КРД. кр. ст-ца Раевская Сосновая 2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.858921, 37.833198],
@@ -48900,7 +48900,7 @@ export const zones = [
   {
     id: '10856',
     name: 'КРД. кр. ст-ца Анапская Школьная 62А',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [44.885985, 37.364196],
@@ -48931,7 +48931,7 @@ export const zones = [
   {
     id: '10857',
     name: 'КРД. кр. с. Супсех Николаевская 1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.856015, 37.307041],
@@ -48959,7 +48959,7 @@ export const zones = [
   {
     id: '10858',
     name: 'КРД. кр. с. Витязево Почтовая 16/3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.145051, 37.315727],
@@ -48997,7 +48997,7 @@ export const zones = [
   {
     id: '10861',
     name: 'Koszalin Grodzka 11',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.094684, 16.926022],
@@ -49019,7 +49019,7 @@ export const zones = [
   {
     id: '10862',
     name: 'Poznan Stefana Batorego 17',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.401679, 14.46602],
@@ -49051,7 +49051,7 @@ export const zones = [
   {
     id: '10863',
     name: 'Legnica ulica Pocztowa 7',
-    color: '5a175c88',
+    color: '5a175c',
     coordinates: [
       [
         [51.825604, 14.580177],
@@ -49082,7 +49082,7 @@ export const zones = [
   {
     id: '10864',
     name: 'МО Подольск Северная 7',
-    color: 'ff4f8188',
+    color: 'ff4f81',
     coordinates: [
       [
         [55.404697, 37.605921],
@@ -49137,7 +49137,7 @@ export const zones = [
   {
     id: '10865',
     name: 'З-К обл. Уральск Чапаева 20',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [51.134339, 51.223691],
@@ -49159,7 +49159,7 @@ export const zones = [
   {
     id: '10867',
     name: 'Челябинск Героев Танкограда 100',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [55.394547, 61.706055],
@@ -49255,7 +49255,7 @@ export const zones = [
   {
     id: '10868',
     name: 'Bialystok Lipowa 31/33',
-    color: 'ff90ee88',
+    color: 'ff90ee',
     coordinates: [
       [
         [48.4356724611426, 16.8533654970075],
@@ -49356,7 +49356,7 @@ export const zones = [
   {
     id: '10869',
     name: 'Магнитогорск Труда 12',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.283029, 61.18173],
@@ -49404,7 +49404,7 @@ export const zones = [
   {
     id: '10870',
     name: 'Краснодар Евгении Жигуленко 5к2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.106907, 39.018141],
@@ -49446,7 +49446,7 @@ export const zones = [
   {
     id: '10872',
     name: 'Набережные Челны Академика Королёва 25Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.687457, 52.497355],
@@ -49463,7 +49463,7 @@ export const zones = [
   {
     id: '10874',
     name: 'МСК Твардовского 23к3',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [55.800376, 37.390467],
@@ -49500,7 +49500,7 @@ export const zones = [
   {
     id: '10876',
     name: 'Красн. кр. Бородино Ленина 54А',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [55.617754, 95.625917],
@@ -49523,7 +49523,7 @@ export const zones = [
   {
     id: '10878',
     name: 'Сарат. Обл Энгельс Тракторная 6',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [50.826106, 46.483773],
@@ -49575,7 +49575,7 @@ export const zones = [
   {
     id: '10879',
     name: 'Пермь Юрша 25/1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.986422, 56.276444],
@@ -49618,7 +49618,7 @@ export const zones = [
   {
     id: '10881',
     name: 'Симферополь Киевская 163',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [45.093257, 33.987543],
@@ -49671,7 +49671,7 @@ export const zones = [
   {
     id: '10882',
     name: 'МСК Троицк Октябрьский пр-кт 1к1',
-    color: '2a11ef88',
+    color: '2a11ef',
     coordinates: [
       [
         [55.471152, 37.249278],
@@ -49714,7 +49714,7 @@ export const zones = [
   {
     id: '10886',
     name: 'Нижний Новгород Ошарская 96Б',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [56.273309, 44.067478],
@@ -49778,7 +49778,7 @@ export const zones = [
   {
     id: '10888',
     name: 'МО Чехов Чехова 12А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.121845, 37.572543],
@@ -49832,7 +49832,7 @@ export const zones = [
   {
     id: '10891',
     name: 'Крым пгт Аграрное Спортивная 10',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.027163, 34.150716],
@@ -49884,7 +49884,7 @@ export const zones = [
   {
     id: '10895',
     name: 'Подольск Юбилейная 3к2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.420526, 37.498484],
@@ -49932,7 +49932,7 @@ export const zones = [
   {
     id: '10898',
     name: 'Ре. Баш. с Кармаскалы Султан-Галиева 37',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [54.266315, 55.251576],
@@ -49960,7 +49960,7 @@ export const zones = [
   {
     id: '10900',
     name: 'Пск. Обл Псков Крупской 28',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.332628, 27.810011],
@@ -50121,7 +50121,7 @@ export const zones = [
   {
     id: '10901',
     name: 'Уфа Российская 43/10',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.757893, 56.062659],
@@ -50163,7 +50163,7 @@ export const zones = [
   {
     id: '10902',
     name: 'Новг. обл. д. Григорово Центральная 4',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [58.018573, 32.717224],
@@ -50192,7 +50192,7 @@ export const zones = [
   {
     id: '10904',
     name: 'С-П Парашютная 23к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [60.015393, 30.240424],
@@ -50219,7 +50219,7 @@ export const zones = [
   {
     id: '10905',
     name: 'Тул. обл. Ясногорск Пролетарская 4',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [54.667687, 38.236645],
@@ -50262,7 +50262,7 @@ export const zones = [
   {
     id: '10906',
     name: 'Ростов-на-Дону 3-я Кольцевая 58Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [47.212794, 39.693317],
@@ -50350,7 +50350,7 @@ export const zones = [
   {
     id: '10909',
     name: 'Альметьевск Шевченко 68',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [54.939569, 52.001227],
@@ -50393,7 +50393,7 @@ export const zones = [
   {
     id: '10910',
     name: 'Ирк. обл. Тайшет Кирова 88',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [55.94935, 98.018629],
@@ -50427,7 +50427,7 @@ export const zones = [
   {
     id: '10912',
     name: 'Выкса Красные Зори 24',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [54.834525, 42.001602],
@@ -50459,7 +50459,7 @@ export const zones = [
   {
     id: '10913',
     name: 'Кар. Обл Караганда Пригородная 2 (Курьерский склад)',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [49.741034, 72.975448],
@@ -50484,7 +50484,7 @@ export const zones = [
   {
     id: '10914',
     name: 'МО Сергиев Посад пр-кт Красной Армии 1А/1',
-    color: 'ffff9b88',
+    color: 'ffff9b',
     coordinates: [
       [
         [56.307945, 37.967592],
@@ -50532,7 +50532,7 @@ export const zones = [
   {
     id: '10916',
     name: 'МО Электроугли Школьная 1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.722619, 38.278912],
@@ -50563,7 +50563,7 @@ export const zones = [
   {
     id: '10924',
     name: 'Казань Лейтенанта Шмидта 3/15',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.781212, 49.147129],
@@ -50615,7 +50615,7 @@ export const zones = [
   {
     id: '10925',
     name: 'Казань пр-кт Победы 226А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.862634, 49.181144],
@@ -50663,7 +50663,7 @@ export const zones = [
   {
     id: '10926',
     name: 'Емва Дзержинского 68',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [63.111592, 51.003404],
@@ -50685,7 +50685,7 @@ export const zones = [
   {
     id: '10927',
     name: 'Волг. обл. Палласовка Остравская 26А',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [50.183518, 46.152334],
@@ -50720,7 +50720,7 @@ export const zones = [
   {
     id: '10932',
     name: 'Магнитогорск пр-кт Карла Маркса 220',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [53.411921, 59.148178],
@@ -50768,7 +50768,7 @@ export const zones = [
   {
     id: '10937',
     name: 'Орел Московское шоссе 155А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.049653, 36.091245],
@@ -50813,7 +50813,7 @@ export const zones = [
   {
     id: '10946',
     name: 'Bialystok Lipowa 31/33',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [56.315982, 44.015942],
@@ -50851,7 +50851,7 @@ export const zones = [
   {
     id: '10949',
     name: 'Ереван Галшоян 12',
-    color: 'ff800088',
+    color: 'ff8000',
     coordinates: [
       [
         [40.176706, 44.602167],
@@ -50921,7 +50921,7 @@ export const zones = [
   {
     id: '10950',
     name: 'МО Наро-Фоминск Ленина 32',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.385615, 36.736933],
@@ -50950,7 +50950,7 @@ export const zones = [
   {
     id: '10955',
     name: 'Саратов Вишнёвая 20',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.555653, 46.000664],
@@ -51031,7 +51031,7 @@ export const zones = [
   {
     id: '10956',
     name: 'Саратов пр-кт Строителей 1',
-    color: 'f81c1c88',
+    color: 'f81c1c',
     coordinates: [
       [
         [51.605994, 45.960334],
@@ -51106,7 +51106,7 @@ export const zones = [
   {
     id: '10957',
     name: 'Мазовецкое воеводство Дзвигова 3',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [53.436335, 21.586257],
@@ -51133,7 +51133,7 @@ export const zones = [
   {
     id: '10958',
     name: 'Бишкек Ахматбека Суюмбаева 12/1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [42.881, 74.6782],
@@ -51204,7 +51204,7 @@ export const zones = [
   {
     id: '10960',
     name: 'Воронеж Героев Сибиряков 79',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.757153, 39.094123],
@@ -51262,7 +51262,7 @@ export const zones = [
   {
     id: '10961',
     name: 'Бишкек Раззакова 2',
-    color: '9cf10d88',
+    color: '9cf10d',
     coordinates: [
       [
         [42.8751, 74.6369],
@@ -51285,7 +51285,7 @@ export const zones = [
   {
     id: '10967',
     name: 'Нягань 7 мкр 1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [61.986561, 64.658203],
@@ -51316,7 +51316,7 @@ export const zones = [
   {
     id: '10968',
     name: 'Саратов Автомобильная 38с1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.580564, 46.05238],
@@ -51377,7 +51377,7 @@ export const zones = [
   {
     id: '10973',
     name: 'Набережные Челны Гидростроителей 14',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.646908, 52.282318],
@@ -51423,7 +51423,7 @@ export const zones = [
   {
     id: '10974',
     name: 'Набережные Челны пр-кт Дружбы Народов 28А',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.740577, 52.413538],
@@ -51485,7 +51485,7 @@ export const zones = [
   {
     id: '10977',
     name: 'Bialystok Lipowa 31/33',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [47.2374788374466, 39.5254161138759],
@@ -51504,7 +51504,7 @@ export const zones = [
   {
     id: '10978',
     name: 'Саров Менделеева 76',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.145121, 43.326872],
@@ -51534,7 +51534,7 @@ export const zones = [
   {
     id: '10980',
     name: 'Сам. обл. Кинель Кутикова 15А',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [53.402363, 50.519775],
@@ -51563,7 +51563,7 @@ export const zones = [
   {
     id: '10985',
     name: 'Ереван Ростовян 11/2',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [40.194088, 44.87421],
@@ -51580,7 +51580,7 @@ export const zones = [
   {
     id: '10986',
     name: 'Ереван Паруйра Севака 30',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [40.242218, 44.544736],
@@ -51597,7 +51597,7 @@ export const zones = [
   {
     id: '10987',
     name: 'Ереван Ачапняк кв-л Г-3 21',
-    color: 'ff9acc88',
+    color: 'ff9acc',
     coordinates: [
       [
         [40.190372, 44.339105],
@@ -51636,7 +51636,7 @@ export const zones = [
   {
     id: '10990',
     name: 'Bialystok Lipowa 31/33',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [44.73625, 37.741622],
@@ -51679,7 +51679,7 @@ export const zones = [
   {
     id: '10991',
     name: 'Краснодар 3-я Трудовая 1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [45.1757, 39.0575],
@@ -51714,7 +51714,7 @@ export const zones = [
   {
     id: '10994',
     name: 'Архангельск Урицкого 10',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [64.537097, 40.626209],
@@ -51751,7 +51751,7 @@ export const zones = [
   {
     id: '10996',
     name: 'Архангельск пр-кт Советских Космонавтов 146',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [64.519347, 40.559879],
@@ -51783,7 +51783,7 @@ export const zones = [
   {
     id: '10999',
     name: 'Южно-Сахалинск им. Н.Г. Смирнова 9',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [46.941898, 142.740469],
@@ -51818,7 +51818,7 @@ export const zones = [
   {
     id: '11001',
     name: 'Краснодар Атарбекова 30',
-    color: '2014b888',
+    color: '2014b8',
     coordinates: [
       [
         [45.038581, 38.986574],
@@ -51860,7 +51860,7 @@ export const zones = [
   {
     id: '11004',
     name: 'Калуж. обл. Сухиничи Ленина 106',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [54.17226, 35.693355],
@@ -51894,7 +51894,7 @@ export const zones = [
   {
     id: '11007',
     name: 'КРД. кр. пгт Ахтырский Красная 2',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [44.900916, 38.49525],
@@ -51922,7 +51922,7 @@ export const zones = [
   {
     id: '11011',
     name: 'Крым Феодосия Гарнаева 63К',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.896741, 35.15625],
@@ -51957,7 +51957,7 @@ export const zones = [
   {
     id: '11012',
     name: 'Симферополь Дачная 22А',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [44.9828, 34.125012],
@@ -51993,7 +51993,7 @@ export const zones = [
   {
     id: '11015',
     name: 'Кульсары 1-й мкр 19',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [46.63505, 53.673706],
@@ -52014,7 +52014,7 @@ export const zones = [
   {
     id: '11016',
     name: 'КРД. кр. с. Краевско-Армянское Мостовой пер. 3Б',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [43.6474, 39.7973],
@@ -52055,7 +52055,7 @@ export const zones = [
   {
     id: '11018',
     name: 'Симферополь Камская 27А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.986558, 34.10396],
@@ -52098,7 +52098,7 @@ export const zones = [
   {
     id: '11022',
     name: 'Уд. Респ. п. Игра мкр. Северный 8',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [57.389592, 53.325714],
@@ -52126,7 +52126,7 @@ export const zones = [
   {
     id: '11027',
     name: 'СПБ Типанова 29',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [59.842892, 30.354715],
@@ -52148,7 +52148,7 @@ export const zones = [
   {
     id: '11031',
     name: 'Ульяновск Юности 5/96',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.133, 47.8608],
@@ -52190,7 +52190,7 @@ export const zones = [
   {
     id: '11032',
     name: 'Самара Солнечная 18',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [53.253707, 50.20225],
@@ -52229,7 +52229,7 @@ export const zones = [
   {
     id: '11033',
     name: 'Крым Евпатория Некрасова 40А',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [45.190573, 33.367021],
@@ -52272,7 +52272,7 @@ export const zones = [
   {
     id: '11037',
     name: 'Алт. кр. с. Ключи Урицкого 1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [51.942196, 79.217506],
@@ -52298,7 +52298,7 @@ export const zones = [
   {
     id: '11038',
     name: 'Алт. кр. Рубцовск Октябрьская 110',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [51.476418, 82.063399],
@@ -52378,7 +52378,7 @@ export const zones = [
   {
     id: '11039',
     name: 'Гом. обл. Чечерск Советская 27',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [52.695923, 31.506558],
@@ -52414,7 +52414,7 @@ export const zones = [
   {
     id: '11040',
     name: 'Bialystok Lipowa 31/33',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [43.490562, 39.851235],
@@ -52440,7 +52440,7 @@ export const zones = [
   {
     id: '11041',
     name: 'Омск. обл. Исилькуль Ленина 86к1',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.0584, 72.5698],
@@ -52499,7 +52499,7 @@ export const zones = [
   {
     id: '11043',
     name: 'Сочи Пасечная 61к2',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [43.577187, 39.704142],
@@ -52532,7 +52532,7 @@ export const zones = [
   {
     id: '11044',
     name: 'Омск. обл. рп Большеречье Красноармейская 32А',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [55.723, 73.9953],
@@ -52561,7 +52561,7 @@ export const zones = [
   {
     id: '11046',
     name: 'Крым пгт Гаспра Алупкинское ш. 17Б',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.434137, 34.01911],
@@ -52594,7 +52594,7 @@ export const zones = [
   {
     id: '11048',
     name: 'Севастополь Окт Революции 52Б',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [44.619483, 33.47243],
@@ -52623,7 +52623,7 @@ export const zones = [
   {
     id: '11049',
     name: 'Севастополь пр-кт Победы 59к1',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [44.556145, 33.564422],
@@ -52709,7 +52709,7 @@ export const zones = [
   {
     id: '11054',
     name: 'Тольятти Коммунистическая 22',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [53.218206, 50.126565],
@@ -52769,7 +52769,7 @@ export const zones = [
   {
     id: '11055',
     name: 'КРД. кр. Анапа Кирова 84',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.929903, 37.322696],
@@ -52821,7 +52821,7 @@ export const zones = [
   {
     id: '11057',
     name: 'Сочи Чебрикова 46Б',
-    color: 'c2333388',
+    color: 'c23333',
     coordinates: [
       [
         [43.5749, 39.7767],
@@ -52875,7 +52875,7 @@ export const zones = [
   {
     id: '11058',
     name: 'Красноярск Ярыгинская набережная 13А',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.981156, 92.888497],
@@ -52916,7 +52916,7 @@ export const zones = [
   {
     id: '11066',
     name: 'Став. Кра. пос Иноземцево Шоссейная 168',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [44.196338, 42.923517],
@@ -52947,7 +52947,7 @@ export const zones = [
   {
     id: '11067',
     name: 'Ре. Даг. Дербент Эдисона Пашабекова 23В',
-    color: 'fff68f88',
+    color: 'fff68f',
     coordinates: [
       [
         [42.002118, 48.450306],
@@ -52973,7 +52973,7 @@ export const zones = [
   {
     id: '11074',
     name: 'Волгоград Базарова 20',
-    color: 'ff8b0088',
+    color: 'ff8b00',
     coordinates: [
       [
         [48.769463, 44.519115],
@@ -53006,7 +53006,7 @@ export const zones = [
   {
     id: '11075',
     name: 'МО д. Суханово 5',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [55.529137, 37.701371],
@@ -53071,7 +53071,7 @@ export const zones = [
   {
     id: '11077',
     name: 'Псков Вокзальная 48',
-    color: 'f7023788',
+    color: 'f70237',
     coordinates: [
       [
         [57.754495, 30.976898],
@@ -53094,7 +53094,7 @@ export const zones = [
   {
     id: '11078',
     name: 'Махачкала пр-кт Насрутдинова 69Б',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [42.913314, 47.561136],
@@ -53128,7 +53128,7 @@ export const zones = [
   {
     id: '11079',
     name: 'Махачкала Имама Шамиля 18Ж',
-    color: 'a8931a88',
+    color: 'a8931a',
     coordinates: [
       [
         [42.968103, 47.493503],
@@ -53165,7 +53165,7 @@ export const zones = [
   {
     id: '11087',
     name: 'Olsztyn ulica Wyzwolenia 6',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [54.363252, 20.614796],
@@ -53191,7 +53191,7 @@ export const zones = [
   {
     id: '11088',
     name: 'Torun Poznanska 74',
-    color: 'ff83b588',
+    color: 'ff83b5',
     coordinates: [
       [
         [52.619753, 18.655435],
@@ -53213,7 +53213,7 @@ export const zones = [
   {
     id: '11094',
     name: 'Владивосток Чкалова 30',
-    color: 'ff4f8188',
+    color: 'ff4f81',
     coordinates: [
       [
         [43.320106, 132.088672],
@@ -53246,7 +53246,7 @@ export const zones = [
   {
     id: '11095',
     name: 'МО Михнево Ленина 15',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [55.078508, 37.931327],
@@ -53270,7 +53270,7 @@ export const zones = [
   {
     id: '11096',
     name: 'МО с Верзилово Олимпийская 29к1',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [54.9877248706129, 38.0907250309734],
@@ -53306,7 +53306,7 @@ export const zones = [
   {
     id: '11099',
     name: 'Грозный Шейха Али Митаева 64',
-    color: 'f9992088',
+    color: 'f99920',
     coordinates: [
       [
         [43.775698, 45.160083],
@@ -53372,7 +53372,7 @@ export const zones = [
   {
     id: '11100',
     name: 'Ульяновск Шигаева 19Б',
-    color: 'b4ddf788',
+    color: 'b4ddf7',
     coordinates: [
       [
         [54.236893, 46.930153],
@@ -53417,7 +53417,7 @@ export const zones = [
   {
     id: '11101',
     name: 'Bialystok Lipowa 31/33',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [50.3505372221705, 21.09180553012],
@@ -53439,7 +53439,7 @@ export const zones = [
   {
     id: '11102',
     name: 'Свентокшиское воеводство Светлая 27',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [50.671738, 19.800622],
@@ -53486,7 +53486,7 @@ export const zones = [
   {
     id: '11104',
     name: 'Марьина Горка Новая Заря 22А',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [53.648871, 27.912964],
@@ -53511,7 +53511,7 @@ export const zones = [
   {
     id: '11108',
     name: 'Подляское воеводство Липова 29',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [53.974716, 23.439617],
@@ -53559,7 +53559,7 @@ export const zones = [
   {
     id: '11112',
     name: 'Ирк. обл. рп Залари Ленина 109',
-    color: 'ff4bac88',
+    color: 'ff4bac',
     coordinates: [
       [
         [53.539273, 103.362317],
@@ -53586,7 +53586,7 @@ export const zones = [
   {
     id: '11113',
     name: 'Bialystok Lipowa 31/33',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [48.1405654979989, 17.0577971664785],
@@ -53696,7 +53696,7 @@ export const zones = [
   {
     id: '11116',
     name: 'МО Бронницы Маяковский пер. 25',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [55.393678, 38.244471],
@@ -53728,7 +53728,7 @@ export const zones = [
   {
     id: '11118',
     name: 'Балаково Ленина 76 (кв2)',
-    color: 'ff9bbb88',
+    color: 'ff9bbb',
     coordinates: [
       [
         [51.67965, 47.822345],
@@ -53750,7 +53750,7 @@ export const zones = [
   {
     id: '11121',
     name: 'Св. обл. Камышлов Карла Маркса 29',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [57.338289, 62.491218],
@@ -53772,7 +53772,7 @@ export const zones = [
   {
     id: '11123',
     name: 'Кир. обл. Нолинск Ленина 2Б',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [58.119575, 50.969757],
@@ -53794,7 +53794,7 @@ export const zones = [
   {
     id: '11124',
     name: 'Ставрополь Пирогова 102/1',
-    color: 'ff806488',
+    color: 'ff8064',
     coordinates: [
       [
         [45.00031, 41.910604],
@@ -53817,7 +53817,7 @@ export const zones = [
   {
     id: '11125',
     name: 'Ставрополь 8 Марта 63',
-    color: 'fff79688',
+    color: 'fff796',
     coordinates: [
       [
         [45.043817, 41.960315],
@@ -53900,7 +53900,7 @@ export const zones = [
   {
     id: '11137',
     name: 'Ставрополь Вокзальная 24',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [45.049741, 41.999894],
@@ -53966,7 +53966,7 @@ export const zones = [
   {
     id: '11141',
     name: 'Мозырь Страконицкий 21-133',
-    color: 'ffc05088',
+    color: 'ffc050',
     coordinates: [
       [
         [51.483567, 29.715026],
@@ -54031,7 +54031,7 @@ export const zones = [
   {
     id: '100015',
     name: 'Вит. Обл Орша Александра Герцена 4',
-    color: '11d65788',
+    color: '11d657',
     coordinates: [
       [
         [54.279527, 29.725376],
@@ -54057,7 +54057,7 @@ export const zones = [
   {
     id: '100025',
     name: 'Вл. обл. Гусь-Хрустальный Интернациональная 40А',
-    color: 'e7545488',
+    color: 'e75454',
     coordinates: [
       [
         [54.927364, 40.973661],
@@ -54092,7 +54092,7 @@ export const zones = [
   {
     id: '100037',
     name: 'Ре. Тыв. Кызыл Ооржака Лопсанчапа 17',
-    color: '50b37388',
+    color: '50b373',
     coordinates: [
       [
         [52.520566, 93.714752],
@@ -54112,7 +54112,7 @@ export const zones = [
   {
     id: '100039',
     name: 'Респ. Даг. Буйнакск Имама Гази-Магомеда 8',
-    color: 'e2f30588',
+    color: 'e2f305',
     coordinates: [
       [
         [42.490797, 47.11913],
@@ -54139,7 +54139,7 @@ export const zones = [
   {
     id: '100041',
     name: 'Чебоксары Ленинского Комсомола 6',
-    color: '4ff30e88',
+    color: '4ff30e',
     coordinates: [
       [
         [56.087177, 47.414676],
@@ -54187,7 +54187,7 @@ export const zones = [
   {
     id: '100052',
     name: 'МСК Адмирала Лазарева 68',
-    color: '150fef88',
+    color: '150fef',
     coordinates: [
       [
         [55.52816, 37.52113],
@@ -54237,7 +54237,7 @@ export const zones = [
   {
     id: '100055',
     name: 'Св. обл. Нижний Тагил пр-кт Вагоностроителей 16',
-    color: '17f7f788',
+    color: '17f7f7',
     coordinates: [
       [
         [57.915073, 60.017234],
@@ -54271,7 +54271,7 @@ export const zones = [
   {
     id: '100060',
     name: 'Краснодар им. Котлярова Н.С. 24',
-    color: 'f5ac0c88',
+    color: 'f5ac0c',
     coordinates: [
       [
         [45.08157, 39.004443],
@@ -54324,7 +54324,7 @@ export const zones = [
   {
     id: '100064',
     name: 'Сасово Южный 32А',
-    color: '73f32788',
+    color: '73f327',
     coordinates: [
       [
         [54.866186, 42.220541],
@@ -54354,7 +54354,7 @@ export const zones = [
   {
     id: '100108',
     name: 'Сочи Вишнёвая 5А',
-    color: '8a383888',
+    color: '8a3838',
     coordinates: [
       [
         [43.6084, 39.7442],
@@ -54394,7 +54394,7 @@ export const zones = [
   {
     id: '100109',
     name: 'МСК пр-кт Мира 68с3',
-    color: 'de10b788',
+    color: 'de10b7',
     coordinates: [
       [
         [55.784199, 37.614655],
@@ -54436,7 +54436,7 @@ export const zones = [
   {
     id: '100112',
     name: 'МСК Гжатская 8',
-    color: 'efd01288',
+    color: 'efd012',
     coordinates: [
       [
         [55.733993, 37.391329],
@@ -54481,7 +54481,7 @@ export const zones = [
   {
     id: '100113',
     name: 'МСК Университетский пр-кт 23к3',
-    color: 'fbb95588',
+    color: 'fbb955',
     coordinates: [
       [
         [55.697518, 37.499256],
@@ -54524,7 +54524,7 @@ export const zones = [
   {
     id: '100115',
     name: 'МСК Островитянова 11к1',
-    color: '56f13988',
+    color: '56f139',
     coordinates: [
       [
         [55.640405, 37.502999],
@@ -54555,7 +54555,7 @@ export const zones = [
   {
     id: '100119',
     name: 'МСК Очаковское ш. 6к2',
-    color: 'd0a03d88',
+    color: 'd0a03d',
     coordinates: [
       [
         [55.689398, 37.451308],
@@ -54596,7 +54596,7 @@ export const zones = [
   {
     id: '100121',
     name: 'МСК Озёрная 31',
-    color: '12e2df88',
+    color: '12e2df',
     coordinates: [
       [
         [55.665847, 37.461576],
@@ -54627,7 +54627,7 @@ export const zones = [
   {
     id: '100122',
     name: 'МСК д. Николо-Хованское пр-кт Магеллана 4',
-    color: 'f51c1c88',
+    color: 'f51c1c',
     coordinates: [
       [
         [55.59765, 37.413682],
@@ -54669,7 +54669,7 @@ export const zones = [
   {
     id: '100123',
     name: 'МСК п. Коммунарка Потаповская Роща 18к2',
-    color: '53d01e88',
+    color: '53d01e',
     coordinates: [
       [
         [55.563592, 37.486897],
@@ -54710,7 +54710,7 @@ export const zones = [
   {
     id: '100127',
     name: 'МСК 3-я Нововатутинская 13к2',
-    color: 'e125fd88',
+    color: 'e125fd',
     coordinates: [
       [
         [55.5562, 37.4333],
@@ -54750,7 +54750,7 @@ export const zones = [
   {
     id: '100130',
     name: 'Балашиха Керамическая 29',
-    color: 'f5e50b88',
+    color: 'f5e50b',
     coordinates: [
       [
         [55.735491, 37.976807],
@@ -54776,7 +54776,7 @@ export const zones = [
   {
     id: '100133',
     name: 'МСК Чертановская 59',
-    color: 'cd15ef88',
+    color: 'cd15ef',
     coordinates: [
       [
         [55.60613, 37.586223],
@@ -54816,7 +54816,7 @@ export const zones = [
   {
     id: '100140',
     name: 'МСК Мичуринский пр-кт 16',
-    color: 'bf2a2a88',
+    color: 'bf2a2a',
     coordinates: [
       [
         [55.646195, 37.475399],
@@ -54855,7 +54855,7 @@ export const zones = [
   {
     id: '100144',
     name: 'МСК пр-кт Вернадского 105к4',
-    color: '4ae81488',
+    color: '4ae814',
     coordinates: [
       [
         [55.670548, 37.495211],
@@ -54895,7 +54895,7 @@ export const zones = [
   {
     id: '100145',
     name: 'МО Красногорск Павшинская 2',
-    color: 'd9626288',
+    color: 'd96262',
     coordinates: [
       [
         [55.8091685685279, 37.3615809536304],
@@ -54939,7 +54939,7 @@ export const zones = [
   {
     id: '100150',
     name: 'МО Красногорск Лесная 14',
-    color: '0ef8eb88',
+    color: '0ef8eb',
     coordinates: [
       [
         [55.841692, 37.217371],
@@ -54985,7 +54985,7 @@ export const zones = [
   {
     id: '100152',
     name: 'МСК Генерала Белобородова 35/2',
-    color: 'db151588',
+    color: 'db1515',
     coordinates: [
       [
         [55.852553, 37.3424],
@@ -55047,7 +55047,7 @@ export const zones = [
   {
     id: '100153',
     name: 'МСК Митинская Улица 12',
-    color: '251adb88',
+    color: '251adb',
     coordinates: [
       [
         [55.838601, 37.395871],
@@ -55084,7 +55084,7 @@ export const zones = [
   {
     id: '100155',
     name: 'МСК Родионовская 18к1',
-    color: '1c52e088',
+    color: '1c52e0',
     coordinates: [
       [
         [55.897021, 37.367849],
@@ -55136,7 +55136,7 @@ export const zones = [
   {
     id: '100156',
     name: 'МСК Пятницкое шоссе 45',
-    color: '08e02688',
+    color: '08e026',
     coordinates: [
       [
         [55.892689, 37.313346],
@@ -55186,7 +55186,7 @@ export const zones = [
   {
     id: '100163',
     name: 'МО Лобня 15',
-    color: 'b4772188',
+    color: 'b47721',
     coordinates: [
       [
         [56.06935, 37.32744],
@@ -55236,7 +55236,7 @@ export const zones = [
   {
     id: '100164',
     name: 'МСК Кировоградская 8к4',
-    color: 'ee232388',
+    color: 'ee2323',
     coordinates: [
       [
         [55.6250920498758, 37.5958714751284],
@@ -55256,7 +55256,7 @@ export const zones = [
   {
     id: '100165',
     name: 'Красноярск Волгоградская 21',
-    color: 'f357ea88',
+    color: 'f357ea',
     coordinates: [
       [
         [55.991929, 92.886732],
@@ -55297,7 +55297,7 @@ export const zones = [
   {
     id: '100170',
     name: 'МСК Фадеева 6с1',
-    color: '26ea1488',
+    color: '26ea14',
     coordinates: [
       [
         [55.78156, 37.623421],
@@ -55338,7 +55338,7 @@ export const zones = [
   {
     id: '100172',
     name: 'МСК Большая Грузинская 20',
-    color: '8d933588',
+    color: '8d9335',
     coordinates: [
       [
         [55.785492, 37.565987],
@@ -55377,7 +55377,7 @@ export const zones = [
   {
     id: '100173',
     name: 'МСК Большая Якиманка 35с1',
-    color: 'ee17ee88',
+    color: 'ee17ee',
     coordinates: [
       [
         [55.729892, 37.625685],
@@ -55414,7 +55414,7 @@ export const zones = [
   {
     id: '100175',
     name: 'МСК Муравская 42к3',
-    color: 'dd8c1688',
+    color: 'dd8c16',
     coordinates: [
       [
         [55.844338, 37.366133],
@@ -55448,7 +55448,7 @@ export const zones = [
   {
     id: '100176',
     name: 'Минск Гинтовта 30',
-    color: 'e7151588',
+    color: 'e71515',
     coordinates: [
       [
         [53.910576, 27.903399],
@@ -55483,7 +55483,7 @@ export const zones = [
   {
     id: '100179',
     name: 'МСК Академика Павлова 9к1',
-    color: '5ad1e088',
+    color: '5ad1e0',
     coordinates: [
       [
         [55.770339, 37.416129],
@@ -55523,7 +55523,7 @@ export const zones = [
   {
     id: '100181',
     name: 'МСК Дмитровское шоссе 124А',
-    color: 'c8bebe88',
+    color: 'c8bebe',
     coordinates: [
       [
         [55.98867, 37.59216],
@@ -55566,7 +55566,7 @@ export const zones = [
   {
     id: '100182',
     name: 'МО Долгопрудный Комсомольская 2',
-    color: '11ed1d88',
+    color: '11ed1d',
     coordinates: [
       [
         [55.911407, 37.502604],
@@ -55608,7 +55608,7 @@ export const zones = [
   {
     id: '100183',
     name: 'Химки Совхозная 18',
-    color: 'e4535388',
+    color: 'e45353',
     coordinates: [
       [
         [55.896777896147, 37.5071732630995],
@@ -55642,7 +55642,7 @@ export const zones = [
   {
     id: '100191',
     name: 'Махачкала Дзержинского 6',
-    color: 'bb1b1b88',
+    color: 'bb1b1b',
     coordinates: [
       [
         [42.963867, 47.499275],
@@ -55673,7 +55673,7 @@ export const zones = [
   {
     id: '100196',
     name: 'Мин. обл. д. Большой Тростенец Зелёная 1А',
-    color: 'bb303088',
+    color: 'bb3030',
     coordinates: [
       [
         [53.84982, 27.67237],
@@ -55708,7 +55708,7 @@ export const zones = [
   {
     id: '100199',
     name: 'Алт. кр. с. Волчиха Ленина 97А',
-    color: '3327dc88',
+    color: '3327dc',
     coordinates: [
       [
         [51.429766, 79.513112],
@@ -55734,7 +55734,7 @@ export const zones = [
   {
     id: '100207',
     name: 'СПБ Маршала Тухачевского 23',
-    color: '435cf588',
+    color: '435cf5',
     coordinates: [
       [
         [59.972345, 30.412897],
@@ -55754,7 +55754,7 @@ export const zones = [
   {
     id: '100208',
     name: 'Кемерово Восточный пр-кт 21к2',
-    color: '61eb0f88',
+    color: '61eb0f',
     coordinates: [
       [
         [55.357153, 86.135363],
@@ -55777,7 +55777,7 @@ export const zones = [
   {
     id: '100210',
     name: 'СПБ пос Шушары Новгородский пр-кт 3с4',
-    color: '340bda88',
+    color: '340bda',
     coordinates: [
       [
         [59.813908, 30.349689],
@@ -55804,7 +55804,7 @@ export const zones = [
   {
     id: '100213',
     name: 'МСК Дербеневская 14к3',
-    color: '1656c388',
+    color: '1656c3',
     coordinates: [
       [
         [55.730509, 37.64132],
@@ -55842,7 +55842,7 @@ export const zones = [
   {
     id: '100214',
     name: 'ЯНАО Надым 13-й пр-д 7',
-    color: '08f8ee88',
+    color: '08f8ee',
     coordinates: [
       [
         [65.551356, 72.542295],
@@ -55868,7 +55868,7 @@ export const zones = [
   {
     id: '100216',
     name: 'ЯНАО Надым Геологоразведчиков 7',
-    color: '0a0de988',
+    color: '0a0de9',
     coordinates: [
       [
         [65.54574, 72.535022],
@@ -55899,7 +55899,7 @@ export const zones = [
   {
     id: '100229',
     name: 'МО Солнечногорск Вертлинская 1',
-    color: 'ebd93888',
+    color: 'ebd938',
     coordinates: [
       [
         [56.211702, 36.929363],
@@ -55929,7 +55929,7 @@ export const zones = [
   {
     id: '100241',
     name: 'МО Звенигород к15',
-    color: 'f0e11688',
+    color: 'f0e116',
     coordinates: [
       [
         [55.840779, 36.781583],
@@ -55975,7 +55975,7 @@ export const zones = [
   {
     id: '100242',
     name: 'МО Звенигород 7',
-    color: 'd826e888',
+    color: 'd826e8',
     coordinates: [
       [
         [55.763963, 37.348101],
@@ -56004,7 +56004,7 @@ export const zones = [
   {
     id: '100247',
     name: 'Омск Перелёта 18',
-    color: '560fcd88',
+    color: '560fcd',
     coordinates: [
       [
         [56.0735, 70.9262],
@@ -56050,7 +56050,7 @@ export const zones = [
   {
     id: '100248',
     name: 'Альметьевск Советская 156А',
-    color: '090cd588',
+    color: '090cd5',
     coordinates: [
       [
         [54.749644, 52.223684],
@@ -56073,7 +56073,7 @@ export const zones = [
   {
     id: '100253',
     name: 'Иркутск Седова 65А/4',
-    color: 'e412e188',
+    color: 'e412e1',
     coordinates: [
       [
         [52.258129, 104.347841],
@@ -56114,7 +56114,7 @@ export const zones = [
   {
     id: '100254',
     name: 'Иркутск Байкальская 307',
-    color: '3606f388',
+    color: '3606f3',
     coordinates: [
       [
         [52.260932, 104.353723],
@@ -56142,7 +56142,7 @@ export const zones = [
   {
     id: '100255',
     name: 'Ульяновск Островского 1',
-    color: 'e70ee488',
+    color: 'e70ee4',
     coordinates: [
       [
         [54.332566, 48.353121],
@@ -56195,7 +56195,7 @@ export const zones = [
   {
     id: '100256',
     name: 'Волгоград Электролесовская 86',
-    color: '6014e288',
+    color: '6014e2',
     coordinates: [
       [
         [48.600972, 44.609985],
@@ -56249,7 +56249,7 @@ export const zones = [
   {
     id: '100258',
     name: 'Волгоград б-р Энгельса 9',
-    color: 'e60baa88',
+    color: 'e60baa',
     coordinates: [
       [
         [48.1893199771058, 43.8564739575102],
@@ -56322,7 +56322,7 @@ export const zones = [
   {
     id: '100269',
     name: 'МСК Петрозаводская 9к2',
-    color: '1c0ddc88',
+    color: '1c0ddc',
     coordinates: [
       [
         [55.865688, 37.497225],
@@ -56356,7 +56356,7 @@ export const zones = [
   {
     id: '100270',
     name: 'Балашиха Центральная 8',
-    color: '1945a788',
+    color: '1945a7',
     coordinates: [
       [
         [55.761509, 38.021536],
@@ -56399,7 +56399,7 @@ export const zones = [
   {
     id: '100274',
     name: 'МСК Солнечногорская 15к1',
-    color: '36ef0888',
+    color: '36ef08',
     coordinates: [
       [
         [55.867032, 37.489468],
@@ -56438,7 +56438,7 @@ export const zones = [
   {
     id: '100276',
     name: 'Муром Энгельса 12',
-    color: '4007ef88',
+    color: '4007ef',
     coordinates: [
       [
         [55.405549, 42.052099],
@@ -56465,7 +56465,7 @@ export const zones = [
   {
     id: '100277',
     name: 'Рост. обл. Миллерово Российская 67',
-    color: '0b0edc88',
+    color: '0b0edc',
     coordinates: [
       [
         [48.584123, 39.768009],
@@ -56527,7 +56527,7 @@ export const zones = [
   {
     id: '100278',
     name: 'Арх. обл. Вельск Гагарина 4',
-    color: '0fe6dc88',
+    color: '0fe6dc',
     coordinates: [
       [
         [61.034809, 42.169132],
@@ -56563,7 +56563,7 @@ export const zones = [
   {
     id: '100279',
     name: 'Ульяновск Тимирязева 3/1',
-    color: '10f93288',
+    color: '10f932',
     coordinates: [
       [
         [54.326708, 48.357424],
@@ -56613,7 +56613,7 @@ export const zones = [
   {
     id: '100280',
     name: 'Бр. обл. Дятьково Первомайский пер. 1',
-    color: '3a01eb88',
+    color: '3a01eb',
     coordinates: [
       [
         [53.400858, 34.391663],
@@ -56645,7 +56645,7 @@ export const zones = [
   {
     id: '100285',
     name: 'Мурманск Бочкова 27',
-    color: 'df0b0b88',
+    color: 'df0b0b',
     coordinates: [
       [
         [68.828161, 32.191594],
@@ -56671,7 +56671,7 @@ export const zones = [
   {
     id: '100286',
     name: 'Ир. Обл Железногорск-Илимский 6-й квартал 1',
-    color: '1002cf88',
+    color: '1002cf',
     coordinates: [
       [
         [56.474269, 104.999135],
@@ -56693,7 +56693,7 @@ export const zones = [
   {
     id: '100288',
     name: 'МСК Мичуринский пр-кт 54к2',
-    color: '24ca6e88',
+    color: '24ca6e',
     coordinates: [
       [
         [55.714805, 37.493337],
@@ -56738,7 +56738,7 @@ export const zones = [
   {
     id: '100290',
     name: 'Казань Залесная 30',
-    color: '9df11288',
+    color: '9df112',
     coordinates: [
       [
         [55.148409, 49.357553],
@@ -56785,7 +56785,7 @@ export const zones = [
   {
     id: '100297',
     name: 'Омск 24-я Северная 194/1',
-    color: '11c6e588',
+    color: '11c6e5',
     coordinates: [
       [
         [55.038115, 73.691351],
@@ -56877,7 +56877,7 @@ export const zones = [
   {
     id: '100298',
     name: 'Ре. Ком. Печора Гагарина 1',
-    color: '5005d988',
+    color: '5005d9',
     coordinates: [
       [
         [65.191487, 57.059555],
@@ -56896,7 +56896,7 @@ export const zones = [
   {
     id: '100304',
     name: 'Бишкек 4-й мкр 49/1',
-    color: 'ee144c88',
+    color: 'ee144c',
     coordinates: [
       [
         [42.8562, 74.6458],
@@ -56924,7 +56924,7 @@ export const zones = [
   {
     id: '100305',
     name: 'Бишкек Жукеева-Пудовкина 77/1',
-    color: '66ff0b88',
+    color: '66ff0b',
     coordinates: [
       [
         [42.856587, 74.616533],
@@ -56961,7 +56961,7 @@ export const zones = [
   {
     id: '100309',
     name: 'МО Долгопрудный Новое шоссе 10к1',
-    color: 'd6e1a688',
+    color: 'd6e1a6',
     coordinates: [
       [
         [56.017096, 37.483807],
@@ -57013,7 +57013,7 @@ export const zones = [
   {
     id: '100310',
     name: 'МО Мытищи 2-й Щёлковский пр-д 3',
-    color: '52c3cb88',
+    color: '52c3cb',
     coordinates: [
       [
         [55.922102, 37.740836],
@@ -57076,7 +57076,7 @@ export const zones = [
   {
     id: '100311',
     name: 'МО Щелково Жегаловская 27',
-    color: '9076a788',
+    color: '9076a7',
     coordinates: [
       [
         [55.925148, 37.955877],
@@ -57122,7 +57122,7 @@ export const zones = [
   {
     id: '100312',
     name: 'МО Королёв Строителей 15',
-    color: 'baa16d88',
+    color: 'baa16d',
     coordinates: [
       [
         [55.846494, 37.910079],
@@ -57162,7 +57162,7 @@ export const zones = [
   {
     id: '100314',
     name: 'МО Мытищи Щербакова 4',
-    color: 'cadd5488',
+    color: 'cadd54',
     coordinates: [
       [
         [55.918121, 37.730141],
@@ -57226,7 +57226,7 @@ export const zones = [
   {
     id: '100316',
     name: 'МО Мытищи Колпакова 24',
-    color: '55424288',
+    color: '554242',
     coordinates: [
       [
         [55.929028, 37.630805],
@@ -57260,7 +57260,7 @@ export const zones = [
   {
     id: '100320',
     name: 'МО Мытищи Воронина 6',
-    color: 'b249cf88',
+    color: 'b249cf',
     coordinates: [
       [
         [55.985459, 37.628824],
@@ -57339,7 +57339,7 @@ export const zones = [
   {
     id: '100321',
     name: 'Москва, Троицк, Нагорная улица, 8',
-    color: '37f61288',
+    color: '37f612',
     coordinates: [
       [
         [55.523859, 37.103958],
@@ -57371,7 +57371,7 @@ export const zones = [
   {
     id: '100323',
     name: 'Черногорск Пушкина 36',
-    color: '09d6cd88',
+    color: '09d6cd',
     coordinates: [
       [
         [54.008225, 91.561736],
@@ -57397,7 +57397,7 @@ export const zones = [
   {
     id: '100324',
     name: 'Черногорск Советская 67А',
-    color: '4c12e088',
+    color: '4c12e0',
     coordinates: [
       [
         [54.008225, 91.561736],
@@ -57422,7 +57422,7 @@ export const zones = [
   {
     id: '100325',
     name: 'Южно-Сахалинск Ленина 285А',
-    color: '0927d488',
+    color: '0927d4',
     coordinates: [
       [
         [46.941898, 142.740469],
@@ -57463,7 +57463,7 @@ export const zones = [
   {
     id: '100331',
     name: 'Тула Циолковского 2В',
-    color: '65e50b88',
+    color: '65e50b',
     coordinates: [
       [
         [54.247054, 37.42601],
@@ -57520,7 +57520,7 @@ export const zones = [
   {
     id: '100333',
     name: 'Амур Обл рп Новобурейский Советская 13',
-    color: '1556e388',
+    color: '1556e3',
     coordinates: [
       [
         [49.833422, 129.914703],
@@ -57539,7 +57539,7 @@ export const zones = [
   {
     id: '100335',
     name: 'Арх. обл. рп Плесецк Кооперативная 4Б',
-    color: '16fc2388',
+    color: '16fc23',
     coordinates: [
       [
         [62.693117, 40.746243],
@@ -57566,7 +57566,7 @@ export const zones = [
   {
     id: '100336',
     name: 'Мур. обл. Кировск Дзержинского 23',
-    color: '6df01088',
+    color: '6df010',
     coordinates: [
       [
         [67.508109, 33.152382],
@@ -57586,7 +57586,7 @@ export const zones = [
   {
     id: '100341',
     name: 'Хаб. Кра. Комсомольск-на-Амуре Осоавиахима 7',
-    color: 'ecd61788',
+    color: 'ecd617',
     coordinates: [
       [
         [50.593598, 136.978303],
@@ -57616,7 +57616,7 @@ export const zones = [
   {
     id: '100359',
     name: 'МО ЖК Бутово парк 28',
-    color: '3911ef88',
+    color: '3911ef',
     coordinates: [
       [
         [55.521617, 37.609423],
@@ -57648,7 +57648,7 @@ export const zones = [
   {
     id: '100361',
     name: 'МО рп Нахабино Панфилова 24А',
-    color: '3ecb0d88',
+    color: '3ecb0d',
     coordinates: [
       [
         [55.829691, 37.145094],
@@ -57703,7 +57703,7 @@ export const zones = [
   {
     id: '100362',
     name: 'МО рп Белоомут Урицкого 35',
-    color: '370ef188',
+    color: '370ef1',
     coordinates: [
       [
         [54.934709, 39.264518],
@@ -57738,7 +57738,7 @@ export const zones = [
   {
     id: '100363',
     name: 'СПБ Тамбовская 11',
-    color: 'f40e0e88',
+    color: 'f40e0e',
     coordinates: [
       [
         [59.953442, 30.349856],
@@ -57770,7 +57770,7 @@ export const zones = [
   {
     id: '100367',
     name: 'Сарат. обл. Пугачёв Революционный пр-кт 262',
-    color: '1405dc88',
+    color: '1405dc',
     coordinates: [
       [
         [51.650643, 50.298187],
@@ -57807,7 +57807,7 @@ export const zones = [
   {
     id: '100371',
     name: 'МО рп Тучково Лебеденко 25',
-    color: '430ff188',
+    color: '430ff1',
     coordinates: [
       [
         [55.644643, 36.575191],
@@ -57854,7 +57854,7 @@ export const zones = [
   {
     id: '100378',
     name: 'Краснодар Захарова 31',
-    color: 'a110e788',
+    color: 'a110e7',
     coordinates: [
       [
         [44.609067, 38.642342],
@@ -57958,7 +57958,7 @@ export const zones = [
   {
     id: '100384',
     name: 'Тацинская Пионерский  1',
-    color: '2dc65d88',
+    color: '2dc65d',
     coordinates: [
       [
         [47.969819, 40.642885],
@@ -57995,7 +57995,7 @@ export const zones = [
   {
     id: '100385',
     name: 'КРД. кр. ст-ца Динская Комсомольская 138',
-    color: '9f0fe688',
+    color: '9f0fe6',
     coordinates: [
       [
         [45.745053, 39.787751],
@@ -58050,7 +58050,7 @@ export const zones = [
   {
     id: '100387',
     name: 'МСК Павла Корчагина 11',
-    color: 'e01e1e88',
+    color: 'e01e1e',
     coordinates: [
       [
         [55.806378, 37.655701],
@@ -58075,7 +58075,7 @@ export const zones = [
   {
     id: '100388',
     name: 'Рост. обл. Волгодонск пр-кт Курчатова 8',
-    color: '20c8eb88',
+    color: '20c8eb',
     coordinates: [
       [
         [47.79989, 41.130052],
@@ -58103,7 +58103,7 @@ export const zones = [
   {
     id: '100389',
     name: 'Вол. обл. Череповец Московский пр-кт 40',
-    color: 'e7074188',
+    color: 'e70741',
     coordinates: [
       [
         [58.904798, 39.188863],
@@ -58126,7 +58126,7 @@ export const zones = [
   {
     id: '100390',
     name: 'Астрахань Звёздная 29Б',
-    color: 'f2030388',
+    color: 'f20303',
     coordinates: [
       [
         [46.2789, 47.8756],
@@ -58197,7 +58197,7 @@ export const zones = [
   {
     id: '100391',
     name: 'МСК Боровское шоссе 20',
-    color: '111ddb88',
+    color: '111ddb',
     coordinates: [
       [
         [55.642013, 37.329729],
@@ -58225,7 +58225,7 @@ export const zones = [
   {
     id: '100392',
     name: 'Тул. Обл Киреевск Чехова 23',
-    color: 'e20f0f88',
+    color: 'e20f0f',
     coordinates: [
       [
         [54.139893, 37.77204],
@@ -58247,7 +58247,7 @@ export const zones = [
   {
     id: '100393',
     name: 'Рязань Новосёлов 49',
-    color: '0edecc88',
+    color: '0edecc',
     coordinates: [
       [
         [54.530489, 39.752623],
@@ -58294,7 +58294,7 @@ export const zones = [
   {
     id: '100395',
     name: 'Чагода Кирова 2',
-    color: 'f31a1a88',
+    color: 'f31a1a',
     coordinates: [
       [
         [59.560853, 34.928336],
@@ -58316,7 +58316,7 @@ export const zones = [
   {
     id: '100396',
     name: 'МО рп Андреевка 16Б',
-    color: 'e6212188',
+    color: 'e62121',
     coordinates: [
       [
         [56.022525, 37.12405],
@@ -58365,7 +58365,7 @@ export const zones = [
   {
     id: '100397',
     name: 'Чел. обл. Трёхгорный Строителей 37',
-    color: '552cfb88',
+    color: '552cfb',
     coordinates: [
       [
         [54.773331, 58.826912],
@@ -58386,7 +58386,7 @@ export const zones = [
   {
     id: '100399',
     name: 'Еманжелинск Гагарина 7',
-    color: '62e41588',
+    color: '62e415',
     coordinates: [
       [
         [54.94739, 61.369268],
@@ -58417,7 +58417,7 @@ export const zones = [
   {
     id: '100401',
     name: 'МО пгт Шаховская пер. Строителей 12',
-    color: '31e24f88',
+    color: '31e24f',
     coordinates: [
       [
         [56.001718, 35.023316],
@@ -58444,7 +58444,7 @@ export const zones = [
   {
     id: '100403',
     name: 'Невельск Победы 15',
-    color: 'ce5d5d88',
+    color: 'ce5d5d',
     coordinates: [
       [
         [46.712561, 141.731631],
@@ -58463,7 +58463,7 @@ export const zones = [
   {
     id: '100404',
     name: 'Славянка 50 лет Октября 6',
-    color: 'e99f9f88',
+    color: 'e99f9f',
     coordinates: [
       [
         [42.880996, 131.357076],
@@ -58481,7 +58481,7 @@ export const zones = [
   {
     id: '100405',
     name: 'Райчихинск Победы 36',
-    color: 'edc2c288',
+    color: 'edc2c2',
     coordinates: [
       [
         [49.830188, 129.401491],
@@ -58500,7 +58500,7 @@ export const zones = [
   {
     id: '100406',
     name: 'Респ. Саха Удачный Центральная пл. 3',
-    color: 'b6595988',
+    color: 'b65959',
     coordinates: [
       [
         [66.082212, 111.960864],
@@ -58523,7 +58523,7 @@ export const zones = [
   {
     id: '100407',
     name: 'Спасск-Дальний Советская 92',
-    color: 'ed353588',
+    color: 'ed3535',
     coordinates: [
       [
         [44.622438, 132.706064],
@@ -58542,7 +58542,7 @@ export const zones = [
   {
     id: '100408',
     name: 'Грод. обл. Волковыск Франциска Скорины 11',
-    color: '341bf988',
+    color: '341bf9',
     coordinates: [
       [
         [53.177528, 23.911929],
@@ -58574,7 +58574,7 @@ export const zones = [
   {
     id: '100409',
     name: 'Грод. обл. Слоним Комсомольская 3',
-    color: '1ae6d488',
+    color: '1ae6d4',
     coordinates: [
       [
         [53.597333, 25.142483],
@@ -58608,7 +58608,7 @@ export const zones = [
   {
     id: '100411',
     name: 'Сарат. обл. Аркадак Ленина 90',
-    color: 'f6101088',
+    color: 'f61010',
     coordinates: [
       [
         [51.734863, 43.405074],
@@ -58632,7 +58632,7 @@ export const zones = [
   {
     id: '100412',
     name: 'Сарат. обл. Ртищево Сердобский тупик 18',
-    color: '2b3ee488',
+    color: '2b3ee4',
     coordinates: [
       [
         [52.3934972660303, 43.7041927210301],
@@ -58650,7 +58650,7 @@ export const zones = [
   {
     id: '100414',
     name: 'Респ. CO-Алания Моздок Кирова 95',
-    color: '0d4fff88',
+    color: '0d4fff',
     coordinates: [
       [
         [43.547802, 44.627295],
@@ -58723,7 +58723,7 @@ export const zones = [
   {
     id: '100415',
     name: 'Тв. обл. Конаково Гагарина 5',
-    color: 'deb8b888',
+    color: 'deb8b8',
     coordinates: [
       [
         [56.782225, 37.054405],
@@ -58752,7 +58752,7 @@ export const zones = [
   {
     id: '100417',
     name: 'Рост. обл. ст-ца Багаевская Спартака 19',
-    color: 'f9101088',
+    color: 'f91010',
     coordinates: [
       [
         [47.241473, 40.249185],
@@ -58807,7 +58807,7 @@ export const zones = [
   {
     id: '100418',
     name: 'МСК Красногвардейский б-р 7',
-    color: 'f3505088',
+    color: 'f35050',
     coordinates: [
       [
         [55.76632, 37.537295],
@@ -58831,7 +58831,7 @@ export const zones = [
   {
     id: '100420',
     name: 'МО Шатура пр-кт Ильича 19/8',
-    color: 'dc868688',
+    color: 'dc8686',
     coordinates: [
       [
         [55.669419, 39.131413],
@@ -58862,7 +58862,7 @@ export const zones = [
   {
     id: '100421',
     name: 'Рязань Бирюзова 7к2',
-    color: 'e5e1e188',
+    color: 'e5e1e1',
     coordinates: [
       [
         [54.820715, 39.754147],
@@ -58905,7 +58905,7 @@ export const zones = [
   {
     id: '100423',
     name: 'Кандалакша Набережная 137',
-    color: 'dcb3b388',
+    color: 'dcb3b3',
     coordinates: [
       [
         [67.199499, 29.936076],
@@ -58932,7 +58932,7 @@ export const zones = [
   {
     id: '100430',
     name: 'Вл. обл. Александров Красный пер. 10А',
-    color: 'f79f9f88',
+    color: 'f79f9f',
     coordinates: [
       [
         [56.399148, 38.388512],
@@ -58994,7 +58994,7 @@ export const zones = [
   {
     id: '100431',
     name: 'Иваново (РБ) Карла Маркса 51А',
-    color: 'd68c8c88',
+    color: 'd68c8c',
     coordinates: [
       [
         [52.092826, 24.804794],
@@ -59019,7 +59019,7 @@ export const zones = [
   {
     id: '100432',
     name: 'Брест. Обл Столин Терешковой 48Б',
-    color: 'fdb6b688',
+    color: 'fdb6b6',
     coordinates: [
       [
         [51.804879, 26.438581],
@@ -59044,7 +59044,7 @@ export const zones = [
   {
     id: '100434',
     name: 'Брест. обл. Лунинец Советская 18',
-    color: 'cd7d7d88',
+    color: 'cd7d7d',
     coordinates: [
       [
         [52.380994, 27.088978],
@@ -59064,7 +59064,7 @@ export const zones = [
   {
     id: '100436',
     name: 'См. обл. Сычёвка Комсомольская 29',
-    color: 'ed8a8a88',
+    color: 'ed8a8a',
     coordinates: [
       [
         [56.001718, 35.023316],
@@ -59084,7 +59084,7 @@ export const zones = [
   {
     id: '100437',
     name: 'МО рп Фряново Первомайская 20',
-    color: 'ce737388',
+    color: 'ce7373',
     coordinates: [
       [
         [56.171765, 38.515549],
@@ -59307,7 +59307,7 @@ export const zones = [
   {
     id: '100438',
     name: 'Заречный 30-летия Победы 47',
-    color: 'd4666688',
+    color: 'd46666',
     coordinates: [
       [
         [53.290251, 45.134228],
@@ -59328,7 +59328,7 @@ export const zones = [
   {
     id: '100441',
     name: 'МО пос Центральной усадьбы совхоза Озёры 51',
-    color: 'e4b7b788',
+    color: 'e4b7b7',
     coordinates: [
       [
         [54.994077, 38.63305],
@@ -59361,7 +59361,7 @@ export const zones = [
   {
     id: '100442',
     name: 'Волг. обл. Калач-на-Дону Октябрьская 141',
-    color: '9ded5888',
+    color: '9ded58',
     coordinates: [
       [
         [48.321387, 42.557421],
@@ -59395,7 +59395,7 @@ export const zones = [
   {
     id: '100445',
     name: 'Вл. обл. Киржач Текстильщиков 9',
-    color: 'f1454588',
+    color: 'f14545',
     coordinates: [
       [
         [56.074346, 38.545318],
@@ -59633,7 +59633,7 @@ export const zones = [
   {
     id: '100450',
     name: 'МСК Каширское шоссе 65к2',
-    color: 'ceadad88',
+    color: 'ceadad',
     coordinates: [
       [
         [55.619129, 37.770169],
@@ -59684,7 +59684,7 @@ export const zones = [
   {
     id: '100452',
     name: 'Крым Ялта Московская 33А',
-    color: 'e47c7c88',
+    color: 'e47c7c',
     coordinates: [
       [
         [44.511745, 34.172138],
@@ -59720,7 +59720,7 @@ export const zones = [
   {
     id: '100455',
     name: 'МО Краснознаменск Генерала Шлыкова 1А',
-    color: 'e0c4c488',
+    color: 'e0c4c4',
     coordinates: [
       [
         [55.603794, 37.009121],
@@ -59745,7 +59745,7 @@ export const zones = [
   {
     id: '100457',
     name: 'Там. Обл город Жердевка Советская 115',
-    color: 'e9363688',
+    color: 'e93636',
     coordinates: [
       [
         [51.722094, 41.278457],
@@ -59765,7 +59765,7 @@ export const zones = [
   {
     id: '100459',
     name: 'МО с. Павловская Слобода Октябрьская 1',
-    color: 'edbaba88',
+    color: 'edbaba',
     coordinates: [
       [
         [55.846257, 37.028296],
@@ -59820,7 +59820,7 @@ export const zones = [
   {
     id: '100460',
     name: 'МСК Ясногорская 21к1',
-    color: 'b6cbd188',
+    color: 'b6cbd1',
     coordinates: [
       [
         [55.598715, 37.52738],
@@ -59847,7 +59847,7 @@ export const zones = [
   {
     id: '100461',
     name: 'МСК Новоясеневский пр-кт 12к1',
-    color: 'e4cdcd88',
+    color: 'e4cdcd',
     coordinates: [
       [
         [55.598715, 37.52738],
@@ -59878,7 +59878,7 @@ export const zones = [
   {
     id: '100463',
     name: 'МО Одинцово Триумфальная 5Б',
-    color: 'd3b4b488',
+    color: 'd3b4b4',
     coordinates: [
       [
         [55.639404, 37.138976],
@@ -59924,7 +59924,7 @@ export const zones = [
   {
     id: '100464',
     name: 'МСК Сеченовский пер 5с2',
-    color: 'ecc5c588',
+    color: 'ecc5c5',
     coordinates: [
       [
         [55.738759, 37.607365],
@@ -59949,7 +59949,7 @@ export const zones = [
   {
     id: '100465',
     name: 'МСК Дорожная 32к1',
-    color: 'c5969688',
+    color: 'c59696',
     coordinates: [
       [
         [55.610169, 37.608913],
@@ -59980,7 +59980,7 @@ export const zones = [
   {
     id: '100468',
     name: 'МО Дмитров Архитектора Белоброва 9',
-    color: '807d5588',
+    color: '807d55',
     coordinates: [
       [
         [56.353219, 37.528152],
@@ -60014,7 +60014,7 @@ export const zones = [
   {
     id: '100470',
     name: 'Волг. обл. рп Иловля Будённого 2',
-    color: '2ca39988',
+    color: '2ca399',
     coordinates: [
       [
         [49.644433, 43.631235],
@@ -60038,7 +60038,7 @@ export const zones = [
   {
     id: '100471',
     name: 'МСК Варшавское Шоссе 10к1',
-    color: '39d43988',
+    color: '39d439',
     coordinates: [
       [
         [55.590423, 37.615429],
@@ -60063,7 +60063,7 @@ export const zones = [
   {
     id: '100472',
     name: 'Тв. обл. Ржев Вокзальная 57',
-    color: '47171788',
+    color: '471717',
     coordinates: [
       [
         [56.027246, 33.984558],
@@ -60084,7 +60084,7 @@ export const zones = [
   {
     id: '100474',
     name: 'МО Балашиха Лесные Поляны 19',
-    color: '5ab35188',
+    color: '5ab351',
     coordinates: [
       [
         [55.781407, 37.861831],
@@ -60121,7 +60121,7 @@ export const zones = [
   {
     id: '100475',
     name: 'МО Наро-Фоминск Рижская 1А',
-    color: 'f5f2ce88',
+    color: 'f5f2ce',
     coordinates: [
       [
         [55.328494, 36.70912],
@@ -60168,7 +60168,7 @@ export const zones = [
   {
     id: '100476',
     name: 'МСК Академика Анохина 4к2',
-    color: '56c15f88',
+    color: '56c15f',
     coordinates: [
       [
         [55.685908, 37.477798],
@@ -60201,7 +60201,7 @@ export const zones = [
   {
     id: '100488',
     name: 'Ре. Даг. Каспийск пр-кт М. Омарова 22',
-    color: 'a7181888',
+    color: 'a71818',
     coordinates: [
       [
         [42.848236, 47.547538],
@@ -60241,7 +60241,7 @@ export const zones = [
   {
     id: '100489',
     name: 'Судак Феодосийское 20',
-    color: 'd9e72088',
+    color: 'd9e720',
     coordinates: [
       [
         [44.753144, 34.704869],
@@ -60268,7 +60268,7 @@ export const zones = [
   {
     id: '100490',
     name: 'Калуж. обл. Мосальск Советская 7',
-    color: 'e01a1a88',
+    color: 'e01a1a',
     coordinates: [
       [
         [54.46046, 35.227661],
@@ -60301,7 +60301,7 @@ export const zones = [
   {
     id: '100491',
     name: 'г Мещовск Проспект Революции 53 (Wildberries)',
-    color: 'd4272788',
+    color: 'd42727',
     coordinates: [
       [
         [54.441952, 34.927735],
@@ -60320,7 +60320,7 @@ export const zones = [
   {
     id: '100493',
     name: 'МСК Коломенская 9с4',
-    color: '33b18988',
+    color: '33b189',
     coordinates: [
       [
         [55.672852, 37.714995],
@@ -60347,7 +60347,7 @@ export const zones = [
   {
     id: '100496',
     name: 'Ельня Пролетарская 38Б',
-    color: '11c4e988',
+    color: '11c4e9',
     coordinates: [
       [
         [54.328216, 33.119339],
@@ -60369,7 +60369,7 @@ export const zones = [
   {
     id: '100497',
     name: 'Тв. обл. Торопец Советская 85',
-    color: '19f7d188',
+    color: '19f7d1',
     coordinates: [
       [
         [56.949768, 31.628666],
@@ -60387,7 +60387,7 @@ export const zones = [
   {
     id: '100498',
     name: 'Новг. обл. Валдай пр-кт Васильева 25',
-    color: 'e1f10a88',
+    color: 'e1f10a',
     coordinates: [
       [
         [58.018573, 32.717224],
@@ -60407,7 +60407,7 @@ export const zones = [
   {
     id: '100499',
     name: 'Новг. обл. Боровичи пл. Володарского 7',
-    color: 'f718c488',
+    color: 'f718c4',
     coordinates: [
       [
         [59.353916, 33.646936],
@@ -60432,7 +60432,7 @@ export const zones = [
   {
     id: '100504',
     name: 'МСК Украинский бульвар 5',
-    color: '5fe85988',
+    color: '5fe859',
     coordinates: [
       [
         [55.736268, 37.566079],
@@ -60454,7 +60454,7 @@ export const zones = [
   {
     id: '100506',
     name: 'МСК М. Филёвская 38',
-    color: 'dc511988',
+    color: 'dc5119',
     coordinates: [
       [
         [55.72622, 37.447934],
@@ -60502,7 +60502,7 @@ export const zones = [
   {
     id: '100507',
     name: 'МО Подольск мкр. Климовск Больничный пр-д 2к1',
-    color: '4bc72188',
+    color: '4bc721',
     coordinates: [
       [
         [55.381484, 37.533059],
@@ -60565,7 +60565,7 @@ export const zones = [
   {
     id: '100508',
     name: 'Кувандык Ленина 102',
-    color: '3e1bca88',
+    color: '3e1bca',
     coordinates: [
       [
         [51.952496, 57.799949],
@@ -60588,7 +60588,7 @@ export const zones = [
   {
     id: '100509',
     name: 'Сарат. Обл пгт Базарный Карабулак Ленина 122',
-    color: 'f312e688',
+    color: 'f312e6',
     coordinates: [
       [
         [52.044889, 46.782532],
@@ -60616,7 +60616,7 @@ export const zones = [
   {
     id: '100510',
     name: 'Сарат. Обл Хвалынск Советская 124',
-    color: 'f90e3688',
+    color: 'f90e36',
     coordinates: [
       [
         [52.191238, 46.759101],
@@ -60638,7 +60638,7 @@ export const zones = [
   {
     id: '100511',
     name: 'Сарат. Обл Ершов Северная 14',
-    color: '06f5b888',
+    color: '06f5b8',
     coordinates: [
       [
         [51.67965, 47.822345],
@@ -60663,7 +60663,7 @@ export const zones = [
   {
     id: '100513',
     name: 'МСК Нагатинская наб 48/2',
-    color: '88bd4788',
+    color: '88bd47',
     coordinates: [
       [
         [55.6768220615625, 37.6638121793726],
@@ -60696,7 +60696,7 @@ export const zones = [
   {
     id: '100514',
     name: 'МСК Новый Арбат 30/9',
-    color: '671a1a88',
+    color: '671a1a',
     coordinates: [
       [
         [55.735294, 37.564101],
@@ -60719,7 +60719,7 @@ export const zones = [
   {
     id: '100516',
     name: 'МСК Соловьиная Роща 8',
-    color: '6187e488',
+    color: '6187e4',
     coordinates: [
       [
         [55.903946, 37.395658],
@@ -60754,7 +60754,7 @@ export const zones = [
   {
     id: '100518',
     name: 'Химки Молодёжная 78',
-    color: 'c8575788',
+    color: 'c85757',
     coordinates: [
       [
         [55.901446, 37.361984],
@@ -60794,7 +60794,7 @@ export const zones = [
   {
     id: '100519',
     name: 'Химки пр-кт Мельникова 4с1',
-    color: '528a5088',
+    color: '528a50',
     coordinates: [
       [
         [55.8960558812748, 37.447689839151],
@@ -60821,7 +60821,7 @@ export const zones = [
   {
     id: '100520',
     name: 'МО Химки Панфилова 4',
-    color: 'ded81688',
+    color: 'ded816',
     coordinates: [
       [
         [55.891639, 37.437801],
@@ -60856,7 +60856,7 @@ export const zones = [
   {
     id: '100522',
     name: 'Химки Овражная 24с5',
-    color: '09f90288',
+    color: '09f902',
     coordinates: [
       [
         [55.920273, 37.31324],
@@ -60895,7 +60895,7 @@ export const zones = [
   {
     id: '100523',
     name: 'Сарат. Обл Новоузенск Трутнева 14',
-    color: 'ed151588',
+    color: 'ed1515',
     coordinates: [
       [
         [50.338146, 47.741789],
@@ -60919,7 +60919,7 @@ export const zones = [
   {
     id: '100524',
     name: 'МО Волоколамск Холмогорка 1А',
-    color: 'cf5ce088',
+    color: 'cf5ce0',
     coordinates: [
       [
         [56.176237, 35.828971],
@@ -60958,7 +60958,7 @@ export const zones = [
   {
     id: '100557',
     name: 'МСК Улица Поляны 57',
-    color: 'e3969688',
+    color: 'e39696',
     coordinates: [
       [
         [55.539577, 37.565942],
@@ -60998,7 +60998,7 @@ export const zones = [
   {
     id: '100558',
     name: 'МО Серпухов Красный Текстильщик 15А',
-    color: '28933b88',
+    color: '28933b',
     coordinates: [
       [
         [55.071243, 37.338784],
@@ -61047,7 +61047,7 @@ export const zones = [
   {
     id: '100591',
     name: 'МО Пушкино Школьная 9',
-    color: '78d9e588',
+    color: '78d9e5',
     coordinates: [
       [
         [55.969166, 37.81334],
@@ -61078,7 +61078,7 @@ export const zones = [
   {
     id: '100592',
     name: 'МО Ивантеевка Трудовая 25',
-    color: 'afad6888',
+    color: 'afad68',
     coordinates: [
       [
         [56.059146, 37.959938],
@@ -61187,7 +61187,7 @@ export const zones = [
   {
     id: '100596',
     name: 'МСК Московский Никитина 2',
-    color: '36b14b88',
+    color: '36b14b',
     coordinates: [
       [
         [55.6038469916896, 37.4029329849879],
@@ -61214,7 +61214,7 @@ export const zones = [
   {
     id: '100598',
     name: 'МО Черноголовка Садовая 2',
-    color: '3c64c788',
+    color: '3c64c7',
     coordinates: [
       [
         [56.04396, 38.390343],
@@ -61267,7 +61267,7 @@ export const zones = [
   {
     id: '100604',
     name: 'МО Балашиха Зелёная 16',
-    color: '212ea288',
+    color: '212ea2',
     coordinates: [
       [
         [55.812811, 37.911378],
@@ -61301,7 +61301,7 @@ export const zones = [
   {
     id: '100605',
     name: 'КРД. кр. ст-ца Староминская Б. Садовая 82Б',
-    color: '7a2b2b88',
+    color: '7a2b2b',
     coordinates: [
       [
         [46.509907, 39.274666],
@@ -61323,7 +61323,7 @@ export const zones = [
   {
     id: '100606',
     name: 'КРД. кр. ст-ца Старощербиновская Краснопартизанская 75',
-    color: '94a9c088',
+    color: '94a9c0',
     coordinates: [
       [
         [46.835696, 38.715456],
@@ -61349,7 +61349,7 @@ export const zones = [
   {
     id: '100607',
     name: 'МСК Элеваторная 8',
-    color: '2ea04288',
+    color: '2ea042',
     coordinates: [
       [
         [55.6179028444169, 37.667384109986],
@@ -61382,7 +61382,7 @@ export const zones = [
   {
     id: '100608',
     name: 'МСК Каширское ш. 65к1',
-    color: '16c53688',
+    color: '16c536',
     coordinates: [
       [
         [55.604685, 37.689882],
@@ -61405,7 +61405,7 @@ export const zones = [
   {
     id: '100615',
     name: 'Пер. Кра. Нытва пр-кт Ленина 40',
-    color: 'fa3a3a88',
+    color: 'fa3a3a',
     coordinates: [
       [
         [57.740175, 54.944065],
@@ -61461,7 +61461,7 @@ export const zones = [
   {
     id: '100617',
     name: 'Балашиха Твардовского 48',
-    color: 'b7363688',
+    color: 'b73636',
     coordinates: [
       [
         [55.777043, 37.843034],
@@ -61486,7 +61486,7 @@ export const zones = [
   {
     id: '100619',
     name: 'МО Коломна б-р 800-лет. Коломны 14',
-    color: 'ce806788',
+    color: 'ce8067',
     coordinates: [
       [
         [55.057525, 39.06441],
@@ -61543,7 +61543,7 @@ export const zones = [
   {
     id: '100620',
     name: 'МО Воскресенск Победы 26',
-    color: '982a2a88',
+    color: '982a2a',
     coordinates: [
       [
         [55.409651, 38.406566],
@@ -61568,7 +61568,7 @@ export const zones = [
   {
     id: '100621',
     name: 'МО Пушкино Надсоновская 3',
-    color: '639d2a88',
+    color: '639d2a',
     coordinates: [
       [
         [55.990556, 37.872832],
@@ -61604,7 +61604,7 @@ export const zones = [
   {
     id: '100623',
     name: 'МО Красноармейск пр-кт Испытателей 3А',
-    color: '256d8688',
+    color: '256d86',
     coordinates: [
       [
         [56.125252, 38.240517],
@@ -61644,7 +61644,7 @@ export const zones = [
   {
     id: '100624',
     name: 'МО Люберцы пр-кт Победы 14',
-    color: 'bec32988',
+    color: 'bec329',
     coordinates: [
       [
         [55.684518, 37.894978],
@@ -61673,7 +61673,7 @@ export const zones = [
   {
     id: '100625',
     name: 'МСК Недорубова 32',
-    color: 'b93c3c88',
+    color: 'b93c3c',
     coordinates: [
       [
         [55.701902, 37.913396],
@@ -61727,7 +61727,7 @@ export const zones = [
   {
     id: '100630',
     name: 'Балашиха Автозаводская 8А',
-    color: '932c2c88',
+    color: '932c2c',
     coordinates: [
       [
         [55.697616, 37.964718],
@@ -61789,7 +61789,7 @@ export const zones = [
   {
     id: '100632',
     name: 'Сугрут Строителей 8/1',
-    color: '0019ff88',
+    color: '0019ff',
     coordinates: [
       [
         [61.213418, 72.97493],
@@ -61823,7 +61823,7 @@ export const zones = [
   {
     id: '100633',
     name: 'МО Дубна Программистов 15к1',
-    color: 'b54f4f88',
+    color: 'b54f4f',
     coordinates: [
       [
         [56.797868, 37.241817],
@@ -61863,7 +61863,7 @@ export const zones = [
   {
     id: '100635',
     name: 'Прогресс Заводская 59',
-    color: 'ee545488',
+    color: 'ee5454',
     coordinates: [
       [
         [49.80899, 129.754071],
@@ -61881,7 +61881,7 @@ export const zones = [
   {
     id: '100638',
     name: 'См. Обл Гагарин Строителей 153Б',
-    color: '23704588',
+    color: '237045',
     coordinates: [
       [
         [55.66496, 35.336723],
@@ -61931,7 +61931,7 @@ export const zones = [
   {
     id: '100639',
     name: 'МО Сергиев Посад 2-й Кирпичный Завод 18А',
-    color: 'ce353588',
+    color: 'ce3535',
     coordinates: [
       [
         [56.326246, 38.132801],
@@ -61978,7 +61978,7 @@ export const zones = [
   {
     id: '100641',
     name: 'Химки 7-й Гвардейской Дивизии 4к1',
-    color: '251fd888',
+    color: '251fd8',
     coordinates: [
       [
         [55.954198, 37.278867],
@@ -62027,7 +62027,7 @@ export const zones = [
   {
     id: '100642',
     name: 'МО пос Новосиньково 44В',
-    color: '8dc3de88',
+    color: '8dc3de',
     coordinates: [
       [
         [56.598254, 37.19983],
@@ -62061,7 +62061,7 @@ export const zones = [
   {
     id: '100644',
     name: 'Красноярск Аэровокзальная 7',
-    color: '002fff88',
+    color: '002fff',
     coordinates: [
       [
         [56.050234, 92.910068],
@@ -62101,7 +62101,7 @@ export const zones = [
   {
     id: '100645',
     name: 'МО Дмитров Большевистский пер 15',
-    color: '4c8eb588',
+    color: '4c8eb5',
     coordinates: [
       [
         [56.37852, 37.935807],
@@ -62142,7 +62142,7 @@ export const zones = [
   {
     id: '100647',
     name: 'МСК Б. Каменщики 21/8',
-    color: 'f0131388',
+    color: 'f01313',
     coordinates: [
       [
         [55.724841, 37.657415],
@@ -62174,7 +62174,7 @@ export const zones = [
   {
     id: '100648',
     name: 'МО Луховицы Пушкина 171Б',
-    color: 'bf202088',
+    color: 'bf2020',
     coordinates: [
       [
         [54.995874, 38.755305],
@@ -62213,7 +62213,7 @@ export const zones = [
   {
     id: '100649',
     name: 'МО Егорьевск Касимовское шоссе 1В',
-    color: '82313188',
+    color: '823131',
     coordinates: [
       [
         [55.567828, 38.649094],
@@ -62260,7 +62260,7 @@ export const zones = [
   {
     id: '100650',
     name: 'МСК Люблинская 17к1',
-    color: '88242488',
+    color: '882424',
     coordinates: [
       [
         [55.699648, 37.75074],
@@ -62296,7 +62296,7 @@ export const zones = [
   {
     id: '100652',
     name: 'МСК Люблинская 171',
-    color: 'cd4b4b88',
+    color: 'cd4b4b',
     coordinates: [
       [
         [55.663561, 37.744707],
@@ -62330,7 +62330,7 @@ export const zones = [
   {
     id: '100654',
     name: 'МО Лобня Свободный пр 7',
-    color: 'd9696988',
+    color: 'd96969',
     coordinates: [
       [
         [56.136607, 37.517925],
@@ -62378,7 +62378,7 @@ export const zones = [
   {
     id: '100655',
     name: 'МО Павловский Посад Поселковая 9',
-    color: '6d343488',
+    color: '6d3434',
     coordinates: [
       [
         [55.599059, 38.609954],
@@ -62445,7 +62445,7 @@ export const zones = [
   {
     id: '100656',
     name: 'МО Балашиха Ласточкин пр-д 8',
-    color: '1ac36588',
+    color: '1ac365',
     coordinates: [
       [
         [55.728947, 38.058113],
@@ -62487,7 +62487,7 @@ export const zones = [
   {
     id: '100658',
     name: 'МСК 1-я Дубровская 1А',
-    color: '1e31d688',
+    color: '1e31d6',
     coordinates: [
       [
         [55.739069, 37.673494],
@@ -62513,7 +62513,7 @@ export const zones = [
   {
     id: '100660',
     name: 'МСК пр-кт Куприна 40к2',
-    color: '5fa4d388',
+    color: '5fa4d3',
     coordinates: [
       [
         [55.5028, 37.4357],
@@ -62622,7 +62622,7 @@ export const zones = [
   {
     id: '100662',
     name: 'Маг. обл. Магадан Комсомольская 26',
-    color: '9e090988',
+    color: '9e0909',
     coordinates: [
       [
         [59.539888, 151.362762],
@@ -62641,7 +62641,7 @@ export const zones = [
   {
     id: '100663',
     name: 'Ре. Саха (Якутия) пгт Айхал Советская 9А',
-    color: 'e1111188',
+    color: 'e11111',
     coordinates: [
       [
         [66.088799, 111.89408],
@@ -62664,7 +62664,7 @@ export const zones = [
   {
     id: '100664',
     name: 'МО Видное Ольховая 6',
-    color: '5ad54888',
+    color: '5ad548',
     coordinates: [
       [
         [55.552946505521, 37.7268762230599],
@@ -62708,7 +62708,7 @@ export const zones = [
   {
     id: '100665',
     name: 'Маг. обл. Магадан пр-кт Карла Маркса 31/18',
-    color: 'c7040488',
+    color: 'c70404',
     coordinates: [
       [
         [59.478456, 150.837983],
@@ -62750,7 +62750,7 @@ export const zones = [
   {
     id: '100666',
     name: 'МО Королёв Гагарина 17',
-    color: 'ccba2d88',
+    color: 'ccba2d',
     coordinates: [
       [
         [55.926249, 37.858165],
@@ -62786,7 +62786,7 @@ export const zones = [
   {
     id: '100675',
     name: 'Калуж. обл. Кондрово Ленина 2',
-    color: '0860fd88',
+    color: '0860fd',
     coordinates: [
       [
         [54.614231, 35.926666],
@@ -62822,7 +62822,7 @@ export const zones = [
   {
     id: '100676',
     name: 'Респ. Саха Мирный Тихонова 12к3',
-    color: 'c1131388',
+    color: 'c11313',
     coordinates: [
       [
         [62.555754, 113.947932],
@@ -62854,7 +62854,7 @@ export const zones = [
   {
     id: '100680',
     name: 'г МСК Улица Авиаторов 5к5',
-    color: '13d9e288',
+    color: '13d9e2',
     coordinates: [
       [
         [55.59765, 37.413682],
@@ -62885,7 +62885,7 @@ export const zones = [
   {
     id: '100681',
     name: 'МСК Московский 39к1',
-    color: '12149188',
+    color: '121491',
     coordinates: [
       [
         [55.562816, 37.332922],
@@ -62934,7 +62934,7 @@ export const zones = [
   {
     id: '100682',
     name: 'МО дач пос Удельная Интернациональная 15',
-    color: 'dc222288',
+    color: 'dc2222',
     coordinates: [
       [
         [55.65037, 38.101787],
@@ -62964,7 +62964,7 @@ export const zones = [
   {
     id: '100683',
     name: 'Пер. кр. Оса Маяковского 60',
-    color: 'df000088',
+    color: 'df0000',
     coordinates: [
       [
         [57.126977, 55.00854],
@@ -62991,7 +62991,7 @@ export const zones = [
   {
     id: '100684',
     name: 'Хабаровск А.А. Вахова 4',
-    color: '00ffdf88',
+    color: '00ffdf',
     coordinates: [
       [
         [48.465753, 135.0908],
@@ -63053,7 +63053,7 @@ export const zones = [
   {
     id: '100685',
     name: 'Хабаровск Воронежское шоссе 1А',
-    color: 'ff00e588',
+    color: 'ff00e5',
     coordinates: [
       [
         [48.559042, 135.135631],
@@ -63120,7 +63120,7 @@ export const zones = [
   {
     id: '100686',
     name: 'МО Можайск 20 Января 2Б',
-    color: 'd46b4a88',
+    color: 'd46b4a',
     coordinates: [
       [
         [55.756014, 35.738038],
@@ -63199,7 +63199,7 @@ export const zones = [
   {
     id: '100688',
     name: 'МО Лобня Борисова 24',
-    color: '73c89088',
+    color: '73c890',
     coordinates: [
       [
         [56.04297, 37.36208],
@@ -63260,7 +63260,7 @@ export const zones = [
   {
     id: '100689',
     name: 'Химки 8 Марта 8А',
-    color: '47d8ab88',
+    color: '47d8ab',
     coordinates: [
       [
         [55.95184, 37.48022],
@@ -63293,7 +63293,7 @@ export const zones = [
   {
     id: '100690',
     name: 'МО Электросталь Ногинское шоссе 28',
-    color: 'e6181888',
+    color: 'e61818',
     coordinates: [
       [
         [55.812983, 38.572445],
@@ -63318,7 +63318,7 @@ export const zones = [
   {
     id: '100694',
     name: 'Сургут Крылова 39/1',
-    color: '6b000088',
+    color: '6b0000',
     coordinates: [
       [
         [61.240574, 73.378133],
@@ -63365,7 +63365,7 @@ export const zones = [
   {
     id: '100735',
     name: 'Минск Матусевича 64',
-    color: 'ab5b5b88',
+    color: 'ab5b5b',
     coordinates: [
       [
         [54.114653, 27.413919],
@@ -63447,7 +63447,7 @@ export const zones = [
   {
     id: '100743',
     name: 'МО Красногорск Чайковского 8А',
-    color: 'df1eee88',
+    color: 'df1eee',
     coordinates: [
       [
         [55.830987, 37.348173],
@@ -63495,7 +63495,7 @@ export const zones = [
   {
     id: '100746',
     name: 'МО Красногорск Заводская 18к3',
-    color: '0de9df88',
+    color: '0de9df',
     coordinates: [
       [
         [55.815174, 37.360561],
@@ -63533,7 +63533,7 @@ export const zones = [
   {
     id: '100747',
     name: 'МО Звенигород к8',
-    color: 'e91d1d88',
+    color: 'e91d1d',
     coordinates: [
       [
         [55.723759, 37.106778],
@@ -63576,7 +63576,7 @@ export const zones = [
   {
     id: '100748',
     name: 'МО д Чёрная Широкая 5А',
-    color: '1230dd88',
+    color: '1230dd',
     coordinates: [
       [
         [55.797162, 37.177351],
@@ -63596,7 +63596,7 @@ export const zones = [
   {
     id: '100750',
     name: 'МО Ликино-Дулёво  Калинина 5',
-    color: '41d32688',
+    color: '41d326',
     coordinates: [
       [
         [55.696557, 39.045937],
@@ -63629,7 +63629,7 @@ export const zones = [
   {
     id: '100752',
     name: 'Могилёв, Чайковского 11',
-    color: '4f642b88',
+    color: '4f642b',
     coordinates: [
       [
         [53.3351, 30.792929],
@@ -63695,7 +63695,7 @@ export const zones = [
   {
     id: '100753',
     name: 'МО пос Зелёный Школьная 15',
-    color: 'e7161688',
+    color: 'e71616',
     coordinates: [
       [
         [55.840723, 38.207571],
@@ -63728,7 +63728,7 @@ export const zones = [
   {
     id: '100755',
     name: 'МСК Алтуфьевское ш. 102Б',
-    color: 'c82b2b88',
+    color: 'c82b2b',
     coordinates: [
       [
         [55.907985, 37.587145],
@@ -63767,7 +63767,7 @@ export const zones = [
   {
     id: '100758',
     name: 'Сургут 30 лет Победы 3',
-    color: 'c00a0a88',
+    color: 'c00a0a',
     coordinates: [
       [
         [61.328369, 74.843025],
@@ -63802,7 +63802,7 @@ export const zones = [
   {
     id: '100761',
     name: 'МСК Б. Тишинский пер. 40с1',
-    color: '6a925788',
+    color: '6a9257',
     coordinates: [
       [
         [55.772759, 37.56393],
@@ -63839,7 +63839,7 @@ export const zones = [
   {
     id: '100762',
     name: 'МСК Красина 9с2',
-    color: 'a8f20e88',
+    color: 'a8f20e',
     coordinates: [
       [
         [55.761866, 37.579217],
@@ -63873,7 +63873,7 @@ export const zones = [
   {
     id: '100763',
     name: 'МСК Суздальская 10к1',
-    color: 'ed090988',
+    color: 'ed0909',
     coordinates: [
       [
         [55.74516, 37.861276],
@@ -63894,7 +63894,7 @@ export const zones = [
   {
     id: '100764',
     name: 'МО Реутов Ленина 21',
-    color: '2dd43e88',
+    color: '2dd43e',
     coordinates: [
       [
         [55.777043, 37.843034],
@@ -63913,7 +63913,7 @@ export const zones = [
   {
     id: '100765',
     name: 'МО Реутов Октября 52',
-    color: '3591cc88',
+    color: '3591cc',
     coordinates: [
       [
         [55.75973, 37.87708],
@@ -63943,7 +63943,7 @@ export const zones = [
   {
     id: '100769',
     name: 'МО Пушкино Марата 1',
-    color: 'e1181888',
+    color: 'e11818',
     coordinates: [
       [
         [56.03182, 37.84988],
@@ -63972,7 +63972,7 @@ export const zones = [
   {
     id: '100770',
     name: 'МО сад тов Чайка 20',
-    color: '27b04788',
+    color: '27b047',
     coordinates: [
       [
         [55.8017339952081, 38.0817269528249],
@@ -64000,7 +64000,7 @@ export const zones = [
   {
     id: '100771',
     name: 'Том. Обл Северск Ленина 122',
-    color: 'f5292988',
+    color: 'f52929',
     coordinates: [
       [
         [57.615842, 83.795299],
@@ -64046,7 +64046,7 @@ export const zones = [
   {
     id: '100772',
     name: 'МО д Малые Вязёмы Высокие Жаворонки 7',
-    color: 'f40e0e88',
+    color: 'f40e0e',
     coordinates: [
       [
         [55.640471, 37.130212],
@@ -64094,7 +64094,7 @@ export const zones = [
   {
     id: '100773',
     name: 'ЯНАО Новый Уренгой мкр. Восточный 2/2Б',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [66.095439, 76.716364],
@@ -64126,7 +64126,7 @@ export const zones = [
   {
     id: '100774',
     name: 'Орен. обл. Соль-Илецк Оренбургская 20',
-    color: '00a8ff88',
+    color: '00a8ff',
     coordinates: [
       [
         [51.229121, 54.222272],
@@ -64146,7 +64146,7 @@ export const zones = [
   {
     id: '100782',
     name: 'Сах. Обл пгт Ноглики Советская 23',
-    color: 'c0000088',
+    color: 'c00000',
     coordinates: [
       [
         [51.310935, 142.122819],
@@ -64163,7 +64163,7 @@ export const zones = [
   {
     id: '100783',
     name: 'МО д Путилково Путилковское шоссе 4к1',
-    color: 'f41e1e88',
+    color: 'f41e1e',
     coordinates: [
       [
         [55.879115, 37.386132],
@@ -64191,7 +64191,7 @@ export const zones = [
   {
     id: '100784',
     name: 'Грозный Ашхабадская 2',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [43.317476, 45.671958],
@@ -64220,7 +64220,7 @@ export const zones = [
   {
     id: '100785',
     name: 'Грозный Муслима Г. Гайрбекова 64',
-    color: '00ffc888',
+    color: '00ffc8',
     coordinates: [
       [
         [43.281625, 45.768833],
@@ -64265,7 +64265,7 @@ export const zones = [
   {
     id: '100786',
     name: 'Пер. Кра. Верещагино 12 Декабря 91',
-    color: '00f4ff88',
+    color: '00f4ff',
     coordinates: [
       [
         [57.832801, 53.935715],
@@ -64287,7 +64287,7 @@ export const zones = [
   {
     id: '100788',
     name: 'МСК Ивантеевская 1к1',
-    color: 'e3111188',
+    color: 'e31111',
     coordinates: [
       [
         [55.81208, 37.72674],
@@ -64373,7 +64373,7 @@ export const zones = [
   {
     id: '100822',
     name: 'Св. обл. Верхотурье Карла Маркса 5Б',
-    color: '00b2ff88',
+    color: '00b2ff',
     coordinates: [
       [
         [58.829684, 60.358162],
@@ -64391,7 +64391,7 @@ export const zones = [
   {
     id: '100823',
     name: 'Св. обл. Дегтярск Калинина 6А',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [56.758295, 60.264861],
@@ -64411,7 +64411,7 @@ export const zones = [
   {
     id: '100825',
     name: 'Красн. кр. Норильск Комсомольская 39',
-    color: '5aca5c88',
+    color: '5aca5c',
     coordinates: [
       [
         [69.346796, 88.191075],
@@ -64444,7 +64444,7 @@ export const zones = [
   {
     id: '100826',
     name: 'Крснр. Кра. Норильск Югославская 30',
-    color: 'abe2f588',
+    color: 'abe2f5',
     coordinates: [
       [
         [69.424624, 88.274635],
@@ -64464,7 +64464,7 @@ export const zones = [
   {
     id: '100829',
     name: 'МО Орехово-Зуево Парковская 36',
-    color: 'bbc91088',
+    color: 'bbc910',
     coordinates: [
       [
         [55.795736, 38.809417],
@@ -64508,7 +64508,7 @@ export const zones = [
   {
     id: '100832',
     name: 'Хаб. Кра. Комсомольск-на-Амуре Московский пр-кт 14',
-    color: 'a1c0ed88',
+    color: 'a1c0ed',
     coordinates: [
       [
         [50.593598, 136.978303],
@@ -64538,7 +64538,7 @@ export const zones = [
   {
     id: '100863',
     name: 'МО п. ВНИИССОК Дружбы 17',
-    color: 'cddb5388',
+    color: 'cddb53',
     coordinates: [
       [
         [55.694997, 37.12956],
@@ -64579,7 +64579,7 @@ export const zones = [
   {
     id: '100865',
     name: 'МО Одинцово Кутузовская 19',
-    color: 'e1cba588',
+    color: 'e1cba5',
     coordinates: [
       [
         [55.746434, 37.369182],
@@ -64617,7 +64617,7 @@ export const zones = [
   {
     id: '100881',
     name: 'Св. обл. Каменск-Уральский Суворова 28',
-    color: '0d720e88',
+    color: '0d720e',
     coordinates: [
       [
         [56.233295, 61.146507],
@@ -64641,7 +64641,7 @@ export const zones = [
   {
     id: '100882',
     name: 'ЛО Луга пр-кт Кирова 18Б',
-    color: '32c7b388',
+    color: '32c7b3',
     coordinates: [
       [
         [58.891665, 29.728828],
@@ -64667,7 +64667,7 @@ export const zones = [
   {
     id: '100884',
     name: 'Новг. обл. Старая Русса Поперечная 47',
-    color: 'e943ff88',
+    color: 'e943ff',
     coordinates: [
       [
         [57.02576, 31.057251],
@@ -64695,7 +64695,7 @@ export const zones = [
   {
     id: '100890',
     name: 'Сарат. обл. Калининск Советская 42',
-    color: 'ebd72288',
+    color: 'ebd722',
     coordinates: [
       [
         [51.118696, 44.042205],
@@ -64720,7 +64720,7 @@ export const zones = [
   {
     id: '100891',
     name: 'МСК Проезд Ольминского 6с1',
-    color: 'b4843088',
+    color: 'b48430',
     coordinates: [
       [
         [55.83079, 37.615982],
@@ -64771,7 +64771,7 @@ export const zones = [
   {
     id: '100892',
     name: 'Кург. обл. Катайск Ленина 174',
-    color: 'f0cd8288',
+    color: 'f0cd82',
     coordinates: [
       [
         [56.287326, 62.273752],
@@ -64795,7 +64795,7 @@ export const zones = [
   {
     id: '100893',
     name: 'Св. Обл Качканар 5-й мкр 61',
-    color: '40a4b388',
+    color: '40a4b3',
     coordinates: [
       [
         [58.709852, 59.590865],
@@ -64817,7 +64817,7 @@ export const zones = [
   {
     id: '100894',
     name: 'МСК Вешняковская 15А',
-    color: 'b4131388',
+    color: 'b41313',
     coordinates: [
       [
         [55.739379, 37.792178],
@@ -64844,7 +64844,7 @@ export const zones = [
   {
     id: '100905',
     name: 'Алматы Айтиева 154/1',
-    color: '2e05f788',
+    color: '2e05f7',
     coordinates: [
       [
         [43.297839, 76.89251],
@@ -64900,7 +64900,7 @@ export const zones = [
   {
     id: '100906',
     name: 'Алматы Думан 11',
-    color: '13f50b88',
+    color: '13f50b',
     coordinates: [
       [
         [43.45242, 77.187796],
@@ -64926,7 +64926,7 @@ export const zones = [
   {
     id: '100910',
     name: 'Ниж. обл. Шахунья Первомайская 34',
-    color: '25405588',
+    color: '254055',
     coordinates: [
       [
         [58.046586, 47.083933],
@@ -64947,7 +64947,7 @@ export const zones = [
   {
     id: '100911',
     name: 'При. Кра. Артём Гоголя 5',
-    color: '9ebf4c88',
+    color: '9ebf4c',
     coordinates: [
       [
         [43.336301, 132.266783],
@@ -64974,7 +64974,7 @@ export const zones = [
   {
     id: '100913',
     name: 'Красн. кр. Норильск Комсомольская 23А',
-    color: 'bf5ab588',
+    color: 'bf5ab5',
     coordinates: [
       [
         [69.346092, 88.20189],
@@ -65000,7 +65000,7 @@ export const zones = [
   {
     id: '100915',
     name: 'ЛО Гатчина Леонова 5',
-    color: '60ee1988',
+    color: '60ee19',
     coordinates: [
       [
         [59.512039, 29.723328],
@@ -65025,7 +65025,7 @@ export const zones = [
   {
     id: '100952',
     name: 'Ереван Шинарарнери 29',
-    color: '5c1e1e88',
+    color: '5c1e1e',
     coordinates: [
       [
         [40.191397, 44.473772],
@@ -65054,7 +65054,7 @@ export const zones = [
   {
     id: '100954',
     name: 'МСК Добролюбова 18',
-    color: 'bb37cd88',
+    color: 'bb37cd',
     coordinates: [
       [
         [55.83687, 37.578312],
@@ -65111,7 +65111,7 @@ export const zones = [
   {
     id: '100955',
     name: 'МО рп Софрино Крайняя 12',
-    color: 'df151588',
+    color: 'df1515',
     coordinates: [
       [
         [56.066909, 37.960081],
@@ -65155,7 +65155,7 @@ export const zones = [
   {
     id: '100962',
     name: 'МО Ивантеевка Центральный пр 7',
-    color: 'd92d2d88',
+    color: 'd92d2d',
     coordinates: [
       [
         [55.989824, 37.881893],
@@ -65241,7 +65241,7 @@ export const zones = [
   {
     id: '100965',
     name: 'Алматы Думан 11',
-    color: 'b02a0f88',
+    color: 'b02a0f',
     coordinates: [
       [
         [43.461804, 77.292765],
@@ -65281,7 +65281,7 @@ export const zones = [
   {
     id: '100974',
     name: 'Красн. кр. Норильск Орджоникидзе 2',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [69.356784, 88.143142],
@@ -65329,7 +65329,7 @@ export const zones = [
   {
     id: '100980',
     name: 'Кот. обл. Нор Ачин Торозяна 23',
-    color: '0e428f88',
+    color: '0e428f',
     coordinates: [
       [
         [40.237335, 44.720939],
@@ -65351,7 +65351,7 @@ export const zones = [
   {
     id: '100981',
     name: 'Респ. Баш. Дюртюли Ленина 28',
-    color: '16e41288',
+    color: '16e412',
     coordinates: [
       [
         [55.7879, 54.596188],
@@ -65368,7 +65368,7 @@ export const zones = [
   {
     id: '100987',
     name: 'Крым Алушта Таврическая 2',
-    color: 'e5212188',
+    color: 'e52121',
     coordinates: [
       [
         [44.672042, 34.418617],
@@ -65390,7 +65390,7 @@ export const zones = [
   {
     id: '100988',
     name: 'Крым Алушта Ялтинская 1',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [44.568747, 34.39171],
@@ -65410,7 +65410,7 @@ export const zones = [
   {
     id: '100989',
     name: 'ХМ. Окр. Покачи Ленина 4/1',
-    color: '854c4c88',
+    color: '854c4c',
     coordinates: [
       [
         [61.58064, 74.944624],
@@ -65428,7 +65428,7 @@ export const zones = [
   {
     id: '100990',
     name: 'СПБ Полтавский пр 2',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [59.935719, 30.364151],
@@ -65455,7 +65455,7 @@ export const zones = [
   {
     id: '100991',
     name: 'СПБ Димитрова 8к2',
-    color: '1215cd88',
+    color: '1215cd',
     coordinates: [
       [
         [59.853922, 30.445859],
@@ -65483,7 +65483,7 @@ export const zones = [
   {
     id: '100992',
     name: 'СПБ Бухарестская 110к1',
-    color: 'c2ef0c88',
+    color: 'c2ef0c',
     coordinates: [
       [
         [59.844225, 30.369244],
@@ -65511,7 +65511,7 @@ export const zones = [
   {
     id: '100994',
     name: 'МО Раменское Холодово 2',
-    color: 'd7373788',
+    color: 'd73737',
     coordinates: [
       [
         [55.665407, 38.279017],
@@ -65559,7 +65559,7 @@ export const zones = [
   {
     id: '100995',
     name: 'Чел. обл. Катав-Ивановск Караваева 42',
-    color: 'deeb3788',
+    color: 'deeb37',
     coordinates: [
       [
         [54.370653, 58.149302],
@@ -65581,7 +65581,7 @@ export const zones = [
   {
     id: '100998',
     name: 'Ряз. обл. Спас-Клепики Московская 13',
-    color: 'fafafa88',
+    color: 'fafafa',
     coordinates: [
       [
         [54.914198, 40.671386],
@@ -65603,7 +65603,7 @@ export const zones = [
   {
     id: '101002',
     name: 'Якутск Можайского 29',
-    color: 'f1c0c088',
+    color: 'f1c0c0',
     coordinates: [
       [
         [62.090903, 129.757319],
@@ -65635,7 +65635,7 @@ export const zones = [
   {
     id: '101003',
     name: 'Чел. обл. Аша Толстого 5',
-    color: '39e5c788',
+    color: '39e5c7',
     coordinates: [
       [
         [54.890826, 57.556],
@@ -65659,7 +65659,7 @@ export const zones = [
   {
     id: '101004',
     name: 'Чел. обл. Миньяр Центральная 4',
-    color: 'b9c52088',
+    color: 'b9c520',
     coordinates: [
       [
         [54.886087, 57.65213],
@@ -65677,7 +65677,7 @@ export const zones = [
   {
     id: '101005',
     name: 'Чел. обл. Сим Давыдова 8',
-    color: 'cfb8b888',
+    color: 'cfb8b8',
     coordinates: [
       [
         [54.886087, 57.65213],
@@ -65695,7 +65695,7 @@ export const zones = [
   {
     id: '101006',
     name: 'МО Королёв Пушкинская 21',
-    color: '9fe58888',
+    color: '9fe588',
     coordinates: [
       [
         [55.927636, 37.801308],
@@ -65763,7 +65763,7 @@ export const zones = [
   {
     id: '101007',
     name: 'МО Щёлково Сиреневая 11А',
-    color: 'f3848488',
+    color: 'f38484',
     coordinates: [
       [
         [55.949424, 37.883835],
@@ -65864,7 +65864,7 @@ export const zones = [
   {
     id: '101009',
     name: 'СПБ Белградская 30',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [59.866118, 30.358521],
@@ -65884,7 +65884,7 @@ export const zones = [
   {
     id: '101010',
     name: 'МСК Печорская 6к1',
-    color: '4ae37b88',
+    color: '4ae37b',
     coordinates: [
       [
         [55.858482, 37.633115],
@@ -65917,7 +65917,7 @@ export const zones = [
   {
     id: '101022',
     name: 'Бр. обл. Стародуб Евсеевская 4',
-    color: 'ac7e7e88',
+    color: 'ac7e7e',
     coordinates: [
       [
         [52.762892, 32.626648],
@@ -65954,7 +65954,7 @@ export const zones = [
   {
     id: '101025',
     name: 'Бр. обл. Унеча Октябрьская 17',
-    color: '76877d88',
+    color: '76877d',
     coordinates: [
       [
         [53.108659, 32.239037],
@@ -65990,7 +65990,7 @@ export const zones = [
   {
     id: '101060',
     name: 'Респ. Саха Ленск Ленина 64Б',
-    color: 'e3f90b88',
+    color: 'e3f90b',
     coordinates: [
       [
         [61.671631, 114.014627],
@@ -66008,7 +66008,7 @@ export const zones = [
   {
     id: '101070',
     name: 'Ставрополь пр-кт Кулакова 71',
-    color: '9cede988',
+    color: '9cede9',
     coordinates: [
       [
         [45.085695, 41.96097],
@@ -66094,7 +66094,7 @@ export const zones = [
   {
     id: '101077',
     name: 'МО Сергиев Посад Южная 29/8',
-    color: '53955688',
+    color: '539556',
     coordinates: [
       [
         [56.748567, 38.030307],
@@ -66192,7 +66192,7 @@ export const zones = [
   {
     id: '101078',
     name: 'МСК Очаковское Шоссе 11к1',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [55.6917929286108, 37.4455531096065],
@@ -66211,7 +66211,7 @@ export const zones = [
   {
     id: '101081',
     name: 'Св. обл. Невьянск Карла Маркса 2',
-    color: '4dbdc288',
+    color: '4dbdc2',
     coordinates: [
       [
         [57.620632, 60.427752],
@@ -66236,7 +66236,7 @@ export const zones = [
   {
     id: '101083',
     name: 'МСК М. Бронная 42/14',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [55.759574, 37.584849],
@@ -66257,7 +66257,7 @@ export const zones = [
   {
     id: '101084',
     name: 'Тв. обл. Кимры Челюскинцев 1А',
-    color: '6e37fa88',
+    color: '6e37fa',
     coordinates: [
       [
         [57.466363, 37.631375],
@@ -66297,7 +66297,7 @@ export const zones = [
   {
     id: '101087',
     name: 'МО Бронницы Ново-Бронницкая 54',
-    color: '44a63388',
+    color: '44a633',
     coordinates: [
       [
         [55.516059, 38.128978],
@@ -66332,7 +66332,7 @@ export const zones = [
   {
     id: '101088',
     name: 'МО Бронницы Комсомольский пер 67',
-    color: '0667e288',
+    color: '0667e2',
     coordinates: [
       [
         [55.390072, 38.242035],
@@ -66363,7 +66363,7 @@ export const zones = [
   {
     id: '101089',
     name: 'МСК Белозерская 17Г',
-    color: 'f1ff2588',
+    color: 'f1ff25',
     coordinates: [
       [
         [55.907985, 37.587145],
@@ -66426,7 +66426,7 @@ export const zones = [
   {
     id: '101091',
     name: 'МСК Краснопрудная 28',
-    color: '1dd51c88',
+    color: '1dd51c',
     coordinates: [
       [
         [55.771738, 37.652001],
@@ -66460,7 +66460,7 @@ export const zones = [
   {
     id: '101092',
     name: 'МСК Новорязанская 30',
-    color: '0e6bd788',
+    color: '0e6bd7',
     coordinates: [
       [
         [55.771738, 37.652001],
@@ -66484,7 +66484,7 @@ export const zones = [
   {
     id: '101093',
     name: 'Нижневартовск Спортивная 17А',
-    color: 'c4bc7d88',
+    color: 'c4bc7d',
     coordinates: [
       [
         [60.934358, 76.612518],
@@ -66522,7 +66522,7 @@ export const zones = [
   {
     id: '101099',
     name: 'МСК пос Коммунарка Бачуринская 21',
-    color: '2316d788',
+    color: '2316d7',
     coordinates: [
       [
         [55.553641, 37.491703],
@@ -66561,7 +66561,7 @@ export const zones = [
   {
     id: '101100',
     name: 'МСК Сиреневый б-р 44к1',
-    color: 'dd242488',
+    color: 'dd2424',
     coordinates: [
       [
         [55.809657, 37.780397],
@@ -66603,7 +66603,7 @@ export const zones = [
   {
     id: '101101',
     name: 'МСК 6-я Парковая 17',
-    color: '40b32488',
+    color: '40b324',
     coordinates: [
       [
         [55.786986, 37.742792],
@@ -66638,7 +66638,7 @@ export const zones = [
   {
     id: '101102',
     name: 'Чел. обл. Южноуральск Победы 22Б',
-    color: '6b454588',
+    color: '6b4545',
     coordinates: [
       [
         [54.6062638718482, 60.8918930838572],
@@ -66660,7 +66660,7 @@ export const zones = [
   {
     id: '101104',
     name: 'Кар. Обл Темиртау Сакена Сейфуллина 34 (курьерка + ПВЗ)',
-    color: 'f052dc88',
+    color: 'f052dc',
     coordinates: [
       [
         [49.980194, 72.911728],
@@ -66685,7 +66685,7 @@ export const zones = [
   {
     id: '101105',
     name: 'МСК Мельникова 3к6',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [55.712176, 37.701505],
@@ -66730,7 +66730,7 @@ export const zones = [
   {
     id: '101107',
     name: 'МСК Госпитальный Вал 5с12',
-    color: 'bd303088',
+    color: 'bd3030',
     coordinates: [
       [
         [55.781062, 37.679801],
@@ -66772,7 +66772,7 @@ export const zones = [
   {
     id: '101108',
     name: 'Серпухов Улица Дзержинского 38а',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [54.883645, 37.323308],
@@ -66805,7 +66805,7 @@ export const zones = [
   {
     id: '101109',
     name: 'г Серпухов Улица Ворошилова 140',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [54.829568, 37.134562],
@@ -66826,7 +66826,7 @@ export const zones = [
   {
     id: '101110',
     name: 'п Радужный Посёлок Радужный 1',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [55.213943, 38.747922],
@@ -66855,7 +66855,7 @@ export const zones = [
   {
     id: '101111',
     name: 'д Крюково Деревня Крюково 35',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [55.112107, 37.57925],
@@ -66881,7 +66881,7 @@ export const zones = [
   {
     id: '101112',
     name: 'г Серпухов Улица Горького 3б',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [54.926541, 37.394543],
@@ -66901,7 +66901,7 @@ export const zones = [
   {
     id: '101113',
     name: 'г Коломна Улица Цементников 18',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [55.066605, 38.78919],
@@ -66920,7 +66920,7 @@ export const zones = [
   {
     id: '101114',
     name: 'МО Коломна пр-кт Кирова 78',
-    color: '6bfcf688',
+    color: '6bfcf6',
     coordinates: [
       [
         [54.930304, 38.758185],
@@ -66981,7 +66981,7 @@ export const zones = [
   {
     id: '101119',
     name: 'МО Клин Чайковского 103',
-    color: '0ae74688',
+    color: '0ae746',
     coordinates: [
       [
         [56.224918, 36.744869],
@@ -67021,7 +67021,7 @@ export const zones = [
   {
     id: '101130',
     name: 'Алматы Радостовца 124',
-    color: 'e6101088',
+    color: 'e61010',
     coordinates: [
       [
         [43.203631, 76.894349],
@@ -67088,7 +67088,7 @@ export const zones = [
   {
     id: '101131',
     name: 'Алматы 11-й мкр 4',
-    color: '5436c588',
+    color: '5436c5',
     coordinates: [
       [
         [43.240401, 76.65834],
@@ -67140,7 +67140,7 @@ export const zones = [
   {
     id: '101133',
     name: 'Алматы Климента Тимирязева 42пав7А',
-    color: '4e62a788',
+    color: '4e62a7',
     coordinates: [
       [
         [43.194678, 76.888299],
@@ -67170,7 +67170,7 @@ export const zones = [
   {
     id: '101142',
     name: 'Став. Кра. с Надежда Октябрьская 45',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [46.109571, 43.239409],
@@ -67202,7 +67202,7 @@ export const zones = [
   {
     id: '101143',
     name: 'Шымкент пр-кт Кунаева 36/В',
-    color: 'f4f30c88',
+    color: 'f4f30c',
     coordinates: [
       [
         [42.20838, 69.258362],
@@ -67247,7 +67247,7 @@ export const zones = [
   {
     id: '101144',
     name: 'Екатеринбург Анри Барбюса 6',
-    color: 'df313188',
+    color: 'df3131',
     coordinates: [
       [
         [56.837954, 60.568537],
@@ -67293,7 +67293,7 @@ export const zones = [
   {
     id: '101145',
     name: 'Алтай Бийск имени Героя Советского Союза Васильева 48',
-    color: '8d68eb88',
+    color: '8d68eb',
     coordinates: [
       [
         [53.0381628826009, 86.5527262821844],
@@ -67367,7 +67367,7 @@ export const zones = [
   {
     id: '101146',
     name: 'Ош Ленина 279',
-    color: '5fd3de88',
+    color: '5fd3de',
     coordinates: [
       [
         [40.578311, 72.839708],
@@ -67404,7 +67404,7 @@ export const zones = [
   {
     id: '101148',
     name: 'МО Коломна б-р 800-лет. Коломны 14',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [55.019326, 38.432109],
@@ -67442,7 +67442,7 @@ export const zones = [
   {
     id: '101149',
     name: 'МСК Мироновская 46к1',
-    color: 'ff000088',
+    color: 'ff0000',
     coordinates: [
       [
         [55.789098, 37.716494],
@@ -67478,7 +67478,7 @@ export const zones = [
   {
     id: '101295',
     name: 'Тул. обл. Белёв Карла Маркса 80',
-    color: '17291288',
+    color: '172912',
     coordinates: [
       [
         [53.904338, 36.521027],
@@ -67499,7 +67499,7 @@ export const zones = [
   {
     id: '101334',
     name: 'Астр. Обл Харабали Лесхозная 47А',
-    color: 'e4666688',
+    color: 'e46666',
     coordinates: [
       [
         [47.02495, 47.98159],
@@ -67544,7 +67544,7 @@ export const zones = [
   {
     id: '101335',
     name: 'МО д Кутьино 65с1А',
-    color: 'f4030388',
+    color: 'f40303',
     coordinates: [
       [
         [55.423297, 37.477906],
@@ -67584,7 +67584,7 @@ export const zones = [
   {
     id: '101337',
     name: 'Респ. Инг. Карабулак Вассан-Гирея Джабагиева 138',
-    color: 'cf484888',
+    color: 'cf4848',
     coordinates: [
       [
         [43.613322, 44.630775],
@@ -67659,7 +67659,7 @@ export const zones = [
   {
     id: '101338',
     name: 'Ставрополь К. Хетагурова 7',
-    color: 'b6eeb388',
+    color: 'b6eeb3',
     coordinates: [
       [
         [45.051215, 41.967126],
@@ -67713,7 +67713,7 @@ export const zones = [
   {
     id: '101339',
     name: 'Респ. Инг. Назрань Московская 13А',
-    color: '34337b88',
+    color: '34337b',
     coordinates: [
       [
         [43.269295, 44.569085],
@@ -67752,7 +67752,7 @@ export const zones = [
   {
     id: '101341',
     name: 'Астана Кенжебека Кумисбекова 9/А',
-    color: 'de2a2a88',
+    color: 'de2a2a',
     coordinates: [
       [
         [51.247994, 71.600626],
@@ -67849,7 +67849,7 @@ export const zones = [
   {
     id: '101342',
     name: 'Астана пр-кт Абылай Хана 52',
-    color: 'b4dc1a88',
+    color: 'b4dc1a',
     coordinates: [
       [
         [51.198085, 71.507628],
@@ -67924,7 +67924,7 @@ export const zones = [
   {
     id: '101343',
     name: 'Астана Абикена Бектурова 4/6',
-    color: '10e0e288',
+    color: '10e0e2',
     coordinates: [
       [
         [51.120641, 71.445568],
@@ -68003,7 +68003,7 @@ export const zones = [
   {
     id: '101344',
     name: 'Астана Сыганак 16/1',
-    color: '0cec3888',
+    color: '0cec38',
     coordinates: [
       [
         [51.122686, 71.432831],
@@ -68097,7 +68097,7 @@ export const zones = [
   {
     id: '101345',
     name: 'МСК п. Коммунарка Александры Монаховой 80к3',
-    color: 'f2e50a88',
+    color: 'f2e50a',
     coordinates: [
       [
         [55.553244, 37.496468],
@@ -68137,7 +68137,7 @@ export const zones = [
   {
     id: '101346',
     name: 'МСК пр-кт Будённого 27',
-    color: '19a45188',
+    color: '19a451',
     coordinates: [
       [
         [55.754313, 37.717716],
@@ -68173,7 +68173,7 @@ export const zones = [
   {
     id: '101347',
     name: 'Турк. Обл Кентау пр-кт Яссави 91',
-    color: 'e90ac988',
+    color: 'e90ac9',
     coordinates: [
       [
         [43.537723, 68.486023],
@@ -68199,7 +68199,7 @@ export const zones = [
   {
     id: '101348',
     name: 'ЛО гп Ульяновка Левая линия 49',
-    color: 'd52f2f88',
+    color: 'd52f2f',
     coordinates: [
       [
         [59.71948, 30.804024],
@@ -68233,7 +68233,7 @@ export const zones = [
   {
     id: '101349',
     name: 'ЛО гор пос Мга Железнодорожная 45',
-    color: '309e2c88',
+    color: '309e2c',
     coordinates: [
       [
         [59.671701, 30.9619],
@@ -68278,7 +68278,7 @@ export const zones = [
   {
     id: '101351',
     name: 'СПБ Пушкин Петербургское ш. 15/2',
-    color: 'ffe50088',
+    color: 'ffe500',
     coordinates: [
       [
         [59.711653, 30.312738],
@@ -68358,7 +68358,7 @@ export const zones = [
   {
     id: '101384',
     name: 'Ереван Закяна 10',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [40.178009, 44.512033],
@@ -68392,7 +68392,7 @@ export const zones = [
   {
     id: '101385',
     name: 'МО Солнечногорск 1-я Урицкая 4А',
-    color: 'f11bf288',
+    color: 'f11bf2',
     coordinates: [
       [
         [56.209678, 36.810849],
@@ -68453,7 +68453,7 @@ export const zones = [
   {
     id: '101386',
     name: 'Ереван Егише Чаренца 1Б',
-    color: 'ffffff88',
+    color: 'ffffff',
     coordinates: [
       [
         [40.196118, 44.516687],
@@ -68471,7 +68471,7 @@ export const zones = [
   {
     id: '101388',
     name: 'МСК Каширское шоссе 57к2',
-    color: '1016f088',
+    color: '1016f0',
     coordinates: [
       [
         [55.639413, 37.74796],
@@ -68514,7 +68514,7 @@ export const zones = [
   {
     id: '101389',
     name: 'Новос. Обл Тогучин Вокзальная 25',
-    color: '5cd16b88',
+    color: '5cd16b',
     coordinates: [
       [
         [55.075416, 85.038245],
@@ -68539,7 +68539,7 @@ export const zones = [
   {
     id: '101390',
     name: 'ЛО Приморск Выборгское ш. 7Б',
-    color: 'df462288',
+    color: 'df4622',
     coordinates: [
       [
         [60.421764, 28.375397],
@@ -68560,7 +68560,7 @@ export const zones = [
   {
     id: '101391',
     name: 'ЛО Светогорск Лесная 11',
-    color: '7879e588',
+    color: '7879e5',
     coordinates: [
       [
         [60.824722, 29.044304],
@@ -68586,7 +68586,7 @@ export const zones = [
   {
     id: '101392',
     name: 'СПБ Павловск Детскосельская 6',
-    color: 'ffe88288',
+    color: 'ffe882',
     coordinates: [
       [
         [59.632555, 30.178944],
