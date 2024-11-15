@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { debounceTime, Subject, switchMap, take } from 'rxjs';
 import { Polygon } from 'yandex-maps';
 import { Queue } from '../models/classes/queue';
@@ -12,6 +12,7 @@ import { TPoint } from '../models/types/point.type';
 import { ActionStore } from '../stores/action.store';
 import { ChangesStore } from '../stores/changes.store';
 import { SelectedStore } from '../stores/selected.store';
+import { VersionsStore } from '../stores/versions.store';
 import { VertexesStore } from '../stores/vertexes.store';
 import { ComputingService } from './computing.service';
 import { IntersectionsExtension } from './extends/map.intersections.extension';
@@ -24,18 +25,13 @@ import { MapsHttpService } from './maps.http.service';
 // TODO: 2. Отображать факт наличия пересечений                                                     -
 // TODO: 3. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур -
 // TODO: 4. Исчезновение vertexCount при перетаскивании полигона                                    -
-// TODO: 5. Почему то может не срабатывать прилипание (замечено по отношению к нижней зоне)         +
-// TODO: 6. Переделать горячие клавиши                                                              -
-// TODO: 7. Бага с анимацией изменений                                                              +
-// TODO: 8. Декомпозировать основной сервис                                                         -
-// TODO: 9. Кэш                                                                                     -
+// TODO: 5. Переделать горячие клавиши                                                              -
+// TODO: 6. Декомпозировать основной сервис                                                         -
 
 @Injectable({
   providedIn: 'root',
 })
 export class MapsService {
-  yandexVersion = signal<string>('0');
-
   private _map: any;
   private _polyline: any | PolylineExtension;
   private _polygon: any | PolygonExtension;
@@ -52,6 +48,7 @@ export class MapsService {
   constructor(
     private readonly _http: MapsHttpService,
     private readonly _settings: MapSettingsExtension,
+    private readonly _versions: VersionsStore,
     private readonly _computing: ComputingService,
     private readonly _changes: ChangesStore,
     private readonly _action: ActionStore,
@@ -59,7 +56,7 @@ export class MapsService {
     private readonly _vertexes: VertexesStore
   ) {
     this.YANDEX_MAPS.ready(() => {
-      this.yandexVersion.set(this.YANDEX_MAPS.meta.version);
+      this._versions.yandex = this.YANDEX_MAPS.meta.version;
 
       const { center, zoom, controls, maxZoom, minZoom } = this._settings.map;
 

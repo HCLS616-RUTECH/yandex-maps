@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, VERSION } from '@angular/core';
-import { MapsService } from '../../../../services/maps.service';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { VersionsStore } from '../../../../stores/versions.store';
 
 @Component({
   selector: 'app-footer',
@@ -10,13 +10,13 @@ import { MapsService } from '../../../../services/maps.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
-  constructor(private readonly _mapService: MapsService) {}
+  constructor(private readonly _versions: VersionsStore) {}
 
-  get angularVersion(): string {
-    return VERSION.full;
+  get angular(): string {
+    return this._versions.angular;
   }
 
-  get yandexVersion(): string {
-    return this._mapService.yandexVersion();
+  get yandex(): string {
+    return this._versions.yandex;
   }
 }
