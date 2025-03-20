@@ -196,6 +196,8 @@ export class MapsService {
       return;
     }
 
+    this._selected.manipulations = { computing: true };
+
     const defaultParams = this._selected.defaultParams!;
 
     this._selected.params = params.reduce(
@@ -206,6 +208,8 @@ export class MapsService {
     this._selected.changes.length
       ? this._changes.edit(this._selected.state)
       : this._changes.remove(this._selected.params!.id, 'edited');
+
+    this._selected.manipulations = { computing: false };
   };
 
   clearShapes = (): void => {

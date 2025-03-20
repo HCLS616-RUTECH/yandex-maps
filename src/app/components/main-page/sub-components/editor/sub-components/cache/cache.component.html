@@ -5,7 +5,7 @@
           [ngClass]="{'text-yellow-500': cache.index > 0}"
   ><</button>
 
-  <div class="text-yellow-500">КЭШ: {{cache.length}}</div>
+  <div class="text-yellow-500">КЭШ: {{cache.length}} ({{cache.index + 1}})</div>
 
   <button class="cursor-pointer"
           (click)="setCache('forward')"
