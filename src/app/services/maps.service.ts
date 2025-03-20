@@ -18,6 +18,7 @@ import { ComputingService } from './computing.service';
 import { IntersectionsExtension } from './extends/map.intersections.extension';
 import { PolygonExtension } from './extends/map.polygon.extension';
 import { PolylineExtension } from './extends/map.polyline.extension';
+import { MapKeyboardExtension } from './extensions/map/map.keyboard.extension';
 import { MapSettingsExtension } from './extensions/map/map.settings.extension';
 import { MapsHttpService } from './maps.http.service';
 
@@ -36,6 +37,7 @@ export class MapsService {
   private _polyline: any | PolylineExtension;
   private _polygon: any | PolygonExtension;
   private _intersections: any | IntersectionsExtension;
+  private _keyboard: any | MapKeyboardExtension;
 
   private readonly _polygons = new Map<string, any>();
   private readonly _visiblePolygons = new Map<string, any>();
@@ -94,6 +96,12 @@ export class MapsService {
         this._polygons
       );
 
+      this._keyboard = new MapKeyboardExtension(
+        this,
+        this._action,
+        this._selected
+      );
+
       this._request$
         .pipe(
           debounceTime(300),
@@ -118,61 +126,7 @@ export class MapsService {
   }
 
   keyboardHandler = (event: KeyboardEvent): void => {
-    if (event.key === 'Escape') {
-      this._polyline.clear(this._drawingHandler);
-
-      this._polygon.clear(this._drawingHandler);
-
-      this._selected.clear();
-    }
-
-    if (/[zя]/i.test(event.key)) {
-      return this.setActionState('DRAWING_POLYLINE');
-    }
-
-    if (/[xч]/i.test(event.key)) {
-      return this.setActionState('DRAWING_POLYGON');
-    }
-
-    if (/[dв]/i.test(event.key)) {
-      if (this._selected.state) {
-        this.setActionState('DRAG_POLYGON');
-      }
-      return;
-    }
-
-    if (/[cс]/i.test(event.key)) {
-      if (this._selected.state) {
-        this.setActionState('EDITING_POLYGON');
-      }
-      return;
-    }
-
-    if (/[sы]/i.test(event.key)) {
-      if (this._selected.state) {
-        this.setActionState('DELETE_POLYGON');
-      }
-      return;
-    }
-
-    if (event.key === 'Delete') {
-      if (this._selected.state) {
-        this.setActionState('DELETE_POLYGON');
-      }
-      return;
-    }
-
-    if (event.key === 'Enter') {
-      if (this._action.state === 'EMPTY' && this._selected.state) {
-        return this.setActionState('EDITING_POLYGON');
-      }
-
-      return this.setActionState(this._action.state);
-    }
-
-    if (/[qй]/i.test(event.key)) {
-      return this.updateMap();
-    }
+    this._keyboard.handler(event);
   };
 
   setActionState(state: TActionState): void {
@@ -207,9 +161,8 @@ export class MapsService {
     this._changes.clear();
 
     this._intersections.clear();
-    this._selected.clear();
-    this._polyline.clear(this._drawingHandler);
-    this._polygon.clear(this._drawingHandler);
+
+    this.clearShapes();
 
     this._action.state = 'EMPTY';
 
@@ -253,6 +206,12 @@ export class MapsService {
     this._selected.changes.length
       ? this._changes.edit(this._selected.state)
       : this._changes.remove(this._selected.params!.id, 'edited');
+  };
+
+  clearShapes = (): void => {
+    this._polyline.clear(this._drawingHandler);
+    this._polygon.clear(this._drawingHandler);
+    this._selected.clear();
   };
 
   private _addNewPolygons(zones: IZone[]): void {
@@ -597,6 +556,8 @@ export class MapsService {
       this.setNewParams({
         coordinates: [this._computing.deleteSamePoints(newCoordinates)],
       });
+    } else {
+      this._selected.check({ coordinates: [coordinates] });
     }
 
     this._selected.changes.length

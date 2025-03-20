@@ -64,7 +64,7 @@ export class SelectedCacheExtension {
     this._setProcessState(false);
   };
 
-  go = (to: 'back' | 'forward'): void => {
+  move = (to: 'back' | 'forward'): void => {
     const value = this._selected.state;
     if (!value) {
       return;

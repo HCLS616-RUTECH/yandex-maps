@@ -159,7 +159,12 @@ export class SelectedStore {
   }
 
   set cache(to: 'back' | 'forward') {
-    this._cache.go(to);
+    const { value } = this._state$;
+    if (!value) {
+      return;
+    }
+
+    this._cache.move(to);
 
     this.update();
   }
