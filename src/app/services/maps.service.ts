@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
 import { debounceTime, Subject, switchMap, take } from 'rxjs';
 import { Polygon } from 'yandex-maps';
-import { Queue } from '../models/classes/queue';
-import { IOptions } from '../models/interfaces/options.interface';
 import { IZone } from '../models/interfaces/zone.interface';
 import { TActionState } from '../models/types/action-state.type';
 import { TBbox } from '../models/types/bbox.type';
-import { TCache } from '../models/types/cache.type';
 import { TChangedParam } from '../models/types/changed-param.type';
 import { TPoint } from '../models/types/point.type';
 import { ActionStore } from '../stores/action.store';
 import { ChangesStore } from '../stores/changes.store';
+import { MapSourcesStore } from '../stores/map-sources.store';
 import { MapStore } from '../stores/map.store';
 import { SelectedStore } from '../stores/selected.store';
 import { VersionsStore } from '../stores/versions.store';
@@ -27,18 +25,13 @@ import { MapsHttpService } from './maps.http.service';
 // TODO: 2. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур        -
 // TODO: 3. Декомпозировать основной сервис                                                                -
 // TODO: 4. Бага с дижением кэша вправо по клавише                                                         -
-// TODO: 3. Бага с добавлением первой точки нового полигона или кривой в пределах существующего полигона   -
+// TODO: 5. Бага с добавлением первой точки нового полигона или кривой в пределах существующего полигона   -
 
 interface IExtensions {
   polyline: PolylineExtension;
   polygon: PolygonExtension;
   intersections: IntersectionsExtension;
   keyboard: MapKeyboardExtension;
-}
-
-interface ISources {
-  polygons: { all: Map<string, any>; visible: Map<string, any> };
-  zones: Map<string, IZone>;
 }
 
 @Injectable({
@@ -50,10 +43,6 @@ export class MapsService {
   private _intersections: any | IntersectionsExtension;
   private _keyboard: any | MapKeyboardExtension;
 
-  private readonly _polygons = new Map<string, any>();
-  private readonly _visiblePolygons = new Map<string, any>();
-  private readonly _zones = new Map<string, IZone>();
-
   private readonly _request$ = new Subject<TBbox>();
 
   private readonly YANDEX_MAPS = (window as any).ymaps;
@@ -61,6 +50,7 @@ export class MapsService {
   constructor(
     private readonly _http: MapsHttpService,
     private readonly _map: MapStore,
+    private readonly _sources: MapSourcesStore,
     private readonly _settings: MapSettingsExtension,
     private readonly _versions: VersionsStore,
     private readonly _computing: ComputingService,
@@ -99,7 +89,7 @@ export class MapsService {
         this._settings,
         this._selected,
         this._action,
-        this._polygons
+        this._sources
       );
 
       this._keyboard = new MapKeyboardExtension(
@@ -162,10 +152,8 @@ export class MapsService {
   }
 
   updateMap(): void {
-    this._map.clear(this._polygons);
-    this._polygons.clear();
-
-    this._visiblePolygons.clear();
+    this._map.clear(this._sources.state.polygons.all);
+    this._sources.clear();
 
     this._map.clear(this._changes.state.new);
     this._changes.clear();
@@ -230,7 +218,7 @@ export class MapsService {
 
   private _addNewPolygons(zones: IZone[]): void {
     const changes = this._changes.state;
-    this._zones.clear();
+    this._sources.clear('ZONES');
 
     const newPolygons: Polygon[] = [];
 
@@ -239,48 +227,25 @@ export class MapsService {
         continue;
       }
 
-      this._zones.set(zone.id, zone);
+      this._sources.add.zone(zone.id);
 
-      const visiblePolygon = this._visiblePolygons.get(zone.id);
+      const visible = this._sources.get(zone.id, 'POLYGONS_VISIBLE');
 
-      if (visiblePolygon) {
+      if (visible) {
         // Чинит багу яндекс карт, при которой не до конца отрисовывается полигон, при движении экрана по картам
-        visiblePolygon.options.set(
-          'fillColor',
-          visiblePolygon.options.get('fillColor')
-        );
+        visible.options.set('fillColor', visible.options.get('fillColor'));
         continue;
       }
 
-      if (this._polygons.has(zone.id)) {
-        this._visiblePolygons.set(zone.id, this._polygons.get(zone.id));
-        this._map.add(this._polygons.get(zone.id));
-        newPolygons.push(this._polygons.get(zone.id));
+      if (this._sources.has(zone.id, 'POLYGONS_ALL')) {
+        const current = this._sources.get(zone.id, 'POLYGONS_ALL');
+        this._sources.add.polygon.visible(zone.id, current);
+        this._map.add(current);
+        newPolygons.push(current);
         continue;
       }
 
-      const options: IOptions = {
-        id: zone.id,
-        name: zone.name,
-        bbox: zone.bbox,
-        new: false,
-        default: {
-          coordinates: zone.coordinates,
-          bbox: zone.bbox,
-          name: zone.name,
-          color: zone.color,
-        },
-        cache: {
-          index: 0,
-          queue: new Queue<TCache>({
-            name: zone.name,
-            color: zone.color,
-            coordinates: zone.coordinates,
-          }),
-        },
-        manipulations: { caches: false, computing: false, drag: false },
-        changes: new Set(),
-      };
+      const options = this._sources.options(zone, false);
 
       const polygon = new this.YANDEX_MAPS.Polygon(zone.coordinates, options, {
         ...this._settings.stroke,
@@ -290,41 +255,42 @@ export class MapsService {
       this._initPolygonActions(polygon);
 
       newPolygons.push(polygon);
-      this._polygons.set(zone.id, polygon);
-      this._visiblePolygons.set(zone.id, this._polygons.get(zone.id));
+      this._sources.add.polygon.all(zone.id, polygon);
+      this._sources.add.polygon.visible(zone.id, polygon);
       this._map.add(polygon);
     }
 
-    this._visiblePolygons.forEach((polygon, id) => {
-      if (
-        !this._zones.has(id) &&
+    this._sources.state.polygons.visible.forEach((polygon, id) => {
+      const requirement =
+        !this._sources.has(id, 'ZONES') &&
         !changes.new.has(id) &&
-        !changes.edited.has(id)
-      ) {
+        !changes.edited.has(id);
+
+      if (requirement) {
         this._map.remove(polygon);
-        this._visiblePolygons.delete(id);
+        this._sources.remove(id, 'POLYGONS_VISIBLE');
       }
     });
 
-    const screenBbox = this._map.bounds;
+    const { bounds } = this._map;
 
     changes.edited.forEach((polygon, id) => {
       const isBboxesIntersected = this._computing.isBBoxesIntersected(
         polygon.properties.get('bbox') as never as TBbox,
-        screenBbox
+        bounds
       );
 
-      if (isBboxesIntersected && this._visiblePolygons.has(id)) {
+      if (isBboxesIntersected && this._sources.has(id, 'POLYGONS_VISIBLE')) {
         return;
       }
 
-      if (!isBboxesIntersected && this._visiblePolygons.has(id)) {
+      if (!isBboxesIntersected && this._sources.has(id, 'POLYGONS_VISIBLE')) {
         this._map.remove(polygon);
-        this._visiblePolygons.delete(id);
+        this._sources.remove(id, 'POLYGONS_VISIBLE');
       }
 
-      if (isBboxesIntersected && !this._visiblePolygons.has(id)) {
-        this._visiblePolygons.set(id, this._polygons.get(id));
+      if (isBboxesIntersected && !this._sources.has(id, 'POLYGONS_VISIBLE')) {
+        this._sources.add.polygon.visible(id, polygon);
         this._map.add(polygon);
         newPolygons.push(polygon);
       }
@@ -333,16 +299,16 @@ export class MapsService {
     changes.new.forEach((polygon, id) => {
       const isBboxesIntersected = this._computing.isBBoxesIntersected(
         polygon.properties.get('bbox') as never as TBbox,
-        screenBbox
+        bounds
       );
 
-      if (!isBboxesIntersected && this._visiblePolygons.has(id)) {
+      if (!isBboxesIntersected && this._sources.has(id, 'POLYGONS_VISIBLE')) {
         this._map.remove(polygon);
-        this._visiblePolygons.delete(id);
+        this._sources.remove(id, 'POLYGONS_VISIBLE');
       }
 
-      if (isBboxesIntersected && !this._visiblePolygons.has(id)) {
-        this._visiblePolygons.set(id, this._polygons.get(id));
+      if (isBboxesIntersected && !this._sources.has(id, 'POLYGONS_VISIBLE')) {
+        this._sources.add.polygon.visible(id, polygon);
         this._map.add(polygon);
         newPolygons.push(polygon);
       }
@@ -350,7 +316,7 @@ export class MapsService {
 
     this._settings.animatePolygons(newPolygons);
 
-    this._intersections.checkBounds(screenBbox);
+    this._intersections.checkBounds(bounds);
   }
 
   private _drawingPolygon(): void {
@@ -402,8 +368,8 @@ export class MapsService {
       this._selected.state = polygon;
       this.setActionState('EDITING_POLYGON');
 
-      this._polygons.set(id, polygon);
-      this._visiblePolygons.set(id, polygon);
+      this._sources.add.polygon.all(id, polygon);
+      this._sources.add.polygon.visible(id, polygon);
 
       this._intersections.check(polygon);
     }
@@ -434,8 +400,8 @@ export class MapsService {
 
     const id = selected.properties.get('id') as never as string;
 
-    this._polygons.delete(id);
-    this._visiblePolygons.delete(id);
+    this._sources.remove(id, 'POLYGONS_ALL');
+    this._sources.remove(id, 'POLYGONS_VISIBLE');
 
     this._changes.delete(selected);
 
@@ -627,7 +593,7 @@ export class MapsService {
 
     const newPoint = coordinates[vertexIndex];
 
-    const polygons = Array.from(this._polygons.values());
+    const polygons = this._sources.values('POLYGONS_ALL');
 
     for (let i = 0; i < polygons.length; i++) {
       if (
@@ -754,101 +720,4 @@ export class MapsService {
 
     return newCoordinates;
   };
-
-  // private _initPlaceMark(): void {
-  //   this._placemark = new this.YANDEX_MAPS.Placemark(
-  //     [0, 0],
-  //     {},
-  //     {
-  //       cursor: 'grab',
-  //       iconLayout: 'default#imageWithContent',
-  //       iconContentLayout: this.YANDEX_MAPS.templateLayoutFactory.createClass(
-  //         '<div style="width: 15px; height: 15px; background-color: white; border: 1px solid black; border-radius: 50%;"></div>'
-  //       ),
-  //       iconImageSize: [15, 15],
-  //       iconImageOffset: [-10, -10],
-  //     }
-  //   );
-  //   this._map.geoObjects.add(this._placemark);
-  //   this._map.events.add('mousemove', this._movePlaceMark);
-  //   this._placemark.events.add('click', this._onPointClick);
-  // }
-  //
-  // private _movePlaceMark = (e: any): void => {
-  //   const coords = e.get('coords');
-  //   this._placemark.geometry.setCoordinates(coords);
-  // };
-
-  // private _initDash(): void {
-  //   this._dash = new this.YANDEX_MAPS.Polyline(
-  //     [
-  //       [0, 0],
-  //       [0, 0],
-  //     ],
-  //     {},
-  //     {
-  //       strokeColor: '#00000088',
-  //       strokeWidth: 3,
-  //       strokeStyle: 'dash',
-  //       editorMaxPoints: 2,
-  //       // editorMenuManager: function (items) {
-  //       //   items.push({
-  //       //     title: 'Удалить линию',
-  //       //     onClick: function () {
-  //       //       myMap.geoObjects.remove(myPolyline);
-  //       //     },
-  //       //   });
-  //       //   return items;
-  //       // },
-  //     }
-  //   );
-  //   this._map.geoObjects.add(this._dash);
-  //   this._map.events.add('mousemove', this._moveDash);
-  // }
-  //
-  // private _moveDash = (e: any): void => {
-  //   const coordinates = this._polyline.geometry.getCoordinates();
-  //
-  //   if (!coordinates.length) {
-  //     return;
-  //   }
-  //
-  //   const lastPoint = coordinates[coordinates.length - 1];
-  //   const dynamicPoint = e.get('coords');
-  //
-  //   this._dash.geometry.setCoordinates([lastPoint, dynamicPoint]);
-  // };
-
-  // private _onPointClick = (e: any): void => {
-  //   if (!this._polyline) {
-  //     return;
-  //   }
-  //
-  //   console.log([...this._polyline.geometry.getCoordinates(), e.get('coords')]);
-  //
-  //   this._polyline.geometry.setCoordinates([
-  //     ...this._polyline.geometry.getCoordinates(),
-  //     e.get('coords'),
-  //   ]);
-  // };
-  //
-
-  // private _updateLastPoint = (e: any): void => {
-  //   if (!this._drawing) {
-  //     return;
-  //   }
-  //
-  //   const coords = this._snapToGrid(e.get('coords'));
-  //
-  //   const updatedCoords = this._polyline.geometry.getCoordinates().slice();
-  //   updatedCoords[updatedCoords.length - 1] = coords;
-  //   this._polyline.geometry.setCoordinates(updatedCoords);
-  // };
-  //
-  // private _snapToGrid = (coords: [number, number]): [number, number] => {
-  //   const gridSize = 0.01; // Размер сетки (чем меньше, тем ближе примагничивание)
-  //   const snappedLat = Math.round(coords[0] / gridSize) * gridSize;
-  //   const snappedLng = Math.round(coords[1] / gridSize) * gridSize;
-  //   return [snappedLat, snappedLng];
-  // };
 }

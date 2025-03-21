@@ -2,6 +2,7 @@ import { signal } from '@angular/core';
 import { featureCollection, intersect, polygon } from '@turf/turf';
 import { TBbox } from '../../models/types/bbox.type';
 import { ActionStore } from '../../stores/action.store';
+import { MapSourcesStore } from '../../stores/map-sources.store';
 import { SelectedStore } from '../../stores/selected.store';
 import { ComputingService } from '../computing.service';
 import { MapSettingsExtension } from '../extensions/map/map.settings.extension';
@@ -20,7 +21,7 @@ export class IntersectionsExtension {
     private readonly _settings: MapSettingsExtension,
     private readonly _selected: SelectedStore,
     private readonly _action: ActionStore,
-    private readonly _polygons: Map<string, any>
+    private readonly _sources: MapSourcesStore
   ) {}
 
   get existence(): boolean {
@@ -104,7 +105,10 @@ export class IntersectionsExtension {
 
       this.delete(id);
 
-      const anotherPolygonWithIntersections = this._polygons.get(id);
+      const anotherPolygonWithIntersections = this._sources.get(
+        id,
+        'POLYGONS_ALL'
+      );
 
       if (anotherPolygonWithIntersections) {
         this._checkIntersections(anotherPolygonWithIntersections);
@@ -143,7 +147,7 @@ export class IntersectionsExtension {
   private _getIntersections = (currentPolygon: any): any[] => {
     let intersections: any[] = [];
 
-    this._polygons.forEach((cachePolygon) => {
+    this._sources.state.polygons.all.forEach((cachePolygon) => {
       if (
         cachePolygon.properties.get('id') ===
         currentPolygon.properties.get('id')
@@ -244,7 +248,7 @@ export class IntersectionsExtension {
   private _clickHandler = (e: any) => {
     const id = e.originalEvent.target.properties.get('id');
 
-    this._selected.state = this._polygons.get(id);
+    this._selected.state = this._sources.get(id, 'POLYGONS_ALL');
 
     if (!this._selected.state && this._action.state === 'EDITING_POLYGON') {
       e.originalEvent.target.editor.stopEditing();
