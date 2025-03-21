@@ -13,6 +13,7 @@ import { VertexesStore } from '../../../../stores/vertexes.store';
 import { ActionComponent } from './sub-components/action/action.component';
 import { CacheComponent } from './sub-components/cache/cache.component';
 import { ChangesComponent } from './sub-components/changes/changes.component';
+import { IntersectionsComponent } from './sub-components/intersections/intersections.component';
 import { SelectedParamsComponent } from './sub-components/selected-params/selected-params.component';
 import { VertexCountComponent } from './sub-components/vertex-count/vertex-count.component';
 
@@ -28,6 +29,7 @@ import { VertexCountComponent } from './sub-components/vertex-count/vertex-count
     SelectedParamsComponent,
     ChangesComponent,
     CacheComponent,
+    IntersectionsComponent,
   ],
   templateUrl: './editor.component.html',
   styleUrl: './editor.component.scss',
@@ -36,7 +38,7 @@ import { VertexCountComponent } from './sub-components/vertex-count/vertex-count
 })
 export class EditorComponent {
   constructor(
-    private readonly _mapService: MapsService,
+    private readonly _main: MapsService,
     private readonly _selected: SelectedStore,
     private readonly _vertexes: VertexesStore,
     private readonly _action: ActionStore
@@ -65,15 +67,23 @@ export class EditorComponent {
     return this._action.state;
   }
 
+  get intersections(): boolean {
+    return this._main.intersections;
+  }
+
   handleChangeParams(params: Partial<IZone>): void {
-    this._mapService.setNewParams(params);
+    this._main.setNewParams(params);
   }
 
   handleClearParams(params: TChangedParam[]): void {
-    this._mapService.clearChangedParams(params);
+    this._main.clearChangedParams(params);
   }
 
   handleSetCache(to: 'back' | 'forward'): void {
     this._selected.cache = to;
+  }
+
+  handleFlyToInterSection(): void {
+    this._main.flyToIntersection();
   }
 }

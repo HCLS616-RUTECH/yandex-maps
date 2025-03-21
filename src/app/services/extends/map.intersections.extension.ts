@@ -1,3 +1,4 @@
+import { signal } from '@angular/core';
 import { featureCollection, intersect, polygon } from '@turf/turf';
 import { TBbox } from '../../models/types/bbox.type';
 import { ActionStore } from '../../stores/action.store';
@@ -6,7 +7,11 @@ import { ComputingService } from '../computing.service';
 import { MapSettingsExtension } from '../extensions/map/map.settings.extension';
 
 export class IntersectionsExtension {
-  private _intersections = new Map<string, any>();
+  private readonly _intersections = new Map<string, any>();
+
+  private readonly _existence = signal<boolean>(false);
+
+  private _flyIndex = 0;
 
   constructor(
     private readonly _map: any,
@@ -17,6 +22,31 @@ export class IntersectionsExtension {
     private readonly _action: ActionStore,
     private readonly _polygons: Map<string, any>
   ) {}
+
+  get existence(): boolean {
+    return this._existence();
+  }
+
+  fly = (): void => {
+    if (!this._intersections.size) {
+      return;
+    }
+
+    const keys = Array.from(this._intersections.keys());
+
+    const index = this._index();
+
+    const intersection = this._intersections.get(keys[index])[0];
+
+    const bbox = intersection.properties.get('bbox');
+
+    const point = this._computing.getBboxCenter(bbox);
+
+    this._map.panTo(point, {
+      flying: true,
+      duration: 500,
+    });
+  };
 
   checkBounds = (screenBbox: TBbox): void => {
     if (!this._intersections.size) {
@@ -80,10 +110,14 @@ export class IntersectionsExtension {
         this._checkIntersections(anotherPolygonWithIntersections);
       }
     }
+
+    this._existence.set(!!this._intersections.size);
   };
 
   clear = (): void => {
     this._intersections.forEach((polygons, id) => this.delete(id));
+
+    this._existence.set(!!this._intersections.size);
   };
 
   delete = (id: string): void => {
@@ -216,5 +250,17 @@ export class IntersectionsExtension {
       e.originalEvent.target.editor.stopEditing();
       this._action.state = 'EMPTY';
     }
+  };
+
+  private _index = (): number => {
+    const current = this._flyIndex;
+
+    this._flyIndex = this._flyIndex + 1;
+
+    if (this._flyIndex > this._intersections.size - 1) {
+      this._flyIndex = 0;
+    }
+
+    return current;
   };
 }

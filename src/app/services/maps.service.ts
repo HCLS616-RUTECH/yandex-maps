@@ -22,12 +22,9 @@ import { MapKeyboardExtension } from './extensions/map/map.keyboard.extension';
 import { MapSettingsExtension } from './extensions/map/map.settings.extension';
 import { MapsHttpService } from './maps.http.service';
 
-// TODO: 1. Бага с цветом при перетаскивании (быстро нажимать)                                      -
-// TODO: 2. Отображать факт наличия пересечений                                                     -
-// TODO: 3. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур -
-// TODO: 4. Исчезновение vertexCount при перетаскивании полигона                                    -
-// TODO: 5. Переделать горячие клавиши                                                              -
-// TODO: 6. Декомпозировать основной сервис                                                         -
+// TODO: 1. Бага с цветом при перетаскивании (быстро нажимать)                                      - -
+// TODO: 2. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур -
+// TODO: 3. Декомпозировать основной сервис                                                         -
 
 @Injectable({
   providedIn: 'root',
@@ -125,8 +122,16 @@ export class MapsService {
     });
   }
 
+  get intersections(): boolean {
+    return this._intersections.existence;
+  }
+
   keyboardHandler = (event: KeyboardEvent): void => {
     this._keyboard.handler(event);
+  };
+
+  flyToIntersection = (): void => {
+    this._intersections.fly();
   };
 
   setActionState(state: TActionState): void {

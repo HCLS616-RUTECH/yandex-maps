@@ -115,6 +115,17 @@ export class ComputingService {
     return isLatOverlap && isLngOverlap;
   };
 
+  getBboxCenter = (bbox: TBbox): TPoint => {
+    const [southWest, northEast] = bbox;
+    const [minLon, minLat] = southWest;
+    const [maxLon, maxLat] = northEast;
+
+    const centerLon = (minLon + maxLon) / 2;
+    const centerLat = (minLat + maxLat) / 2;
+
+    return [centerLon, centerLat];
+  };
+
   getClosestPoint(targetPoint: TPoint, coordinates: TPoint[]): TPoint {
     let closestPoint = coordinates[0];
     let minDistance = Infinity;

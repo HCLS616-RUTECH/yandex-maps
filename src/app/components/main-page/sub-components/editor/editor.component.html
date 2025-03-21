@@ -1,6 +1,11 @@
 <aside class="bg-black-1000 text-white-1000 max-h-full h-full w-full flex flex-col overflow-auto p-2">
   <app-action [action]="action"></app-action>
 
+  <app-intersections *ngIf="intersections"
+                     (onClick)="handleFlyToInterSection()"
+                     [@vertical]
+  ></app-intersections>
+
   <app-vertex-count *ngIf="vertexes$ | async as count" [count]="count" [@vertical]></app-vertex-count>
 
   <app-selected-params *ngIf="selected$ | async as params"
