@@ -11,6 +11,7 @@ import { TChangedParam } from '../models/types/changed-param.type';
 import { TPoint } from '../models/types/point.type';
 import { ActionStore } from '../stores/action.store';
 import { ChangesStore } from '../stores/changes.store';
+import { MapStore } from '../stores/map.store';
 import { SelectedStore } from '../stores/selected.store';
 import { VersionsStore } from '../stores/versions.store';
 import { VertexesStore } from '../stores/vertexes.store';
@@ -22,15 +23,28 @@ import { MapKeyboardExtension } from './extensions/map/map.keyboard.extension';
 import { MapSettingsExtension } from './extensions/map/map.settings.extension';
 import { MapsHttpService } from './maps.http.service';
 
-// TODO: 1. Бага с цветом при перетаскивании (быстро нажимать)                                      - -
-// TODO: 2. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур -
-// TODO: 3. Декомпозировать основной сервис                                                         -
+// TODO: 1. Бага с цветом при перетаскивании (быстро нажимать)                                             -
+// TODO: 2. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур        -
+// TODO: 3. Декомпозировать основной сервис                                                                -
+// TODO: 4. Бага с дижением кэша вправо по клавише                                                         -
+// TODO: 3. Бага с добавлением первой точки нового полигона или кривой в пределах существующего полигона   -
+
+interface IExtensions {
+  polyline: PolylineExtension;
+  polygon: PolygonExtension;
+  intersections: IntersectionsExtension;
+  keyboard: MapKeyboardExtension;
+}
+
+interface ISources {
+  polygons: { all: Map<string, any>; visible: Map<string, any> };
+  zones: Map<string, IZone>;
+}
 
 @Injectable({
   providedIn: 'root',
 })
 export class MapsService {
-  private _map: any;
   private _polyline: any | PolylineExtension;
   private _polygon: any | PolygonExtension;
   private _intersections: any | IntersectionsExtension;
@@ -46,6 +60,7 @@ export class MapsService {
 
   constructor(
     private readonly _http: MapsHttpService,
+    private readonly _map: MapStore,
     private readonly _settings: MapSettingsExtension,
     private readonly _versions: VersionsStore,
     private readonly _computing: ComputingService,
@@ -57,16 +72,10 @@ export class MapsService {
     this.YANDEX_MAPS.ready(() => {
       this._versions.yandex = this.YANDEX_MAPS.meta.version;
 
-      const { center, zoom, controls, maxZoom, minZoom } = this._settings.map;
-
-      this._map = new this.YANDEX_MAPS.Map(
-        'map',
-        { center, zoom, controls },
-        { minZoom, maxZoom }
-      );
+      this._map.init(this._request$);
 
       this._polyline = new PolylineExtension(
-        this._map,
+        this._map.state,
         this.YANDEX_MAPS,
         this._action,
         this._vertexes,
@@ -75,7 +84,7 @@ export class MapsService {
       );
 
       this._polygon = new PolygonExtension(
-        this._map,
+        this._map.state,
         this.YANDEX_MAPS,
         this._action,
         this._vertexes,
@@ -84,7 +93,7 @@ export class MapsService {
       );
 
       this._intersections = new IntersectionsExtension(
-        this._map,
+        this._map.state,
         this.YANDEX_MAPS,
         this._computing,
         this._settings,
@@ -105,25 +114,23 @@ export class MapsService {
           switchMap((bbox) => this._http.getZones(bbox))
         )
         .subscribe({
-          next: (zones) => this._addNewPolygons(zones),
+          next: (zones) => {
+            this._addNewPolygons(zones);
+          },
         });
-
-      this._map.events.add('boundschange', (e: any) =>
-        this._request$.next(this._map.getBounds())
-      );
 
       // this._map.events.add('click', (event: any) =>
       //   console.log(event.get('coords'))
       // );
 
-      this._request$.next(this._map.getBounds());
+      this._request$.next(this._map.bounds);
 
       document.querySelector('.ymaps-2-1-79-map-copyrights-promo')?.remove();
     });
   }
 
   get intersections(): boolean {
-    return this._intersections.existence;
+    return this._intersections?.existence ?? false;
   }
 
   keyboardHandler = (event: KeyboardEvent): void => {
@@ -155,14 +162,12 @@ export class MapsService {
   }
 
   updateMap(): void {
-    this._polygons.forEach((polygon) => this._map.geoObjects.remove(polygon));
+    this._map.clear(this._polygons);
     this._polygons.clear();
 
     this._visiblePolygons.clear();
 
-    this._changes.state.new.forEach((polygon) =>
-      this._map.geoObjects.remove(polygon)
-    );
+    this._map.clear(this._changes.state.new);
     this._changes.clear();
 
     this._intersections.clear();
@@ -171,7 +176,7 @@ export class MapsService {
 
     this._action.state = 'EMPTY';
 
-    this._request$.next(this._map.getBounds());
+    this._request$.next(this._map.bounds);
   }
 
   saveChanges(): void {
@@ -249,7 +254,7 @@ export class MapsService {
 
       if (this._polygons.has(zone.id)) {
         this._visiblePolygons.set(zone.id, this._polygons.get(zone.id));
-        this._map.geoObjects.add(this._polygons.get(zone.id));
+        this._map.add(this._polygons.get(zone.id));
         newPolygons.push(this._polygons.get(zone.id));
         continue;
       }
@@ -287,7 +292,7 @@ export class MapsService {
       newPolygons.push(polygon);
       this._polygons.set(zone.id, polygon);
       this._visiblePolygons.set(zone.id, this._polygons.get(zone.id));
-      this._map.geoObjects.add(polygon);
+      this._map.add(polygon);
     }
 
     this._visiblePolygons.forEach((polygon, id) => {
@@ -296,12 +301,12 @@ export class MapsService {
         !changes.new.has(id) &&
         !changes.edited.has(id)
       ) {
-        this._map.geoObjects.remove(polygon);
+        this._map.remove(polygon);
         this._visiblePolygons.delete(id);
       }
     });
 
-    const screenBbox = this._map.getBounds();
+    const screenBbox = this._map.bounds;
 
     changes.edited.forEach((polygon, id) => {
       const isBboxesIntersected = this._computing.isBBoxesIntersected(
@@ -314,13 +319,13 @@ export class MapsService {
       }
 
       if (!isBboxesIntersected && this._visiblePolygons.has(id)) {
-        this._map.geoObjects.remove(polygon);
+        this._map.remove(polygon);
         this._visiblePolygons.delete(id);
       }
 
       if (isBboxesIntersected && !this._visiblePolygons.has(id)) {
         this._visiblePolygons.set(id, this._polygons.get(id));
-        this._map.geoObjects.add(polygon);
+        this._map.add(polygon);
         newPolygons.push(polygon);
       }
     });
@@ -332,13 +337,13 @@ export class MapsService {
       );
 
       if (!isBboxesIntersected && this._visiblePolygons.has(id)) {
-        this._map.geoObjects.remove(polygon);
+        this._map.remove(polygon);
         this._visiblePolygons.delete(id);
       }
 
       if (isBboxesIntersected && !this._visiblePolygons.has(id)) {
         this._visiblePolygons.set(id, this._polygons.get(id));
-        this._map.geoObjects.add(polygon);
+        this._map.add(polygon);
         newPolygons.push(polygon);
       }
     });
@@ -434,7 +439,7 @@ export class MapsService {
 
     this._changes.delete(selected);
 
-    this._map.geoObjects.remove(selected);
+    this._map.remove(selected);
 
     this._intersections.delete(id);
     this._intersections.checkAll();
