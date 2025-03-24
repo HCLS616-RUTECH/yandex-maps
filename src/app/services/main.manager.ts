@@ -17,8 +17,7 @@ import { ComputingService } from './computing.service';
 import { MainExtensions } from './extensions/main/main.extensions.extension';
 import { MapsHttpService } from './maps.http.service';
 
-// TODO: 1. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур        - -
-// TODO: 2. Бага с добавлением первой точки нового полигона или кривой в пределах существующего полигона   -
+// TODO: 1. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур        -
 
 @Injectable({
   providedIn: 'root',

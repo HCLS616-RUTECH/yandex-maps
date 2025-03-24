@@ -194,6 +194,12 @@ export class MainHandlersExtension {
           polygons[i].geometry.getCoordinates()[0]
         );
 
+        if (
+          this._computing.isSamePoints(coordinates[vertexIndex], closestPoint)
+        ) {
+          continue;
+        }
+
         switch (this._action.state) {
           case 'DRAWING_POLYLINE':
             result = this._changeCoordinatesForPolyline(

@@ -50,7 +50,7 @@ export class PolylineExtension {
     value.editor.startDrawing();
   }
 
-  startDrawing(drawingHandler: (event: any) => void): void {
+  startDrawing(handler: (event: any) => void): void {
     const polyline = new this.YANDEX_MAPS.Polyline(
       [],
       {},
@@ -67,7 +67,7 @@ export class PolylineExtension {
           if (isPolyLineStartOrEnd && this.coordinates.length > 2) {
             actions.push({
               title: 'Замкнуть полигон',
-              onClick: () => this.stopDrawing(drawingHandler),
+              onClick: () => this.stopDrawing(handler),
             });
           }
 
@@ -76,7 +76,7 @@ export class PolylineExtension {
       }
     );
 
-    polyline.geometry.events.add('change', drawingHandler);
+    polyline.geometry.events.add('change', handler);
 
     this._map.add(polyline);
     polyline.editor.startEditing();
@@ -84,7 +84,7 @@ export class PolylineExtension {
     this._state$.next(polyline);
   }
 
-  stopDrawing(drawingHandler: (event: any) => void): void {
+  stopDrawing(handler: (event: any) => void): void {
     if (!this._state$.value) {
       return;
     }
@@ -92,7 +92,7 @@ export class PolylineExtension {
     const coordinates = this._computing.deleteSamePoints(this.coordinates);
 
     if (coordinates.length < 4) {
-      return this.clear(drawingHandler);
+      return this.clear(handler);
     }
 
     const polygon = new this.YANDEX_MAPS.Polygon(
@@ -117,14 +117,14 @@ export class PolylineExtension {
 
     polygon.properties.set(options);
 
-    this._clearStates(drawingHandler);
+    this._clearStates(handler);
 
     this._emitter$.next(polygon);
   }
 
-  clear = (drawingHandler: (event: any) => void): void => {
+  clear = (handler: (event: any) => void): void => {
     if (this._state$.value) {
-      this._clearStates(drawingHandler);
+      this._clearStates(handler);
 
       this._emitter$.next(null);
     }
@@ -134,7 +134,7 @@ export class PolylineExtension {
     this._state$.next(this._state$.value);
   };
 
-  private _clearStates = (drawingHandler: (event: any) => void): void => {
+  private _clearStates = (handler: (event: any) => void): void => {
     const { value } = this._state$;
     if (!value) {
       return;
@@ -142,7 +142,7 @@ export class PolylineExtension {
 
     value.editor.stopEditing();
     value.editor.stopDrawing();
-    value.events.remove('change', drawingHandler);
+    value.events.remove('change', handler);
     this._map.remove(value);
     this._state$.next(null);
     this._action.state = 'EMPTY';
