@@ -17,7 +17,12 @@ import { ComputingService } from './computing.service';
 import { MainExtensions } from './extensions/main/main.extensions.extension';
 import { MapsHttpService } from './maps.http.service';
 
-// TODO: -
+// TODO: 1. Починить кнопки действий
+// TODO: 2. Подобрать иконки для кнопок
+// TODO: 3. Скрыть вернуться к проектам
+// TODO: 4. Заменить полигоны
+// TODO: 5. Поправить ссылку на гитхаб
+// TODO: 6. Панель управления (1. Перейти к точке; 2. Сохранить центральную точку; 3. Добавить ссылку на полигоны)
 
 @Injectable({
   providedIn: 'root',
