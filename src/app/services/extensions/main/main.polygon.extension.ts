@@ -1,25 +1,26 @@
 import { BehaviorSubject, map, Observable, Subject } from 'rxjs';
-import { Queue } from '../../models/classes/queue';
-import { IOptions } from '../../models/interfaces/options.interface';
-import { IPointActions } from '../../models/interfaces/point-actions.interface';
-import { TCache } from '../../models/types/cache.type';
-import { TPoint } from '../../models/types/point.type';
-import { ActionStore } from '../../stores/action.store';
-import { VertexesStore } from '../../stores/vertexes.store';
-import { ComputingService } from '../computing.service';
-import { MapSettingsExtension } from '../extensions/map/map.settings.extension';
+import { Queue } from '../../../models/classes/queue';
+import { IOptions } from '../../../models/interfaces/options.interface';
+import { IPointActions } from '../../../models/interfaces/point-actions.interface';
+import { TCache } from '../../../models/types/cache.type';
+import { TPoint } from '../../../models/types/point.type';
+import { ActionStore } from '../../../stores/action.store';
+import { MapStore } from '../../../stores/map.store';
+import { SettingsStore } from '../../../stores/settings.store';
+import { VertexesStore } from '../../../stores/vertexes.store';
+import { ComputingService } from '../../computing.service';
 
 export class PolygonExtension {
   private readonly _state$ = new BehaviorSubject<any | null>(null);
   private readonly _emitter$ = new Subject<any>();
 
   constructor(
-    private readonly _map: any,
     private readonly YANDEX_MAPS: any,
+    private readonly _map: MapStore,
     private readonly _action: ActionStore,
     private readonly _vertexes: VertexesStore,
     private readonly _computing: ComputingService,
-    private readonly _settings: MapSettingsExtension
+    private readonly _settings: SettingsStore
   ) {
     this._vertexes.state = this._state$
       .asObservable()
@@ -50,7 +51,7 @@ export class PolygonExtension {
       }
     );
 
-    this._map.geoObjects.add(polygon);
+    this._map.add(polygon);
     polygon.editor.startDrawing();
 
     polygon.geometry.events.add('change', drawingHandler);
@@ -112,7 +113,7 @@ export class PolygonExtension {
     if (this._state$.value) {
       this._clearStates(drawingHandler);
 
-      this._map.geoObjects.remove(this._state$.value);
+      this._map.remove(this._state$.value);
 
       this._state$.next(null);
       this._emitter$.next(null);

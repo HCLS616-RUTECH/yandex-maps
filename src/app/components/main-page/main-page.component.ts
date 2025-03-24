@@ -3,7 +3,7 @@ import {
   Component,
   HostListener,
 } from '@angular/core';
-import { MapsService } from '../../services/maps.service';
+import { MainManager } from '../../services/main.manager';
 import { ActionsComponent } from './sub-components/actions/actions.component';
 import { EditorComponent } from './sub-components/editor/editor.component';
 import { FooterComponent } from './sub-components/footer/footer.component';
@@ -27,8 +27,8 @@ import { MapsComponent } from './sub-components/maps/maps.component';
 export class MainPageComponent {
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {
-    this._service.keyboardHandler(event);
+    this._main.keyboardHandler(event);
   }
 
-  constructor(private readonly _service: MapsService) {}
+  constructor(private readonly _main: MainManager) {}
 }

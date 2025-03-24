@@ -1,8 +1,8 @@
 import { ActionStore } from '../../../stores/action.store';
 import { SelectedStore } from '../../../stores/selected.store';
-import { MapsService } from '../../maps.service';
+import { MainManager } from '../../main.manager';
 
-export class MapKeyboardExtension {
+export class MainKeyboardExtension {
   private readonly _test = {
     global: {
       escape: (code: string) => code === 'Escape',
@@ -24,7 +24,7 @@ export class MapKeyboardExtension {
   };
 
   constructor(
-    private readonly _main: MapsService,
+    private readonly _main: MainManager,
     private readonly _action: ActionStore,
     private readonly _selected: SelectedStore
   ) {}
@@ -36,14 +36,14 @@ export class MapKeyboardExtension {
 
     if (this._test.global.enter(code)) {
       if (this._action.state === 'EMPTY' && this._selected.state) {
-        return this._main.setActionState('EDITING_POLYGON');
+        return this._main.setAction('EDITING_POLYGON');
       }
 
-      return this._main.setActionState(this._action.state);
+      return this._main.setAction(this._action.state);
     }
 
     if (this._test.global.delete(code)) {
-      return this._main.setActionState('DELETE_POLYGON');
+      return this._main.setAction('DELETE_POLYGON');
     }
 
     if (!shiftKey) {
@@ -51,23 +51,23 @@ export class MapKeyboardExtension {
     }
 
     if (this._test.drawing.polygon(code)) {
-      return this._main.setActionState('DRAWING_POLYGON');
+      return this._main.setAction('DRAWING_POLYGON');
     }
 
     if (this._test.drawing.polyline(code)) {
-      return this._main.setActionState('DRAWING_POLYLINE');
+      return this._main.setAction('DRAWING_POLYLINE');
     }
 
     if (this._test.editing(code)) {
-      return this._main.setActionState('EDITING_POLYGON');
+      return this._main.setAction('EDITING_POLYGON');
     }
 
     if (this._test.drag(code)) {
-      return this._main.setActionState('DRAG_POLYGON');
+      return this._main.setAction('DRAG_POLYGON');
     }
 
     if (this._test.delete(code)) {
-      return this._main.setActionState('DELETE_POLYGON');
+      return this._main.setAction('DELETE_POLYGON');
     }
 
     if (this._test.update(code)) {

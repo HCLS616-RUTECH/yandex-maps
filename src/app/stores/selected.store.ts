@@ -9,11 +9,11 @@ import { TChangedParam } from '../models/types/changed-param.type';
 import { TDefaultParams } from '../models/types/default-params.type';
 import { TPoint } from '../models/types/point.type';
 import { ComputingService } from '../services/computing.service';
-import { MapSettingsExtension } from '../services/extensions/map/map.settings.extension';
 import { SelectedCacheExtension } from '../services/extensions/selected/selected.cache.extension';
 import { SelectedChangesExtension } from '../services/extensions/selected/selected.changes.extension';
 import { SelectedParamsExtension } from '../services/extensions/selected/selected.params.extension';
 import { ActionStore } from './action.store';
+import { SettingsStore } from './settings.store';
 import { VertexesStore } from './vertexes.store';
 
 @Injectable({
@@ -27,7 +27,7 @@ export class SelectedStore {
   private readonly _params: SelectedParamsExtension;
 
   constructor(
-    private readonly _settings: MapSettingsExtension,
+    private readonly _settings: SettingsStore,
     private readonly _action: ActionStore,
     private readonly _vertexes: VertexesStore,
     private readonly _computing: ComputingService

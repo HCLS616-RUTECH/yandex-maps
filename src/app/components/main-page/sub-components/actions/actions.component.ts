@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TActionState } from '../../../../models/types/action-state.type';
-import { MapsService } from '../../../../services/maps.service';
+import { MainManager } from '../../../../services/main.manager';
 import { SelectedStore } from '../../../../stores/selected.store';
 
 @Component({
@@ -13,7 +13,7 @@ import { SelectedStore } from '../../../../stores/selected.store';
 })
 export class ActionsComponent {
   constructor(
-    private readonly _service: MapsService,
+    private readonly _main: MainManager,
     private readonly _selected: SelectedStore
   ) {}
 
@@ -22,6 +22,6 @@ export class ActionsComponent {
   }
 
   handleSetActionState(state: TActionState): void {
-    this._service.setActionState(state);
+    this._main.setAction(state);
   }
 }

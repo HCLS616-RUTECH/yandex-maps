@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { TBbox } from '../models/types/bbox.type';
-import { MapSettingsExtension } from '../services/extensions/map/map.settings.extension';
+import { TPoint } from '../models/types/point.type';
+import { SettingsStore } from './settings.store';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ export class MapStore {
 
   private readonly YANDEX_MAPS = (window as any).ymaps;
 
-  constructor(private readonly _settings: MapSettingsExtension) {}
+  constructor(private readonly _settings: SettingsStore) {}
 
   get state(): any {
     return this._map;
@@ -45,5 +46,12 @@ export class MapStore {
 
   remove = (polygon: any): void => {
     this._map?.geoObjects.remove(polygon);
+  };
+
+  fly = (point: TPoint): void => {
+    this._map?.panTo(point, {
+      flying: true,
+      duration: 500,
+    });
   };
 }

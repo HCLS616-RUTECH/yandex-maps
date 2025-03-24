@@ -5,15 +5,15 @@ import { TDefaultParams } from '../../../models/types/default-params.type';
 import { TPoint } from '../../../models/types/point.type';
 import { ActionStore } from '../../../stores/action.store';
 import { SelectedStore } from '../../../stores/selected.store';
+import { SettingsStore } from '../../../stores/settings.store';
 import { ComputingService } from '../../computing.service';
-import { MapSettingsExtension } from '../map/map.settings.extension';
 
 type TKeys = Extract<keyof IZone, keyof SelectedParamsExtension>;
 
 export class SelectedParamsExtension {
   constructor(
     private readonly _selected: SelectedStore,
-    private readonly _settings: MapSettingsExtension,
+    private readonly _settings: SettingsStore,
     private readonly _action: ActionStore,
     private readonly _computing: ComputingService
   ) {}

@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { MapsService } from '../../../../services/maps.service';
+import { MainManager } from '../../../../services/main.manager';
 import { ChangesStore } from '../../../../stores/changes.store';
 
 @Component({
@@ -13,7 +13,7 @@ import { ChangesStore } from '../../../../stores/changes.store';
 })
 export class HeaderComponent {
   constructor(
-    private readonly _mapService: MapsService,
+    private readonly _main: MainManager,
     private readonly _changesStore: ChangesStore
   ) {}
 
@@ -22,10 +22,10 @@ export class HeaderComponent {
   }
 
   handleSaveChanges(): void {
-    this._mapService.saveChanges();
+    this._main.saveChanges();
   }
 
   handleUpdateMap(): void {
-    this._mapService.updateMap();
+    this._main.updateMap();
   }
 }

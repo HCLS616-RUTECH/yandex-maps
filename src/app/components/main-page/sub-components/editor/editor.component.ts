@@ -6,7 +6,7 @@ import { VERTICAL_ANIMATION } from '../../../../animations/vertical.animation';
 import { IZone } from '../../../../models/interfaces/zone.interface';
 import { TActionState } from '../../../../models/types/action-state.type';
 import { TChangedParam } from '../../../../models/types/changed-param.type';
-import { MapsService } from '../../../../services/maps.service';
+import { MainManager } from '../../../../services/main.manager';
 import { ActionStore } from '../../../../stores/action.store';
 import { SelectedStore } from '../../../../stores/selected.store';
 import { VertexesStore } from '../../../../stores/vertexes.store';
@@ -38,7 +38,7 @@ import { VertexCountComponent } from './sub-components/vertex-count/vertex-count
 })
 export class EditorComponent {
   constructor(
-    private readonly _main: MapsService,
+    private readonly _main: MainManager,
     private readonly _selected: SelectedStore,
     private readonly _vertexes: VertexesStore,
     private readonly _action: ActionStore

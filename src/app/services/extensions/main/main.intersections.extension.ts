@@ -1,11 +1,12 @@
 import { signal } from '@angular/core';
 import { featureCollection, intersect, polygon } from '@turf/turf';
-import { TBbox } from '../../models/types/bbox.type';
-import { ActionStore } from '../../stores/action.store';
-import { MapSourcesStore } from '../../stores/map-sources.store';
-import { SelectedStore } from '../../stores/selected.store';
-import { ComputingService } from '../computing.service';
-import { MapSettingsExtension } from '../extensions/map/map.settings.extension';
+import { TBbox } from '../../../models/types/bbox.type';
+import { ActionStore } from '../../../stores/action.store';
+import { MapSourcesStore } from '../../../stores/map-sources.store';
+import { MapStore } from '../../../stores/map.store';
+import { SelectedStore } from '../../../stores/selected.store';
+import { SettingsStore } from '../../../stores/settings.store';
+import { ComputingService } from '../../computing.service';
 
 export class IntersectionsExtension {
   private readonly _intersections = new Map<string, any>();
@@ -15,10 +16,10 @@ export class IntersectionsExtension {
   private _flyIndex = 0;
 
   constructor(
-    private readonly _map: any,
     private readonly YANDEX_MAPS: any,
+    private readonly _map: MapStore,
     private readonly _computing: ComputingService,
-    private readonly _settings: MapSettingsExtension,
+    private readonly _settings: SettingsStore,
     private readonly _selected: SelectedStore,
     private readonly _action: ActionStore,
     private readonly _sources: MapSourcesStore
@@ -43,10 +44,7 @@ export class IntersectionsExtension {
 
     const point = this._computing.getBboxCenter(bbox);
 
-    this._map.panTo(point, {
-      flying: true,
-      duration: 500,
-    });
+    this._map.fly(point);
   };
 
   checkBounds = (screenBbox: TBbox): void => {
@@ -69,13 +67,13 @@ export class IntersectionsExtension {
 
         if (isBBoxesIntersected && !isOnMap) {
           intersection.properties.set({ isOnMap: true });
-          this._map.geoObjects.add(intersection);
+          this._map.add(intersection);
           forAnimate.push(intersection);
         }
 
         if (!isBBoxesIntersected && isOnMap) {
           intersection.properties.set({ isOnMap: false });
-          this._map.geoObjects.remove(intersection);
+          this._map.remove(intersection);
         }
       });
 
@@ -130,7 +128,7 @@ export class IntersectionsExtension {
     if (intersections) {
       intersections.forEach((p: any) => {
         p.events.remove('click', this._clickHandler);
-        this._map.geoObjects.remove(p);
+        this._map.remove(p);
       });
       this._intersections.delete(id);
     }
@@ -214,7 +212,7 @@ export class IntersectionsExtension {
     this._intersections.set(id, intersections);
 
     intersections.forEach((intersection) => {
-      this._map.geoObjects.add(intersection);
+      this._map.add(intersection);
 
       intersection.options.set('fillColor', this._settings.intersectionColor);
 

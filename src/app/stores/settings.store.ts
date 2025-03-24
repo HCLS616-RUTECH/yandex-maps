@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Polygon } from 'yandex-maps';
 
 @Injectable({ providedIn: 'root' })
-export class MapSettingsExtension {
+export class SettingsStore {
   private readonly BASE_PARAMS = {
     map: {
       // center: [55.76, 37.64],
