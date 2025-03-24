@@ -1,10 +1,8 @@
 import { BehaviorSubject, map, Observable, Subject } from 'rxjs';
-import { Queue } from '../../../models/classes/queue';
-import { IOptions } from '../../../models/interfaces/options.interface';
 import { IPointActions } from '../../../models/interfaces/point-actions.interface';
-import { TCache } from '../../../models/types/cache.type';
 import { TPoint } from '../../../models/types/point.type';
 import { ActionStore } from '../../../stores/action.store';
+import { MapSourcesStore } from '../../../stores/map-sources.store';
 import { MapStore } from '../../../stores/map.store';
 import { SettingsStore } from '../../../stores/settings.store';
 import { VertexesStore } from '../../../stores/vertexes.store';
@@ -20,7 +18,8 @@ export class PolylineExtension {
     private readonly _action: ActionStore,
     private readonly _vertexes: VertexesStore,
     private readonly _computing: ComputingService,
-    private readonly _settings: SettingsStore
+    private readonly _settings: SettingsStore,
+    private readonly _sources: MapSourcesStore
   ) {
     this._vertexes.state = this._state$
       .asObservable()
@@ -56,7 +55,7 @@ export class PolylineExtension {
       [],
       {},
       {
-        ...this._settings.strokeSelected,
+        ...this._settings.strokes.selected,
         editorMenuManager: (actions: IPointActions[]) => {
           actions = actions.filter((action) => action.title !== 'Завершить');
 
@@ -99,36 +98,20 @@ export class PolylineExtension {
       [coordinates],
       {},
       {
-        ...this._settings.strokeSelected,
-        fillColor: this._settings.baseColor,
+        ...this._settings.strokes.selected,
+        fillColor: this._settings.colors.base,
       }
     );
 
     this._map.add(polygon);
 
     const id = this._settings.createPolygonId(polygon);
-    const options: IOptions = {
+
+    const options = this._sources.options.forNew(
       id,
-      name: `Новая зона ${id}`,
-      bbox: polygon.geometry.getBounds(),
-      new: false,
-      default: {
-        coordinates: [coordinates],
-        bbox: polygon.geometry.getBounds(),
-        name: `Новая зона ${id}`,
-        color: this._settings.baseColor,
-      },
-      cache: {
-        index: 0,
-        queue: new Queue<TCache>({
-          name: `Новая зона ${id}`,
-          color: this._settings.baseColor,
-          coordinates: [coordinates],
-        }),
-      },
-      manipulations: { caches: false, computing: false, drag: false },
-      changes: new Set(),
-    };
+      coordinates,
+      polygon.geometry.getBounds()
+    );
 
     polygon.properties.set(options);
 

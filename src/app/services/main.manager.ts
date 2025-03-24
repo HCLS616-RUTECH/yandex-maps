@@ -17,11 +17,9 @@ import { ComputingService } from './computing.service';
 import { MainExtensions } from './extensions/main/main.extensions.extension';
 import { MapsHttpService } from './maps.http.service';
 
-// TODO: 1. Бага с цветом при перетаскивании (быстро нажимать)                                             -
-// TODO: 2. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур        -
-// TODO: 3. Декомпозировать основной сервис                                                                -
-// TODO: 4. Бага с дижением кэша вправо по клавише                                                         -
-// TODO: 5. Бага с добавлением первой точки нового полигона или кривой в пределах существующего полигона   -
+// TODO: 1. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур        - -
+// TODO: 2. Бага с дижением кэша вправо по клавише                                                         -
+// TODO: 3. Бага с добавлением первой точки нового полигона или кривой в пределах существующего полигона   -
 
 @Injectable({
   providedIn: 'root',
@@ -194,10 +192,10 @@ export class MainManager {
         continue;
       }
 
-      const options = this._sources.options(zone, false);
+      const options = this._sources.options.fromZone(zone);
 
       const polygon = new this.YANDEX_MAPS.Polygon(zone.coordinates, options, {
-        ...this._settings.stroke,
+        ...this._settings.strokes.base,
         fillColor: zone.color,
       });
 
@@ -263,7 +261,7 @@ export class MainManager {
       }
     });
 
-    this._settings.animatePolygons(newPolygons);
+    this._settings.animate(newPolygons);
 
     this._extensions.intersections.checkBounds(bounds);
   }

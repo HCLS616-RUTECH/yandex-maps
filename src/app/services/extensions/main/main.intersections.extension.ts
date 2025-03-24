@@ -78,7 +78,7 @@ export class IntersectionsExtension {
       });
 
       if (forAnimate.length) {
-        this._settings.animatePolygons(forAnimate);
+        this._settings.animate(forAnimate);
       }
     });
   };
@@ -214,7 +214,7 @@ export class IntersectionsExtension {
     intersections.forEach((intersection) => {
       this._map.add(intersection);
 
-      intersection.options.set('fillColor', this._settings.intersectionColor);
+      intersection.options.set('fillColor', this._settings.colors.intersection);
 
       intersection.properties.set({
         id,
@@ -225,7 +225,7 @@ export class IntersectionsExtension {
       intersection.events.add('click', this._clickHandler);
     });
 
-    this._settings.animatePolygons(intersections);
+    this._settings.animate(intersections);
   };
 
   private _isBboxesIntersected = (

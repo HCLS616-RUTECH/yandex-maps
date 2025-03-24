@@ -40,7 +40,8 @@ export class MainExtensions {
       this._action,
       this._vertexes,
       this._computing,
-      this._settings
+      this._settings,
+      this._sources
     );
 
     this._polygon = new PolygonExtension(
@@ -49,7 +50,8 @@ export class MainExtensions {
       this._action,
       this._vertexes,
       this._computing,
-      this._settings
+      this._settings,
+      this._sources
     );
 
     this._intersections = new IntersectionsExtension(

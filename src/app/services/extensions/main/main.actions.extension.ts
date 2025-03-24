@@ -84,7 +84,7 @@ export class MainActionsExtension {
     }
 
     if (this._action.state === 'DRAG_POLYGON') {
-      this._settings.stopDrag(selected);
+      this._selected.drag(false);
     }
 
     this._action.state = 'EDITING_POLYGON';
@@ -127,9 +127,7 @@ export class MainActionsExtension {
 
     this._action.state = 'DRAG_POLYGON';
 
-    this._action.state === 'DRAG_POLYGON'
-      ? this._settings.startDrag(selected)
-      : this._settings.stopDrag(selected);
+    this._selected.drag(this._action.state === 'DRAG_POLYGON');
   };
 
   initPolygonActions = (polygon: Polygon): void => {

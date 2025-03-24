@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Polygon } from 'yandex-maps';
 
+interface IStroke {
+  color: string;
+  width: number;
+}
+
 @Injectable({ providedIn: 'root' })
 export class SettingsStore {
   private readonly BASE_PARAMS = {
@@ -23,7 +28,6 @@ export class SettingsStore {
       base: '00FF00',
       new: 'FFFF00',
       drag: 'FF0000',
-      cache: '00FF0088',
     },
     stroke: {
       color: '0000FF',
@@ -36,42 +40,28 @@ export class SettingsStore {
     return this.BASE_PARAMS.map;
   }
 
-  get baseColor(): string {
-    return `${this.BASE_PARAMS.colors.base}${this.BASE_PARAMS.colors.opacity}`;
-  }
-
-  get newColor(): string {
-    return `${this.BASE_PARAMS.colors.new}${this.BASE_PARAMS.colors.opacity}`;
-  }
-
-  get dragColor(): string {
-    return `${this.BASE_PARAMS.colors.drag}${this.BASE_PARAMS.colors.opacity}`;
-  }
-
-  get intersectionColor(): string {
-    return `${this.BASE_PARAMS.colors.drag}90`;
-  }
-
-  get stroke(): { strokeColor: string; strokeWidth: number } {
+  get colors(): Omit<typeof this.BASE_PARAMS.colors, 'opacity'> & {
+    intersection: string;
+  } {
     return {
-      strokeColor: this.BASE_PARAMS.stroke.color,
-      strokeWidth: this.BASE_PARAMS.stroke.width,
+      base: `${this.BASE_PARAMS.colors.base}${this.BASE_PARAMS.colors.opacity}`,
+      new: `${this.BASE_PARAMS.colors.new}${this.BASE_PARAMS.colors.opacity}`,
+      drag: `${this.BASE_PARAMS.colors.drag}${this.BASE_PARAMS.colors.opacity}`,
+      intersection: `${this.BASE_PARAMS.colors.drag}90`,
     };
   }
 
-  get strokeSelected(): { strokeColor: string; strokeWidth: number } {
+  get strokes(): { base: IStroke; selected: IStroke } {
     return {
-      strokeColor: this.BASE_PARAMS.stroke.color,
-      strokeWidth: this.BASE_PARAMS.stroke.selected,
+      base: {
+        color: this.BASE_PARAMS.stroke.color,
+        width: this.BASE_PARAMS.stroke.width,
+      },
+      selected: {
+        color: this.BASE_PARAMS.stroke.color,
+        width: this.BASE_PARAMS.stroke.selected,
+      },
     };
-  }
-
-  get colorCache(): string {
-    return this.BASE_PARAMS.colors.cache;
-  }
-
-  set colorCache(cache: string) {
-    this.BASE_PARAMS.colors.cache = cache;
   }
 
   get opacity(): number {
@@ -90,24 +80,7 @@ export class SettingsStore {
     return id;
   }
 
-  startDrag = (polygon: any): void => {
-    polygon.options.set('draggable', true);
-    this.colorCache = polygon.options.get('fillColor');
-    polygon.options.set('fillColor', this.dragColor);
-
-    this.animatePolygons([polygon]);
-  };
-
-  stopDrag = (polygon: any): void => {
-    polygon.options.set('draggable', false);
-
-    if (polygon.options.get('fillColor') === this.dragColor) {
-      polygon.options.set('fillColor', this.colorCache);
-      this.animatePolygons([polygon]);
-    }
-  };
-
-  animatePolygons(polygons: Polygon[]): void {
+  animate = (polygons: Polygon[]): void => {
     const startTime = performance.now();
     const duration = 400;
     const maxOpacity = this.BASE_PARAMS.colors.opacity;
@@ -147,5 +120,5 @@ export class SettingsStore {
     }
 
     requestAnimationFrame(updateOpacity);
-  }
+  };
 }

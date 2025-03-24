@@ -64,7 +64,7 @@ export class SelectedStore {
         selected?.editor.stopEditing();
         break;
       case 'DRAG_POLYGON':
-        this._settings.stopDrag(selected);
+        this.drag(false);
         break;
     }
 
@@ -84,7 +84,7 @@ export class SelectedStore {
         polygon.editor.startEditing();
         break;
       case 'DRAG_POLYGON':
-        this._settings.startDrag(polygon);
+        this.drag(true);
         break;
     }
   }
@@ -205,4 +205,29 @@ export class SelectedStore {
 
     this.update();
   }
+
+  drag = (state: boolean): void => {
+    const { value } = this._state$;
+    if (!value) {
+      return;
+    }
+
+    value.options.set('draggable', state);
+
+    if (state) {
+      value.options.set('fillColor', this._settings.colors.drag);
+    } else {
+      let color = value.properties.get('default').color;
+
+      const cache = value.properties.get('cache') as IOptions['cache'];
+
+      if (cache.queue.length) {
+        color = cache.queue[cache.index].color.replace('#', '');
+      }
+
+      value.options.set('fillColor', color);
+    }
+
+    this._settings.animate([value]);
+  };
 }

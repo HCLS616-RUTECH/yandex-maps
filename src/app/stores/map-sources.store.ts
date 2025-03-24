@@ -2,7 +2,15 @@ import { Injectable } from '@angular/core';
 import { Queue } from '../models/classes/queue';
 import { IOptions } from '../models/interfaces/options.interface';
 import { IZone } from '../models/interfaces/zone.interface';
+import { TBbox } from '../models/types/bbox.type';
 import { TCache } from '../models/types/cache.type';
+import { TPoint } from '../models/types/point.type';
+import { SettingsStore } from './settings.store';
+
+interface IGetOptions {
+  fromZone: (zone: IZone) => IOptions;
+  forNew: (id: string, coordinates: TPoint[], bbox: TBbox) => IOptions;
+}
 
 interface ISources {
   polygons: { all: Map<string, any>; visible: Map<string, any> };
@@ -23,6 +31,8 @@ export class MapSourcesStore {
     zones: new Set(),
   };
 
+  constructor(private readonly _settings: SettingsStore) {}
+
   get state(): ISources {
     return this._state;
   }
@@ -36,6 +46,13 @@ export class MapSourcesStore {
         visible: (id: string, polygon: any) =>
           this._state.polygons.visible.set(id, polygon),
       },
+    };
+  }
+
+  get options(): IGetOptions {
+    return {
+      forNew: this._getOptionsForNewPolygon,
+      fromZone: this._getOptionsFromZone,
     };
   }
 
@@ -102,12 +119,12 @@ export class MapSourcesStore {
     }
   };
 
-  options = (zone: IZone, isNew: boolean): IOptions => {
+  private _getOptionsFromZone = (zone: IZone): IOptions => {
     return {
       id: zone.id,
       name: zone.name,
       bbox: zone.bbox,
-      new: isNew,
+      new: false,
       default: {
         coordinates: zone.coordinates,
         bbox: zone.bbox,
@@ -120,6 +137,35 @@ export class MapSourcesStore {
           name: zone.name,
           color: zone.color,
           coordinates: zone.coordinates,
+        }),
+      },
+      manipulations: { caches: false, computing: false, drag: false },
+      changes: new Set(),
+    };
+  };
+
+  private _getOptionsForNewPolygon = (
+    id: string,
+    coordinates: TPoint[],
+    bbox: TBbox
+  ): IOptions => {
+    return {
+      id,
+      name: `Новая зона ${id}`,
+      bbox,
+      new: false,
+      default: {
+        coordinates: [coordinates],
+        bbox,
+        name: `Новая зона ${id}`,
+        color: this._settings.colors.base,
+      },
+      cache: {
+        index: 0,
+        queue: new Queue<TCache>({
+          name: `Новая зона ${id}`,
+          color: this._settings.colors.base,
+          coordinates: [coordinates],
         }),
       },
       manipulations: { caches: false, computing: false, drag: false },

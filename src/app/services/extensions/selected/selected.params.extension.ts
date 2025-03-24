@@ -1,3 +1,4 @@
+import { IOptions } from '../../../models/interfaces/options.interface';
 import { IZone } from '../../../models/interfaces/zone.interface';
 import { TBbox } from '../../../models/types/bbox.type';
 import { TChangedParam } from '../../../models/types/changed-param.type';
@@ -42,18 +43,22 @@ export class SelectedParamsExtension {
   get color(): string {
     const value = this._selected.state;
     if (!value) {
-      return `#${this._settings.baseColor}`;
+      return `#${this._settings.colors.base}`;
     }
 
-    const fillColor: string = value.options.get('fillColor').slice(0, 6);
-    const dragColor: string = this._settings.dragColor.slice(0, 6);
+    if (this._action.state !== 'DRAG_POLYGON') {
+      return `#${value.options.get('fillColor').slice(0, 6)}`;
+    }
 
-    const color: string =
-      fillColor === dragColor
-        ? this._settings.colorCache.slice(0, 6)
-        : fillColor;
+    let color = value.properties.get('default').color;
 
-    return `#${color}`;
+    const cache = value.properties.get('cache') as IOptions['cache'];
+
+    if (cache.queue.length) {
+      color = cache.queue[cache.index].color.replace('#', '');
+    }
+
+    return `#${color.slice(0, 6)}`;
   }
 
   set color(color: string) {

@@ -1,10 +1,8 @@
 import { BehaviorSubject, map, Observable, Subject } from 'rxjs';
-import { Queue } from '../../../models/classes/queue';
-import { IOptions } from '../../../models/interfaces/options.interface';
 import { IPointActions } from '../../../models/interfaces/point-actions.interface';
-import { TCache } from '../../../models/types/cache.type';
 import { TPoint } from '../../../models/types/point.type';
 import { ActionStore } from '../../../stores/action.store';
+import { MapSourcesStore } from '../../../stores/map-sources.store';
 import { MapStore } from '../../../stores/map.store';
 import { SettingsStore } from '../../../stores/settings.store';
 import { VertexesStore } from '../../../stores/vertexes.store';
@@ -20,7 +18,8 @@ export class PolygonExtension {
     private readonly _action: ActionStore,
     private readonly _vertexes: VertexesStore,
     private readonly _computing: ComputingService,
-    private readonly _settings: SettingsStore
+    private readonly _settings: SettingsStore,
+    private readonly _sources: MapSourcesStore
   ) {
     this._vertexes.state = this._state$
       .asObservable()
@@ -39,13 +38,13 @@ export class PolygonExtension {
     this._state$.value?.geometry.setCoordinates([coordinates]);
   }
 
-  startDrawing(drawingHandler: (event: any) => void): void {
+  startDrawing(handler: (event: any) => void): void {
     const polygon = new this.YANDEX_MAPS.Polygon(
       [],
       {},
       {
-        ...this._settings.strokeSelected,
-        fillColor: this._settings.newColor,
+        ...this._settings.strokes.selected,
+        fillColor: this._settings.colors.new,
         editorMenuManager: (actions: IPointActions[]) =>
           actions.filter((action) => action.title !== 'Завершить'),
       }
@@ -54,11 +53,11 @@ export class PolygonExtension {
     this._map.add(polygon);
     polygon.editor.startDrawing();
 
-    polygon.geometry.events.add('change', drawingHandler);
+    polygon.geometry.events.add('change', handler);
     this._state$.next(polygon);
   }
 
-  stopDrawing(drawingHandler: (event: any) => void): void {
+  stopDrawing(handler: (event: any) => void): void {
     const { value } = this._state$;
     if (!value) {
       return;
@@ -67,51 +66,35 @@ export class PolygonExtension {
     const coordinates = this._computing.deleteSamePoints(this.coordinates);
 
     if (coordinates.length < 4) {
-      return this.clear(drawingHandler);
+      return this.clear(handler);
     }
 
     if (coordinates.length !== this.coordinates.length) {
       this.coordinates = coordinates;
     }
 
-    value.options.set('fillColor', this._settings.baseColor);
+    value.options.set('fillColor', this._settings.colors.base);
 
     const id = this._settings.createPolygonId(value);
-    const options: IOptions = {
+
+    const options = this._sources.options.forNew(
       id,
-      name: `Новая зона ${id}`,
-      bbox: value.geometry.getBounds(),
-      new: false,
-      default: {
-        coordinates: [coordinates],
-        bbox: value.geometry.getBounds(),
-        name: `Новая зона ${id}`,
-        color: this._settings.baseColor,
-      },
-      cache: {
-        index: 0,
-        queue: new Queue<TCache>({
-          name: `Новая зона ${id}`,
-          color: this._settings.baseColor,
-          coordinates: [coordinates],
-        }),
-      },
-      manipulations: { caches: false, computing: false, drag: false },
-      changes: new Set(),
-    };
+      coordinates,
+      value.geometry.getBounds()
+    );
 
     value.properties.set(options);
 
-    this._clearStates(drawingHandler);
+    this._clearStates(handler);
 
     this._emitter$.next(value);
 
     this._state$.next(null);
   }
 
-  clear = (drawingHandler: (event: any) => void): void => {
+  clear = (handler: (event: any) => void): void => {
     if (this._state$.value) {
-      this._clearStates(drawingHandler);
+      this._clearStates(handler);
 
       this._map.remove(this._state$.value);
 
@@ -124,14 +107,14 @@ export class PolygonExtension {
     this._state$.next(this._state$.value);
   };
 
-  private _clearStates = (drawingHandler: (event: any) => void): void => {
+  private _clearStates = (handler: (event: any) => void): void => {
     const { value } = this._state$;
     if (!value) {
       return;
     }
 
     value.editor.stopDrawing();
-    value.geometry.events.remove('change', drawingHandler);
+    value.geometry.events.remove('change', handler);
     this._action.state = 'EMPTY';
   };
 }

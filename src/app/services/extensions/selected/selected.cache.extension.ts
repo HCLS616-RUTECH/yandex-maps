@@ -95,7 +95,7 @@ export class SelectedCacheExtension {
   };
 
   private _forward = (cache: IOptions['cache']): void => {
-    if (cache.index >= cache.queue.length) {
+    if (cache.index >= cache.queue.length - 1) {
       return;
     }
 
