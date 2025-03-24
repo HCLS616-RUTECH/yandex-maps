@@ -17,7 +17,7 @@ import { ComputingService } from './computing.service';
 import { MainExtensions } from './extensions/main/main.extensions.extension';
 import { MapsHttpService } from './maps.http.service';
 
-// TODO: 1. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур        -
+// TODO: -
 
 @Injectable({
   providedIn: 'root',

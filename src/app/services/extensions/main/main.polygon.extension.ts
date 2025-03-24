@@ -47,7 +47,11 @@ export class PolygonExtension {
         strokeWidth: this._settings.strokes.selected.width,
         fillColor: this._settings.colors.new,
         editorMenuManager: (actions: IPointActions[]) =>
-          actions.filter((action) => action.title !== 'Завершить'),
+          actions.filter(
+            (action) =>
+              action.title !== 'Завершить' &&
+              action.title !== 'Добавить внутренний контур'
+          ),
       }
     );
 
