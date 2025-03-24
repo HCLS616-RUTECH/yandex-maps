@@ -31,8 +31,10 @@ export class SettingsStore {
     },
     stroke: {
       color: '0000FF',
-      width: 1,
-      selected: 3,
+      widths: {
+        base: 1,
+        selected: 3,
+      },
     },
   };
 
@@ -55,11 +57,11 @@ export class SettingsStore {
     return {
       base: {
         color: this.BASE_PARAMS.stroke.color,
-        width: this.BASE_PARAMS.stroke.width,
+        width: this.BASE_PARAMS.stroke.widths.base,
       },
       selected: {
         color: this.BASE_PARAMS.stroke.color,
-        width: this.BASE_PARAMS.stroke.selected,
+        width: this.BASE_PARAMS.stroke.widths.selected,
       },
     };
   }

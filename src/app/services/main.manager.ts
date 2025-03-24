@@ -18,8 +18,7 @@ import { MainExtensions } from './extensions/main/main.extensions.extension';
 import { MapsHttpService } from './maps.http.service';
 
 // TODO: 1. editorMenuManager: завершить рисование для полигона, удалить добавить внутренний контур        - -
-// TODO: 2. Бага с дижением кэша вправо по клавише                                                         -
-// TODO: 3. Бага с добавлением первой точки нового полигона или кривой в пределах существующего полигона   -
+// TODO: 2. Бага с добавлением первой точки нового полигона или кривой в пределах существующего полигона   -
 
 @Injectable({
   providedIn: 'root',
@@ -71,10 +70,6 @@ export class MainManager {
             this._addNewPolygons(zones);
           },
         });
-
-      // this._map.events.add('click', (event: any) =>
-      //   console.log(event.get('coords'))
-      // );
 
       this._request$.next(this._map.bounds);
 
@@ -195,7 +190,8 @@ export class MainManager {
       const options = this._sources.options.fromZone(zone);
 
       const polygon = new this.YANDEX_MAPS.Polygon(zone.coordinates, options, {
-        ...this._settings.strokes.base,
+        strokeColor: this._settings.strokes.base.color,
+        strokeWidth: this._settings.strokes.base.width,
         fillColor: zone.color,
       });
 

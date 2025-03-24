@@ -55,7 +55,8 @@ export class PolylineExtension {
       [],
       {},
       {
-        ...this._settings.strokes.selected,
+        strokeColor: this._settings.strokes.selected.color,
+        strokeWidth: this._settings.strokes.selected.width,
         editorMenuManager: (actions: IPointActions[]) => {
           actions = actions.filter((action) => action.title !== 'Завершить');
 
@@ -98,7 +99,8 @@ export class PolylineExtension {
       [coordinates],
       {},
       {
-        ...this._settings.strokes.selected,
+        strokeColor: this._settings.strokes.selected.color,
+        strokeWidth: this._settings.strokes.selected.width,
         fillColor: this._settings.colors.base,
       }
     );

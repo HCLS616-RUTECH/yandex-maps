@@ -43,7 +43,8 @@ export class PolygonExtension {
       [],
       {},
       {
-        ...this._settings.strokes.selected,
+        strokeColor: this._settings.strokes.selected.color,
+        strokeWidth: this._settings.strokes.selected.width,
         fillColor: this._settings.colors.new,
         editorMenuManager: (actions: IPointActions[]) =>
           actions.filter((action) => action.title !== 'Завершить'),
