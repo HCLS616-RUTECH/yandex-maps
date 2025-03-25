@@ -7,8 +7,16 @@
   </div>
 
   <div class="flex-1 flex items-center justify-end">
-    <div>Angular v. {{ angular }}</div>
-    <div class="mx-2">+</div>
-    <div>Yandex Maps v. {{ yandex }}</div>
+    <div class="flex">
+      <icon-brand-angular></icon-brand-angular>
+      <div class="ml-2">Angular v. {{ angular }}</div>
+    </div>
+
+    <div class="ml-2 mr-1">+</div>
+
+    <div class="flex">
+      <icon-brand-yandex></icon-brand-yandex>
+      <div class="ml-1">Yandex Maps v. {{ yandex }}</div>
+    </div>
   </div>
 </footer>

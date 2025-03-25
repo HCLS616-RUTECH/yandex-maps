@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { VERTICAL_ANIMATION } from '../../../../../../animations/vertical.animation';
+import { VERTICAL_ANIMATION } from '../../../../../../shared/animations/vertical.animation';
 
 @Component({
   selector: 'app-cache',

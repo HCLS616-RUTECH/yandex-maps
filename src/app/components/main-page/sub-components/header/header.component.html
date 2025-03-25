@@ -1,9 +1,52 @@
-<header class="bg-black-1000 w-full h-full text-white-1000 flex justify-between items-center px-3">
-  <a href="https://projects-angular.firebaseapp.com">Вернуться к проектам</a>
+<header class="bg-black-1000 w-full h-full text-white-1000 flex justify-between items-center px-2">
+  <div>
+<!--    <button disabled class="cursor-not-allowed flex">-->
+<!--&lt;!&ndash;      <a href="https://projects-angular.firebaseapp.com">&ndash;&gt;-->
+<!--        <div class="mr-2">К другим проектам</div>-->
+
+<!--        <icon-arrow-back-up></icon-arrow-back-up>-->
+<!--&lt;!&ndash;      </a>&ndash;&gt;-->
+<!--    </button>-->
+  </div>
 
   <div class="flex items-center">
+<!--    <button (click)="handleUpdateMap()" class="mr-4 flex transition-all border border-transparent-->
+<!--  px-2.5 py-1 rounded-lg-->
+<!--  shadow-md-->
+<!--  hover:shadow-inner hover:shadow-gray-800-->
+<!--  hover:border-white-1000-->
+<!--  active:scale-95-->
+<!--  duration-200">    -->
 
-    <button (click)="handleUpdateMap()" class="ml-2">ОБНОВИТЬ КАРТУ</button>
-    <button (click)="handleSaveChanges()" [disabled]="!isHaveChanges" class="ml-2">СОХРАНИТЬ</button>
+<!--      <button (click)="handleUpdateMap()" class="mr-4 flex transition-all border border-gray-800-->
+<!--  px-2.5 py-1 rounded-lg-->
+<!--  hover:shadow-lg hover:shadow-cyan-500/20-->
+<!--  hover:border-cyan-400-->
+<!--  duration-300">      -->
+
+<!--        <button (click)="handleUpdateMap()" class="mr-4 flex transition-all border border-gray-700-->
+<!--  px-2.5 py-1 rounded-lg-->
+<!--  hover:shadow-lg hover:shadow-gray-600/30-->
+<!--  hover:border-gray-500-->
+<!--  duration-300">        -->
+
+<!--          <button (click)="handleUpdateMap()" class="mr-4 flex transition-all border border-gray-700-->
+<!--  px-6 py-3 rounded-lg-->
+<!--  shadow-md-->
+<!--  hover:shadow-inner hover:shadow-gray-800/50-->
+<!--  hover:translate-y-1-->
+<!--  hover:border-gray-600-->
+<!--  active:scale-95-->
+<!--  duration-150">          -->
+
+    <button (click)="handleUpdateMap()" class="flex transition-all px-1.5 py-1.5 border">
+      <div class="mr-1">ОБНОВИТЬ</div>
+      <icon-reload></icon-reload>
+    </button>
+
+    <button (click)="handleSaveChanges()" [disabled]="!isHaveChanges" class="flex cursor-not-allowed px-1.5 py-1.5 border">
+      <div class="mr-1">СОХРАНИТЬ</div>
+      <icon-device-floppy></icon-device-floppy>
+    </button>
   </div>
 </header>

@@ -1,7 +1,7 @@
 import { NgSwitch, NgSwitchCase } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { SHIFT_ANIMATION } from '../../../../../../animations/shift.animation';
 import { TActionState } from '../../../../../../models/types/action-state.type';
+import { SHIFT_ANIMATION } from '../../../../../../shared/animations/shift.animation';
 
 @Component({
   selector: 'app-action',

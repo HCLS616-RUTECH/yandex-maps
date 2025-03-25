@@ -9,9 +9,9 @@ import {
 import { FormsModule } from '@angular/forms';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { debounceTime, Subject } from 'rxjs';
-import { SHIFT_ANIMATION } from '../../../../../../animations/shift.animation';
 import { IZone } from '../../../../../../models/interfaces/zone.interface';
 import { TActionState } from '../../../../../../models/types/action-state.type';
+import { SHIFT_ANIMATION } from '../../../../../../shared/animations/shift.animation';
 
 @UntilDestroy()
 @Component({

@@ -8,10 +8,10 @@ import {
   Output,
   signal,
 } from '@angular/core';
-import { ROTATE_ANIMATION } from '../../../../../../animations/rotate.animation';
-import { VERTICAL_ANIMATION } from '../../../../../../animations/vertical.animation';
 import { MChangedParam } from '../../../../../../models/maps/changed-param.map';
 import { TChangedParam } from '../../../../../../models/types/changed-param.type';
+import { ROTATE_ANIMATION } from '../../../../../../shared/animations/rotate.animation';
+import { VERTICAL_ANIMATION } from '../../../../../../shared/animations/vertical.animation';
 
 @Component({
   selector: 'app-changes',

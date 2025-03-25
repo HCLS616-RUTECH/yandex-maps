@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { VERTICAL_ANIMATION } from '../../../../../../animations/vertical.animation';
+import { VERTICAL_ANIMATION } from '../../../../../../shared/animations/vertical.animation';
 
 @Component({
   selector: 'app-vertex-count',

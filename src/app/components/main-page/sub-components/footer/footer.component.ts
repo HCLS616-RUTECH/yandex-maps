@@ -1,10 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { BrandAngularIcon } from '../../../../shared/icons/brand-angular.icon';
+import { BrandYandexIcon } from '../../../../shared/icons/brand-yandex.icon';
 import { VersionsStore } from '../../../../stores/versions.store';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [BrandAngularIcon, BrandYandexIcon],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

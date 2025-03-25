@@ -1,8 +1,39 @@
-<article class="bg-black-1000 h-full w-full flex flex-col justify-between items-center text-white-1000 py-3">
-  <button (click)="handleSetActionState('DRAWING_POLYLINE')">Линия</button>
-  <button (click)="handleSetActionState('DRAWING_POLYGON')">Зона</button>
-  <button (click)="handleSetActionState('EDITING_POLYGON')" [disabled]="!isSelected">Ред</button>
-  <button (click)="handleSetActionState('DELETE_POLYGON')" [disabled]="!isSelected">Удал</button>
-  <button (click)="handleSetActionState('DRAG_POLYGON')" [disabled]="!isSelected">ТАЩ</button>
-  <button>%</button>
+<article class="bg-black-1000 h-full w-full flex flex-col justify-around items-center text-white-1000 py-3">
+  <button (click)="handleSetActionState('DRAWING_POLYLINE')"
+          title="Рисовать зону с помощью кривой линии"
+          [class]="classes + ' hover:text-sky-500'"
+  >
+    <icon-line></icon-line>
+  </button>
+
+  <button (click)="handleSetActionState('DRAWING_POLYGON')"
+          title="Рисовать зону с помощью фигуры"
+          [class]="classes + ' hover:text-yellow-500'"
+  >
+    <icon-polygon></icon-polygon>
+  </button>
+
+  <button (click)="handleSetActionState('EDITING_POLYGON')"
+          [disabled]="disabled$ | async"
+          title="Редактировать зону (требуется выбрать)"
+          [class]="classes + ' hover:text-green-500'"
+  >
+    <icon-lasso-polygon></icon-lasso-polygon>
+  </button>
+
+  <button (click)="handleSetActionState('DRAG_POLYGON')"
+          [disabled]="disabled$ | async"
+          title="Перетащить зону (требуется выбрать)"
+          [class]="classes + ' hover:text-red-500'"
+  >
+    <icon-hand-grab></icon-hand-grab>
+  </button>
+
+  <button (click)="handleSetActionState('DELETE_POLYGON')"
+          [disabled]="disabled$ | async"
+          title="Удалить зону (требуется выбрать)"
+          [class]="classes + ' hover:text-red-300'"
+  >
+    <icon-trash-x></icon-trash-x>
+  </button>
 </article>

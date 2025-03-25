@@ -48,6 +48,10 @@ export class SelectedStore {
       .pipe(map(() => this._params.coordinates.length));
   }
 
+  get selected$(): Observable<boolean> {
+    return this._state$.asObservable().pipe(map((selected) => !!selected));
+  }
+
   get state(): any | null {
     return this._state$.value;
   }

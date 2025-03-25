@@ -1,12 +1,15 @@
 import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MainManager } from '../../../../services/main.manager';
+import { ArrowBackUpIcon } from '../../../../shared/icons/arrow-back-up.icon';
+import { DeviceFloppyIcon } from '../../../../shared/icons/device-floppy.icon';
+import { ReloadIcon } from '../../../../shared/icons/reload.icon';
 import { ChangesStore } from '../../../../stores/changes.store';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, ReloadIcon, DeviceFloppyIcon, ArrowBackUpIcon],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -22,7 +25,7 @@ export class HeaderComponent {
   }
 
   handleSaveChanges(): void {
-    this._main.saveChanges();
+    // this._main.saveChanges();
   }
 
   handleUpdateMap(): void {
